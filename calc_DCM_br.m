@@ -1,0 +1,2 @@
+function [DCM_br]= calc_DCM_br(phi,thet,psi)
+DCM_br =[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[cos(thet), 0, -sin(thet);0,1,0;sin(thet),0,cos(thet)]*[cos(psi),sin(psi),0;-sin(psi),cos(psi),0;0,0,1];
