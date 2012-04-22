@@ -30,11 +30,14 @@ q = [1,0,0,0]';
 
 syms q1 q2 q3 q4;
 syms vn_old ve_old vd_old;
-syms lat long alt vn ve vd phi thet psi d_phi d_thet d_psi bax bay baz bgx bgy bgz bmx bmy bmz real;
-syms lat_e long_e alt_e vn_e ve_e vd_e phi_e thet_e psi_e d_phi_e d_thet_e d_psi_e bax_e bay_e baz_e bgx_e bgy_e bgz_e bmx_e bmy_e bmz_e real;
-vf=[lat, long, alt, vn, ve, vd, phi, thet, psi, d_phi, d_thet, d_psi, bax, bay, baz, bgx, bgy, bgz, bmx, bmy, bmz];
+%syms lat long alt vn ve vd phi thet psi d_phi d_thet d_psi bax bay baz bgx bgy bgz bmx bmy bmz real;
+%syms lat_e long_e alt_e vn_e ve_e vd_e phi_e thet_e psi_e d_phi_e d_thet_e d_psi_e bax_e bay_e baz_e bgx_e bgy_e bgz_e bmx_e bmy_e bmz_e real;
+syms a b c da db dc  bax bay baz bgx bgy bgz bmx bmy bmz real; %angles alpha (in xy plane), beta (to z/down axis), gamma (angle between x_i and x_b for beta=0)
+syms a_e b_e c_e da_e db_e dc_e bax_e bay_e baz_e bgx_e bgy_e bgz_e bmx_e bmy_e bmz_e real;
+%vf=[lat, long, alt, vn, ve, vd, phi, thet, psi, d_phi, d_thet, d_psi, bax, bay, baz, bgx, bgy, bgz, bmx, bmy, bmz];
+vf=[a, b, c, da, db, dc, bax, bay, baz, bgx, bgy, bgz, bmx, bmy, bmz];
 quat= [q1, q2, q3, q4];
-vh=[lat_e, long_e, alt_e, vn_e, ve_e, vd_e, phi_e, thet_e, psi_e, d_phi_e, d_thet_e, d_psi_e, bax_e, bay_e, baz_e, bgx_e, bgy_e, bgz_e, bmx_e, bmy_e, bmz_e];
+vh=[a_e, b_e, c_e, da_e, db_e, dc_e, bax_e, bay_e, baz_e, bgx_e, bgy_e, bgz_e, bmx_e, bmy_e, bmz_e];
 
 
 
