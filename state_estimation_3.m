@@ -10,7 +10,8 @@ MAG2=595.1;
 MAG3=42682.6;
 Rl= geocradius(47+24/60); %from zurich
 Rp= Rl*cos(8+32/60); %from zurich
-
+lat0=47+24/60;
+long0=8+32/60;
 % noise form Xsens datasheet
 NOISE_ACC_b=[0.002;0.002;0.002];%noise accelerometer
 NOISE_GYRO_b=[0.05;0.05;0.05];%noise gyro
@@ -50,6 +51,15 @@ DCM_bi=DCM_br*DCM_ir';
 % the physical model and the measurement-state realation are defined. the
 % jacobian matrix is calculated
 %------------------------
+
+x_i=(lat-lat0)*Rl;
+y_i=(long-long0)*Rp;
+z_i=-alt;
+pos=[x_i,y_i,z_i];
+R=norm(pos);
+rotvec=vrrotvec(pos./R,[0,0,-1]);
+alpha=rotvec(4);
+
 f=
 
 
