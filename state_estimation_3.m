@@ -65,7 +65,7 @@ f=
 
 
 
-
+%definition of h
 h1=[lat;long;alt;vn;ve;vd];
 h2=DCM_bi*[(vn-vn_old)/t;(ve-ve_old)/t;(vd-vd_old/t)+G];
 h3=[phi;0;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[0;thet;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[cos(thet), 0, -sin(thet);0,1,0;sin(thet),0,cos(thet)]*[0;0;psi];
