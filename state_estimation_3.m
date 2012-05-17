@@ -5,6 +5,7 @@ function [state,state_est] = state_estimation_3(M,W)
 %------------------------
 t=0.01; % [s] time interval between two measurements
 G= 9.85; % [m/s^2] gravitation in zurich
+dis=[0;0;0];%displacementvector of the box
 MAG1=21449.9;% [nano tesla] magnetic field in zurich
 MAG2=595.1;
 MAG3=42682.6;
@@ -31,7 +32,7 @@ q = [1,0,0,0]';
 
 syms q1 q2 q3 q4;
 syms vn_old ve_old vd_old;
-syms lat long alt vn ve vd phi thet psi d_phi d_thet d_psi bax bay baz bgx bgy bgz bmx bmy bmz real;
+syms lat long alt vn ve vd phi thet psi d_phi d_thet d_psi bax bay baz bgx bgy bgz bmx bmy bmz vn_old ve_old vd_old phi_old thet_old psi_old d_phi_old d_thet_old d_psi_old real;
 syms lat_e long_e alt_e vn_e ve_e vd_e phi_e thet_e psi_e d_phi_e d_thet_e d_psi_e bax_e bay_e baz_e bgx_e bgy_e bgz_e bmx_e bmy_e bmz_e real;
 vf=[lat, long, alt, vn, ve, vd, phi, thet, psi, d_phi, d_thet, d_psi, bax, bay, baz, bgx, bgy, bgz, bmx, bmy, bmz];
 quat= [q1, q2, q3, q4];
@@ -66,12 +67,20 @@ f=
 
 
 %definition of h
-h1=[lat;long;alt;vn;ve;vd];
-h2=DCM_bi*[(vn-vn_old)/t;(ve-ve_old)/t;(vd-vd_old/t)+G];
-h3=[phi;0;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[0;thet;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[cos(thet), 0, -sin(thet);0,1,0;sin(thet),0,cos(thet)]*[0;0;psi];
-h4=DCM_bi*[MAG1;MAG2;MAG3];
-h5=0;%pressure sensor
-h=[h1;h2;h3;h4;h5];
+w=[d_phi;0;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[0;d_thet;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[cos(thet), 0, -sin(thet);0,1,0;sin(thet),0,cos(thet)]*[0;0;d_psi];
+w_old=[d_phi_old;0;0]+[1,0,0;0,cos(phi_old),sin(phi_old);0,-sin(phi_old),cos(phi_old)]*[0;d_thet_old;0]+[1,0,0;0,cos(phi_old),sin(phi_old);0,-sin(phi_old),cos(phi_old)]*[cos(thet_old), 0, -sin(thet_old);0,1,0;sin(thet_old),0,cos(thet_old)]*[0;0;d_psi_old];
+vg=(cross(w',dis'))';
+vg_old=(cross(w_old',dis'))';
+v=[vn;ve;vd];
+v_old=[vn_old,ve_old,vd_old];
+
+h1=[lat;long;alt] + DCM_bi'*dis; %pos
+h2=v + DCM_bi'*vg; %vel
+h3=DCM_bi*(((v+DCM_bi'*vg)-(v_old+DCM_bi'*vg_old))./t+G);%acc
+h4=w;%gyr
+h5=DCM_bi*[MAG1;MAG2;MAG3];%magnetometer
+h6=0;%pressure sensor
+h=[h1;h2;h3;h4;h5;h6];
 
 
 tmp_A= jacobian(f,vf);
@@ -155,10 +164,27 @@ for i=1:size(M,2)
     vn_old=x(4);
     ve_old=x(5);
     vd_old=x(6);
+    phi_old=x(7);
+    thet_old=x(8);
+    psi_old=x(9);
+    d_phi_old=x(10);
+    d_thet_old=x(11);
+    d_psi_old=x(12);
     H = eval(tmp_H);
     
     %correction step
-    [x_new,P]= correction(P_est,H,R,z,x_est);
+    z_new=M(:,i);
+    z_old=M(:,i-1);
+    meas_control= d_meas(z_new,z_old);
+    
+    for j=1:size(meas_control)
+        if meas_control(j)==1
+            [x_new(j,:),P(j,:)]= correction2(P_est,H(j,:),R(j,:),z_new(j),x_est,j);
+        else
+            x_new(j,:)=x_est(j,:);
+            P(j,:)=P_est(j,:);
+        end
+    end
     
     %rest
     phi = x_new(7);
