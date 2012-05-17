@@ -1,4 +1,4 @@
-function [state,state_est] = state_estimation_3(M,W)
+function [state,state_est] = state_estimation_3(M,W,meas_time,counter)
 
 %------------------------
 % constants are defined
@@ -106,8 +106,10 @@ R=diag(r);
 % for every measurement the Extended Kalman Filter is used for state
 % estimation
 %------------------------
-
-for i=1:size(M,2)
+totalTime=0;
+i=1;
+while (i<size(M,2))
+    totalTime=totalTime+t;
     % values for the symbols for the x state
     lat = x(1);
     long= x(2);
@@ -139,7 +141,13 @@ for i=1:size(M,2)
     %estimation step
     [x_est,P_est]=estimation(A,P,Q,x);
     
-    % the values are now from the estimated x
+    if(meas_time(i)>totalTime)
+        disp('no new value within t')
+        x_new=x_est;
+        P=P_est;
+        
+    else
+        % the values are now from the estimated x
     lat = x_est(1);
     long= x_est(2);
     alt = x_est(3);
@@ -173,18 +181,28 @@ for i=1:size(M,2)
     H = eval(tmp_H);
     
     %correction step
+    
+    i_old =i-1;
+    while(meas_time(i)<=totalTime)
+        i=i+1;
+    end
     z_new=M(:,i);
-    z_old=M(:,i-1);
-    meas_control= d_meas(z_new,z_old);
+    counter_new=counter(:,i);
+    counter_old=counter(:,i_old);
+    length_z=size(z_new);
+   
+    meas_control= d_meas(counter_new,counter_old,length_z);
     
     for j=1:size(meas_control)
         if meas_control(j)==1
-            [x_new(j,:),P(j,:)]= correction2(P_est,H(j,:),R(j,:),z_new(j),x_est,j);
+            [x_new(j),P(j,:)]= correction2(P_est,H(j,:),R(j,:),z_new(j),x_est,j);
         else
-            x_new(j,:)=x_est(j,:);
+            x_new(j)=x_est(j);
             P(j,:)=P_est(j,:);
         end
     end
+    end
+    
     
     %rest
     phi = x_new(7);
@@ -198,8 +216,10 @@ for i=1:size(M,2)
     x_new(8)=0;
     x_new(9)=0;
     
+    x=x_new;
     state(:,i)=x_new;
     state_est(:,i)=x_est;
+    
     
 end
 
