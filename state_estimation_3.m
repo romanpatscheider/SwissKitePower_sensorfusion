@@ -1,14 +1,14 @@
-function [state,state_est] = state_estimation_3(M,W,meas_time,counter)
+function [state,state_est] = state_estimation_3(M,meas_time,counter)
 
 %------------------------
 % constants are defined
 %------------------------
 t=0.01; % [s] time interval between two measurements
-G= 9.85; % [m/s^2] gravitation in zurich
+G= [0;0;9.85]; % [m/s^2] gravitation in zurich
 dis=[0;0;0];%displacementvector of the box
-MAG1=21449.9;% [nano tesla] magnetic field in zurich
-MAG2=595.1;
-MAG3=42682.6;
+MAG1=0.2145;% [Gauss] magnetic field in zurich
+MAG2=0.0060;
+MAG3=0.4268;
 Rl= geocradius(47+24/60); %from zurich
 Rp= Rl*cos(8+32/60); %from zurich
 lat0=47+24/60;
@@ -18,25 +18,25 @@ NOISE_ACC_b=[0.002;0.002;0.002];%noise accelerometer
 NOISE_GYRO_b=[0.05;0.05;0.05];%noise gyro
 NOISE_MAG_b=[0.5;0.5;0.5];%check data sheet again!!!!!!!!!!!!!!
 
-NOISE_GPS_POS=0;% Noise in position of the GPS
-NOISE_GPS_VEL=0;%Noise in velocity of the GPS
+NOISE_GPS_POS=0.005;% Noise in position of the GPS
+NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
 
 
 
 %------------------------
 % variables with initial values are defined
 %------------------------
-x = zeros(21)';
+x = [-0.08372,-0.2276,-0.8123,-0.5,-0.2,0,0,-0.2901,-1.9233, 0, 0.0171, -2.2197,0,0,0,0,0,0,0,0,0]';
 P = zeros(size(x,2),size(x,2));
-q = [1,0,0,0]';
+q = [0,0,1,0]';
 
 syms q1 q2 q3 q4;
 syms vn_old ve_old vd_old;
 syms lat long alt vn ve vd phi thet psi d_phi d_thet d_psi bax bay baz bgx bgy bgz bmx bmy bmz vn_old ve_old vd_old phi_old thet_old psi_old d_phi_old d_thet_old d_psi_old real;
-syms lat_e long_e alt_e vn_e ve_e vd_e phi_e thet_e psi_e d_phi_e d_thet_e d_psi_e bax_e bay_e baz_e bgx_e bgy_e bgz_e bmx_e bmy_e bmz_e real;
+% syms lat_e long_e alt_e vn_e ve_e vd_e phi_e thet_e psi_e d_phi_e d_thet_e d_psi_e bax_e bay_e baz_e bgx_e bgy_e bgz_e bmx_e bmy_e bmz_e real;
 vf=[lat, long, alt, vn, ve, vd, phi, thet, psi, d_phi, d_thet, d_psi, bax, bay, baz, bgx, bgy, bgz, bmx, bmy, bmz];
 quat= [q1, q2, q3, q4];
-vh=[lat_e, long_e, alt_e, vn_e, ve_e, vd_e, phi_e, thet_e, psi_e, d_phi_e, d_thet_e, d_psi_e, bax_e, bay_e, baz_e, bgx_e, bgy_e, bgz_e, bmx_e, bmy_e, bmz_e];
+% vh=[lat_e, long_e, alt_e, vn_e, ve_e, vd_e, phi_e, thet_e, psi_e, d_phi_e, d_thet_e, d_psi_e, bax_e, bay_e, baz_e, bgx_e, bgy_e, bgz_e, bmx_e, bmy_e, bmz_e];
 
 
 
@@ -53,17 +53,79 @@ DCM_bi=DCM_br*DCM_ir';
 % jacobian matrix is calculated
 %------------------------
 
-x_i=(lat-lat0)*Rl;
-y_i=(long-long0)*Rp;
-z_i=-alt;
-pos=[x_i,y_i,z_i];
-R=norm(pos);
-rotvec=vrrotvec(pos./R,[0,0,-1]);
-alpha=rotvec(4);
+% x_i=(lat-lat0)*Rl;
+% y_i=(long-long0)*Rp;
+% z_i=-alt;
+% pos=[x_i,y_i,z_i];
+% R=norm(pos);
+% rotvec=vrrotvec(pos./R,[0,0,-1]);
+% alpha=rotvec(4);
+pos =[lat,long,alt]';
+dpos= [vn, ve, vd]';
+cardan=[phi, thet, psi]';
+dcardan=[d_phi,d_thet,d_psi]';
+%Conversion from KF variables to model variables
+    %%Achtung definition von Phi und Theta und Psii!!!!!
+    R=norm(pos);
+    Theta=atan2(-pos(3),sqrt(pos(1)^2+pos(2)^2));
+    Psii=atan2(pos(2),pos(1));
+    dR=0;
+    %dR=[cos(Psii)*cos(Theta) sin(Psii)*cos(Theta) -sin(Theta)]*dpos;
+    dPsii=[-sin(Psii)/(R*cos(Theta)) cos(Psii)/(R*cos(Theta)) 0]*dpos;
+    dTheta=[-cos(Psii)*sin(Theta)/R -sin(Psii)*sin(Theta)/R, -cos(Theta)/R] *dpos;
+    
+    %DCM_ir=calc_DCM_ir(q);
+    DCM_ri=DCM_ir';
+    %DCM_br=calc_DCM_br(cardan(1),cardan(2),cardan(3));
+%     DCM_bi=DCM_br*DCM_ri;
+    
+    
+    cardan_mod=[atan2(DCM_bi(2,3),DCM_bi(1,3)) ...
+           asin(DCM_bi(3,3)) ...
+           atan2(-DCM_bi(3,2),-DCM_bi(3,1))]';
+    
+    deuler2body=calc_deuler2body(cardan(1),cardan(2),cardan(3));   
+    deuler2body_mod=calc_deuler2body(cardan_mod(1),cardan_mod(2),cardan_mod(3));
+    
+    dcardan_mod=deuler2body_mod\[0,0,-1;0,1,0;1,0,0]*deuler2body*dcardan;
+    %end of conversion kf variables to model variables
+    %--------------------------------------------------------------------
+    %calculate new phys model variables
+    x=[cardan_mod(1) Theta Psii R dcardan_mod(1) dTheta dPsii dR]';
+    [x_n]=runge_kutta(@pendulum,x,0,dt);
+    cardan_mod_n=x_n(1:3); %cardan_mod_n = cardan_mod_n';
+    dcardan_mod_n=x_n(5:7); %dcardan_mod_n = dcardan_mod_n';
+    R_n=x_n(4);
+    dR_n=x_n(8);
+    %end of calculation of new model variables
+    %--------------------------------------------------------------------
+    
+    %conversion of new model variables to new kf variables:
+   
+    DCM_b2i_n=calc_DCM_br(cardan_mod_n(1),cardan_mod_n(2),cardan_mod_n(3));
+    DCM_br_n=[0,0,1;0,1,0;-1,0,0]*DCM_b2i_n*DCM_ir;
+    
+    cardan_n=[atan2(DCM_br_n(2,3),DCM_br_n(3,3)) ...
+              asin(-DCM_br_n(1,3)) ...
+              atan2(DCM_br_n(1,2),DCM_br_n(1,1))];
+   
+    deuler2body_n=calc_deuler2body(cardan_n(1),cardan_n(2),cardan_n(3));   
+    deuler2body_mod_n=calc_deuler2body(cardan_mod_n(1),cardan_mod_n(2),cardan_mod_n(3));
+    
+    dcardan_n=deuler2body_n\[0,0,1;0,1,0;-1,0,0]*deuler2body_mod_n*dcardan_mod_n;
+    
+    pos_n=R_n*[cos(cardan_mod_n(3))*cos(cardan_mod_n(2));...
+        sin(cardan_mod_n(3))*cos(cardan_mod_n(2));...
+        -sin(cardan_mod_n(2))];
+    dpos_n=[cos(cardan_mod_n(2))*cos(cardan_mod_n(3))*dR_n-sin(cardan_mod_n(2))*cos(cardan_mod_n(3))*R_n*dcardan_mod_n(2)-cos(cardan_mod_n(2))*sin(cardan_mod_n(3))*R_n*dcardan_mod_n(3);...
+        cos(cardan_mod_n(2))*sin(cardan_mod_n(3))*dR_n-sin(cardan_mod_n(2))*sin(cardan_mod_n(3))*R_n*dcardan_mod_n(2)+cos(cardan_mod_n(2))*cos(cardan_mod_n(3))*R_n*dcardan_mod_n(3);...
+        -sin(cardan_mod_n(2))*dR_n-cos(cardan_mod_n(2))*R_n*dcardan_mod_n(2)];
 
-f=
 
+    %end of conversion 
+    %--------------------------------------------------------------------
 
+f=[pos_n;dpos_n;cardan_n;d_cardan_n;bax;bay;baz;bgx;bgy;bgz;bmx;bmy;bmz];
 
 
 %definition of h
@@ -76,7 +138,7 @@ v_old=[vn_old,ve_old,vd_old];
 
 h1=[lat;long;alt] + DCM_bi'*dis; %pos
 h2=v + DCM_bi'*vg; %vel
-h3=DCM_bi*(((v+DCM_bi'*vg)-(v_old+DCM_bi'*vg_old))./t+G);%acc
+h3=DCM_bi*(((v+DCM_bi'*vg)-(v_old+DCM_bi'*vg_old))./t-G);%acc
 h4=w;%gyr
 h5=DCM_bi*[MAG1;MAG2;MAG3];%magnetometer
 h6=0;%pressure sensor
@@ -93,11 +155,12 @@ NOISE_ACC_i=DCM_ir*(NOISE_ACC_b.^2);
 NOISE_VEL_i=(NOISE_ACC_i.^2)*t;
 NOISE_POS_i=(NOISE_VEL_i.^2)*t;
 NOISE_GYRO_i=DCM_ir(NOISE_GYRO_b.^2);
-q_diag=[NOISE_POS_i',NOISE_VEL_i',NOISE_GYRO_i',0,0,0,0,0,0,0,0,0];
+% q_diag=[NOISE_POS_i',NOISE_VEL_i',NOISE_GYRO_i',0,0,0,0,0,0,0,0,0];
+q_diag=[0.001,0.001,0.001,0.001,0.001,0.001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0,0,0,0,0,0,0,0,0];
 Q=diag(q_diag);
 
 
-r=[NOISE_GPS_POS,NOISE_GPS_POS,NOISE_GPS_POS,NOISE_GPS_VEL,NOISE_GPS_VEL,NOISE_GPS_VEL,(NOISE_ACC_b.^2)',(NOISE_MAG_B.^)'];
+r=[NOISE_GPS_POS,NOISE_GPS_POS,NOISE_GPS_POS,NOISE_GPS_VEL,NOISE_GPS_VEL,NOISE_GPS_VEL,(NOISE_ACC_b.^2)',(NOISE_MAG_B.^2)'];
 R=diag(r);
 
 
@@ -106,7 +169,7 @@ R=diag(r);
 % for every measurement the Extended Kalman Filter is used for state
 % estimation
 %------------------------
-totalTime=0;
+totalTime=meas_time(1);
 i=1;
 while (i<size(M,2))
     totalTime=totalTime+t;
@@ -183,7 +246,7 @@ while (i<size(M,2))
     %correction step
     
     i_old =i-1;
-    while(meas_time(i)<=totalTime)
+    while(meas_time(i+1)<=totalTime)
         i=i+1;
     end
     z_new=M(:,i);
@@ -193,28 +256,35 @@ while (i<size(M,2))
    
     meas_control= d_meas(counter_new,counter_old,length_z);
     
-    for j=1:size(meas_control)
+    x_tmp=x_est;
+    p_tmp=P_est;
+    for j=1:size(meas_control)                  % if we have new data, correction step is done
         if meas_control(j)==1
-            [x_new(j),P(j,:)]= correction2(P_est,H(j,:),R(j,:),z_new(j),x_est,j);
-        else
-            x_new(j)=x_est(j);
-            P(j,:)=P_est(j,:);
+            [x_tmp,P_tmp]= correction2(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
+            
         end
+            
     end
+    x_new=x_tmp;
+    P=P_tmp;
     end
     
     
-    %rest
+    %reset
     phi = x_new(7);
-    psi = x_new(8);
-    thet = x_new(9);
+    thet= x_new(8);
+    psi = x_new(9);
     
     DCM=eval(DCM_bi');
     q=DCMtoQ(DCM);
-
+    deuler2body=calc_deuler2body(x_new(7),x_new(8),x_new(9));
+    
+    
     x_new(7)=0;
     x_new(8)=0;
     x_new(9)=0;
+    x_new(10:12)=DCM*deuler2body*x_new(10:12);
+    
     
     x=x_new;
     state(:,i)=x_new;
