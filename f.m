@@ -1,4 +1,4 @@
-function [x_est]=f(x,DCM_ir,DCM_br)
+function [x_est]=f(x,DCM_ir,DCM_br,t)
 %%
 %------------------------
 % the physical model and the measurement-state realation are defined. the
