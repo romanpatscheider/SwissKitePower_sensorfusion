@@ -6,7 +6,7 @@ for i=1:5
         meas_control_vector(3*i)=0;
     else
         meas_control_vector(3*i-2)=1;
-        meas_control_vector(3*i-1)=1
+        meas_control_vector(3*i-1)=1;
         meas_control_vector(3*i)=1;
     end
 end

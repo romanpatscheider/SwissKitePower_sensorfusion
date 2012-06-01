@@ -27,7 +27,7 @@ NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
 % variables with initial values are defined
 %------------------------
 x = [-0.08372,-0.2276,-0.8123,-0.5,-0.2,0,0,-0.2901,-1.9233, 0, 0.0171, -2.2197,0,0,0,0,0,0,0,0,0]';
-P = zeros(size(x,2),size(x,2));
+P = zeros(size(x,1),size(x,1));
 q = [0,0,1,0]';
 
 syms q1 q2 q3 q4;
@@ -47,7 +47,7 @@ DCM_ir=calc_DCM_ir(quat);
 DCM_br=calc_DCM_br(phi,thet,pssi);
 DCM_bi=DCM_br*DCM_ir';
 
-
+%%
 %------------------------
 % the physical model and the measurement-state realation are defined. the
 % jacobian matrix is calculated
@@ -100,18 +100,18 @@ dcardan=[d_phi,d_thet,d_psi]';
 %            atan2(-DCM_bi(3,2),-DCM_bi(3,1))]';
     
     deuler2body=calc_deuler2body(cardan(1),cardan(2),cardan(3));   
-    deuler2body_mod=calc_deuler2body(cardan_mod(1),cardan_mod(2),cardan_mod(3));
+    body2deuler_mod=calc_body2deuler(cardan_mod(1),cardan_mod(2),cardan_mod(3));
     
-    dcardan_mod=inv(deuler2body_mod)*[0,0,-1;0,1,0;1,0,0]*deuler2body*dcardan;
+    dcardan_mod=body2deuler_mod*[0,0,-1;0,1,0;1,0,0]*deuler2body*dcardan;
     %end of conversion kf variables to model variables
     %--------------------------------------------------------------------
     %calculate new phys model variables
-    x=[cardan_mod(1) Theta Psii R dcardan_mod(1) dTheta dPsii dR]';
-    [x_n]=runge_kutta(@pendulum,x,0,t);
-    cardan_mod_n=x_n(1:3); %cardan_mod_n = cardan_mod_n';
-    dcardan_mod_n=x_n(5:7); %dcardan_mod_n = dcardan_mod_n';
-    R_n=x_n(4);
-    dR_n=x_n(8);
+    state=[cardan_mod(1) Theta Psii R dcardan_mod(1) dTheta dPsii dR]';
+    [state_n]=runge_kutta(@pendulum,state,0,t);
+    cardan_mod_n=state_n(1:3); %cardan_mod_n = cardan_mod_n';
+    dcardan_mod_n=state_n(5:7); %dcardan_mod_n = dcardan_mod_n';
+    R_n=state_n(4);
+    dR_n=state_n(8);
     %end of calculation of new model variables
     %--------------------------------------------------------------------
     
@@ -128,17 +128,16 @@ dcardan=[d_phi,d_thet,d_psi]';
     
      cardan_n=[2*atan( (sqrt(x6^2+y6^2)-x6)/y6) ...
               asin(-DCM_br_n(1,3)) ...
-              2*atan( (sqrt(x7^2+y7^2)-x7)/y7)];
+              2*atan( (sqrt(x7^2+y7^2)-x7)/y7)]';
     
 %     cardan_n=[atan2(DCM_br_n(2,3),DCM_br_n(3,3)) ...
 %               asin(-DCM_br_n(1,3)) ...
 %               atan2(DCM_br_n(1,2),DCM_br_n(1,1))];
    
-    deuler2body_n=calc_deuler2body(cardan_n(1),cardan_n(2),cardan_n(3));   
+    body2deuler_n=calc_body2deuler(cardan_n(1),cardan_n(2),cardan_n(3));   
     deuler2body_mod_n=calc_deuler2body(cardan_mod_n(1),cardan_mod_n(2),cardan_mod_n(3));
     
-    %dcardan_n=inv(deuler2body_n)*[0,0,1;0,1,0;-1,0,0]*deuler2body_mod_n*dcardan_mod_n;
-     dcardan_n=deuler2body_n*[0,0,1;0,1,0;-1,0,0]*deuler2body_mod_n*dcardan_mod_n;
+    dcardan_n=body2deuler_n*[0,0,1;0,1,0;-1,0,0]*deuler2body_mod_n*dcardan_mod_n;
     pos_n=R_n*[cos(cardan_mod_n(3))*cos(cardan_mod_n(2));...
         sin(cardan_mod_n(3))*cos(cardan_mod_n(2));...
         -sin(cardan_mod_n(2))];
@@ -169,8 +168,9 @@ h5=DCM_bi*[MAG1;MAG2;MAG3];%magnetometer
 h6=0;%pressure sensor
 h=[h1;h2;h3;h4;h5;h6];
 
-
-tmp_A= jacobian(f,vf);
+%%
+%tmp_A= jacobian(f,vf);
+A=eye(21);
 tmp_H= jacobian(h,vf);
 
 %------------------------
@@ -189,7 +189,7 @@ r=[NOISE_GPS_POS,NOISE_GPS_POS,NOISE_GPS_POS,NOISE_GPS_VEL,NOISE_GPS_VEL,NOISE_G
 R=diag(r);
 
 
-
+%%
 %------------------------
 % for every measurement the Extended Kalman Filter is used for state
 % estimation
@@ -282,10 +282,10 @@ while (i<size(M,2))
     meas_control= d_meas(counter_new,counter_old,length_z);
     
     x_tmp=x_est;
-    p_tmp=P_est;
+    P_tmp=P_est;
     for j=1:size(meas_control)                  % if we have new data, correction step is done
         if meas_control(j)==1
-            [x_tmp,P_tmp]= correction2(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
+            [x_tmp,P_tmp]= correction(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
             
         end
             
@@ -312,8 +312,8 @@ while (i<size(M,2))
     
     
     x=x_new;
-    state(:,i)=x_new;
-    state_est(:,i)=x_est;
+    save(:,i)=x_new;
+    save_est(:,i)=x_est;
     
     
 end
