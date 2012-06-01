@@ -61,7 +61,7 @@ dcardan=x(10:12);
       
     cardan_n=[atan2(DCM_br_n(2,3),DCM_br_n(3,3)) ...
               asin(-DCM_br_n(1,3)) ...
-              atan2(DCM_br_n(1,2),DCM_br_n(1,1))];
+              atan2(DCM_br_n(1,2),DCM_br_n(1,1))]';
    
     body2deuler_n=calc_body2deuler(cardan_n(1),cardan_n(2),cardan_n(3));   
     deuler2body_mod_n=calc_deuler2body(cardan_mod_n(1),cardan_mod_n(2),cardan_mod_n(3));
