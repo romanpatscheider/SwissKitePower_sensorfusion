@@ -1,4 +1,4 @@
-function [z,A]=jaccsd_f(fun,x,DCM_ir, DCM_br,t)
+function [z,A]=jaccsd_f(fun,fun_imag,x,DCM_ir, DCM_br,t)
 % JACCSD Jacobian through complex step differentiation
 % [z J] = jaccsd(f,s)
 % z = f(x)
@@ -12,5 +12,5 @@ h=n*eps;
 for k=1:n
     x1=x;
     x1(k)=x1(k)+h*i;
-    A(:,k)=imag(fun(x1,DCM_ir,DCM_br,t))/h;
+    A(:,k)=imag(fun_imag(x1,DCM_ir,DCM_br,t))/h;
 end
