@@ -4,7 +4,7 @@ function [z,A]=jaccsd_h(fun,x,x_old,DCM_bi)
 % z = f(x)
 % J = f'(x)
 %
-z=fun(x,xold,DCM_bi);
+z=fun(x,x_old,DCM_bi);
 n=numel(x);
 m=numel(z);
 A=zeros(m,n);
