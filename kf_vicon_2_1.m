@@ -17,7 +17,7 @@ VI=csvread('positionlog_KiteBox_19.23.21.533.csv');
 %bringing sensors and vicon together. NO NOISE added to vicon
 %------------------------
 %% deleting error measurements
-[meas_time_X,acc_X,gyro_X,magn_X,counter_X]=delete_meas_error(10,580,meas_time_X,acc_X,gyro_X,magn_X,counter_X);
+%[meas_time_X,acc_X,gyro_X,magn_X,counter_X]=delete_meas_error(10,580,meas_time_X,acc_X,gyro_X,magn_X,counter_X);
 [meas_time_P,acc_P,gyro_P,magn_P,counter_P]=delete_meas_error(10,580,meas_time_P,acc_P,gyro_P,magn_P,counter_P);
 
 %% VI posiotion and velocity + PixHawk
@@ -90,7 +90,7 @@ plot(meas_time_X,pos_VI_x(1,:)*10,meas_time_X,acc_X(3,:));legend('pos','xacc')
 %% Building Segments
 [segment1_Z_P,segment1_counter_P,segment1_time_P]=build_segment(57.8240, 149.7180, Z_p,counter_P_new,meas_time_P);
 
-%%
+
 segment1_Z_P(1:3,:)=[segment1_Z_P(1,:)-0.13165*ones(1,size(segment1_Z_P,2));segment1_Z_P(2,:)-0.21*ones(1,size(segment1_Z_P,2));segment1_Z_P(3,:)-1.347185*ones(1,size(segment1_Z_P,2))];
 
 %%
