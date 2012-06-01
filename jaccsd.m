@@ -1,6 +1,6 @@
 function [z,A]=jaccsd(fun,x)
 % JACCSD Jacobian through complex step differentiation
-% [z J] = jaccsd(f,x)
+% [z J] = jaccsd(f,s)
 % z = f(x)
 % J = f'(x)
 %

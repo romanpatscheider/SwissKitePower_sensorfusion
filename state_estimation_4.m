@@ -9,8 +9,8 @@ MAG1=0.2145;% [Gauss] magnetic field in zurich
 MAG2=0.0060;
 MAG3=0.4268;
 mag=[MAG1,MAG2,MAG3];
-Rl= geocradius(47+24/60); %from zurich
-Rp= Rl*cos(8+32/60); %from zurich
+%Rl= geocradius(47+24/60); %from zurich
+%Rp= Rl*cos(8+32/60); %from zurich
 lat0=47+24/60;
 long0=8+32/60;
 % noise form Xsens datasheet
@@ -50,8 +50,9 @@ R=diag(r);
 %------------------------
 totalTime=meas_time(1);
 i=1;
+k=1;
 while (i<size(M,2))
-    totalTime=totalTime+t;
+    totalTime=totalTime+t
     %------------------------
     % direct cosine matrice gets calculated
     %------------------------
@@ -76,7 +77,11 @@ while (i<size(M,2))
    
     [z_est,H]=jaccsd_h(@h,x_est,x,DCM_bi,t,dis,G,mag);
     
-    i_old =i-1;
+    if(i==1)
+        i_old=10;
+    else
+        i_old =i-1;
+    end
     while(meas_time(i+1)<=totalTime)
         i=i+1;
     end
@@ -98,7 +103,7 @@ while (i<size(M,2))
               % P=P-K*P12';               %state covariance matrix
               S=chol(H(j,:)*P12+R(j,j));            %Cholesky factorization
               U=P12/S;                    %K=U/R'; Faster because of back substitution
-              x_tmp=x_tmp+U*(S'\(z(j)-z_est(j)));         %Back substitution to get state update
+              x_tmp=x_tmp+U*(S'\(z_new(j)-z_est(j)));         %Back substitution to get state update
               P_tmp=P_tmp-U*U';
             
         end
@@ -108,26 +113,27 @@ while (i<size(M,2))
     P=P_tmp;
     end
     
-    
+    %saving:
+    save(:,k)=x_new;
+    save_est(:,k)=x_est;
+    k=k+1;
     %reset
-    phi = x_new(7);
-    thet= x_new(8);
-    pssi = x_new(9);
+        
+    DCM_br=calc_DCM_br(x_new(7),x_new(8),x_new(9));
+    DCM_bi=DCM_br*DCM_ir';
     
-    DCM=eval(DCM_bi');
-    quat=DCMtoQ(DCM);
+    quat=DCMtoQ(DCM_bi');
     deuler2body=calc_deuler2body(x_new(7),x_new(8),x_new(9));
     
     
     x_new(7)=0;
     x_new(8)=0;
     x_new(9)=0;
-    x_new(10:12)=DCM*deuler2body*x_new(10:12);
+    x_new(10:12)=DCM_br'*deuler2body*x_new(10:12);
     
     
     x=x_new;
-    save(:,i)=x_new;
-    save_est(:,i)=x_est;
+    
     
     
 end

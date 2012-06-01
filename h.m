@@ -49,5 +49,5 @@ h2=v + DCM_bi'*vg; %vel
 h3=DCM_bi*(((v+DCM_bi'*vg)-(v_old+DCM_bi'*vg_old))./t-G);%acc
 h4=w;%gyr
 h5=DCM_bi*[MAG1;MAG2;MAG3];%magnetometer
-h
+
 z_est=[h1;h2;h3;h4;h5];
