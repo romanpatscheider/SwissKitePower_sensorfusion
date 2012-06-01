@@ -165,8 +165,7 @@ h2=v + DCM_bi'*vg; %vel
 h3=DCM_bi*(((v+DCM_bi'*vg)-(v_old+DCM_bi'*vg_old))./t-G);%acc
 h4=w;%gyr
 h5=DCM_bi*[MAG1;MAG2;MAG3];%magnetometer
-h6=0;%pressure sensor
-h=[h1;h2;h3;h4;h5;h6];
+h=[h1;h2;h3;h4;h5];
 
 %%
 %tmp_A= jacobian(f,vf);
@@ -185,7 +184,7 @@ q_diag=[0.001,0.001,0.001,0.001,0.001,0.001,0.0001,0.0001,0.0001,0.0001,0.0001,0
 Q=diag(q_diag);
 
 
-r=[NOISE_GPS_POS,NOISE_GPS_POS,NOISE_GPS_POS,NOISE_GPS_VEL,NOISE_GPS_VEL,NOISE_GPS_VEL,(NOISE_ACC_b.^2)',(NOISE_MAG_b.^2)'];
+r=[NOISE_GPS_POS,NOISE_GPS_POS,NOISE_GPS_POS,NOISE_GPS_VEL,NOISE_GPS_VEL,NOISE_GPS_VEL,(NOISE_ACC_b.^2)',(NOISE_GYRO_b.^2)',(NOISE_MAG_b.^2)'];
 R=diag(r);
 
 

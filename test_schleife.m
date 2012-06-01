@@ -1,6 +1,7 @@
 % test while schleife
 totalTime=meas_time(1);
 i=1;
+k=1;
 while (i<size(M,2))
     totalTime=totalTime+t
     % values for the symbols for the x state
@@ -29,7 +30,7 @@ while (i<size(M,2))
     q2  = q(2);
     q3  = q(3);
     q4  = q(4);
-    %A = eval(tmp_A);
+    A = eval(tmp_A);
     
     %estimation step
     [x_est,P_est]=estimation(A,P,Q,x);
@@ -94,7 +95,7 @@ while (i<size(M,2))
     for j=1:size(meas_control,2)                  % if we have new data, correction step is done
         if meas_control(j)==1
             [x_tmp,P_tmp]= correction(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp);
-            x_tmp
+            
             
         end
             
@@ -121,9 +122,9 @@ while (i<size(M,2))
     
     
     x=x_new;
-    save(:,i)=x_new;
-    save_est(:,i)=x_est;
-    
+    save(:,k)=x_new;
+    save_est(:,k)=x_est;
+    k=k+1;
     
 end
 
