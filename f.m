@@ -1,4 +1,4 @@
-function [x_est]=f(x,q)
+function [x_est]=f(x,DCM_ir,DCM_br)
 %%
 %------------------------
 % the physical model and the measurement-state realation are defined. the
@@ -12,6 +12,7 @@ function [x_est]=f(x,q)
 % R=norm(pos);
 % rotvec=vrrotvec(pos./R,[0,0,-1]);
 % alpha=rotvec(4);
+
 pos =x(1:3);
 dpos=x(4:6);
 cardan=x(7:9);
@@ -26,9 +27,10 @@ dcardan=x(10:12);
     dPsii=[-sin(Psii)/(R*cos(Theta)) cos(Psii)/(R*cos(Theta)) 0]*dpos;
     dTheta=[-cos(Psii)*sin(Theta)/R -sin(Psii)*sin(Theta)/R, -cos(Theta)/R] *dpos;
     
-    DCM_ir=calc_DCM_ir(q);
+%     DCM_ir=calc_DCM_ir(q);
+
     DCM_ri=DCM_ir';
-    DCM_br=calc_DCM_br(cardan(1),cardan(2),cardan(3));
+%     DCM_br=calc_DCM_br(cardan(1),cardan(2),cardan(3));
     DCM_bi=DCM_br*DCM_ri;
     
     cardan_mod=[atan2(DCM_bi(2,3),DCM_bi(1,3)) ...
