@@ -96,8 +96,8 @@ segment1_Z_P(1:3,:)=[segment1_Z_P(1,:)-0.13165*ones(1,size(segment1_Z_P,2));segm
 %%
 diffed=diff(segment1_Z_P(1:3,:)');
 %%
-%plot(segment1_time_P,segment1_Z_P(1:3,:),segment1_time_P(1:size(diffed,1)),diffed');legend('X','Y','Z','dx','dy','dz');
-plot(segment1_time_P,10*segment1_Z_P(1:3,:),segment1_time_P,segment1_Z_P(7:9,:),segment1_time_P,segment1_Z_P(10:12,:),'.');legend('X','Y','Z','ax','ay','az','gx','gy','gz');
+plot(segment1_time_P,segment1_Z_P(1:3,:),segment1_time_P(1:size(diffed,1)),diffed'./[diff(segment1_time_P')';diff(segment1_time_P')';diff(segment1_time_P')']);legend('X','Y','Z','dx','dy','dz');
+%plot(segment1_time_P,10*segment1_Z_P(1:3,:),segment1_time_P,segment1_Z_P(7:9,:),segment1_time_P,segment1_Z_P(10:12,:),'.');legend('X','Y','Z','ax','ay','az','gx','gy','gz');
 %plot(segment4_time_P,10*segment4_Z_P(1:3,:),segment4_time_P,segment4_Z_P(7:9,:),segment4_time_P,segment4_Z_P(10:12,:),'.');legend('X','Y','Z','ax','ay','az','gx','gy','gz');
 
 %%
