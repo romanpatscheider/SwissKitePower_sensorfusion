@@ -29,7 +29,7 @@ meas_time_VI_new=meas_time_VI';
 VI_new=VI';
 
 for i=2:4
-      pos_VI_p(i-1,:)=interp1(meas_time_VI_new+42.622+0.5100,VI_new(i,:),meas_time_P);
+      pos_VI_p(i-1,:)=interp1(meas_time_VI_new+42.622+0.5100+0.49,VI_new(i,:),meas_time_P);
 end
 
 Z_p=[(pos_VI_p)/1000;zeros(3,size(meas_time_P,2));acc_P;gyro_P;magn_P];
@@ -96,18 +96,22 @@ segment1_Z_P(1:3,:)=[segment1_Z_P(1,:)-0.13165*ones(1,size(segment1_Z_P,2));segm
 %%
 diffed=diff(segment1_Z_P(1:3,:)');
 %%
-plot(segment1_time_P,segment1_Z_P(1:3,:),segment1_time_P(1:size(diffed,1)),diffed');legend('X','Y','Z','dx','dy','dz');
+%plot(segment1_time_P,segment1_Z_P(1:3,:),segment1_time_P(1:size(diffed,1)),diffed');legend('X','Y','Z','dx','dy','dz');
+plot(segment1_time_P,10*segment1_Z_P(1:3,:),segment1_time_P,segment1_Z_P(7:9,:),segment1_time_P,segment1_Z_P(10:12,:),'.');legend('X','Y','Z','ax','ay','az','gx','gy','gz');
+%plot(segment4_time_P,10*segment4_Z_P(1:3,:),segment4_time_P,segment4_Z_P(7:9,:),segment4_time_P,segment4_Z_P(10:12,:),'.');legend('X','Y','Z','ax','ay','az','gx','gy','gz');
 
 %%
 [segment1_Z_X,segment1_counter_X,segment1_time_X]=build_segment(57.8240, 149.7180, Z_x,counter_X_new,meas_time_X);
 
 [segment2_Z_P,segment2_counter_P,segment2_time_P]=build_segment(149.7180, 228.2, Z_p,counter_P_new,meas_time_P);
 [segment2_Z_X,segment2_counter_X,segment2_time_X]=build_segment(149.7180, 228.2, Z_x,counter_X_new,meas_time_X);
-
+%%
 [segment3_Z_P,segment3_counter_P,segment3_time_P]=build_segment(228.2, 314.6150, Z_p,counter_P_new,meas_time_P);
+%%
 [segment3_Z_X,segment3_counter_X,segment3_time_X]=build_segment(228.2, 314.6150, Z_x,counter_X_new,meas_time_X);
-
+%%
 [segment4_Z_P,segment4_counter_P,segment4_time_P]=build_segment(314.6150, 4.444950000000000e+02, Z_p,counter_P_new,meas_time_P);
+%%
 [segment4_Z_X,segment4_counter_X,segment4_time_X]=build_segment(314.6150, 4.444950000000000e+02, Z_x,counter_X_new,meas_time_X);
 
 [segment5_Z_P,segment5_counter_P,segment5_time_P]=build_segment(4.444950000000000e+02, 580, Z_p,counter_P_new,meas_time_P);
