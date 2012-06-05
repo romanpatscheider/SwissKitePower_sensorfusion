@@ -74,8 +74,11 @@ while (i<size(M,2))
     
     
     %correction step
+    
+    DCM_br_est=calc_DCM_br(x_est(7),x_est(8),x_est(9));
+    DCM_bi_est=DCM_br_est*DCM_ir';
    
-    [z_est,H]=jaccsd_h(@h,x_est,x,DCM_bi,t,dis,G,mag);
+    [z_est,H]=jaccsd_h(@h,x_est,x,DCM_bi_est,t,dis,G,mag);
     
     if(i==1)
         i_old=10;
@@ -94,7 +97,7 @@ while (i<size(M,2))
     
     x_tmp=x_est;
     P_tmp=P_est;
-    for j=1:size(meas_control)                  % if we have new data, correction step is done
+    for j=1:size(meas_control,2)                  % if we have new data, correction step is done
         if meas_control(j)==1
 %             [x_tmp,P_tmp]= correction(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
               P12=P_tmp*H(j,:)';                   %cross covariance
