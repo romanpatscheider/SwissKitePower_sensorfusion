@@ -14,9 +14,9 @@ mag=[MAG1,MAG2,MAG3];
 lat0=47+24/60;
 long0=8+32/60;
 % noise form Xsens datasheet
-NOISE_ACC_b=[0.002;0.002;0.002];%noise accelerometer
-NOISE_GYRO_b=[0.05;0.05;0.05];%noise gyro
-NOISE_MAG_b=[0.5;0.5;0.5];%check data sheet again!!!!!!!!!!!!!!
+NOISE_ACC_b=[0.0014;0.0014;0.0014];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
+NOISE_GYRO_b=[0.03;0.03;0.03]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
+NOISE_MAG_b=[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
 NOISE_GPS_POS=0.005;% Noise in position of the GPS
 NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
