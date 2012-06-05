@@ -25,8 +25,14 @@ NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
 
 %------------------------
 % variables with initial values are defined
+% [0.451525000000000;-0.0250317999999978;-0.715591800000000;][0,-0.56358145
+% 5457894,-0.0553776831161063;][0;0.173924051749699;-1.73248360301804;]
 %------------------------
-x = [-0.08372,-0.2276,-0.8123,-0.5,-0.2,0,0,-0.2901,-1.9233, 0, 0.0171, -2.2197,0,0,0,0,0,0,0,0,0]';
+x = [0.451525,-0.02503,-0.7155918,...
+    -0.1635,-0.7756,-0.0852,...
+    0,-0.563581455457894, -0.0553776831161063,...
+    0,0.173924051749699,-1.73248360301804,...
+    0,0,0,0,0,0,0,0,0]';
 P = zeros(size(x,1),size(x,1));
 quat = [0,0,1,0]';
 %------------------------
@@ -58,7 +64,7 @@ while (i<size(M,2))
     %------------------------
     DCM_ir=calc_DCM_ir(quat);
     DCM_br=calc_DCM_br(x(7),x(8),x(9));
-    DCM_bi=DCM_br*DCM_ir';
+    %DCM_bi=DCM_br*DCM_ir';
     
     [x_est,A]=jaccsd_f(@f,@f_imag,x,DCM_ir,DCM_br,t);
     
@@ -78,7 +84,7 @@ while (i<size(M,2))
     DCM_br_est=calc_DCM_br(x_est(7),x_est(8),x_est(9));
     DCM_bi_est=DCM_br_est*DCM_ir';
    
-    [z_est,H]=jaccsd_h(@h,x_est,x,DCM_bi_est,t,dis,G,mag);
+    [z_est,H]=jaccsd_h(@h2,x_est,x,DCM_bi_est,t,dis,G,mag);
     
     if(i==1)
         i_old=10;
@@ -97,7 +103,8 @@ while (i<size(M,2))
     
     x_tmp=x_est;
     P_tmp=P_est;
-    for j=1:size(meas_control,2)                  % if we have new data, correction step is done
+    for j=1:3
+    %for j=1:size(meas_control,2)                  % if we have new data, correction step is done
         if meas_control(j)==1
 %             [x_tmp,P_tmp]= correction(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
               P12=P_tmp*H(j,:)';                   %cross covariance
@@ -117,8 +124,10 @@ while (i<size(M,2))
     end
     
     %saving:
-    save(:,k)=x_new;
+    save(:,k)=x;
     save_est(:,k)=x_est;
+    save_corr(:,k)=x_new;
+    save_t(k)=totalTime;
     k=k+1;
     %reset
         
@@ -132,7 +141,8 @@ while (i<size(M,2))
     x_new(7)=0;
     x_new(8)=0;
     x_new(9)=0;
-    x_new(10:12)=DCM_br'*deuler2body*x_new(10:12);
+    %x_new(10:12)=DCM_br'*deuler2body*x_new(10:12);
+    x_new(10:12)=deuler2body*x_new(10:12);
     
     
     x=x_new;
@@ -140,3 +150,11 @@ while (i<size(M,2))
     
     
 end
+
+
+%%
+%plot(save_t,save(1:3,:),save_t,save_est(1:3,:),meas_time,M(1:3,:))
+plot(save_t,save(1:3,:),'o-',save_t,save_est(1:3,:),'.',save_t,save_corr(1:3,:),'x-')
+plot(save_t,save(4:6,:),'o-',save_t,save_est(4:6,:),'.',save_t,save_corr(4:6,:),'x-')
+plot(save_t,save(7:9,:),'o-',save_t,save_est(7:9,:),'.',save_t,save_corr(7:9,:),'x-')
+%plot(save_t,save(10:12,:),'o-',save_t,save_est(10:12,:),'.',save_t,save_corr(10:12,:),'x-')
