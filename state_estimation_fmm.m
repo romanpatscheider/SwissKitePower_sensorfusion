@@ -95,10 +95,10 @@ while (i<size(M,2))
     
     %correction step
     
-    DCM_br_est=calc_DCM_br(x_est(7),x_est(8),x_est(9));
-    DCM_bi_est=DCM_br_est*DCM_ir';
+%     DCM_br_est=calc_DCM_br(x_est(7),x_est(8),x_est(9));
+%     DCM_bi_est=DCM_br_est*DCM_ir';
    
-    [z_est,H]=jaccsd_h(@h,x_est,x,DCM_bi_est,t,dis,G,mag);
+    [z_est,H]=jaccsd_h(@h,x_est,x,DCM_ir,t,dis,G,mag);
     
     if(i==1)
         i_old=10;
@@ -141,6 +141,7 @@ while (i<size(M,2))
     save_x(:,k)=x;
     save_new(:,k)=x_new;
     save_est(:,k)=x_est;
+    save_quat(:,k)=quat;
     k=k+1;
     %reset
         
@@ -162,3 +163,12 @@ while (i<size(M,2))
     
     
 end
+
+
+%%
+%plot(save_t,save(1:3,:),save_t,save_est(1:3,:),meas_time,M(1:3,:))
+figure(1);plot(save_time,save_x(1:3,:),'o-',save_time,save_est(1:3,:),'.',save_time,save_new(1:3,:),'x-');
+figure(2);plot(save_time,save_x(4:6,:),'o-',save_time,save_est(4:6,:),'.',save_time,save_new(4:6,:),'x-');
+%figure(3);plot(save_time,save_x(7:9,:),'o-',save_time,save_est(7:9,:),'.',save_time,save_new(7:9,:),'x-');
+figure(3);plot(save_time,save_quat,'.-');
+figure(4);plot(save_time,save_x(10:12,:),'o-',save_time,save_est(10:12,:),'.',save_time,save_new(10:12,:),'x-');

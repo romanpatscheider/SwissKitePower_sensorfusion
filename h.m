@@ -1,4 +1,4 @@
-function [z_est]=h(x_est,x_old,DCM_bi,t,dis,G,mag)
+function [z_est]=h(x_est,x_old,DCM_ir,t,dis,G,mag)
 
     
     MAG1=0.2145;% [Gauss] magnetic field in zurich
@@ -34,7 +34,9 @@ function [z_est]=h(x_est,x_old,DCM_bi,t,dis,G,mag)
     d_phi_old=x_old(10);
     d_thet_old=x_old(11);
     d_psi_old=x_old(12);
-
+    
+DCM_br_est=calc_DCM_br(x_est(7),x_est(8),x_est(9));
+DCM_bi=DCM_br_est*transp(DCM_ir);
 
 
 w=[d_phi;0;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[0;d_thet;0] ...
@@ -43,14 +45,14 @@ w=[d_phi;0;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[0;d_thet;0] ...
 w_old=[d_phi_old;0;0]+[1,0,0;0,cos(phi_old),sin(phi_old);0,-sin(phi_old),cos(phi_old)]*[0;d_thet_old;0] ...
     +[1,0,0;0,cos(phi_old),sin(phi_old);0,-sin(phi_old),cos(phi_old)]...
     *[cos(thet_old), 0, -sin(thet_old);0,1,0;sin(thet_old),0,cos(thet_old)]*[0;0;d_psi_old];
-vg=(cross(w',dis'))';
-vg_old=(cross(w_old',dis'))';
+vg=transp(cross(transp(w),transp(dis)));
+vg_old=transp(cross(transp(w_old),transp(dis)));
 v=[vn;ve;vd];
 v_old=[vn_old;ve_old;vd_old];
 
-h1=[lat;long;alt] + DCM_bi'*dis; %pos
-h2=v + DCM_bi'*vg; %vel
-h3=DCM_bi*(((v+DCM_bi'*vg)-(v_old+DCM_bi'*vg_old))./t-G);%acc
+h1=[lat;long;alt] + transp(DCM_bi)*dis; %pos
+h2=v + transp(DCM_bi)*vg; %vel
+h3=DCM_bi*(((v+transp(DCM_bi)*vg)-(v_old+transp(DCM_bi)*vg_old))./t-G);%acc
 h4=w;%gyr
 h5=DCM_bi*[MAG1;MAG2;MAG3];%magnetometer
 

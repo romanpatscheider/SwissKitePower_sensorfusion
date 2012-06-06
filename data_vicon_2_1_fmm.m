@@ -31,7 +31,7 @@ vel_tmp=zeros(3,size(meas_time_P,2)-1);
 
 size(vel_tmp)
 
-vel=zeros(3,size(meas_time_P));
+vel=zeros(3,size(meas_time_P,2));
 
 
 for i=1:3

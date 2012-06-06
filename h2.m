@@ -1,4 +1,4 @@
-function [z_est]=h(x_est,x_old,DCM_bi,t,dis,G,mag)
+function [z_est]=h(x_est,x_old,DCM_ir,t,dis,G,mag)
 
     
     MAG1=0.2145;% [Gauss] magnetic field in zurich
@@ -8,6 +8,11 @@ function [z_est]=h(x_est,x_old,DCM_bi,t,dis,G,mag)
 
 deuler2body=calc_deuler2body(x_est(7),x_est(8),x_est(9));
 w_body=deuler2body*x_est(10:12);
+
+    
+DCM_br_est=calc_DCM_br(x_est(7),x_est(8),x_est(9));
+DCM_bi=DCM_br_est*transp(DCM_ir);
+
 
 
 %w=[d_phi;0;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[0;d_thet;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[cos(thet), 0, -sin(thet);0,1,0;sin(thet),0,cos(thet)]*[0;0;d_psi];
