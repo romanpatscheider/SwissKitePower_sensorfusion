@@ -38,7 +38,7 @@ dcardan=x(10:12);
     
 %     DCM_ir=calc_DCM_ir(q);
 
-    DCM_ri=DCM_ir';
+    DCM_ri=transp(DCM_ir);
 %     DCM_br=calc_DCM_br(cardan(1),cardan(2),cardan(3));
     DCM_bi=DCM_br*DCM_ri;
     
@@ -47,9 +47,14 @@ dcardan=x(10:12);
     y5=-DCM_bi(3,2);
     x5=-DCM_bi(3,1);
     
-    cardan_mod=[2*atan( (sqrt(x4^2+y4^2)-x4)/y4) ...
+   
+    cardan_mod=transp([2*atan( y4/(sqrt(x4^2+y4^2)+x4)) ...
            asin(DCM_bi(3,3)) ...
-           2*atan( (sqrt(x5^2+y5^2)-x5)/y5)]';
+           2*atan( (sqrt(x5^2+y5^2)-x5)/y5)]);
+    
+%     cardan_mod=transp([2*atan( (sqrt(x4^2+y4^2)-x4)/y4) ...
+%            asin(DCM_bi(3,3)) ...
+%            2*atan( (sqrt(x5^2+y5^2)-x5)/y5)]);
 %     cardan_mod=[atan2(DCM_bi(2,3),DCM_bi(1,3)) ...
 %            asin(DCM_bi(3,3)) ...
 %            atan2(-DCM_bi(3,2),-DCM_bi(3,1))]';
@@ -61,7 +66,7 @@ dcardan=x(10:12);
     %end of conversion kf variables to model variables
     %--------------------------------------------------------------------
     %calculate new phys model variables
-    state=[cardan_mod(1) Theta Psii R dcardan_mod(1) dTheta dPsii dR]';
+    state=transp([cardan_mod(1) Theta Psii R dcardan_mod(1) dTheta dPsii dR]);
     [state_n]=runge_kutta(@pendulum,state,0,t);
     cardan_mod_n=state_n(1:3); %cardan_mod_n = cardan_mod_n';
     dcardan_mod_n=state_n(5:7); %dcardan_mod_n = dcardan_mod_n';
@@ -82,9 +87,9 @@ dcardan=x(10:12);
     x7=DCM_br_n(1,1);
     
     
-     cardan_n=[2*atan( (sqrt(x6^2+y6^2)-x6)/y6) ...
+     cardan_n=transp([2*atan( y6/(sqrt(x6^2+y6^2)+x6)) ...
               asin(-DCM_br_n(1,3)) ...
-              2*atan( (sqrt(x7^2+y7^2)-x7)/y7)]';
+              2*atan( (sqrt(x7^2+y7^2)-x7)/y7)]);
    
     body2deuler_n=calc_body2deuler(cardan_n(1),cardan_n(2),cardan_n(3));   
     deuler2body_mod_n=calc_deuler2body(cardan_mod_n(1),cardan_mod_n(2),cardan_mod_n(3));

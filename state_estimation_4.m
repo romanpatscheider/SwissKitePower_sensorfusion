@@ -34,7 +34,7 @@ x = [0.451525,-0.02503,-0.7155918,...
     0,0.173924051749699,-1.73248360301804,...
     0,0,0,0,0,0,0,0,0]';
 P = zeros(size(x,1),size(x,1));
-quat = [0,0,1,0]';
+quat = [1,0,0,0]';
 %------------------------
 % Q and R are calculated
 %------------------------
@@ -155,6 +155,6 @@ end
 %%
 %plot(save_t,save(1:3,:),save_t,save_est(1:3,:),meas_time,M(1:3,:))
 plot(save_t,save(1:3,:),'o-',save_t,save_est(1:3,:),'.',save_t,save_corr(1:3,:),'x-')
-plot(save_t,save(4:6,:),'o-',save_t,save_est(4:6,:),'.',save_t,save_corr(4:6,:),'x-')
-plot(save_t,save(7:9,:),'o-',save_t,save_est(7:9,:),'.',save_t,save_corr(7:9,:),'x-')
-%plot(save_t,save(10:12,:),'o-',save_t,save_est(10:12,:),'.',save_t,save_corr(10:12,:),'x-')
+%plot(save_t,save(4:6,:),'o-',save_t,save_est(4:6,:),'.',save_t,save_corr(4:6,:),'x-')
+%figure(1);plot(save_t,save(7:9,:),'o-',save_t,save_est(7:9,:),'.',save_t,save_corr(7:9,:),'x-')
+%figure(2);plot(save_t,save(10:12,:),'o-',save_t,save_est(10:12,:),'.',save_t,save_corr(10:12,:),'x-')
