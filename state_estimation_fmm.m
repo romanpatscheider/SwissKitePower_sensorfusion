@@ -24,7 +24,14 @@ NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
 %------------------------
 % variables with initial values are defined
 %------------------------
-x = [-0.08372,-0.2276,-0.8123,-0.5,-0.2,0,0,-0.2901,-1.9233, 0, 0.0171, -2.2197,0,0,0,0,0,0,0,0,0]';
+% x = [-0.08372,-0.2276,-0.8123,-0.5,-0.2,0,0,-0.2901,-1.9233, 0, 0.0171, -2.2197,0,0,0,0,0,0,0,0,0]';
+% P = zeros(size(x,1),size(x,1));
+% quat = [0,0,1,0]';
+x = [0.451525,-0.02503,-0.7155918,...
+    -0.1635,-0.7756,-0.0852,...
+    0,-0.563581455457894, -0.0553776831161063,...
+    0,0.173924051749699,-1.73248360301804,...
+    0,0,0,0,0,0,0,0,0]';
 P = zeros(size(x,1),size(x,1));
 quat = [0,0,1,0]';
 %------------------------
@@ -60,11 +67,11 @@ while (i<size(M,2))
     
     
     %noise, dependent on DCMs
-    NOISE_ACC_i=DCM_ir*(NOISE_ACC_b.^2);
-    NOISE_VEL_i=(NOISE_ACC_i.^2)*t;
-    NOISE_POS_i=(NOISE_VEL_i.^2)*t;
-    NOISE_GYRO_i=DCM_ir*(NOISE_GYRO_b.^2);
-    NOISE_CARTAN_i=(NOISE_GYRO_i.^2)*t;
+%     NOISE_ACC_i=DCM_ir*(NOISE_ACC_b.^2);
+%     NOISE_VEL_i=(NOISE_ACC_i.^2)*t;
+%     NOISE_POS_i=(NOISE_VEL_i.^2)*t;
+%     NOISE_GYRO_i=DCM_ir*(NOISE_GYRO_b.^2);
+%     NOISE_CARTAN_i=(NOISE_GYRO_i.^2)*t;
     
     %q_diag=[NOISE_POS_i',NOISE_VEL_i',NOISE_CARTAN_i', NOISE_GYRO_i',0,0,0,0,0,0,0,0,0];
     q_diag=[0.001,0.001,0.001,0.001,0.001,0.001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0,0,0,0,0,0,0,0,0];
@@ -129,7 +136,9 @@ while (i<size(M,2))
     end
     
     %saving:
-    save(:,k)=x_new;
+    save_time(k)=totalTime;
+    save_x(:,k)=x;
+    save_new(:,k)=x_new;
     save_est(:,k)=x_est;
     k=k+1;
     %reset

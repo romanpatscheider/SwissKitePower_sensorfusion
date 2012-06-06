@@ -14,4 +14,4 @@ f2=[vn;ve;vd];
 f3=[phi+t*d_phi;thet+t*d_thet;pssi+t*d_psi];
 f4=[d_phi;d_thet;d_psi];
 
-x_est=[lat;long;alt;vn;ve;vd;phi;thet;pssi;d_phi;d_thet;d_psi;x(13:21)];
+x_est=[f1;f2;f3;f4;x(13:21)];
