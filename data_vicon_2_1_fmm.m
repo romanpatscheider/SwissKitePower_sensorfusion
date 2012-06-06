@@ -50,7 +50,7 @@ for j=2:size(pos_VI_p,2)
     end
 end
 counter_P_pv(2,1)=1;
-for j=2:size(meas_time_P);
+for j=2:size(meas_time_P,2);
     if vel(1,j) == vel(1,j-1) && vel(2,j) == vel(2,j-1) && vel(3,j) == vel(3,j-1);
         counter_P_pv(2,j)=j-1;
     else counter_P_pv(2,j)=j;
