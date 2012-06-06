@@ -16,8 +16,9 @@ NOISE_ACC_b=[0.0014;0.0014;0.0014];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0
 NOISE_GYRO_b=[0.03;0.03;0.03]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
 NOISE_MAG_b=[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
-NOISE_GPS_POS=0.005;% Noise in position of the GPS
-NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
+NOISE_GPS_POS=0.001;% Noise in position of the GPS
+NOISE_GPS_VEL=0.001;%Noise in velocity of the GPS
+noise_scale=1;
 
 
 
@@ -67,13 +68,13 @@ while (i<size(M,2))
     
     
     %noise, dependent on DCMs
-%     NOISE_ACC_i=DCM_ir*(NOISE_ACC_b.^2);
-%     NOISE_VEL_i=(NOISE_ACC_i.^2)*t;
-%     NOISE_POS_i=(NOISE_VEL_i.^2)*t;
-%     NOISE_GYRO_i=DCM_ir*(NOISE_GYRO_b.^2);
-%     NOISE_CARTAN_i=(NOISE_GYRO_i.^2)*t;
+    NOISE_ACC_i=(NOISE_ACC_b);%DCM_ir*
+    NOISE_VEL_i=[NOISE_GPS_VEL;NOISE_GPS_VEL;NOISE_GPS_VEL];
+    NOISE_POS_i=(NOISE_VEL_i.^2)*t;
+    NOISE_GYRO_i=(NOISE_GYRO_b);%DCM_ir*
+    NOISE_CARTAN_i=(NOISE_GYRO_i.^2)*t;
     
-    %q_diag=[NOISE_POS_i',NOISE_VEL_i',NOISE_CARTAN_i', NOISE_GYRO_i',0,0,0,0,0,0,0,0,0];
+    %q_diag=[NOISE_POS_i',NOISE_VEL_i',NOISE_CARTAN_i', NOISE_GYRO_i',0,0,0,0,0,0,0,0,0].*noise_scale;
     q_diag=[0.001,0.001,0.001,0.001,0.001,0.001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0,0,0,0,0,0,0,0,0];
     
     Q=diag(q_diag);
@@ -155,7 +156,7 @@ while (i<size(M,2))
     x_new(9)=0;
     x_new(10:12)=DCM_br'*deuler2body*x_new(10:12);
     
-    
+  
     x=x_new;
     
     
