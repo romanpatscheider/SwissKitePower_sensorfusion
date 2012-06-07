@@ -37,8 +37,20 @@ for i=1:3
     
 end
 vel=([vel_tmp(:,1),vel_tmp(:,:)]);
+for j=2:size(meas_time_P,2);
 
-vel_noisy=awgn([vel_tmp(:,1),vel_tmp(:,:)],-5);
+    if isnan(vel(1,j))
+        vel(1,j)=vel(1,j-1);
+    end
+    if isnan(vel(2,j))
+        vel(2,j)=vel(2,j-1);
+    end
+    if isnan(vel(3,j))  
+       vel(3,j)=vel(3,j-1);
+    end
+end
+
+vel_noisy=awgn(vel,-5);
 
 ground_truth=[pos_VI_p/1000;vel/1000];
 Z_p=[(pos_VI_p_noisy)/1000;vel_noisy/1000;acc_P;gyro_P;magn_P];
@@ -51,8 +63,13 @@ for j=2:size(pos_VI_p,2)
     end
 end
 counter_P_pv(2,1)=1;
+
+
+
 for j=2:size(meas_time_P,2);
-    if vel(1,j) == vel(1,j-1) && vel(2,j) == vel(2,j-1) && vel(3,j) == vel(3,j-1);
+    
+    if vel(1,j) == vel(1,j-1) && vel(2,j) == vel(2,j-1) && vel(3,j) == vel(3,j-1) ;
+        %disp('got it ,');j
         counter_P_pv(2,j)=j-1;
     else counter_P_pv(2,j)=j;
     end

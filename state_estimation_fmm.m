@@ -54,8 +54,9 @@ R=diag(r);
 % for every measurement the Extended Kalman Filter is used for state
 % estimation
 %------------------------
-totalTime=meas_time(1);
 i=1;
+totalTime=meas_time(i);
+
 k=1;
 while (i<size(M,2))
     totalTime=totalTime+t
@@ -105,9 +106,11 @@ while (i<size(M,2))
     else
         i_old =i-1;
     end
+    
     while(meas_time(i+1)<=totalTime)
         i=i+1;
     end
+    
     z_new=M(:,i);
     counter_new=counter(:,i);
     counter_old=counter(:,i_old);
@@ -124,10 +127,25 @@ while (i<size(M,2))
               % K=P12*inv(H*P12+R);       %Kalman filter gain
               % x=x1+K*(z-z1);            %state estimate
               % P=P-K*P12';               %state covariance matrix
-              S=chol(H(j,:)*P12+R(j,j));            %Cholesky factorization
-              U=P12/S;                    %K=U/R'; Faster because of back substitution
-              x_tmp=x_tmp+U*(S'\(z_new(j)-z_est(j)));         %Back substitution to get state update
-              P_tmp=P_tmp-U*U';
+              [S,p]=chol(H(j,:)*P12+R(j,j));  %Cholesky factorization
+              if i==1430
+                  H;
+              end
+               
+              if p~=0
+                    disp('not positive definite')
+                    i
+                    j
+                end
+%               if p~=0
+%                    K=P12*inv(H(j,:)*P12+R(j,j));       
+%                    x_tmp=x_tmp+K*(z_new(j)-z_est(j));            
+%                    P_tmp=P_tmp-K*P12';
+             % else
+                   U=P12/S;                    %K=U/R'; Faster because of back substitution
+                   x_tmp=x_tmp+U*(S'\(z_new(j)-z_est(j)));         %Back substitution to get state update
+                   P_tmp=P_tmp-U*U';
+            %  end
             
         end
             
@@ -138,7 +156,11 @@ while (i<size(M,2))
     
     %saving:
     save_time(k)=totalTime;
-    save_x(:,k)=x;
+    if k>1
+        save_x(:,k-1)=x;
+        save_x(:,k)=0;
+    end
+%    save_x(:,k)=x;
     save_new(:,k)=x_new;
     save_est(:,k)=x_est;
     save_quat(:,k)=quat;
@@ -172,3 +194,8 @@ figure(2);plot(save_time,save_x(4:6,:),'o-',save_time,save_est(4:6,:),'.',save_t
 %figure(3);plot(save_time,save_x(7:9,:),'o-',save_time,save_est(7:9,:),'.',save_time,save_new(7:9,:),'x-');
 figure(3);plot(save_time,save_quat,'.-');
 figure(4);plot(save_time,save_x(10:12,:),'o-',save_time,save_est(10:12,:),'.',save_time,save_new(10:12,:),'x-');
+
+s=3;
+figure(5);plot(save_time,save_x(s,:),save_time,save_new(s,:),save_time,save_est(s,:),segment1_time_ground_truth,segsment1_ground_truth(s,:));legend('x','new','est','ground truth')
+%% pos and vel compared to ground truth
+figure(6);plot(save_time,save_x(1,:),save_time,save_new(1,:),save_time,save_est(1,:),segment1_time_ground_truth,segment1_ground_truth(1,:),save_time,save_x(4,:)/10,segment1_time_ground_truth,segment1_ground_truth(4,:)/10);legend('x','new','est','ground truth','v state x','v ground truth')
