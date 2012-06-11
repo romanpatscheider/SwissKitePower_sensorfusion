@@ -71,7 +71,7 @@ while (i<size(M,2))
     %estimation step
     P_est=A*P*A'+Q;
     
-    if(meas_time(i)>totalTime)
+    if(meas_time(i+1)>totalTime)
         disp('no new value within t')
         x_new=x_est;
         P=P_est;
