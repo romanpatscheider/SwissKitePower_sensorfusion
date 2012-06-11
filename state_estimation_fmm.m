@@ -58,7 +58,7 @@ i=1;
 totalTime=meas_time(i);
 
 k=1;
-while (i<size(M,2))
+while (i<7000)%size(M,2)
     totalTime=totalTime+t
     %------------------------
     % direct cosine matrice gets calculated
@@ -76,7 +76,7 @@ while (i<size(M,2))
     NOISE_CARTAN_i=(NOISE_GYRO_i.^2)*t;
     
     %q_diag=[NOISE_POS_i',NOISE_VEL_i',NOISE_CARTAN_i', NOISE_GYRO_i',0,0,0,0,0,0,0,0,0].*noise_scale;
-    q_diag=[0.001,0.001,0.001,0.001,0.001,0.001,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0,0,0,0,0,0,0,0,0];
+    q_diag=[0.001,0.001,0.001,0.01,0.01,0.01,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0,0,0,0,0,0,0,0,0];
     
     Q=diag(q_diag);
     
@@ -86,7 +86,7 @@ while (i<size(M,2))
     %estimation step
     P_est=A*P*A'+Q;
     
-    if(meas_time(i)>totalTime)
+    if(meas_time(i+1)>totalTime)
         disp('no new value within t')
         x_new=x_est;
         P=P_est;
@@ -101,13 +101,16 @@ while (i<size(M,2))
    
     [z_est,H]=jaccsd_h(@h,x_est,x,DCM_ir,t,dis,G,mag);
     
+    
+    
+    
     if(i==1)
         i_old=10;
     else
         i_old =i-1;
     end
     
-    while(meas_time(i+1)<=totalTime)
+    while(meas_time(i)<=totalTime)
         i=i+1;
     end
     
@@ -115,7 +118,11 @@ while (i<size(M,2))
     counter_new=counter(:,i);
     counter_old=counter(:,i_old);
     length_z=size(z_new);
-   
+    
+    DCM_br_est=calc_DCM_br(x_est(7),x_est(8),x_est(9));
+    DCM_bi=DCM_br_est*transp(DCM_ir);
+    save_mag(:,k)=DCM_bi'*z_new(13:15);
+    
     meas_control= d_meas(counter_new,counter_old,length_z);
     
     x_tmp=x_est;
@@ -165,6 +172,7 @@ while (i<size(M,2))
     save_est(:,k)=x_est;
     save_quat(:,k)=quat;
     k=k+1;
+    
     %reset
         
     DCM_br=calc_DCM_br(x_new(7),x_new(8),x_new(9));
@@ -182,20 +190,20 @@ while (i<size(M,2))
   
     x=x_new;
     
-    
+    %i=i+1;
     
 end
 
 
 %%
-%plot(save_t,save(1:3,:),save_t,save_est(1:3,:),meas_time,M(1:3,:))
-figure(1);plot(save_time,save_x(1:3,:),'o-',save_time,save_est(1:3,:),'.',save_time,save_new(1:3,:),'x-');
-figure(2);plot(save_time,save_x(4:6,:),'o-',save_time,save_est(4:6,:),'.',save_time,save_new(4:6,:),'x-');
-%figure(3);plot(save_time,save_x(7:9,:),'o-',save_time,save_est(7:9,:),'.',save_time,save_new(7:9,:),'x-');
-figure(3);plot(save_time,save_quat,'.-');
-figure(4);plot(save_time,save_x(10:12,:),'o-',save_time,save_est(10:12,:),'.',save_time,save_new(10:12,:),'x-');
-
-s=3;
-figure(5);plot(save_time,save_x(s,:),save_time,save_new(s,:),save_time,save_est(s,:),segment1_time_ground_truth,segsment1_ground_truth(s,:));legend('x','new','est','ground truth')
+% %plot(save_t,save(1:3,:),save_t,save_est(1:3,:),meas_time,M(1:3,:))
+% figure(1);plot(save_time,save_x(1:3,:),'o-',save_time,save_est(1:3,:),'.',save_time,save_new(1:3,:),'x-');
+% figure(2);plot(save_time,save_x(4:6,:),'o-',save_time,save_est(4:6,:),'.',save_time,save_new(4:6,:),'x-');
+% %figure(3);plot(save_time,save_x(7:9,:),'o-',save_time,save_est(7:9,:),'.',save_time,save_new(7:9,:),'x-');
+% figure(3);plot(save_time,save_quat,'.-');
+% figure(4);plot(save_time,save_x(10:12,:),'o-',save_time,save_est(10:12,:),'.',save_time,save_new(10:12,:),'x-');
+% 
+% s=3;
+% figure(5);plot(save_time,save_x(s,:),save_time,save_new(s,:),save_time,save_est(s,:),segment1_time_ground_truth,segsment1_ground_truth(s,:));legend('x','new','est','ground truth')
 %% pos and vel compared to ground truth
-figure(6);plot(save_time,save_x(1,:),save_time,save_new(1,:),save_time,save_est(1,:),segment1_time_ground_truth,segment1_ground_truth(1,:),save_time,save_x(4,:)/10,segment1_time_ground_truth,segment1_ground_truth(4,:)/10);legend('x','new','est','ground truth','v state x','v ground truth')
+figure(6);plot(save_time,save_x(1,:),save_time,save_new(1,:),save_time,save_est(1,:),segment1_time_ground_truth,segment1_ground_truth(1,:),save_time,save_x(4,:)/10,save_time,save_new(4,:)/10,segment1_time_ground_truth,segment1_ground_truth(4,:)/10);legend('x','new','est','ground truth','v state x','v est x','v ground truth')
