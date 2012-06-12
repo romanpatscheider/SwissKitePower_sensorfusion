@@ -7,8 +7,9 @@ function [z_est]=h5(x_est,t)
     MAG1=0.2145;% [Gauss] magnetic field in zurich
     MAG2=0.0060;
     MAG3=0.4268;
-    mag_angle=pi/2+.4;
-    mag=[cos(mag_angle),sin(mag_angle),0;-sin(mag_angle),cos(mag_angle),0;0,0,1]*[MAG1,MAG2,MAG3]';
+    true_mag=[-0.119784172661871;-0.0330935251798561;0.341007194244604;];
+    mag_angle=-1.496;
+    mag=[cos(mag_angle),sin(mag_angle),0;-sin(mag_angle),cos(mag_angle),0;0,0,1]*true_mag;
    
 
 deuler2body=calc_deuler2body(x_est(1),x_est(2),x_est(3));

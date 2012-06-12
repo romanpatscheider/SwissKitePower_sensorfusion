@@ -14,12 +14,12 @@ MAG3=0.4268;
 lat0=47+24/60;
 long0=8+32/60;
 % noise form Xsens datasheet
-NOISE_ACC_b=[0.14;0.14;0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
-NOISE_GYRO_b=[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
-NOISE_MAG_b=[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
+NOISE_ACC_b=10*[0.14;0.14;0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
+NOISE_GYRO_b=10*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
+NOISE_MAG_b=1000*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
 NOISE_GPS_POS=0.0005;% Noise in position of the GPS
-NOISE_GPS_VEL=0.0005;%Noise in velocity of the GPS
+NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
 
 
 
@@ -77,10 +77,11 @@ while (i<size(M,2))
     
     P_est=A*P*A'+Q;
     
-    if(meas_time(i)>totalTime)
+    if(meas_time(i+1)>totalTime)
         disp('no new value within t')
         x_new=x_est;
         P=P_est;
+        [z_est,H]=jaccsd_5(@h5,x_est,t);
         
     else
     
@@ -112,36 +113,36 @@ while (i<size(M,2))
     deviation1=z_est-z_new;
     %do not use mag!
     
-    P12=P_tmp*H([1:6 7:9 10:12 13:15],:)';                   %cross covariance
-    % K=P12*inv(H*P12+R);       %Kalman filter gain
-    % x=x1+K*(z-z1);            %state estimate
-    % P=P-K*P12';               %state covariance matrix
-    S=chol(H([1:6 7:9 10:12 13:15],:)*P12+R([1:6 7:9 10:12 13:15],[1:6 7:9 10:12 13:15]));            %Cholesky factorization
-    U=P12/S;                    %K=U/R'; Faster because of back substitution
-    
-    x_tmp=x_tmp+U*(S'\(z_new([1:6 7:9 10:12 13:15])-z_est([1:6 7:9 10:12 13:15])));  %Back substitution to get state update
-    
-    P_tmp=P_tmp-U*U';
+%     P12=P_tmp*H([1:6 7:9 10:12 13:15],:)';                   %cross covariance
+%     % K=P12*inv(H*P12+R);       %Kalman filter gain
+%     % x=x1+K*(z-z1);            %state estimate
+%     % P=P-K*P12';               %state covariance matrix
+%     S=chol(H([1:6 7:9 10:12 13:15],:)*P12+R([1:6 7:9 10:12 13:15],[1:6 7:9 10:12 13:15]));            %Cholesky factorization
+%     U=P12/S;                    %K=U/R'; Faster because of back substitution
+%     
+%     x_tmp=x_tmp+U*(S'\(z_new([1:6 7:9 10:12 13:15])-z_est([1:6 7:9 10:12 13:15])));  %Back substitution to get state update
+%     
+%     P_tmp=P_tmp-U*U';
     
     
     
     
     %for j=1:3
-%     for j=1:size(meas_control,2)                  % if we have new data, correction step is done
-%         if meas_control(j)==1
-% %             [x_tmp,P_tmp]= correction(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
-%               P12=P_tmp*H(j,:)';                   %cross covariance
-%               % K=P12*inv(H*P12+R);       %Kalman filter gain
-%               % x=x1+K*(z-z1);            %state estimate
-%               % P=P-K*P12';               %state covariance matrix
-%               S=chol(H(j,:)*P12+R(j,j));            %Cholesky factorization
-%               U=P12/S;                    %K=U/R'; Faster because of back substitution
-%               x_tmp=x_tmp+U*(S'\(z_new(j)-z_est(j)));         %Back substitution to get state update
-%               P_tmp=P_tmp-U*U';
-%             
-%         end
-%             
-%     end
+    for j=1:size(meas_control,2)                  % if we have new data, correction step is done
+        if meas_control(j)==1 && j<=6
+%             [x_tmp,P_tmp]= correction(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
+              P12=P_tmp*H(j,:)';                   %cross covariance
+              % K=P12*inv(H*P12+R);       %Kalman filter gain
+              % x=x1+K*(z-z1);            %state estimate
+              % P=P-K*P12';               %state covariance matrix
+              S=chol(H(j,:)*P12+R(j,j));            %Cholesky factorization
+              U=P12/S;                    %K=U/R'; Faster because of back substitution
+              x_tmp=x_tmp+U*(S'\(z_new(j)-z_est(j)));         %Back substitution to get state update
+              P_tmp=P_tmp-U*U';
+            
+        end
+            
+    end
     x_new=x_tmp;
     P=P_tmp;
     end
