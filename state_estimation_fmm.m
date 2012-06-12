@@ -203,7 +203,9 @@ end
 % figure(3);plot(save_time,save_quat,'.-');
 % figure(4);plot(save_time,save_x(10:12,:),'o-',save_time,save_est(10:12,:),'.',save_time,save_new(10:12,:),'x-');
 % 
-% s=3;
-% figure(5);plot(save_time,save_x(s,:),save_time,save_new(s,:),save_time,save_est(s,:),segment1_time_ground_truth,segsment1_ground_truth(s,:));legend('x','new','est','ground truth')
+
 %% pos and vel compared to ground truth
-figure(6);plot(save_time,save_x(1,:),save_time,save_new(1,:),save_time,save_est(1,:),segment1_time_ground_truth,segment1_ground_truth(1,:),save_time,save_x(4,:)/10,save_time,save_new(4,:)/10,segment1_time_ground_truth,segment1_ground_truth(4,:)/10);legend('x','new','est','ground truth','v state x','v est x','v ground truth')
+figure(5);plot(save_time,save_x(1,:),save_time,save_new(1,:),save_time,save_est(1,:),segment1_time_ground_truth,segment1_ground_truth(1,:),save_time,save_x(4,:)/10,save_time,save_new(4,:)/10,segment1_time_ground_truth,segment1_ground_truth(4,:)/10);legend('x','new','est','ground truth','v state x','v est x','v ground truth')
+
+%% Quaternions
+figure(6);plot(save_time,save_quat(1,:),segment1_time_ground_truth, segment1_ground_truth(7,:));legend('quat 1','quat gt');

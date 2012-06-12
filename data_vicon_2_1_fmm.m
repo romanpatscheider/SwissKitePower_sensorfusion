@@ -23,15 +23,15 @@ meas_time_VI=VI(:,1).*dt_vicon;
 meas_time_VI_new=meas_time_VI';
 VI_new=VI';
 
+%position
 for i=2:4
       pos_VI_p_noisy(i-1,:)=awgn(interp1(meas_time_VI_new+42.622+0.5100+0.49,VI_new(i,:),meas_time_P),-5);
       pos_VI_p(i-1,:)=interp1(meas_time_VI_new+42.622+0.5100+0.49,VI_new(i,:),meas_time_P);
 end
 
+% velocity
 vel_tmp=zeros(3,size(meas_time_P,2)-1);
 vel=zeros(3,size(meas_time_P,2));
-
-
 for i=1:3
     vel_tmp(i,:)=diff(pos_VI_p(i,:))./diff(meas_time_P);
     
@@ -49,12 +49,26 @@ for j=2:size(meas_time_P,2);
        vel(3,j)=vel(3,j-1);
     end
 end
-
 vel_noisy=awgn(vel,-5);
 
-ground_truth=[pos_VI_p/1000;vel/1000];
+%angles
+for i=5:7
+     angles_VI_p(i-4,:)=interp1(meas_time_VI_new+42.622+0.5100+0.49,VI_new(i,:),meas_time_P);
+end
+
+%calculating the quaternion
+for i=1:size(meas_time_P,2)
+    DCM_bi=calc_DCM_br(angles_VI_p(1,i),angles_VI_p(2,i),angles_VI_p(3,i));
+    quat_VI(:,i)=DCMtoQ(DCM_bi'); 
+end
+
+
+ground_truth=[pos_VI_p/1000;vel/1000;quat_VI];
 Z_p=[(pos_VI_p_noisy)/1000;vel_noisy/1000;acc_P;gyro_P;magn_P];
 
+%%
+% plot(meas_time_P,magn_P(1:3,:),meas_time_P,quat_VI(1,:));legend('x','y','z','phi');
+%%
 counter_P_pv(1,1)=1;
 for j=2:size(pos_VI_p,2)
     if pos_VI_p(1,j) == pos_VI_p(1,j-1) && pos_VI_p(2,j) == pos_VI_p(2,j-1) && pos_VI_p(3,j) == pos_VI_p(3,j-1);
