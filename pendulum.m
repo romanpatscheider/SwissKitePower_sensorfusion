@@ -20,6 +20,6 @@ dy(1) = y(5);
 dy(2) = y(6);
 dy(3) = y(7);
 dy(4) = 0;
-dy=dy';
+dy=transp(dy);
 
 
