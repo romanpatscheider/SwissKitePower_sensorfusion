@@ -24,13 +24,11 @@ meas_time_VI_new=meas_time_VI';
 VI_new=VI';
 
 for i=2:4
+      pos_VI_p_noisy(i-1,:)=awgn(interp1(meas_time_VI_new+42.622+0.5100+0.49,VI_new(i,:),meas_time_P),-5);
       pos_VI_p(i-1,:)=interp1(meas_time_VI_new+42.622+0.5100+0.49,VI_new(i,:),meas_time_P);
 end
 
 vel_tmp=zeros(3,size(meas_time_P,2)-1);
-
-size(vel_tmp)
-
 vel=zeros(3,size(meas_time_P,2));
 
 
@@ -38,9 +36,24 @@ for i=1:3
     vel_tmp(i,:)=diff(pos_VI_p(i,:))./diff(meas_time_P);
     
 end
-vel=[vel_tmp(:,1),vel_tmp(:,:)];
+vel=([vel_tmp(:,1),vel_tmp(:,:)]);
+for j=2:size(meas_time_P,2);
 
-Z_p=[(pos_VI_p)/1000;vel/1000;acc_P;gyro_P;magn_P];
+    if isnan(vel(1,j))
+        vel(1,j)=vel(1,j-1);
+    end
+    if isnan(vel(2,j))
+        vel(2,j)=vel(2,j-1);
+    end
+    if isnan(vel(3,j))  
+       vel(3,j)=vel(3,j-1);
+    end
+end
+
+vel_noisy=awgn(vel,-5);
+
+ground_truth=[pos_VI_p/1000;vel/1000];
+Z_p=[(pos_VI_p_noisy)/1000;vel_noisy/1000;acc_P;gyro_P;magn_P];
 
 counter_P_pv(1,1)=1;
 for j=2:size(pos_VI_p,2)
@@ -50,8 +63,13 @@ for j=2:size(pos_VI_p,2)
     end
 end
 counter_P_pv(2,1)=1;
+
+
+
 for j=2:size(meas_time_P,2);
-    if vel(1,j) == vel(1,j-1) && vel(2,j) == vel(2,j-1) && vel(3,j) == vel(3,j-1);
+    
+    if vel(1,j) == vel(1,j-1) && vel(2,j) == vel(2,j-1) && vel(3,j) == vel(3,j-1) ;
+        %disp('got it ,');j
         counter_P_pv(2,j)=j-1;
     else counter_P_pv(2,j)=j;
     end
@@ -70,10 +88,10 @@ counter_P_new=[counter_P_pv;counter_P];
 %----------------------
 %% Building Segments
 [segment1_Z_P,segment1_counter_P,segment1_time_P]=build_segment(57.8240, 149.7180, Z_p,counter_P_new,meas_time_P);
-
+[segment1_ground_truth, segment1_time_ground_truth]=build_segment_ground_truth(57.8240, 149.7180,ground_truth,meas_time_P);
 
 segment1_Z_P(1:3,:)=[segment1_Z_P(1,:)-0.13165*ones(1,size(segment1_Z_P,2));segment1_Z_P(2,:)-0.21*ones(1,size(segment1_Z_P,2));segment1_Z_P(3,:)-1.347185*ones(1,size(segment1_Z_P,2))];
-
+segment1_ground_truth(1:3,:)=[segment1_ground_truth(1,:)-0.13165*ones(1,size(segment1_ground_truth,2));segment1_ground_truth(2,:)-0.21*ones(1,size(segment1_ground_truth,2));segment1_ground_truth(3,:)-1.347185*ones(1,size(segment1_ground_truth,2))];
 %%
 % diffed=diff(segment1_Z_P(1:3,:)');
 % %%
