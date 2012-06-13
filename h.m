@@ -52,6 +52,8 @@ v_old=[vn_old;ve_old;vd_old];
 
 h1=[lat;long;alt] + transp(DCM_bi)*dis; %pos
 h2=v + transp(DCM_bi)*vg; %vel
+
+
 h3=DCM_bi*(((v+transp(DCM_bi)*vg)-(v_old+transp(DCM_bi)*vg_old))./t-G);%acc
 h4=w;%gyr
 h5=DCM_bi*[MAG1;MAG2;MAG3];%magnetometer

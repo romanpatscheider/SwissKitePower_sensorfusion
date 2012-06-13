@@ -95,6 +95,7 @@ while (i<size(M,2))%size(M,2)
         disp('no new value within t')
         x_new=x_est;
         P=P_est;
+        [z_est,H]=jaccsd_h_euler(@h_euler,x_est,x,t,dis,G,mag);
         
     else
     
@@ -115,7 +116,7 @@ while (i<size(M,2))%size(M,2)
         i_old =i-1;
     end
     
-    while(meas_time(i)<=totalTime)
+    while(meas_time(i+1)<=totalTime)
         i=i+1;
     end
     
@@ -163,15 +164,28 @@ while (i<size(M,2))%size(M,2)
     P=P_tmp;
     end
     
-    %saving:
-    save_time(k)=totalTime;
-    if k>1
-        save_x(:,k-1)=x;
-        save_x(:,k)=0;
-    end
-%    save_x(:,k)=x;
-    save_new(:,k)=x_new;
+%     %saving:
+%     save_time(k)=totalTime;
+%     if k>1
+%         save_x(:,k-1)=x;
+%         save_x(:,k)=0;
+%     end
+% %    save_x(:,k)=x;
+%     save_new(:,k)=x_new;
+%     save_est(:,k)=x_est;
+    
+    
+     %saving:
+    save(:,k)=x;
     save_est(:,k)=x_est;
+    save_corr(:,k)=x_new;
+    save_t(k)=totalTime;
+    save_z_est(:,k)=z_est;
+    save_z(:,k)=z_new;
+    [val,ind]=min(abs(meas_time_P-meas_time(i)));
+    save_anlges(:,k)=angles_VI_p(:,ind);
+    
+    
     k=k+1;
     
     x=x_new;
@@ -194,6 +208,15 @@ figure(5);plot(save_time,save_x(1,:),save_time,save_new(1,:),save_time,save_est(
 %% psi
 figure(6);plot(save_time,-mod(save_est(9,:),2*pi)+pi,segment1_time_ground_truth, segment1_ground_truth(7,:));legend('euler x','euler gt')
 %% thet
-figure(7);plot(save_time,save_est(7,:),segment1_time_ground_truth, segment1_ground_truth(8,:));legend('euler x','euler gt')
+figure(7);plot(save_time,save_est(7:9,:),'o-',segment1_time_ground_truth, segment1_ground_truth(7:9,:),'.');%legend('euler x','euler gt')
 %% phi
 figure(8);plot(save_time,-save_est(8,:),save_time,-save_new(8,:),segment1_time_ground_truth, segment1_ground_truth(9,:));legend('est','new','euler gt')
+
+
+%%
+figure(1);plot(save_t,save_z_est(1:3,:),'o-',save_t,save_z(1:3,:),'.');
+figure(2);plot(save_t,save_z_est(4:6,:),'o-',save_t,save_z(4:6,:),'.');
+figure(3);plot(save_t,save_z_est(7:9,:),'o-',save_t,save_z(7:9,:),'.');
+figure(4);plot(save_t,save_z_est(10:12,:),'o-',save_t,save_z(10:12,:),'.');
+figure(5);plot(save_t,save_z_est(13:15,:),'o-',save_t,save_z(13:15,:),'.');
+figure(6);plot(save_t,save(7:9,:),'o-',save_t,save_anlges(1:3,:),'.');
