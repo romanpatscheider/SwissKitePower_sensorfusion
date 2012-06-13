@@ -56,18 +56,32 @@ for i=5:7
      angles_VI_p(i-4,:)=interp1(meas_time_VI_new+42.622+0.5100+0.49,VI_new(i,:),meas_time_P);
 end
 
-%calculating the quaternion
-for i=1:size(meas_time_P,2)
-    DCM_bi=calc_DCM_br(angles_VI_p(1,i),angles_VI_p(2,i),angles_VI_p(3,i));
-    quat_VI(:,i)=DCMtoQ(DCM_bi'); 
-end
+% %calculating the quaternion
+% for i=1:size(meas_time_P,2)
+%     DCM_bi=calc_DCM_br(angles_VI_p(1,i),angles_VI_p(3,i),angles_VI_p(2,i));
+%     quat_VI_1(:,i)=DCMtoQ(DCM_bi'); 
+% end
+% 
+% for i=1:size(meas_time_P,2)
+%     DCM_bi=calc_DCM_br(angles_VI_p(2,i),angles_VI_p(3,i),angles_VI_p(1,i));
+%     quat_VI_2(:,i)=DCMtoQ(DCM_bi'); 
+% end
+% 
+% for i=1:size(meas_time_P,2)
+%     DCM_bi=calc_DCM_br(angles_VI_p(3,i),angles_VI_p(2,i),angles_VI_p(1,i));
+%     quat_VI_3(:,i)=DCMtoQ(DCM_bi'); 
+% end
+% for i=1:size(meas_time_P,2)
+%     DCM_bi=calc_DCM_br(angles_VI_p(3,i),angles_VI_p(1,i),angles_VI_p(2,i));
+%     quat_VI_4(:,i)=DCMtoQ(DCM_bi'); 
+% end
 
-
-ground_truth=[pos_VI_p/1000;vel/1000;quat_VI];
+ground_truth=[pos_VI_p/1000;vel/1000;angles_VI_p];
 Z_p=[(pos_VI_p_noisy)/1000;vel_noisy/1000;acc_P;gyro_P;magn_P];
 
 %%
-% plot(meas_time_P,magn_P(1:3,:),meas_time_P,quat_VI(1,:));legend('x','y','z','phi');
+%plot(meas_time_P,magn_P(1:3,:),meas_time_P,quat_VI(1,:));legend('x','y','z','phi');
+
 %%
 counter_P_pv(1,1)=1;
 for j=2:size(pos_VI_p,2)
