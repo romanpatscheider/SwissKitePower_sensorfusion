@@ -17,7 +17,7 @@ long0=8+32/60;
 
 
 NOISE_ACC_b=10*[0.14;0.14;0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
-NOISE_GYRO_b=10*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
+NOISE_GYRO_b=100*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
 NOISE_MAG_b=1000*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
 NOISE_GPS_POS=0.0005;% Noise in position of the GPS
@@ -48,7 +48,7 @@ P = zeros(size(x,1),size(x,1));
 % R=diag(r);
 
 % noise predection
-q_diag=[0.001,0.001,0.001,0.01,0.01,0.01,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0,0,0,0,0,0,0,0,0];
+q_diag=[0.001,0.001,0.001,0.01,0.01,0.01,0.0001,0.0001,0.0001,0.01,0.01,0.01,0,0,0,0,0,0,0,0,0];
 Q=diag(q_diag);
 
 % noise correction
@@ -194,6 +194,6 @@ figure(5);plot(save_time,save_x(1,:),save_time,save_new(1,:),save_time,save_est(
 %% psi
 figure(6);plot(save_time,-mod(save_est(9,:),2*pi)+pi,segment1_time_ground_truth, segment1_ground_truth(7,:));legend('euler x','euler gt')
 %% thet
-figure(7);plot(save_time,save_est(7,:),segment1_time_ground_truth, segment1_ground_truth(8,:));legend('euler x','euler gt')
+figure(7);plot(save_time,save_est(7,:),segment1_time_ground_truth, segment1_ground_truth(9,:));legend('euler x','euler gt')
 %% phi
-figure(8);plot(save_time,-save_est(8,:),save_time,-save_new(8,:),segment1_time_ground_truth, segment1_ground_truth(9,:));legend('est','new','euler gt')
+figure(8);plot(save_time,save_est(8,:),save_time,save_new(8,:),segment1_time_ground_truth, segment1_ground_truth(8,:));legend('new 7','new 8','euler gt')
