@@ -191,7 +191,9 @@ end
 
 %% pos and vel compared to ground truth
 figure(5);plot(save_time,save_x(1,:),save_time,save_new(1,:),save_time,save_est(1,:),segment1_time_ground_truth,segment1_ground_truth(1,:),save_time,save_x(4,:)/10,save_time,save_new(4,:)/10,segment1_time_ground_truth,segment1_ground_truth(4,:)/10);legend('x','new','est','ground truth','v state x','v est x','v ground truth')
-%%
-figure(7);plot(save_time,save_est(9,:),save_time,save_new(9,:));legend('deuler');
-%% Quaternions
-figure(6);plot(save_time,save_est(9,:),save_time,save_new(9,:),segment1_time_ground_truth, -segment1_ground_truth(9,:));legend('euler x','euler est','euler gt');
+%% psi
+figure(6);plot(save_time,-mod(save_est(9,:),2*pi)+pi,segment1_time_ground_truth, segment1_ground_truth(7,:));legend('euler x','euler gt')
+%% thet
+figure(7);plot(save_time,save_est(7,:),segment1_time_ground_truth, segment1_ground_truth(8,:));legend('euler x','euler gt')
+%% phi
+figure(8);plot(save_time,-save_est(8,:),save_time,-save_new(8,:),segment1_time_ground_truth, segment1_ground_truth(9,:));legend('est','new','euler gt')
