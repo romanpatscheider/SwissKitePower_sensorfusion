@@ -40,14 +40,15 @@ w=[d_phi;0;0]+[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)]*[0;d_thet;0] ...
 w_old=[d_phi_old;0;0]+[1,0,0;0,cos(phi_old),sin(phi_old);0,-sin(phi_old),cos(phi_old)]*[0;d_thet_old;0] ...
     +[1,0,0;0,cos(phi_old),sin(phi_old);0,-sin(phi_old),cos(phi_old)]...
     *[cos(thet_old), 0, -sin(thet_old);0,1,0;sin(thet_old),0,cos(thet_old)]*[0;0;d_psi_old];
-vg=transp(cross(transp(w),transp(dis)));
+vg=transp(cross(transp(w),transp(dis))); %vg and vg_old are additional velocitys introduced by the displacement of the Imu from the center of mass
 vg_old=transp(cross(transp(w_old),transp(dis)));
 v=[vn;ve;vd];
 v_old=[vn_old;ve_old;vd_old];
 
 h1=[lat;long;alt] + transp(DCM_bi)*dis; %pos
 h2=v + transp(DCM_bi)*vg; %vel
-h3=DCM_bi*(((v+transp(DCM_bi)*vg)-(v_old+transp(DCM_bi)*vg_old))./t-G);%acc
+h3=DCM_bi*((v-v_old)./t-G);
+%h3=DCM_bi*(((v+transp(DCM_bi)*vg)-(v_old+transp(DCM_bi)*vg_old))./t-G);%acc
 h4=w;%gyr
 h5=DCM_bi*mag;%magnetometer
 

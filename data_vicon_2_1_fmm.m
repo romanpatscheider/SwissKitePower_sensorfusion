@@ -1,5 +1,6 @@
-%daten f?r free mass modnel
-% Running the kalman filter for the vicon test
+% This file imports the data from the vicon, the pxhawk and the xsens. Then
+% this date is arranged in order to be processed by the ekf
+%
 
 %---------------------------------------------
 %Import DATA
@@ -7,7 +8,7 @@
 %% Importing PixHawk
 fid_pixhawk = fopen('p_test_2_1.txt');
 [acc_P,gyro_P,magn_P,meas_time_P,counter_P]= import_PixHawk(fid_pixhawk);
-% Import vicon file
+%% Import vicon file
 VI=csvread('positionlog_KiteBox_19.23.21.533.csv');
 
 
@@ -29,7 +30,8 @@ for i=2:4
       pos_VI_p(i-1,:)=interp1(meas_time_VI_new+42.622+0.5100+0.49,VI_new(i,:),meas_time_P);
 end
 
-% velocity
+% velocity . The velocity is calculted and added with noise to simulate the
+% velocity from the gps
 vel_tmp=zeros(3,size(meas_time_P,2)-1);
 vel=zeros(3,size(meas_time_P,2));
 for i=1:3
@@ -76,13 +78,15 @@ end
 %     quat_VI_4(:,i)=DCMtoQ(DCM_bi'); 
 % end
 
-ground_truth=[pos_VI_p/1000;vel/1000;angles_VI_p];
+ground_truth=[pos_VI_p/1000;vel/1000;angles_VI_p]; %position, velocity and angels without noise.
 Z_p=[(pos_VI_p_noisy)/1000;vel_noisy/1000;acc_P;gyro_P;magn_P];
 
 %%
 %plot(meas_time_P,magn_P(1:3,:),meas_time_P,quat_VI(1,:));legend('x','y','z','phi');
 
-%%
+%% Counter
+% A counter is calculated for the measurements form the vicon. This counter
+% is needed, weather we have new senosor data
 counter_P_pv(1,1)=1;
 for j=2:size(pos_VI_p,2)
     if pos_VI_p(1,j) == pos_VI_p(1,j-1) && pos_VI_p(2,j) == pos_VI_p(2,j-1) && pos_VI_p(3,j) == pos_VI_p(3,j-1);
@@ -97,7 +101,6 @@ counter_P_pv(2,1)=1;
 for j=2:size(meas_time_P,2);
     
     if vel(1,j) == vel(1,j-1) && vel(2,j) == vel(2,j-1) && vel(3,j) == vel(3,j-1) ;
-        %disp('got it ,');j
         counter_P_pv(2,j)=j-1;
     else counter_P_pv(2,j)=j;
     end

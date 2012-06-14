@@ -6,9 +6,9 @@ dis=[0;0;0];%displacementvector of the box
 MAG1=0.2145;% [Gauss] magnetic field in zurich
 MAG2=0.0060;
 MAG3=0.4268;
-   true_mag=[-0.119784172661871;-0.0330935251798561;0.341007194244604;];
-    mag_angle=-1.496;
-    mag=[cos(mag_angle),sin(mag_angle),0;-sin(mag_angle),cos(mag_angle),0;0,0,1]*true_mag;
+true_mag=[-0.119784172661871;-0.0330935251798561;0.341007194244604;];
+mag_angle=-1.496;
+mag=[cos(mag_angle),sin(mag_angle),0;-sin(mag_angle),cos(mag_angle),0;0,0,1]*true_mag;
 %Rl= geocradius(47+24/60); %from zurich
 %Rp= Rl*cos(8+32/60); %from zurich
 lat0=47+24/60;
@@ -17,7 +17,7 @@ long0=8+32/60;
 
 
 NOISE_ACC_b=10*[0.14;0.14;0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
-NOISE_GYRO_b=10*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
+NOISE_GYRO_b=[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
 NOISE_MAG_b=1000*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
 NOISE_GPS_POS=0.0005;% Noise in position of the GPS
@@ -48,7 +48,7 @@ P = zeros(size(x,1),size(x,1));
 % R=diag(r);
 
 % noise predection
-q_diag=[0.001,0.001,0.001,0.01,0.01,0.01,0.0001,0.0001,0.0001,0.0001,0.0001,0.0001,0,0,0,0,0,0,0,0,0];
+q_diag=[0.001,0.001,0.001,0.01,0.01,0.01,0.0001,0.0001,0.0001,0.01,0.01,0.01,0,0,0,0,0,0,0,0,0];
 Q=diag(q_diag);
 
 % noise correction
@@ -91,6 +91,7 @@ while (i<size(M,2))%size(M,2)
     %estimation step
     P_est=A*P*A'+Q;
     
+    % there is no new sensor value. the ekf is just propagating
     if(meas_time(i+1)>totalTime)
         disp('no new value within t')
         x_new=x_est;
@@ -116,7 +117,7 @@ while (i<size(M,2))%size(M,2)
         i_old =i-1;
     end
     
-    while(meas_time(i+1)<=totalTime)
+    while(meas_time(i+1)<=totalTime) %looking for the closest measurement value to the estimatin time "totalTime"
         i=i+1;
     end
     
@@ -130,7 +131,7 @@ while (i<size(M,2))%size(M,2)
     
     x_tmp=x_est;
     P_tmp=P_est;
-    for j=1:size(meas_control,2)                  % if we have new data, correction step is done
+    for j=1:size(meas_control,2)                  % only for the measurements from which we have new sensor data, the correction step is done
         if meas_control(j)==1
 %             [x_tmp,P_tmp]= correction(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
               P12=P_tmp*H(j,:)';                   %cross covariance
@@ -138,12 +139,9 @@ while (i<size(M,2))%size(M,2)
               % x=x1+K*(z-z1);            %state estimate
               % P=P-K*P12';               %state covariance matrix
               [S,p]=chol(H(j,:)*P12+R(j,j));  %Cholesky factorization
-              if i==1430
-                  H;
-              end
                
               if p~=0
-                    disp('not positive definite')
+                    disp('not positive definite') % this is required for the argument of chol(...), otherwise the filter is unstable
                     i
                     j
                 end
@@ -176,6 +174,7 @@ while (i<size(M,2))%size(M,2)
     
     
      %saving:
+    save_deviation(:,k)=(z_est-z_new)./z_new;
     save(:,k)=x;
     save_est(:,k)=x_est;
     save_corr(:,k)=x_new;
@@ -204,13 +203,13 @@ end
 % 
 
 %% pos and vel compared to ground truth
-figure(5);plot(save_time,save_x(1,:),save_time,save_new(1,:),save_time,save_est(1,:),segment1_time_ground_truth,segment1_ground_truth(1,:),save_time,save_x(4,:)/10,save_time,save_new(4,:)/10,segment1_time_ground_truth,segment1_ground_truth(4,:)/10);legend('x','new','est','ground truth','v state x','v est x','v ground truth')
+figure(5);plot(save_t,save_x(1,:),save_t,save_new(1,:),save_t,save_est(1,:),segment1_time_ground_truth,segment1_ground_truth(1,:),save_time,save_x(4,:)/10,save_time,save_new(4,:)/10,segment1_time_ground_truth,segment1_ground_truth(4,:)/10);legend('x','new','est','ground truth','v state x','v est x','v ground truth')
 %% psi
-figure(6);plot(save_time,-mod(save_est(9,:),2*pi)+pi,segment1_time_ground_truth, segment1_ground_truth(7,:));legend('euler x','euler gt')
+figure(6);plot(save_t,-mod(save_est(9,:),2*pi)+pi,segment1_time_ground_truth, segment1_ground_truth(7,:));legend('euler x','euler gt')
 %% thet
-figure(7);plot(save_time,save_est(7:9,:),'o-',segment1_time_ground_truth, segment1_ground_truth(7:9,:),'.');%legend('euler x','euler gt')
+figure(7);plot(save_t,save_est(7,:),segment1_time_ground_truth, segment1_ground_truth(9,:));legend('euler x','euler gt')
 %% phi
-figure(8);plot(save_time,-save_est(8,:),save_time,-save_new(8,:),segment1_time_ground_truth, segment1_ground_truth(9,:));legend('est','new','euler gt')
+figure(8);plot(save_t,-save_est(8,:),save_t,-save_corr(8,:),segment1_time_ground_truth, segment1_ground_truth(9,:));legend('est','new','euler gt')
 
 
 %%
@@ -220,3 +219,6 @@ figure(3);plot(save_t,save_z_est(7:9,:),'o-',save_t,save_z(7:9,:),'.');
 figure(4);plot(save_t,save_z_est(10:12,:),'o-',save_t,save_z(10:12,:),'.');
 figure(5);plot(save_t,save_z_est(13:15,:),'o-',save_t,save_z(13:15,:),'.');
 figure(6);plot(save_t,save(7:9,:),'o-',save_t,save_anlges(1:3,:),'.');
+
+%%
+figure(9);plot(save_t,save_deviation(7,:))
