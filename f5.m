@@ -1,8 +1,7 @@
 function [x_est]=f5(x,t)
 %%
 %------------------------
-% the physical model and the measurement-state realation are defined. the
-% jacobian matrix is calculated
+% the physical model is defined. 
 %------------------------
 
 
