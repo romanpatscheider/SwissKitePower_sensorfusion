@@ -212,13 +212,13 @@ figure(7);plot(save_t,save_est(7,:),segment1_time_ground_truth, segment1_ground_
 figure(8);plot(save_t,-save_est(8,:),save_t,-save_corr(8,:),segment1_time_ground_truth, segment1_ground_truth(9,:));legend('est','new','euler gt')
 
 
-%%
-figure(1);plot(save_t,save_z_est(1:3,:),'o-',save_t,save_z(1:3,:),'.');
-figure(2);plot(save_t,save_z_est(4:6,:),'o-',save_t,save_z(4:6,:),'.');
-figure(3);plot(save_t,save_z_est(7:9,:),'o-',save_t,save_z(7:9,:),'.');
-figure(4);plot(save_t,save_z_est(10:12,:),'o-',save_t,save_z(10:12,:),'.');
-figure(5);plot(save_t,save_z_est(13:15,:),'o-',save_t,save_z(13:15,:),'.');
-figure(6);plot(save_t,save(7:9,:),'o-',save_t,save_anlges(1:3,:),'.');
+%% plot actual measurements against expected measurements
+figure(1);plot(save_t,save_z_est(1:3,:),'o-',save_t,save_z(1:3,:),'.');title('position')
+figure(2);plot(save_t,save_z_est(4:6,:),'o-',save_t,save_z(4:6,:),'.');title('velocity')
+figure(3);plot(save_t,save_z_est(7:9,:),'o-',save_t,save_z(7:9,:),'.');title('accelerometer')
+figure(4);plot(save_t,save_z_est(10:12,:),'o-',save_t,save_z(10:12,:),'.');title('gyros')
+figure(5);plot(save_t,save_z_est(13:15,:),'o-',save_t,save_z(13:15,:),'.');title('magnetometer')
+figure(6);plot(save_t,save(7:9,:),'o-',save_t,save_anlges(1:3,:),'.');title('vicon orientation')
 
 %%
 figure(9);plot(save_t,save_deviation(10,:))
