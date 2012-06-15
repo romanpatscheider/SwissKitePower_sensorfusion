@@ -87,24 +87,39 @@ Z_p=[(pos_VI_p_noisy)/1000;vel_noisy/1000;acc_P;gyro_P;magn_P];
 %% Counter
 % A counter is calculated for the measurements form the vicon. This counter
 % is needed, weather we have new senosor data
+
+%to adjust gps reading frequency set vicon_freq to desired value! set it
+%high to use every measurement available
+%to set a gps outage set vicon_outage(1) to start of outage and
+%vicon_outage(2) to end of outage
+vicon_freq=10;
+vicon_outage=[62 63];
+j_old_p=1;
+j_old_v=1;
 counter_P_pv(1,1)=1;
-for j=2:size(pos_VI_p,2)
-    if pos_VI_p(1,j) == pos_VI_p(1,j-1) && pos_VI_p(2,j) == pos_VI_p(2,j-1) && pos_VI_p(3,j) == pos_VI_p(3,j-1);
-        counter_P_pv(1,j)=j-1;
-    else counter_P_pv(1,j)=j;
-    end
-end
 counter_P_pv(2,1)=1;
 
-
-
-for j=2:size(meas_time_P,2);
-    
-    if vel(1,j) == vel(1,j-1) && vel(2,j) == vel(2,j-1) && vel(3,j) == vel(3,j-1) ;
-        counter_P_pv(2,j)=j-1;
-    else counter_P_pv(2,j)=j;
+for j=2:size(pos_VI_p,2)
+    if (meas_time_P(j)<=vicon_outage(1) || meas_time_P(j)>=vicon_outage(2))
+        if  meas_time_P(j)-meas_time_P(j_old_p)>=1/vicon_freq && (pos_VI_p(1,j) ~= pos_VI_p(1,j_old_p) || pos_VI_p(2,j) ~= pos_VI_p(2,j_old_p) || pos_VI_p(3,j) ~= pos_VI_p(3,j_old_p))
+            counter_P_pv(1,j)=j;
+            j_old_p=j;
+        else counter_P_pv(1,j)=j_old_p;
+        end
+        if  meas_time_P(j)-meas_time_P(j_old_v)>=1/vicon_freq  && (vel(1,j) ~= vel(1,j_old_v) || vel(2,j) ~= vel(2,j_old_v) || vel(3,j) ~= vel(3,j_old_v)) ;
+            counter_P_pv(2,j)=j;
+            j_old_v=j;
+        else counter_P_pv(2,j)=j_old_v;
+        end
+    else
+       disp('outage');
+       counter_P_pv(1,j)=j_old_p;
+       counter_P_pv(2,j)=j_old_v;
     end
+        
 end
+
+
 
 counter_P_new=[counter_P_pv;counter_P];
 
