@@ -17,8 +17,8 @@ long0=8+32/60;
 
 
 NOISE_ACC_b=10*[0.14;0.14;0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
-NOISE_GYRO_b=[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
-NOISE_MAG_b=1000*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
+NOISE_GYRO_b=10*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
+NOISE_MAG_b=100*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
 NOISE_GPS_POS=0.0005;% Noise in position of the GPS
 NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
@@ -62,7 +62,7 @@ R=diag(r);
 % for every measurement the Extended Kalman Filter is used for state
 % estimation
 %------------------------
-i=1;
+i=7000;
 totalTime=meas_time(i);
 
 k=1;
@@ -114,7 +114,7 @@ while (i<size(M,2))%size(M,2)
     if(i==1)
         i_old=10;
     else
-        i_old =i-1;
+        i_old =i;
     end
     
     while(meas_time(i+1)<=totalTime) %looking for the closest measurement value to the estimatin time "totalTime"
@@ -221,4 +221,4 @@ figure(5);plot(save_t,save_z_est(13:15,:),'o-',save_t,save_z(13:15,:),'.');title
 figure(6);plot(save_t,save(7:9,:),'o-',save_t,save_anlges(1:3,:),'.');title('vicon orientation')
 
 %%
-figure(9);plot(save_t,save_deviation(7,:))
+figure(9);plot(save_t,save_deviation(10,:))
