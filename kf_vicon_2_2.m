@@ -82,14 +82,16 @@ plot(meas_time_X_c,pos_VI_x(1,:)/100,meas_time_X_c,acc_X_c(3,:));
 [segment1_Z_P,segment1_counter_P,segment1_time_P]=build_segment(47.1620, 158.7230, Z_p,counter_P_new,meas_time_P);
 [segment1_Z_X,segment1_counter_X,segment1_time_X]=build_segment(47.1620, 158.7230, Z_x,counter_X_new,meas_time_X_c);
 
-[segment2_Z_P,segment2_counter_P,segment2_time_P]=build_segment(158.7230, 214.4140, Z_p,counter_P_new,meas_time_P);
-[segment2_Z_X,segment2_counter_X,segment2_time_X]=build_segment(158.7230, 214.4140, Z_x,counter_X_new,meas_time_X_c);
 
-[segment3_Z_P,segment3_counter_P,segment3_time_P]=build_segment(214.4140, 345.4370, Z_p,counter_P_new,meas_time_P);
-[segment3_Z_X,segment3_counter_X,segment3_time_X]=build_segment(214.4140, 345.4370, Z_x,counter_X_new,meas_time_X_c);
 
-[segment4_Z_P,segment4_counter_P,segment4_time_P]=build_segment(345.4370, 450, Z_p,counter_P_new,meas_time_P);
-[segment4_Z_X,segment4_counter_X,segment4_time_X]=build_segment(345.4370, 450, Z_x,counter_X_new,meas_time_X_c);
+% [segment2_Z_P,segment2_counter_P,segment2_time_P]=build_segment(158.7230, 214.4140, Z_p,counter_P_new,meas_time_P);
+% [segment2_Z_X,segment2_counter_X,segment2_time_X]=build_segment(158.7230, 214.4140, Z_x,counter_X_new,meas_time_X_c);
+% 
+% [segment3_Z_P,segment3_counter_P,segment3_time_P]=build_segment(214.4140, 345.4370, Z_p,counter_P_new,meas_time_P);
+% [segment3_Z_X,segment3_counter_X,segment3_time_X]=build_segment(214.4140, 345.4370, Z_x,counter_X_new,meas_time_X_c);
+% 
+% [segment4_Z_P,segment4_counter_P,segment4_time_P]=build_segment(345.4370, 450, Z_p,counter_P_new,meas_time_P);
+% [segment4_Z_X,segment4_counter_X,segment4_time_X]=build_segment(345.4370, 450, Z_x,counter_X_new,meas_time_X_c);
 
 
 
