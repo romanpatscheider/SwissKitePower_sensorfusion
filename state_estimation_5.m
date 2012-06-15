@@ -15,8 +15,8 @@ lat0=47+24/60;
 long0=8+32/60;
 % noise form Xsens datasheet
 NOISE_ACC_b=10*[0.14;0.14;0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
-NOISE_GYRO_b=1*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
-NOISE_MAG_b=1000*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
+NOISE_GYRO_b=10*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
+NOISE_MAG_b=10*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
 NOISE_GPS_POS=0.0005;% Noise in position of the GPS
 NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
@@ -96,7 +96,7 @@ while (i<size(M,2))
     if(i==1)
         i_old=10;
     else
-        i_old =i-1;
+        i_old =i;
     end
     while(meas_time(i+1)<=totalTime)
         i=i+1;
@@ -132,7 +132,7 @@ while (i<size(M,2))
     %-----------------------
     
     for j=1:size(meas_control,2)                  % if we have new data, correction step is done
-        if meas_control(j)==1 && (j<=6 || (j>=7 && j<=9)) % after && define wich measurements are to be used for correction (in this care magn is ignored)
+        if meas_control(j)==1 && (j<=6 || (j>=7 && j<=12)) % after && define wich measurements are to be used for correction (in this care magn is ignored)
 %             [x_tmp,P_tmp]= correction(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
               P12=P_tmp*H(j,:)';                   %cross covariance
               % K=P12*inv(H*P12+R);       %Kalman filter gain
