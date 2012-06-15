@@ -15,7 +15,7 @@ lat0=47+24/60;
 long0=8+32/60;
 % noise form Xsens datasheet
 NOISE_ACC_b=10*[0.14;0.14;0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
-NOISE_GYRO_b=10*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
+NOISE_GYRO_b=50*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
 NOISE_MAG_b=10*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
 NOISE_GPS_POS=0.0005;% Noise in position of the GPS
@@ -142,6 +142,7 @@ while (i<size(M,2))
               U=P12/S;                    %K=U/R'; Faster because of back substitution
               x_tmp=x_tmp+U*(S'\(z_new(j)-z_est(j)));         %Back substitution to get state update
               P_tmp=P_tmp-U*U';
+        
             
         end
             
@@ -157,6 +158,7 @@ while (i<size(M,2))
     save_t(k)=totalTime;
     save_z_est(:,k)=z_est;
     save_z(:,k)=z_new;
+    save_z_used(:,k)=z_new.*meas_control';
     [val,ind]=min(abs(meas_time_P-meas_time(i)));
     save_anlges(:,k)=angles_VI_p(:,ind);
     k=k+1;
@@ -178,8 +180,10 @@ figure(2);plot(save_t,save(5:7,:),'o-',save_t,save_est(5:7,:),'.',save_t,save_co
 figure(3);plot(save_t,save([4 8],:),'o-',save_t,save_est([4 8],:),'.',save_t,save_corr([4 8],:),'x-');
 
 %% plot expected measurements against actual measurements!
-figure(1);plot(save_t,save_z_est(1:3,:),'o-',save_t,save_z(1:3,:),'.');title('position')
-figure(2);plot(save_t,save_z_est(4:6,:),'o-',save_t,save_z(4:6,:),'.');title('velocity')
+%figure(1);plot(save_t,save_z_est(1:3,:),'o-',save_t,save_z(1:3,:),'.');title('position')
+figure(1);plot(save_t,save_z_est(1:3,:),'o-',save_t,save_z_used(1:3,:),'.');title('position')
+%figure(2);plot(save_t,save_z_est(4:6,:),'o-',save_t,save_z(4:6,:),'.');title('velocity')
+figure(2);plot(save_t,save_z_est(4:6,:),'o-',save_t,save_z_used(4:6,:),'.');title('velocity')
 figure(3);plot(save_t,save_z_est(7:9,:),'o-',save_t,save_z(7:9,:),'.');title('acceleration')
 figure(4);plot(save_t,save_z_est(10:12,:),'o-',save_t,save_z(10:12,:),'.');title('gyros')
 %figure(4);plot(save_t,save_est(5,:),'o-',save_t,-save_est(7,:).*sin(save_est(2,:)),'o-',save_t,save_z(10:12,:),'.');

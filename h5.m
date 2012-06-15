@@ -53,7 +53,7 @@ h2=dpos_n + transp(DCM_bi)*vg; %vel
 % calculate expected acceleration
 a_zp=-[0;0;norm((dpos_n))^2/(R)];
 a_zp_dis=-transp(cross(transp(w_body),transp(cross(transp(w_body),transp(dis)))));
-a_G=DCM_bi*(-G).*[0;0;1];
+a_G=DCM_bi*(-G).*[0;0;1.15];
 h3=a_zp+a_zp_dis+a_G;
 
 h4=w_body;%gyr
