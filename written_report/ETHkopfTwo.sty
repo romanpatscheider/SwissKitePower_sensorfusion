@@ -1,0 +1,120 @@
+% By Tobias Oetiker (tobias@ife.ee.ethz.ch)
+% Version 1:  7. April 1994 (to)
+% Version 1.1 totaly Reworked 14. April 1994 (to)
+% Version 1.2 make boxes for the text under the header. 16. Mai 1994
+%             and put text to \sf (to)
+% Version 1.3 Choose Helvetica Italic for the header and add
+%              relative fontsize.
+%              Make it a Pagestyle called ETHkopf
+% Version 1.4 We need a \global before the def so that it works even when
+% 1996/10/09  the command is called from within an environment like center
+%
+% Version 2.0 Integrated Official EPS ...
+% Version 2.1 Smaller parbox around bylines to force linebreaks
+% use \newline for controlled linebreaks in the arguments of
+% \ETHkopf{}{}
+%
+% ------------------------------------------------------------------------
+% ADDITIONS:
+%
+% Version 3.0 New ETH-Logo added (and changed name to ETHkopfTwo.sty)
+%             by Mathias Staeger (stager@ife.ee.ethz.ch)
+% Version 3.1 ETH-Font added for ps (doesn't work for pdf right now)
+%             by Mathias Staeger (stager@ife.ee.ethz.ch)
+% Note: Version 3.0 and 3.1 are still a pretty quick hack (April 2002)
+%		commented RequirePackage{ethfont} since that doesn't work
+
+
+\newcommand{\ETHkopfTwoFirstline}{Institut f\"ur Elektronik}
+\newcommand{\ETHkopfTwoSecondline}{Prof. G.~Tr\"oster}
+\newcommand{\ETHkopfTwoThirdline}{Wintersemester 2001/02}
+
+\ifpdf
+    \RequirePackage[pdftex]{graphicx}
+\else
+    \RequirePackage[dvips]{graphicx}
+%    \RequirePackage{ethfont}
+\fi
+
+\sf
+
+\newcommand{\ETHkopfTwo}[3]{%
+  \global\def\ETHkopfTwoFirstline{#1}%
+  \global\def\ETHkopfTwoSecondline{#2}%
+  \global\def\ETHkopfTwoThirdline{#3}%
+  \thispagestyle{ETHkopfTwo}%
+}
+
+
+
+\def\ps@ETHkopfTwo{%
+  \def\@oddhead{%
+    \noindent%
+    \raisebox{1.5cm}[\headheight][0pt]{%
+        \noindent%
+        \begin{minipage}[t]{0.3\textwidth}%
+            \vspace{0pt}%
+            \includegraphics[width=63mm]{ETHlogo}%
+        \end{minipage}%
+        \hspace{\stretch{1}}%
+        \begin{minipage}[t]{0.7\textwidth}%
+            \fontencoding{T1}\fontsize{11}{0}%
+            \selectfont%
+            \sf
+            \vspace{0pt}%
+            \begin{flushright}%
+                \textbf{\Large\ETHkopfTwoFirstline}%
+                \vspace{2mm} \\%
+                \textbf{\large\ETHkopfTwoSecondline}%
+                \vspace{3mm} \\%
+                \textbf{\ETHkopfTwoThirdline}%   
+            \end{flushright}%
+        \end{minipage}%
+      }%
+    }%
+  \def\@oddfoot{}  
+  \def\@evenhead{%
+    \noindent%
+    \raisebox{1.5cm}[\headheight][0pt]{%
+        \noindent%
+        \begin{minipage}[t]{0.3\textwidth}%
+            \vspace{0pt}%
+            \includegraphics[width=63mm]{ETHlogo}%
+        \end{minipage}%
+        \hspace{\stretch{1}}%
+        \begin{minipage}[t]{0.7\textwidth}%
+            \fontencoding{T1}\fontsize{11}{0}%
+            \selectfont%
+            \sf
+            \vspace{0pt}%
+            \begin{flushright}%
+                \textbf{\Large\ETHkopfTwoFirstline}%
+                \vspace{2mm} \\%
+                \textbf{\large\ETHkopfTwoSecondline}%
+                \vspace{3mm} \\%
+                \textbf{\ETHkopfTwoThirdline}%   
+            \end{flushright}%
+        \end{minipage}%
+      }%
+    }%
+  \def\@evenfoot{}
+}%
+
+
+% to have an ethkopf on the fullpage maketitle page we need to
+% get rid of the thispagestyle empty thing from the
+% standard latex \maketitle
+
+%\renewenvironment{titlepage}{
+% \if@twocolumn
+%    \@restonecoltrue\onecolumn
+% \else
+%    \@restonecolfalse\newpage
+% \fi
+% \setcounter{page}\@ne
+% \thispagestyle{ETHkopfTwo}%
+%}{\if@restonecol\twocolumn \else \newpage \fi
+%     \if@twoside\else
+%        \setcounter{page}\@ne
+%     \fi
+%}

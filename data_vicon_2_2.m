@@ -9,6 +9,7 @@ fid_pixhawk = fopen('p_test_2_2.txt');
 % Import vicon file
 VI=csvread('positionlog_KiteBox_20.25.14.615.csv');
 
+shift=0.51;
 %------------------------
 %bringing sensors and vicon together.
 %------------------------
@@ -26,8 +27,8 @@ VI_new=VI';
 
 %position
 for i=2:4
-      pos_VI_p_noisy(i-1,:)=awgn(interp1(meas_time_VI_new+8.5646+0.6363-0.07,VI_new(i,:),meas_time_P),-5);
-      pos_VI_p(i-1,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07,VI_new(i,:),meas_time_P);
+      pos_VI_p_noisy(i-1,:)=awgn(interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_P),-5);
+      pos_VI_p(i-1,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_P);
 end
 
 % velocity
@@ -54,7 +55,7 @@ vel_p_noisy=awgn(vel,-5);
 
 %angles
 for i=5:7
-     angles_VI_p(i-4,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07,VI_new(i,:),meas_time_P);
+     angles_VI_p(i-4,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_P);
 end
 
 % ground truth
@@ -99,8 +100,8 @@ meas_time_VI=meas_time_VI';
 
 % position
 for i=2:4
-     pos_VI_x_noisy(i-1,:)=awgn(interp1(meas_time_VI_new+8.5646+0.6363-0.07,VI_new(i,:),meas_time_X_c),-5);
-     pos_VI_x(i-1,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07,VI_new(i,:),meas_time_X_c);
+     pos_VI_x_noisy(i-1,:)=awgn(interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_X_c),-5);
+     pos_VI_x(i-1,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_X_c);
 end
 
 %velocity
@@ -129,12 +130,12 @@ vel_x_noisy=awgn(vel,-5);
 
 %angles
 for i=5:7
-     angles_VI_x(i-4,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07,VI_new(i,:),meas_time_X_c);
+     angles_VI_x(i-4,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_X_c);
 end
 
 % ground truth
 ground_truth_X=[pos_VI_x/1000;vel/1000;angles_VI_x]; %position, velocity and angels without noise.
-Z_x=[(pos_VI_x_noisy)/1000;vel_x_noisy/1000;acc_X_c;gyro_X_c;magn_X_c];
+Z_x=[(pos_VI_x_noisy)/1000;vel_x_noisy/1000;acc_X_c;gyro_X_c;magn_X_c].*[1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2))];
 
 
 % counter

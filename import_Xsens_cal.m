@@ -8,27 +8,27 @@ a1=textscan(fid,'%f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f'
 meas_time_X_c=a1{20}*1e-3;
 %accelerometer
 for i=1:3
-    acc_X_c(:,i)=(typecast(int32(a1{i}),'single'));
+    acc_X_c(:,i)=double((typecast(int32(a1{i}),'single')));
 end
 %gyro
 for i=4:6
-    gyro_X_c(:,i-3)=(typecast(int32(a1{i}),'single'));
+    gyro_X_c(:,i-3)=double((typecast(int32(a1{i}),'single')));
 end
 %magnetometer
 for i=7:9
-    magn_X_c(:,i-6)=(typecast(int32(a1{i}),'single'));
+    magn_X_c(:,i-6)=double((typecast(int32(a1{i}),'single')));
 end
 %position
 for i=14:16
-    pos_X_c(:,i-13)=(typecast(int32(a1{i}),'single'));
+    pos_X_c(:,i-13)=double((typecast(int32(a1{i}),'single')));
 end
 %velocity
 for i=17:19
-    vel_X_c(:,i-16)=(typecast(int32(a1{i}),'single'));
+    vel_X_c(:,i-16)=double((typecast(int32(a1{i}),'single')));
 end
 %quaternion
 for i=10:13
-    quat_X_c(:,i-9)=(typecast(int32(a1{i}),'single'));
+    quat_X_c(:,i-9)=double((typecast(int32(a1{i}),'single')));
 end
 
 %counter

@@ -1,0 +1,15 @@
+\BOOKMARK [0][-]{Doc-Start}{Task}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{Introduction}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Kite Power in General and the Swiss Kite Power Project}{}% 3
+\BOOKMARK [0][-]{chapter.2}{IMUs}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Platform}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Centrifue Test}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{State Estimation}{}% 7
+\BOOKMARK [1][-]{section.3.1}{Basics of the Extended Kalman Filter}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{Propagation Model}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.3}{H,no sensor Data}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.4}{Covariances}{chapter.3}% 11
+\BOOKMARK [0][-]{chapter.4}{Results - Vicon Test}{}% 12
+\BOOKMARK [1][-]{section.4.1}{Set up}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.2}{Evaluation}{chapter.4}% 14
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 15

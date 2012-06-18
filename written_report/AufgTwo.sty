@@ -1,0 +1,103 @@
+% **********************************************
+% *                                            *
+% * Substyle for ETH Diplom- and Stud.arbeiten *
+% *                                            *
+% **********************************************
+%
+% FILENAME:   AufgTwo.sty
+%
+% ABSTRACT:   Dient der Einbettung der Aufgaben-
+%             stellung in den Bericht
+%             With new ETH-Logo
+%
+% AUTHOR:     M. Staeger, April. 2002,
+%              
+% STATUS:     a pretty quick hack...
+%
+% VERSION:    2.0
+%
+%***********************************************
+
+%
+% HEADER AND TITLE
+%
+
+\newcommand{\headerandtitle}{
+
+    % --------------- ETH HEAD ---------------
+    \topmargin=1.2cm
+    \ETHkopfTwo{\laboratorystring}{\professorstring}{\periodstring}
+    \vspace{-2.5cm}
+  
+    % --------------- SADA INFO ---------------
+   \noindent
+   \begin{center}
+     \Large
+     \dasatypestring
+   \end{center}
+   \begin{center}
+     \large
+     \studentstring
+   \end{center}
+   \vskip 2.5em
+   \begin{center}
+     \LARGE  
+     \textbf{\titlestring}
+   \end{center}
+   \vskip 2.5em
+   \begin{center}
+     \large
+     \begin{tabular}{ll}
+       Betreuer:       & \mainreaderstring \\
+       Stellvertreter: & \alternatereaderstring
+     \end{tabular}
+   \end{center}
+   \vskip 0.5em
+   \begin{center}
+     \large
+     \begin{tabular}{ll}
+       Ausgabe:      & \issuedatestring \\
+       Abgabe:       & \submissiondatestring
+     \end{tabular}
+   \end{center}
+   \par
+   \vskip 2.5em
+}
+
+%
+% DATE AND SIGNATURE
+%
+\newcommand{\dateandsignature}{
+  \vskip3cm plus0pt minus2cm
+    \noindent
+    \parbox{\textwidth}{
+      \raggedleft
+      Z\"urich, den \issuedatestring \\[1.5cm]
+      \professorstring
+    }
+}
+
+
+%
+% THE GENERIC DASA-COMMANDS
+%
+\def\period#1{\def\periodstring{#1}}
+\def\periodstring{}
+\def\dasatype#1{\def\dasatypestring{#1}}
+\def\dasatypestring{}
+\def\students#1{\def\studentstring{#1}}
+\def\studentstring{}
+\def\mainreader#1{\def\mainreaderstring{#1}}
+\def\mainreaderstring{}
+\def\alternatereader#1{\def\alternatereaderstring{#1}}
+\def\alternatereaderstring{}
+\def\issuedate#1{\def\issuedatestring{#1}}
+\def\issuedatestring{}
+\def\submissiondate#1{\def\submissiondatestring{#1}}
+\def\submissiondatestring{}
+\def\title#1{\def\titlestring{#1}}
+\def\titlestring{}
+\def\laboratory#1{\def\laboratorystring{#1}}
+\def\laboratorystring{}
+\def\professor#1{\def\professorstring{#1}}
+\def\professorstring{}

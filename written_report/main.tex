@@ -1,0 +1,179 @@
+
+%=============================================================================
+%  File:          main.tex
+%  Author:       Roman Patscheider und Fabian Hilti
+%                Automatik Control Lab, ETH Zurich, Switzerland
+%                
+%  Content:      Template for student reports
+%  Creation:     11 Jan 2001
+%  Last change:  continuous ...
+%=============================================================================
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+  \pdffalse
+\else
+  \pdfoutput=1
+  \pdftrue
+\fi
+
+\ifpdf
+\documentclass[11pt,            % 11pt Font
+               a4paper,         % a4-Paperformat
+               twoside,         % twoside
+               fleqn,           % Equations appear flush left
+               pdftex
+               ]{report}
+\else
+\documentclass[11pt,            % 11pt Font
+               a4paper,         % a4-Paperformat
+               twoside,         % twoside
+               fleqn,           % Equations appear flush left
+               openright        % Chapters begin on odd (right) page
+              ]{report}
+\fi
+
+
+\ifpdf
+     \usepackage[colorlinks,hyperindex]{hyperref}% generates colored links
+                                                 % in pdf file
+     \usepackage[pdftex]{graphicx}
+     \DeclareGraphicsExtensions{.png, .jpg, .pdf}
+     \graphicspath{{pictures/}}
+\else
+     \usepackage[dvips]{graphicx}
+     \DeclareGraphicsExtensions{.eps}
+     \graphicspath{{pictures/}}
+\fi
+
+\usepackage[T1]{fontenc}        % T1-Fontcoding, auch notwendig
+                                % um mit Umlauten ,, arbeiten zu koennen
+\usepackage{ae}                 % Almost european computer modern font
+                                % Zur Erstellung von pdf-Files
+\usepackage[english]{babel}      % Package for multilingual style options
+\usepackage{fancyhdr}           % Package for customizing page layout
+\usepackage{ETHkopfTwo}         % ETH Style Title page
+\usepackage{AufgTwo}            % Formatiert die Aufgabenstellung
+\usepackage{verbatim}           % Package for including files
+\usepackage[final]{pdfpages}	% Bindet PDF ein
+
+
+%=============================================================================
+% Layout Header and Footer
+%=============================================================================
+
+\pagestyle{fancy}
+% with this we ensure that the chapter and section
+% headings are in lowercase.
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}                           % Delete all current settings
+                                     % for header and footer
+\fancyhead[LE,RO]{\bfseries\thepage} % Pagenumber aligned left on odd pages
+                                     % Pagenumber aligned right on
+                                     % even pages
+\fancyhead[LO]{\nouppercase{\bfseries\rightmark}}
+\fancyhead[RE]{\nouppercase{\bfseries\leftmark}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{1.6pt}     % Make space for headrule
+\fancypagestyle{plain}
+{
+\fancyhead{}                         % Get rid of headers on plain pages
+\renewcommand{\headrulewidth}{0pt}   % Get rid of headerline on plain pages
+}
+
+%=============================================================================
+% Pagelayout
+%=============================================================================
+
+\addtolength{\headwidth}{1.2cm}
+\addtolength{\textwidth}{1.2cm}
+\addtolength{\evensidemargin}{-1.2cm}
+\addtolength{\oddsidemargin}{-0cm}
+
+
+%=============================================================================
+% Numbering depth for headings
+%=============================================================================
+\setcounter{secnumdepth}{3} % Within document
+\setcounter{tocdepth}{3}    % Within table of contents
+
+%=============================================================================
+% New commands
+%=============================================================================
+
+% These commands may be used instead of the built-in commands of LaTeX
+% for creating your equations
+\newcommand{\be}{\begin{equation}}          % Abbreviation
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+
+%Command clear used to produce empty page without header and footer
+%in case of a twoside report where new chapters always begin on odd pages
+\ifpdf
+   \newcommand{\clear}{}
+\else
+   \newcommand{\clear}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\fi
+
+
+\frenchspacing
+
+%=============================================================================
+% Begin of document
+%=============================================================================
+
+\begin{document}
+    \include{Deckblatt}
+\clear
+    \pagenumbering{roman}
+
+    %\include{Vorwort}
+\clear
+    \include{Aufgabenstellung}
+\clear
+    \tableofcontents
+\clear
+    \listoffigures % Creates list of all figures used in document
+%\clear
+    %\listoftables  % Creates list of all tables inserted
+\clear
+    \include{Abstract}
+\clear
+
+
+% Split your document e.g. chapterwise and rejoin the chapters
+% to a single documentation with the \include-Command
+    \pagenumbering{arabic}
+    \include{Chapter1} % TeX includes file Chapter1.tex
+\clear
+    \include{Chapter2}
+\clear
+    \include{Chapter3}
+\clear
+    \include{Chapter4}
+\clear
+    \include{Chapter5}
+\clear
+    %\include{Zusammenfassung}
+\clear
+    %\include{Ausblick}
+\clear
+    %Bibliography
+    %\bibliographystyle{unsrt}
+    %\bibliography{Parashare}
+\clear
+
+    %Appendix
+    %%%\appendix
+    % uncomment the following line in case you need to make the page wider
+    %\addtolength{\headwidth}{1.2cm}\addtolength{\textwidth}{0.5cm}
+    %\include{Schematics}
+\clear
+    %%%%\include{Software}
+    % uncomment the following line in case you made the page wider earlier
+    %\addtolength{\headwidth}{-1.2cm}\addtolength{\textwidth}{-0.5cm}
+
+\end{document}
