@@ -4,12 +4,18 @@
 \BOOKMARK [0][-]{chapter.2}{IMUs}{}% 4
 \BOOKMARK [1][-]{section.2.1}{Platform}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.2}{Centrifue Test}{chapter.2}% 6
-\BOOKMARK [0][-]{chapter.3}{State Estimation}{}% 7
-\BOOKMARK [1][-]{section.3.1}{Basics of the Extended Kalman Filter}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.2}{Propagation Model}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.3}{H,no sensor Data}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.4}{Covariances}{chapter.3}% 11
-\BOOKMARK [0][-]{chapter.4}{Results - Vicon Test}{}% 12
-\BOOKMARK [1][-]{section.4.1}{Set up}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.2}{Evaluation}{chapter.4}% 14
-\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{Set-up}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.2}{Output/Units}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.3}{Conclusion}{section.2.2}% 9
+\BOOKMARK [0][-]{chapter.3}{State Estimation}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Basics of the Extended Kalman Filter}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{State Estimation Model}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Sensor Estimation Model}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Covariances, Outage}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Results - Vicon Test}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Set up}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Evaluation}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.2.1}{short vs long radius}{section.4.2}% 18
+\BOOKMARK [2][-]{subsection.4.2.2}{Outage and Sensor rate}{section.4.2}% 19
+\BOOKMARK [2][-]{subsection.4.2.3}{Pixhawk vs Xsens}{section.4.2}% 20
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 21

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  18 JUN 2012 07:27
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  18 JUN 2012 07:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -553,13 +553,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
 (./Chapter5.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2CEE36029D0C72D3D67F80C86A1C652D;858.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 2CEE36029D0C72D3D67F80C86A1C652D;858
+(rerunfilecheck)             After:  42530C0A122C076DDA931240A4376FF9;1288.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
  ) 
 Here is how much of TeX's memory you used:
- 6983 strings out of 493633
- 100248 string characters out of 3143378
+ 6989 strings out of 493633
+ 100344 string characters out of 3143378
  189533 words of memory out of 3000000
  10073 multiletter control sequences out of 15000+200000
  44037 words of font info for 77 fonts, out of 3000000 for 9000
@@ -570,11 +577,10 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 ></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-
-Output written on main.pdf (13 pages, 177720 bytes).
+Output written on main.pdf (13 pages, 178674 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 205 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
