@@ -5,7 +5,7 @@
 %---------------------------------------------
     %% Importing Xsens
 fid_xsens_cal = fopen('x_test_2_1.txt');
-[pos_X,vel_X, acc_X,gyro_X,magn_X,meas_time_X,counter_X,pos_counter_X] =import_Xsens(fid_xsens_cal);
+[acc_X,gyro_X,magn_X,meas_time_X,counter_X,pos_counter_X] =import_Xsens(fid_xsens_cal);
 %% Importing PixHawk
 fid_pixhawk = fopen('p_test_2_1.txt');
 [acc_P,gyro_P,magn_P,meas_time_P,counter_P]= import_PixHawk(fid_pixhawk);

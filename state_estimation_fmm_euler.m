@@ -62,7 +62,7 @@ R=diag(r);
 % for every measurement the Extended Kalman Filter is used for state
 % estimation
 %------------------------
-i=7000;
+i=1;
 totalTime=meas_time(i);
 
 k=1;

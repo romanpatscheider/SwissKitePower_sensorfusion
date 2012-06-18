@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  18 JUN 2012 07:58
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  18 JUN 2012 08:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -362,14 +362,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<pictures/titelbild.jpg, id=64, 906.38625pt x 302.12875pt>
+<pictures/titelbild.jpg, id=88, 906.38625pt x 302.12875pt>
 File: pictures/titelbild.jpg Graphic file (type jpg)
 
 <use pictures/titelbild.jpg>
 Package pdftex.def Info: pictures/titelbild.jpg used on input line 23.
 (pdftex.def)             Requested size: 295.6074pt x 98.53642pt.
 
-<pictures/ETHlogo.pdf, id=65, 179.67125pt x 45.16875pt>
+<pictures/ETHlogo.pdf, id=89, 179.67125pt x 45.16875pt>
 File: pictures/ETHlogo.pdf Graphic file (type pdf)
 
 <use pictures/ETHlogo.pdf>
@@ -392,7 +392,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \openout2 = `Aufgabenstellung.aux'.
 
  (./Aufgabenstellung.tex
-<aufgabeProv.pdf, id=77, page=1, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=101, page=1, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 1>
@@ -420,7 +420,7 @@ Package pdftex.def Info: aufgabeProv.pdf, page1 used on input line 2.
 
 
  <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=101, page=2, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=125, page=2, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 2>
@@ -436,7 +436,7 @@ File: aufgabeProv.pdf Graphic file (type pdf)
 Package pdftex.def Info: aufgabeProv.pdf, page2 used on input line 2.
 (pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
  [2 <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=107, page=3, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=131, page=3, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 3>
@@ -452,7 +452,7 @@ File: aufgabeProv.pdf Graphic file (type pdf)
 Package pdftex.def Info: aufgabeProv.pdf, page3 used on input line 2.
 (pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
  [3 <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=113, page=4, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=137, page=4, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 4>
@@ -553,22 +553,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
 (./Chapter5.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 2CEE36029D0C72D3D67F80C86A1C652D;858
-(rerunfilecheck)             After:  42530C0A122C076DDA931240A4376FF9;1288.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 42530C0A122C076DDA931240A4376FF9;1288.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
  ) 
 Here is how much of TeX's memory you used:
- 6989 strings out of 493633
- 100344 string characters out of 3143378
- 189533 words of memory out of 3000000
- 10073 multiletter control sequences out of 15000+200000
+ 6995 strings out of 493633
+ 100452 string characters out of 3143378
+ 191540 words of memory out of 3000000
+ 10079 multiletter control sequences out of 15000+200000
  44037 words of font info for 77 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  45i,18n,49p,241b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -577,10 +570,11 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 ></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on main.pdf (13 pages, 178674 bytes).
+
+Output written on main.pdf (13 pages, 180338 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
+ 229 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
  35 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
