@@ -36,26 +36,26 @@ end
 % velocity
 % calculation of the velocity from the position measurement of the vicon
 % the velocity is added with noise
-vel_tmp=zeros(3,size(meas_time_P,2)-1);
-vel=zeros(3,size(meas_time_P,2));
+vel_P_tmp=zeros(3,size(meas_time_P,2)-1);
+vel_P=zeros(3,size(meas_time_P,2));
 for i=1:3
-    vel_tmp(i,:)=diff(pos_VI_p(i,:))./diff(meas_time_P);
+    vel_P_tmp(i,:)=diff(pos_VI_p(i,:))./diff(meas_time_P);
     
 end
-vel=([vel_tmp(:,1),vel_tmp(:,:)]);
+vel_P=([vel_P_tmp(:,1),vel_P_tmp(:,:)]);
 for j=2:size(meas_time_P,2);
 
-    if isnan(vel(1,j))
-        vel(1,j)=vel(1,j-1);
+    if isnan(vel_P(1,j))
+        vel_P(1,j)=vel_P(1,j-1);
     end
-    if isnan(vel(2,j))
-        vel(2,j)=vel(2,j-1);
+    if isnan(vel_P(2,j))
+        vel_P(2,j)=vel_P(2,j-1);
     end
-    if isnan(vel(3,j))  
-       vel(3,j)=vel(3,j-1);
+    if isnan(vel_P(3,j))  
+       vel_P(3,j)=vel_P(3,j-1);
     end
 end
-vel_p_noisy=awgn(vel,-5);
+vel_p_noisy=awgn(vel_P,-5);
 
 %angles
 for i=5:7
@@ -63,37 +63,48 @@ for i=5:7
 end
 
 % ground truth
-ground_truth_P=[pos_VI_p/1000;vel/1000;angles_VI_p]; %position, velocity and angels without noise.
+ground_truth_P=[pos_VI_p/1000;vel_P/1000;angles_VI_p]; %position, velocity and angels without noise.
 Z_p=[(pos_VI_p_noisy)/1000;vel_p_noisy/1000;acc_P;gyro_P;magn_P];
 
 
-% Counter
-% a counter for the position and the velocity has to be calculated. The EKF
-% needs them.
+%% Counter
+% A counter is calculated for the measurements form the vicon. This counter
+% is needed, weather we have new senosor data
+
+%to adjust gps reading frequency set vicon_freq to desired value! set it
+%high to use every measurement available
+%to set a gps outage set vicon_outage(1) to start of outage and
+%vicon_outage(2) to end of outage
+vicon_freq=10;
+vicon_outage=[62 63];
+j_old_p=1;
+j_old_v=1;
 counter_P_pv(1,1)=1;
-for j=2:size(pos_VI_p,2)
-    if pos_VI_p(1,j) == pos_VI_p(1,j-1) && pos_VI_p(2,j) == pos_VI_p(2,j-1) && pos_VI_p(3,j) == pos_VI_p(3,j-1);
-        counter_P_pv(1,j)=j-1;
-    else counter_P_pv(1,j)=j;
-    end
-end
 counter_P_pv(2,1)=1;
 
-
-
-for j=2:size(meas_time_P,2);
-    
-    if vel(1,j) == vel(1,j-1) && vel(2,j) == vel(2,j-1) && vel(3,j) == vel(3,j-1) ;
-        counter_P_pv(2,j)=j-1;
-    else counter_P_pv(2,j)=j;
+for j=2:size(pos_VI_p,2)
+    if (meas_time_P(j)<=vicon_outage(1) || meas_time_P(j)>=vicon_outage(2))
+        if  meas_time_P(j)-meas_time_P(j_old_p)>=1/vicon_freq && (pos_VI_p(1,j) ~= pos_VI_p(1,j_old_p) || pos_VI_p(2,j) ~= pos_VI_p(2,j_old_p) || pos_VI_p(3,j) ~= pos_VI_p(3,j_old_p))
+            counter_P_pv(1,j)=j;
+            j_old_p=j;
+        else counter_P_pv(1,j)=j_old_p;
+        end
+        if  meas_time_P(j)-meas_time_P(j_old_v)>=1/vicon_freq  && (vel_P(1,j) ~= vel_P(1,j_old_v) || vel_P(2,j) ~= vel_P(2,j_old_v) || vel_P(3,j) ~= vel_P(3,j_old_v)) ;
+            counter_P_pv(2,j)=j;
+            j_old_v=j;
+        else counter_P_pv(2,j)=j_old_v;
+        end
+    else
+       disp('outage');
+       counter_P_pv(1,j)=j_old_p;
+       counter_P_pv(2,j)=j_old_v;
     end
+        
 end
 
+
+
 counter_P_new=[counter_P_pv;counter_P];
-
-
-
-
 
 
 %---------------------------------
@@ -112,27 +123,27 @@ end
 
 %velocity
 % velocity 
-vel_tmp=zeros(3,size(meas_time_X_c,2)-1);
-vel=zeros(3,size(meas_time_X_c,2));
+vel_X_tmp=zeros(3,size(meas_time_X_c,2)-1);
+vel_X=zeros(3,size(meas_time_X_c,2));
 
 for i=1:3
-    vel_tmp(i,:)=diff(pos_VI_x(i,:))./diff(meas_time_X_c);
+    vel_X_tmp(i,:)=diff(pos_VI_x(i,:))./diff(meas_time_X_c);
     
 end
-vel=([vel_tmp(:,1),vel_tmp(:,:)]);
+vel_X=([vel_X_tmp(:,1),vel_X_tmp(:,:)]);
 for j=2:size(meas_time_P,2);
 
-    if isnan(vel(1,j))
-        vel(1,j)=vel(1,j-1);
+    if isnan(vel_X(1,j))
+        vel_X(1,j)=vel_X(1,j-1);
     end
-    if isnan(vel(2,j))
-        vel(2,j)=vel(2,j-1);
+    if isnan(vel_X(2,j))
+        vel_X(2,j)=vel_X(2,j-1);
     end
-    if isnan(vel(3,j))  
-       vel(3,j)=vel(3,j-1);
+    if isnan(vel_X(3,j))  
+       vel_X(3,j)=vel_X(3,j-1);
     end
 end
-vel_x_noisy=awgn(vel,-5);
+vel_x_noisy=awgn(vel_X,-5);
 
 %angles
 for i=5:7
@@ -140,27 +151,45 @@ for i=5:7
 end
 
 % ground truth
-ground_truth_X=[pos_VI_x/1000;vel/1000;angles_VI_x]; %position, velocity and angels without noise.
+ground_truth_X=[pos_VI_x/1000;vel_X/1000;angles_VI_x]; %position, velocity and angels without noise.
 Z_x=[(pos_VI_x_noisy)/1000;vel_x_noisy/1000;acc_X_c;gyro_X_c;magn_X_c].*[1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));-1*ones(1,size(pos_VI_x_noisy,2));1*ones(1,size(pos_VI_x_noisy,2))];
 
+%% Counter
+% A counter is calculated for the measurements form the vicon. This counter
+% is needed, weather we have new senosor data
 
-% counter
+%to adjust gps reading frequency set vicon_freq to desired value! set it
+%high to use every measurement available
+%to set a gps outage set vicon_outage(1) to start of outage and
+%vicon_outage(2) to end of outage
+vicon_freq=10;
+vicon_outage=[62 63];
+j_old_p_X=1;
+j_old_v_X=1;
 counter_X_pv(1,1)=1;
-for j=2:size(pos_VI_x,2)
-    if pos_VI_x(1,j) == pos_VI_x(1,j-1) && pos_VI_x(2,j) == pos_VI_x(2,j-1) && pos_VI_x(3,j) == pos_VI_x(3,j-1);
-        counter_X_pv(1,j)=j-1;
-    else counter_X_pv(1,j)=j;
-    end
-end
 counter_X_pv(2,1)=1;
 
-for j=2:size(meas_time_X_c,2);
-    
-    if vel(1,j) == vel(1,j-1) && vel(2,j) == vel(2,j-1) && vel(3,j) == vel(3,j-1) ;
-        counter_X_pv(2,j)=j-1;
-    else counter_X_pv(2,j)=j;
+for j=2:size(pos_VI_x,2)
+    if (meas_time_X_c(j)<=vicon_outage(1) || meas_time_X_c(j)>=vicon_outage(2))
+        if  meas_time_X_c(j)-meas_time_X_c(j_old_p)>=1/vicon_freq && (pos_VI_x(1,j) ~= pos_VI_x(1,j_old_p) || pos_VI_x(2,j) ~= pos_VI_x(2,j_old_p) || pos_VI_x(3,j) ~= pos_VI_x(3,j_old_p))
+            counter_X_pv(1,j)=j;
+            j_old_p=j;
+        else counter_X_pv(1,j)=j_old_p;
+        end
+        if  meas_time_X_c(j)-meas_time_X_c(j_old_v)>=1/vicon_freq  && (vel_X(1,j) ~= vel_X(1,j_old_v) || vel_X(2,j) ~= vel_X(2,j_old_v) || vel_X(3,j) ~= vel_X(3,j_old_v)) ;
+            counter_X_pv(2,j)=j;
+            j_old_v=j;
+        else counter_X_pv(2,j)=j_old_v;
+        end
+    else
+       disp('outage');
+       counter_X_pv(1,j)=j_old_p;
+       counter_X_pv(2,j)=j_old_v;
     end
+        
 end
+
+
 
 counter_X_new=[counter_X_pv;counter_X_c];
 
