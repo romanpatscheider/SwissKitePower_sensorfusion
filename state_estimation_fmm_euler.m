@@ -16,9 +16,9 @@ long0=8+32/60;
 % noise form Xsens datasheet
 
 
-NOISE_ACC_b=10*[0.14;0.14;0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
+NOISE_ACC_b=10*[0.14;10*0.14;0.1* 0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
 NOISE_GYRO_b=10*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
-NOISE_MAG_b=100*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
+NOISE_MAG_b=100*[0.002;0.002;0.1*0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
 NOISE_GPS_POS=0.0005;% Noise in position of the GPS
 NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
@@ -63,7 +63,7 @@ R=diag(r);
 % estimation
 %------------------------
 i=1;
-totalTime=meas_time(i);
+totalTime=meas_time(i)
 
 k=1;
 while (i<size(M,2))%size(M,2)
@@ -174,6 +174,11 @@ while (i<size(M,2))%size(M,2)
     
     
      %saving:
+    
+    DCM_bi=calc_DCM_br(x_est(7),x_est(8),x_est(9));
+    save_gyro(:,k)=DCM_bi'*z_new(10:12);
+     
+     
     save_deviation(:,k)=(z_est-z_new)./z_new;
     save(:,k)=x;
     save_est(:,k)=x_est;
@@ -202,14 +207,19 @@ end
 % figure(4);plot(save_time,save_x(10:12,:),'o-',save_time,save_est(10:12,:),'.',save_time,save_new(10:12,:),'x-');
 % 
 
+%--------------------------------------
+% for X sens
+%--------------------------------------
 %% pos and vel compared to ground truth
-figure(5);plot(save_t,save_x(1,:),save_t,save_new(1,:),save_t,save_est(1,:),segment1_time_ground_truth,segment1_ground_truth(1,:),save_time,save_x(4,:)/10,save_time,save_new(4,:)/10,segment1_time_ground_truth,segment1_ground_truth(4,:)/10);legend('x','new','est','ground truth','v state x','v est x','v ground truth')
+figure(5);
+subplot(2,1,1);plot(save_t,save_corr(1,:),save_t,save_est(1,:),segment1_time_ground_truth_X,segment1_ground_truth_X(1,:));legend('pos x corrected','pos x estimated','pos x ground truth')
+subplot(2,1,2);plot(save_t,save_corr(4,:),save_t,save_est(4,:),segment1_time_ground_truth_X,segment1_ground_truth_X(4,:));legend('vel x corrected','vel x estimated','vel x ground truth')
 %% psi
-figure(6);plot(save_t,-mod(save_est(9,:),2*pi)+pi,segment1_time_ground_truth, segment1_ground_truth(7,:));legend('euler x','euler gt')
+figure(6);plot(save_t,-mod(save_est(9,:),2*pi)+pi,save_t,-mod(save_corr(9,:),2*pi)+pi,segment1_time_ground_truth_X, segment1_ground_truth_X(7,:));legend('psi estimated','psi corrected','psi ground truth')
 %% thet
-figure(7);plot(save_t,save_est(7,:),segment1_time_ground_truth, segment1_ground_truth(9,:));legend('euler x','euler gt')
+figure(7);plot(save_t,save_est(7,:),segment1_time_ground_truth_X, segment1_ground_truth_X(9,:));legend('euler x','euler gt')
 %% phi
-figure(8);plot(save_t,-save_est(8,:),save_t,-save_corr(8,:),segment1_time_ground_truth, segment1_ground_truth(9,:));legend('est','new','euler gt')
+figure(8);plot(save_t,-save_est(8,:),save_t,-save_corr(8,:),segment1_time_ground_truth_X, segment1_ground_truth_X(9,:));legend('est','new','euler gt')
 
 
 %% plot actual measurements against expected measurements
@@ -218,7 +228,9 @@ figure(2);plot(save_t,save_z_est(4:6,:),'o-',save_t,save_z(4:6,:),'.');title('ve
 figure(3);plot(save_t,save_z_est(7:9,:),'o-',save_t,save_z(7:9,:),'.');title('accelerometer')
 figure(4);plot(save_t,save_z_est(10:12,:),'o-',save_t,save_z(10:12,:),'.');title('gyros')
 figure(5);plot(save_t,save_z_est(13:15,:),'o-',save_t,save_z(13:15,:),'.');title('magnetometer')
+%%
 figure(6);plot(save_t,save(7:9,:),'o-',save_t,save_anlges(1:3,:),'.');title('vicon orientation')
 
 %%
-figure(9);plot(save_t,save_deviation(10,:))
+figure(9);plot(save_t,save_deviation(8,:))
+%%

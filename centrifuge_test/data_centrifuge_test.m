@@ -3,9 +3,9 @@ fid1 = fopen('p_test_1.txt');
 fid2 = fopen('x_test_1.txt');
 
 [acc_P,gyro_P,magn_P,meas_time_P,counter_P]= import_PixHawk(fid1);
-[acc_X,gyro_X,magn_X,meas_time_X,counter_X,pos_counter_X] =import_Xsens(fid2);
+[pos_X,vel_X,acc_X,gyro_X,magn_X,meas_time_X,counter_X_IMU,counter_X_pos] =import_Xsens_ct(fid2);
 
-
+counter_X=[counter_X_IMU;counter_X_pos];
 
 % Daten?bertragungsrate xIMU, siehe Registereintrag xIMU:
 f = 32; %[Hz]
@@ -25,5 +25,9 @@ PacketEulerAngles = PacketNumber;
 
 clear PacketNumber;
 
-deltaPacket = PacketTime(3) - PacketTime(2)
+deltaPacket = PacketTime(3) - PacketTime(2);
 t =  1/(f*deltaPacket);
+
+%deleting measurements
+[meas_time_X,acc_X,gyro_X,magn_X,counter_X]=delete_meas_error(47946,49190,meas_time_X,acc_X,gyro_X,magn_X,counter_X);
+[meas_time_P,acc_P,gyro_P,magn_P,counter_P]=delete_meas_error(47946,49190,meas_time_P,acc_P,gyro_P,magn_P,counter_P);
