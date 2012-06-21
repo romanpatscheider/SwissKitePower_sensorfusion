@@ -29,5 +29,5 @@ deltaPacket = PacketTime(3) - PacketTime(2);
 t =  1/(f*deltaPacket);
 
 %deleting measurements
-[meas_time_X,acc_X,gyro_X,magn_X,counter_X]=delete_meas_error(47946,49190,meas_time_X,acc_X,gyro_X,magn_X,counter_X);
+[meas_time_X,acc_X,gyro_X,magn_X,pos_X,vel_X,counter_X]=delete_meas_error_ct(47946,49190,meas_time_X,acc_X,gyro_X,magn_X,pos_X,vel_X,counter_X);
 [meas_time_P,acc_P,gyro_P,magn_P,counter_P]=delete_meas_error(47946,49190,meas_time_P,acc_P,gyro_P,magn_P,counter_P);

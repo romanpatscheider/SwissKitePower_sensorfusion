@@ -16,6 +16,7 @@ for i=1:3
     
     counter1=counter_error(i,time_error<max_time);
     counter(i,:)=counter1(time1>min_time);
+   
 end
 
 
