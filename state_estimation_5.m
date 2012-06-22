@@ -16,7 +16,7 @@ long0=8+32/60;
 % noise form Xsens datasheet
 NOISE_ACC_b=10*[0.14;0.14;0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
 NOISE_GYRO_b=50*[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
-NOISE_MAG_b=10*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
+NOISE_MAG_b=100*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
 NOISE_GPS_POS=0.0005;% Noise in position of the GPS
 NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
@@ -26,17 +26,18 @@ NOISE_GPS_VEL=0.005;%Noise in velocity of the GPS
 %------------------------
 % variables with initial values are defined (probably needs to be tuned by
 % correction....)
-x= [-2.5;1.0077;-0.0606;...
-    0.8465;...
-   -0.1 ;0.1617;-1.7352;...
-    0;];
+% x= [-2.5;1.0077;-0.0606;...
+%     0.8465;...
+%    -0.1 ;0.1617;-1.7352;...
+%     0;];
+x=[-2.8;1;0;0.848;0;0;0;0];
 x(1)=mod(x(1),2*pi);
     x(2)=mod(x(2),2*pi);
     x(3)=mod(x(3),2*pi);
 
 %---------------------------------
 %initial covariance Matrix
-P = zeros(size(x,1),size(x,1));%P(1,1)=10;P(5,5)=10;
+P = eye(size(x,1),size(x,1));%P(1,1)=10;P(5,5)=10;
 quat = [1,0,0,0]';
 %------------------------
 % Q and R are calculated (estimation only by trial and error)
@@ -132,7 +133,7 @@ while (i<size(M,2))
     %-----------------------
     
     for j=1:size(meas_control,2)                  % if we have new data, correction step is done
-        if meas_control(j)==1 && (j<=6 || (j>=7 && j<=12)) % after && define wich measurements are to be used for correction (in this care magn is ignored)
+        if meas_control(j)==1 && (j<=6 || (j>=7 && j<=15)) % after && define wich measurements are to be used for correction (in this care magn is ignored)
 %             [x_tmp,P_tmp]= correction(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
               P12=P_tmp*H(j,:)';                   %cross covariance
               % K=P12*inv(H*P12+R);       %Kalman filter gain

@@ -163,20 +163,20 @@ Z_x=[(pos_VI_x_noisy)/1000;vel_x_noisy/1000;acc_X_c;gyro_X_c;magn_X_c].*[1*ones(
 %to set a gps outage set vicon_outage(1) to start of outage and
 %vicon_outage(2) to end of outage
 vicon_freq=10;
-vicon_outage=[62 63];
-j_old_p_X=1;
-j_old_v_X=1;
+vicon_outage=[60 63];
+j_old_p=1;
+j_old_v=1;
 counter_X_pv(1,1)=1;
 counter_X_pv(2,1)=1;
 
 for j=2:size(pos_VI_x,2)
     if (meas_time_X_c(j)<=vicon_outage(1) || meas_time_X_c(j)>=vicon_outage(2))
-        if  meas_time_X_c(j)-meas_time_X_c(j_old_p)>=1/vicon_freq && (pos_VI_x(1,j) ~= pos_VI_x(1,j_old_p) || pos_VI_x(2,j) ~= pos_VI_x(2,j_old_p) || pos_VI_x(3,j) ~= pos_VI_x(3,j_old_p))
+        if (meas_time_X_c(j)<=47.6 || meas_time_X_c(j)>=47) || meas_time_X_c(j)-meas_time_X_c(j_old_p)>=1/vicon_freq && (pos_VI_x(1,j) ~= pos_VI_x(1,j_old_p) || pos_VI_x(2,j) ~= pos_VI_x(2,j_old_p) || pos_VI_x(3,j) ~= pos_VI_x(3,j_old_p))
             counter_X_pv(1,j)=j;
             j_old_p=j;
         else counter_X_pv(1,j)=j_old_p;
         end
-        if  meas_time_X_c(j)-meas_time_X_c(j_old_v)>=1/vicon_freq  && (vel_X(1,j) ~= vel_X(1,j_old_v) || vel_X(2,j) ~= vel_X(2,j_old_v) || vel_X(3,j) ~= vel_X(3,j_old_v)) ;
+        if (meas_time_X_c(j)<=47.6 || meas_time_X_c(j)>=47) || meas_time_X_c(j)-meas_time_X_c(1)<=1 || meas_time_X_c(j)-meas_time_X_c(j_old_v)>=1/vicon_freq  && (vel_X(1,j) ~= vel_X(1,j_old_v) || vel_X(2,j) ~= vel_X(2,j_old_v) || vel_X(3,j) ~= vel_X(3,j_old_v)) ;
             counter_X_pv(2,j)=j;
             j_old_v=j;
         else counter_X_pv(2,j)=j_old_v;
@@ -210,7 +210,10 @@ segment1_Z_X(1:3,:)=[segment1_Z_X(1,:)-0.13165*ones(1,size(segment1_Z_X,2));segm
 segment1_ground_truth_X(1:3,:)=[segment1_ground_truth_X(1,:)-0.13165*ones(1,size(segment1_ground_truth_X,2));segment1_ground_truth_X(2,:)-0.21*ones(1,size(segment1_ground_truth_X,2));segment1_ground_truth_X(3,:)-1.347185*ones(1,size(segment1_ground_truth_X,2))];
 
 %%
-% plot(segment1_time_P,segment1_Z_P(3,:)*10+8,segment1_time_P,segment1_Z_P(9,:)+10,segment1_time_P,segment1_Z_P(12,:))*10;legend('pos z','acc z','gyro')
+ plot(meas_time_X_c,Z_x(13:15,:));legend('x','y','z');title('mag')
+ 
+%%
+ plot(meas_time_X_c,ground_truth_X(7:9,:));
 
 %%
 meas_time=segment1_time_P;

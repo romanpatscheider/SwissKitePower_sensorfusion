@@ -1,7 +1,7 @@
 function dy=pendulum(t,y)
 g=9.81;
 
-%dy = zeros(8,1);    % a column vector
+dy = zeros(8,1);    % a column vector
 
 % Model from Roman
 % dy(1) = sin(y(3))*cos(y(3))*y(2)^2-g/l*sin(y(3)); % theta ..
@@ -20,6 +20,6 @@ dy(1) = y(5);
 dy(2) = y(6);
 dy(3) = y(7);
 dy(4) = 0;
-dy=transp(dy);
+%dy=transp(dy);
 
 
