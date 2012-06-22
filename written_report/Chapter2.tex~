@@ -1,5 +1,27 @@
 \chapter{IMUs}\label{cha2}
-\section{Platform}
+
+For estimating the kite's state measurements from different sensors are needed. In so called inertial measurements units (IMU)  several sensors are embedded. The most important difference between the the IMUs are in what sensors are embedded, with which rate do they provide the data, what is their range and sensitivity and how much signal processing is already done by the IMU.
+The Swiss Kite Power Project has the following options of IMUs to choose:
+
+\begin{description}
+\item[MTi-G]
+The MTi-G development kit is a commercial product from the Dutch company Xsens. The unit has an accelerometer, gyroscope, magnetometer, pressure sensor and GPS with antenna included. It exist two output data formats. It can be chosen wether the output is raw data or calibrated data. The calibrated data from the sensors without GPS gives the data in [m/s^2] and takes a offset calibration test into account. In addition to that is the GPS data processed with an Extended  Kalman Filter in the calibrated output mode.
+
+\item[PX4]
+The PX4 is a open-source/open-hardware IMU used and developed by the PIXHAWK Project of the Computer Vision and Geometry Lab of ETH Zurich. The unit contains a temperature and pressure sensor, an accelerometer, a gyroscope and a magnetometer. The IMU additionally provides a counter for each sensor output. The output of the sensors is raw data. In the estimation algorithm( …....label estimation chapter …....) only the embedded accelerometer a BMA180 from Bosch (…..DataSheetAppendix.....), the gyroscope a L3GD20 from STMicroelectronics (…..DataSheetAppendix...) and the magnetometer a HMC5883L from Honeywell (….DataSheetAppendix...) is used.
+
+\item[x-IMU]
+The x-IMU is a product of the company x-io Technologies. It has as well a temperature sensor, a accelerometer, a gyroscope and a magnetometer. The setting of the x-IMU was done by the FHNW. It provides only raw data. The data sheets of the sensors can be found in the (…..APPENDIX.....).
 \section{Centrifue Test}
+There are several performance requirements on an IMU installed on a kite. One of them is the dependency on g-loads because on a kite several g loads can appear. Therefore a centrifuge test was carried out in corporation with the Fachhochschule Nordwestschweiz (FHNW)
 \subsection{Set-up}
-\subsection{Output}
+Set-Up
+The setting of the centrifuge is described in (…..Figure.....). It is provided by the FHNW. A arm is rotated by a motor. The IMUs are set into a box at the end of the arm. The sensors are put next to each other to have the almost the same measurements in all sensors. The Box can be seen on the picture in (….Figure....). Obviously is the motion of the box describing a circle with a radius (he distance between the center and the  center of the box) of 0.75 m. The motor is able to rotate the arm with a velocity of about 10 m/s. With formula (.. a=wr^2...) we get maximum acceleration of about 8 g. There is no software for the data collection of the measured velocity implemented. Therefore we have no ground truth to compare the sensor data with. The motor is driven in order to have 5 steps between 1.62 g and 7.8 g (ca. 1.6 g; 2.4 g 3.7 g; 5.4 g; 6.9 g; 7.8 g) of centripetal acceleration.
+The PX4 and Xsens are connected together. Both, the PX4 and the Xsens measurements are written on the SD card which is attached on the PX4 Unit. The timestamp is taken from the GPS clock for the Xsens as well as for the PX4 sensor data at the time when they are written on the SD card. This results in easy and accurate synchronization between the two IMUs. To get the time synchronized with the third IMU, the x-IMU is synchronized to the computer's time. Additionally the 3 sensors are hit for having a estimation of how accurate the synchronization is.
+\subsection{Result}
+The raw data from the x-IMU is scaled by Raphael Mueller bringing it in the common units m/s^2 for the accelerometer, deg/s for the gyroscope and gauss for the magnetometer.
+The PX4 was set by the group of the PixHawk Project. How the output of the sensors have to be scaled to bring them in the required units is shown in (….table...). The scale factor describes by how much the output has to be multiplied to get the data converted in the units described in 4th row.
+\subsection{Conclusion}
+All IMUs work in the same range of noise level. With an increasing rotational velocity and therefore a higher centripetal acceleration, the average error is increasing in all sensors, except in the magnetometer. There could not be found a noise acceleration dependency. 
+In a next experiment also the recording of rotational velocity should be carried out in order to generate a ground truth to compare the it with the IMU datas. It can then be made some more observations to compare the quality of the sensors with each other. Finally the sensitivity of the accelerometer of the PX4 unit should be set in a way to be able to observe the whole range or the applied and tested centripetal acceleration.
+
