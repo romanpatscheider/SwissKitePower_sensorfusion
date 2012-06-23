@@ -55,7 +55,7 @@
 \usepackage{AufgTwo}            % Formatiert die Aufgabenstellung
 \usepackage{verbatim}           % Package for including files
 \usepackage[final]{pdfpages}	% Bindet PDF ein
-
+\usepackage{amsmath}
 
 %=============================================================================
 % Layout Header and Footer
@@ -165,12 +165,14 @@
     %\bibliographystyle{unsrt}
     %\bibliography{Parashare}
 \clear
-
+%\begin{appendix}
     %Appendix
-    %%%\appendix
+    \appendix
+    \include{addAppendix}
     % uncomment the following line in case you need to make the page wider
     %\addtolength{\headwidth}{1.2cm}\addtolength{\textwidth}{0.5cm}
     %\include{Schematics}
+%\end{appendix}
 \clear
     %%%%\include{Software}
     % uncomment the following line in case you made the page wider earlier
