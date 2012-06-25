@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  18 JUN 2012 08:04
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  23 JUN 2012 08:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -288,9 +288,67 @@ File: pppdftex.def 2011/03/10 v0.4n Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count103
 \AM@templatesizebox=\box27
 )
-(./main.aux (./Deckblatt.aux) (./Aufgabenstellung.aux) (./Abstract.aux)
-(./Chapter1.aux) (./Chapter2.aux) (./Chapter3.aux) (./Chapter4.aux)
-(./Chapter5.aux))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip56
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen112
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen113
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count104
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count105
+\leftroot@=\count106
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count107
+\DOTSCASE@=\count108
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen114
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count109
+\c@MaxMatrixCols=\count110
+\dotsspace@=\muskip11
+\c@parentequation=\count111
+\dspbrk@lvl=\count112
+\tag@help=\toks19
+\row@=\count113
+\column@=\count114
+\maxfields@=\count115
+\andhelp@=\toks20
+\eqnshift@=\dimen115
+\alignsep@=\dimen116
+\tagshift@=\dimen117
+\tagwidth@=\dimen118
+\totwidth@=\dimen119
+\lineht@=\dimen120
+\@envbody=\toks21
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) (./main.aux
+(./Deckblatt.aux) (./Aufgabenstellung.aux) (./Abstract.aux) (./Chapter1.aux)
+(./Chapter2.aux) (./Chapter3.aux) (./Chapter4.aux) (./Chapter5.aux)
+(./addAppendix.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
@@ -307,7 +365,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
 LaTeX Font Info:    ... okay on input line 128.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
 LaTeX Font Info:    ... okay on input line 128.
-\AtBeginShipoutBox=\box28
+\AtBeginShipoutBox=\box30
 Package hyperref Info: Link coloring ON on input line 128.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -316,7 +374,7 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count104
+\c@section@level=\count116
 )
 LaTeX Info: Redefining \ref on input line 128.
 LaTeX Info: Redefining \pageref on input line 128.
@@ -329,17 +387,17 @@ LaTeX Info: Redefining \nameref on input line 128.
 
 (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen112
-\scratchbox=\box29
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen113
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks19
+\scratchcounter=\count117
+\scratchdimen=\dimen121
+\scratchbox=\box31
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count120
+\MPscratchDim=\dimen122
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
+\everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -362,14 +420,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<pictures/titelbild.jpg, id=88, 906.38625pt x 302.12875pt>
+<pictures/titelbild.jpg, id=104, 906.38625pt x 302.12875pt>
 File: pictures/titelbild.jpg Graphic file (type jpg)
 
 <use pictures/titelbild.jpg>
 Package pdftex.def Info: pictures/titelbild.jpg used on input line 23.
 (pdftex.def)             Requested size: 295.6074pt x 98.53642pt.
 
-<pictures/ETHlogo.pdf, id=89, 179.67125pt x 45.16875pt>
+<pictures/ETHlogo.pdf, id=105, 179.67125pt x 45.16875pt>
 File: pictures/ETHlogo.pdf Graphic file (type pdf)
 
 <use pictures/ETHlogo.pdf>
@@ -392,7 +450,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \openout2 = `Aufgabenstellung.aux'.
 
  (./Aufgabenstellung.tex
-<aufgabeProv.pdf, id=101, page=1, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=117, page=1, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 1>
@@ -420,7 +478,7 @@ Package pdftex.def Info: aufgabeProv.pdf, page1 used on input line 2.
 
 
  <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=125, page=2, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=141, page=2, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 2>
@@ -436,7 +494,7 @@ File: aufgabeProv.pdf Graphic file (type pdf)
 Package pdftex.def Info: aufgabeProv.pdf, page2 used on input line 2.
 (pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
  [2 <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=131, page=3, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=147, page=3, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 3>
@@ -452,7 +510,7 @@ File: aufgabeProv.pdf Graphic file (type pdf)
 Package pdftex.def Info: aufgabeProv.pdf, page3 used on input line 2.
 (pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
  [3 <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=137, page=4, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=153, page=4, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 4>
@@ -467,14 +525,7 @@ File: aufgabeProv.pdf Graphic file (type pdf)
 <use aufgabeProv.pdf, page 4>
 Package pdftex.def Info: aufgabeProv.pdf, page4 used on input line 2.
 (pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
- [4 <./aufgabeProv.pdf>]) (./main.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 6.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 6.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 6.
-)
+ [4 <./aufgabeProv.pdf>]) (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -482,7 +533,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 ]
-(./main.lof)
+(./main.lof
+Overfull \hbox (0.17183pt too wide) in paragraph at lines 12--12
+ [][] [][][]\T1/aer/m/n/10.95 The pre-dic-tion and the cor-rec-tion step with t
+heir cor-re-spond-ing equa- 
+ []
+
+)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
@@ -514,25 +571,334 @@ l.150     \include{Chapter1}
 
 (./Chapter2.tex
 Chapter 2.
-) [2
+[2
 
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]\T1/aer/m/n/10.95 Accelerometer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]\T1/aer/m/n/10.95 Gyroscope
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]\T1/aer/m/n/10.95 Magnetometer
+ []
+
+
+Overfull \hbox (11.52498pt too wide) in paragraph at lines 28--39
+ [][] 
+ []
+
+Package epstopdf Info: Source file: <pictures/ct_pos.eps>
+(epstopdf)                    date: 2012-06-22 14:17:43
+(epstopdf)                    size: 214169 bytes
+(epstopdf)             Output file: <pictures/ct_pos-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-22 14:30:03
+(epstopdf)                    size: 97883 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/ct_pos-eps-conver
+ted-to.pdf pictures/ct_pos.eps>
+(epstopdf)             \includegraphics on input line 46.
+Package epstopdf Info: Output file is already uptodate.
+<pictures/ct_pos-eps-converted-to.pdf, id=242, 1442.38875pt x 755.82375pt>
+File: pictures/ct_pos-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pictures/ct_pos-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/ct_pos-eps-converted-to.pdf used on input lin
+e 46.
+(pdftex.def)             Requested size: 472.97066pt x 247.83105pt.
+
+Overfull \hbox (78.82744pt too wide) in paragraph at lines 46--47
+ [] 
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Package epstopdf Info: Source file: <pictures/ct_vel.eps>
+(epstopdf)                    date: 2012-06-22 14:18:05
+(epstopdf)                    size: 227114 bytes
+(epstopdf)             Output file: <pictures/ct_vel-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-22 14:30:04
+(epstopdf)                    size: 99039 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/ct_vel-eps-conver
+ted-to.pdf pictures/ct_vel.eps>
+(epstopdf)             \includegraphics on input line 70.
+Package epstopdf Info: Output file is already uptodate.
+<pictures/ct_vel-eps-converted-to.pdf, id=244, 1442.38875pt x 755.82375pt>
+File: pictures/ct_vel-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pictures/ct_vel-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/ct_vel-eps-converted-to.pdf used on input lin
+e 70.
+(pdftex.def)             Requested size: 472.97066pt x 247.83105pt.
+
+Overfull \hbox (78.82744pt too wide) in paragraph at lines 70--71
+[][] 
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Package epstopdf Info: Source file: <pictures/ct_acc.eps>
+(epstopdf)                    date: 2012-06-22 14:18:27
+(epstopdf)                    size: 1507974 bytes
+(epstopdf)             Output file: <pictures/ct_acc-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-22 14:30:06
+(epstopdf)                    size: 892671 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/ct_acc-eps-conver
+ted-to.pdf pictures/ct_acc.eps>
+(epstopdf)             \includegraphics on input line 93.
+Package epstopdf Info: Output file is already uptodate.
+<pictures/ct_acc-eps-converted-to.pdf, id=248, 1442.38875pt x 755.82375pt>
+File: pictures/ct_acc-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pictures/ct_acc-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/ct_acc-eps-converted-to.pdf used on input lin
+e 93.
+(pdftex.def)             Requested size: 472.97066pt x 247.83105pt.
+
+Overfull \hbox (78.82744pt too wide) in paragraph at lines 93--94
+[][] 
+ []
+
+Package epstopdf Info: Source file: <pictures/ct_gyro.eps>
+(epstopdf)                    date: 2012-06-22 14:18:53
+(epstopdf)                    size: 1486008 bytes
+(epstopdf)             Output file: <pictures/ct_gyro-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-22 14:56:01
+(epstopdf)                    size: 893757 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/ct_gyro-eps-conve
+rted-to.pdf pictures/ct_gyro.eps>
+(epstopdf)             \includegraphics on input line 98.
+Package epstopdf Info: Output file is already uptodate.
+<pictures/ct_gyro-eps-converted-to.pdf, id=249, 1442.38875pt x 755.82375pt>
+File: pictures/ct_gyro-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pictures/ct_gyro-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/ct_gyro-eps-converted-to.pdf used on input li
+ne 98.
+(pdftex.def)             Requested size: 472.97066pt x 247.83105pt.
+
+Overfull \hbox (78.82744pt too wide) in paragraph at lines 98--99
+[][] 
+ []
+
+Missing character: There is no Â in font cmr10!
+Missing character: There is no ² in font cmr10!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]
+
+LaTeX Warning: Reference `acc_mag' on page 5 undefined on input line 105.
+
+Package epstopdf Info: Source file: <pictures/ct_mag.eps>
+(epstopdf)                    date: 2012-06-22 14:19:20
+(epstopdf)                    size: 1247436 bytes
+(epstopdf)             Output file: <pictures/ct_mag-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-22 14:56:03
+(epstopdf)                    size: 763657 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/ct_mag-eps-conver
+ted-to.pdf pictures/ct_mag.eps>
+(epstopdf)             \includegraphics on input line 107.
+Package epstopdf Info: Output file is already uptodate.
+<pictures/ct_mag-eps-converted-to.pdf, id=263, 1442.38875pt x 755.82375pt>
+File: pictures/ct_mag-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pictures/ct_mag-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/ct_mag-eps-converted-to.pdf used on input lin
+e 107.
+(pdftex.def)             Requested size: 472.97066pt x 247.83105pt.
+
+Overfull \hbox (78.82744pt too wide) in paragraph at lines 107--108
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <./pictures/ct_pos-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <pictures/ct_sine.eps>
+(epstopdf)                    date: 2012-06-22 14:14:20
+(epstopdf)                    size: 53217 bytes
+(epstopdf)             Output file: <pictures/ct_sine-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-22 14:56:04
+(epstopdf)                    size: 39671 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/ct_sine-eps-conve
+rted-to.pdf pictures/ct_sine.eps>
+(epstopdf)             \includegraphics on input line 115.
+Package epstopdf Info: Output file is already uptodate.
+
+<pictures/ct_sine-eps-converted-to.pdf, id=276, 1442.38875pt x 755.82375pt>
+File: pictures/ct_sine-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pictures/ct_sine-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/ct_sine-eps-converted-to.pdf used on input li
+ne 115.
+(pdftex.def)             Requested size: 472.97066pt x 247.83105pt.
+
+Overfull \hbox (78.82744pt too wide) in paragraph at lines 115--116
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [6 <./pictures/ct_vel-eps-converted-to.pdf>] [7 <./pictures/ct_acc-eps-conver
+ted-to.pdf> <./pictures/ct_gyro-eps-converted-to.pdf>] [8 <./pictures/ct_mag-ep
+s-converted-to.pdf> <./pictures/ct_sine-eps-converted-to.pdf>]
 \openout2 = `Chapter3.aux'.
 
  (./Chapter3.tex
 Chapter 3.
-) [3
+[9
 
 
 
 ]
+Package epstopdf Info: Source file: <pictures/simple_schematic_algo.eps>
+(epstopdf)                    date: 2012-06-23 06:23:10
+(epstopdf)                    size: 547887 bytes
+(epstopdf)             Output file: <pictures/simple_schematic_algo-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2012-06-23 06:30:31
+(epstopdf)                    size: 11493 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/simple_schematic_
+algo-eps-converted-to.pdf pictures/simple_schematic_algo.eps>
+(epstopdf)             \includegraphics on input line 25.
+Package epstopdf Info: Output file is already uptodate.
+
+<pictures/simple_schematic_algo-eps-converted-to.pdf, id=336, 394.47375pt x 227
+.85126pt>
+File: pictures/simple_schematic_algo-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use pictures/simple_schematic_algo-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/simple_schematic_algo-eps-converted-to.pdf us
+ed on input line 25.
+(pdftex.def)             Requested size: 170.71652pt x 98.60689pt.
+ [10 <./pictures/simple_schematic_algo-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `P-post' on page 11 undefined on input line 53.
+
+Package epstopdf Info: Source file: <pictures/equation_kalman.eps>
+(epstopdf)                    date: 2012-06-23 06:22:51
+(epstopdf)                    size: 2964387 bytes
+(epstopdf)             Output file: <pictures/equation_kalman-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2012-06-23 08:00:11
+(epstopdf)                    size: 48082 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/equation_kalman-e
+ps-converted-to.pdf pictures/equation_kalman.eps>
+(epstopdf)             \includegraphics on input line 64.
+Package epstopdf Info: Output file is already uptodate.
+
+<pictures/equation_kalman-eps-converted-to.pdf, id=352, 969.6225pt x 505.89pt>
+File: pictures/equation_kalman-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pictures/equation_kalman-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/equation_kalman-eps-converted-to.pdf used on 
+input line 64.
+(pdftex.def)             Requested size: 284.52756pt x 148.44888pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11]
+Package epstopdf Info: Source file: <pictures/equation_ekf.eps>
+(epstopdf)                    date: 2012-06-23 06:22:30
+(epstopdf)                    size: 3009948 bytes
+(epstopdf)             Output file: <pictures/equation_ekf-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2012-06-23 08:00:12
+(epstopdf)                    size: 50417 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/equation_ekf-eps-
+converted-to.pdf pictures/equation_ekf.eps>
+(epstopdf)             \includegraphics on input line 90.
+Package epstopdf Info: Output file is already uptodate.
+
+<pictures/equation_ekf-eps-converted-to.pdf, id=365, 980.66376pt x 507.8975pt>
+File: pictures/equation_ekf-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pictures/equation_ekf-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/equation_ekf-eps-converted-to.pdf used on inp
+ut line 90.
+(pdftex.def)             Requested size: 284.52756pt x 147.35625pt.
+ [12 <./pictures/equation_kalman-eps-converted-to.pdf> <./pictures/equation_ekf
+-eps-converted-to.pdf>]
+[13]
+Package epstopdf Info: Source file: <pictures/structure_algo_1.eps>
+(epstopdf)                    date: 2012-06-23 07:20:07
+(epstopdf)                    size: 8562 bytes
+(epstopdf)             Output file: <pictures/structure_algo_1-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2012-06-23 08:00:31
+(epstopdf)                    size: 9131 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/structure_algo_1-
+eps-converted-to.pdf pictures/structure_algo_1.eps>
+(epstopdf)             \includegraphics on input line 148.
+Package epstopdf Info: Output file is already uptodate.
+
+<pictures/structure_algo_1-eps-converted-to.pdf, id=389, 226.8475pt x 463.7325p
+t>
+File: pictures/structure_algo_1-eps-converted-to.pdf Graphic file (type pdf)
+ <use pictures/structure_algo_1-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/structure_algo_1-eps-converted-to.pdf used on
+ input line 148.
+(pdftex.def)             Requested size: 227.62204pt x 465.31636pt.
+ [14] [15 <./pictures/structure_algo_1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <pictures/displacement_1.eps>
+(epstopdf)                    date: 2012-06-23 07:46:33
+(epstopdf)                    size: 4532 bytes
+(epstopdf)             Output file: <pictures/displacement_1-eps-converted-to.p
+df>
+(epstopdf)                    date: 2012-06-23 08:00:41
+(epstopdf)                    size: 5284 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/displacement_1-ep
+s-converted-to.pdf pictures/displacement_1.eps>
+(epstopdf)             \includegraphics on input line 183.
+Package epstopdf Info: Output file is already uptodate.
+
+<pictures/displacement_1-eps-converted-to.pdf, id=413, 171.64125pt x 85.31876pt
+>
+File: pictures/displacement_1-eps-converted-to.pdf Graphic file (type pdf)
+ <use pictures/displacement_1-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/displacement_1-eps-converted-to.pdf used on i
+nput line 183.
+(pdftex.def)             Requested size: 227.62204pt x 113.14442pt.
+ [16]) [17 <./pictures/displacement_1-eps-converted-to.pdf>]
 \openout2 = `Chapter4.aux'.
 
  (./Chapter4.tex
 Chapter 4.
-) [4
+) [18
 
 
 
@@ -541,40 +907,942 @@ Chapter 4.
 
  (./Chapter5.tex
 Chapter 5.
-) [5
+) [19
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
- (./main.aux (./Deckblatt.aux) (./Aufgabenstellung.aux) (./Abstract.aux)
-(./Chapter1.aux) (./Chapter2.aux) (./Chapter3.aux) (./Chapter4.aux)
-(./Chapter5.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 42530C0A122C076DDA931240A4376FF9;1288.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
- ) 
-Here is how much of TeX's memory you used:
- 6995 strings out of 493633
- 100452 string characters out of 3143378
- 191540 words of memory out of 3000000
- 10079 multiletter control sequences out of 15000+200000
- 44037 words of font info for 77 fonts, out of 3000000 for 9000
- 831 hyphenation exceptions out of 8191
- 45i,18n,49p,241b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+\openout2 = `addAppendix.aux'.
 
-Output written on main.pdf (13 pages, 180338 bytes).
+ (./addAppendix.tex
+Appendix A.
+
+
+pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
+lusion: found PDF version <1.6>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
+lusion: found PDF version <1.6>, but at most version <1.5> allowed
+[20
+
+
+
+]
+
+pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
+lusion: found PDF version <1.6>, but at most version <1.5> allowed
+
+<appendix/acc-BST-BMA180-FL000-03.pdf, id=450, page=1, 597.50829pt x 845.0471pt
+>
+File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
+ <use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
+put line 4.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
+
+<use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
+put line 4.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
+
+<use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
+put line 4.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
+
+<use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
+put line 4.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
+
+<use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
+put line 4.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [21 <./appendix/acc-BST-BMA180-FL000-03.pdf>]
+
+pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
+lusion: found PDF version <1.6>, but at most version <1.5> allowed
+
+<appendix/acc-BST-BMA180-FL000-03.pdf, id=497, page=2, 597.50829pt x 845.0471pt
+>
+File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
+ <use appendix/acc-BST-BMA180-FL000-03.pdf, page 2>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page2 used on in
+put line 4.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
+
+<use appendix/acc-BST-BMA180-FL000-03.pdf, page 2>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page2 used on in
+put line 4.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
+
+<use appendix/acc-BST-BMA180-FL000-03.pdf, page 2>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page2 used on in
+put line 4.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [22 <./appendix/acc-BST-BMA180-FL000-03.pdf>] [23]
+<appendix/gyro_px4.pdf, id=539, page=1, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 1>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page1 used on input line 6.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 1>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page1 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 1>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page1 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 1>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page1 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 1>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page1 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [24 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=566, page=2, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 2>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page2 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 2>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page2 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 2>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page2 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [25 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=572, page=3, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 3>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page3 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 3>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page3 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 3>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page3 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [26 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=579, page=4, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 4>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page4 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 4>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page4 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 4>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page4 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [27 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=585, page=5, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 5>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page5 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 5>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page5 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 5>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page5 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [28 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=591, page=6, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 6>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page6 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 6>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page6 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 6>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page6 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [29 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=598, page=7, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 7>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page7 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 7>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page7 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 7>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page7 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [30 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=619, page=8, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 8>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page8 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 8>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page8 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 8>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page8 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [31 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=625, page=9, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 9>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 9>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 9>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [32 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=631, page=10, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 10>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page10 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 10>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page10 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 10>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page10 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [33 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=637, page=11, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 11>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page11 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 11>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page11 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 11>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page11 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [34 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=660, page=12, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 12>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page12 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 12>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page12 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 12>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page12 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [35 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=669, page=13, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 13>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page13 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 13>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page13 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 13>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page13 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [36 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=678, page=14, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 14>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page14 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 14>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page14 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 14>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page14 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [37 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=684, page=15, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 15>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page15 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 15>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page15 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 15>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page15 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [38 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=692, page=16, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 16>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page16 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 16>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page16 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 16>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page16 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [39 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=700, page=17, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 17>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page17 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 17>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page17 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 17>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page17 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [40 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=711, page=18, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 18>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page18 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 18>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page18 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 18>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page18 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [41 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=720, page=19, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 19>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page19 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 19>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page19 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 19>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page19 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [42 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=731, page=20, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 20>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page20 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 20>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page20 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 20>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page20 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [43 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=747, page=21, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 21>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page21 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 21>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page21 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 21>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page21 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [44 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=753, page=22, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 22>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page22 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 22>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page22 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 22>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page22 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [45 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=759, page=23, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 23>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page23 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 23>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page23 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 23>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page23 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [46 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=765, page=24, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 24>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page24 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 24>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page24 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 24>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page24 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [47 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=772, page=25, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 25>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page25 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 25>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page25 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 25>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page25 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [48 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=784, page=26, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 26>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page26 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 26>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page26 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 26>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page26 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [49 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=797, page=27, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 27>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page27 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 27>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page27 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 27>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page27 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [50 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=811, page=28, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 28>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page28 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 28>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page28 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 28>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page28 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [51 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=821, page=29, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 29>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page29 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 29>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page29 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 29>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page29 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [52 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=827, page=30, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 30>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page30 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 30>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page30 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 30>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page30 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [53 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=834, page=31, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 31>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page31 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 31>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page31 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 31>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page31 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [54 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=840, page=32, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 32>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page32 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 32>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page32 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 32>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page32 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [55 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=846, page=33, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 33>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page33 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 33>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page33 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 33>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page33 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [56 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=852, page=34, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 34>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page34 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 34>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page34 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 34>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page34 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [57 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=858, page=35, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 35>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page35 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 35>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page35 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 35>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page35 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [58 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=866, page=36, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 36>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page36 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 36>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page36 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 36>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page36 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [59 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=873, page=37, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 37>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page37 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 37>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page37 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 37>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page37 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [60 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=879, page=38, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 38>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page38 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 38>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page38 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 38>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page38 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [61 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=885, page=39, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 39>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page39 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 39>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page39 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 39>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page39 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [62 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=891, page=40, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 40>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page40 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 40>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page40 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 40>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page40 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [63 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=897, page=41, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 41>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page41 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 41>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page41 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 41>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page41 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [64 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=906, page=42, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 42>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page42 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 42>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page42 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 42>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page42 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [65 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=921, page=43, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 43>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page43 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 43>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page43 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 43>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page43 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [66 <./appendix/gyro_px4.pdf>]
+<appendix/gyro_px4.pdf, id=927, page=44, 597.23125pt x 845.1575pt>
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 44>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page44 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+ <use appendix/gyro_px4.pdf, page 44>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page44 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/gyro_px4.pdf Graphic file (type pdf)
+
+<use appendix/gyro_px4.pdf, page 44>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page44 used on input line 6.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [67 <./appendix/gyro_px4.pdf>] [68]
+<appendix/mag_px4.pdf, id=939, page=1, 614.295pt x 794.97pt>
+File: appendix/mag_px4.pdf Graphic file (type pdf)
+
+<use appendix/mag_px4.pdf, page 1>
+Package pdftex.def Info: appendix/mag_px4.pdf, page1 used on input line 8.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: appendix/mag_px4.pdf Graphic file (type pdf)
+ <use appendix/mag_px4.pdf, page 1>
+Package pdftex.def Info: appendix/mag_px4.pdf, page1 used on input line 8.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: appendix/mag_px4.pdf Graphic file (type pdf)
+
+<use appendix/mag_px4.pdf, page 1>
+Package pdftex.def Info: appendix/mag_px4.pdf, page1 used on input line 8.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: appendix/mag_px4.pdf Graphic file (type pdf)
+ <use appendix/mag_px4.pdf, page 1>
+Package pdftex.def Info: appendix/mag_px4.pdf, page1 used on input line 8.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: appendix/mag_px4.pdf Graphic file (type pdf)
+
+<use appendix/mag_px4.pdf, page 1>
+Package pdftex.def Info: appendix/mag_px4.pdf, page1 used on input line 8.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [69 <./appendix/mag_px4.pdf>]
+Appendix B.
+[70
+
+] <appendix/gyro_ximu.pdf, id=983, page=1, 614.295pt x 794.97pt>
+File: appendix/gyro_ximu.pdf Graphic file (type pdf)
+
+<use appendix/gyro_ximu.pdf, page 1>
+Package pdftex.def Info: appendix/gyro_ximu.pdf, page1 used on input line 10.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: appendix/gyro_ximu.pdf Graphic file (type pdf)
+ <use appendix/gyro_ximu.pdf, page 1>
+Package pdftex.def Info: appendix/gyro_ximu.pdf, page1 used on input line 10.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: appendix/gyro_ximu.pdf Graphic file (type pdf)
+
+<use appendix/gyro_ximu.pdf, page 1>
+Package pdftex.def Info: appendix/gyro_ximu.pdf, page1 used on input line 10.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: appendix/gyro_ximu.pdf Graphic file (type pdf)
+ <use appendix/gyro_ximu.pdf, page 1>
+Package pdftex.def Info: appendix/gyro_ximu.pdf, page1 used on input line 10.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: appendix/gyro_ximu.pdf Graphic file (type pdf)
+
+<use appendix/gyro_ximu.pdf, page 1>
+Package pdftex.def Info: appendix/gyro_ximu.pdf, page1 used on input line 10.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [71 <./appendix/gyro_ximu.pdf>]
+<appendix/acc_mag_ximu.pdf, id=1007, page=1, 597.23125pt x 845.1575pt>
+File: appendix/acc_mag_ximu.pdf Graphic file (type pdf)
+
+<use appendix/acc_mag_ximu.pdf, page 1>
+Package pdftex.def Info: appendix/acc_mag_ximu.pdf, page1 used on input line 11
+.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: appendix/acc_mag_ximu.pdf Graphic file (type pdf)
+
+<use appendix/acc_mag_ximu.pdf, page 1>
+Package pdftex.def Info: appendix/acc_mag_ximu.pdf, page1 used on input line 11
+.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/acc_mag_ximu.pdf Graphic file (type pdf)
+
+<use appendix/acc_mag_ximu.pdf, page 1>
+Package pdftex.def Info: appendix/acc_mag_ximu.pdf, page1 used on input line 11
+.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/acc_mag_ximu.pdf Graphic file (type pdf)
+
+<use appendix/acc_mag_ximu.pdf, page 1>
+Package pdftex.def Info: appendix/acc_mag_ximu.pdf, page1 used on input line 11
+.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: appendix/acc_mag_ximu.pdf Graphic file (type pdf)
+
+<use appendix/acc_mag_ximu.pdf, page 1>
+Package pdftex.def Info: appendix/acc_mag_ximu.pdf, page1 used on input line 11
+.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [72 <./appendix/acc_mag_ximu.pdf>])
+
+! LaTeX Error: \begin{description} on input line 7 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.181 \end{document}
+                    
+? 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
+(./main.aux (./Deckblatt.aux) (./Aufgabenstellung.aux) (./Abstract.aux)
+(./Chapter1.aux) (./Chapter2.aux) (./Chapter3.aux) (./Chapter4.aux)
+(./Chapter5.aux) (./addAppendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: AE195B4FF4B85A7119E5FA79EA5DB500;1592.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 7 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 7936 strings out of 493633
+ 115484 string characters out of 3143378
+ 214057 words of memory out of 3000000
+ 10866 multiletter control sequences out of 15000+200000
+ 44711 words of font info for 80 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 45i,18n,49p,1306b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbxti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx
+10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb>
+Output written on main.pdf (80 pages, 5018396 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1109 PDF objects out of 1200 (max. 8388607)
+ 754 compressed objects within 8 object streams
+ 141 named destinations out of 1000 (max. 500000)
+ 591 words of extra memory for PDF output out of 10000 (max. 10000000)
 

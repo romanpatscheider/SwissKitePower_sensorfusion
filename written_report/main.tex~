@@ -155,7 +155,7 @@
 \clear
     \include{Chapter4}
 \clear
-    %\include{Chapter5}
+    \include{Chapter5}
 \clear
     %\include{Zusammenfassung}
 \clear
@@ -165,12 +165,14 @@
     %\bibliographystyle{unsrt}
     %\bibliography{Parashare}
 \clear
-
+%\begin{appendix}
     %Appendix
-    %%%\appendix
+    \appendix
+    \include{addAppendix}
     % uncomment the following line in case you need to make the page wider
     %\addtolength{\headwidth}{1.2cm}\addtolength{\textwidth}{0.5cm}
     %\include{Schematics}
+%\end{appendix}
 \clear
     %%%%\include{Software}
     % uncomment the following line in case you made the page wider earlier
