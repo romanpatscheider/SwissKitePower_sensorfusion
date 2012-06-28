@@ -268,12 +268,36 @@ k_{4}&=&h g(t_{n}+h,x_{n}+k_{3})\\
 x_{n+1}&=&x_{n} + \frac{1}{6} k_{1} + \frac{1}{3} k_{2} + \frac{1}{3} k_{3} + \frac{1}{6} k_{4} + \mathcal{O}(h^{5})\end{eqnarray}
 
 \section{Sensor Estimation Model}\label{sensor_estimation}
-An illustration of the relation between the position and velocity in $(y,x,z)$ or $(dx,dy,dz)$ and the two angles …. is shown in (...figure...). With this sketch and the fact that the velocity is the derivative of the position we get to the equations: 
-The centripetal acceleration can be calculated by the formula:
-We then have the additional acceleration of the earth gravitation. The earth gravitation is in the inertial frame only in z direction and has to be transformed with the $DCM_{bi}$ from the inertial in the body frame. The magnetic field is given in the inertial frame in Zurich by :...... . By transforming that into the body frame again with the help of the $DCM_{bi}$, the expected measurement from the magnetometer is calculated. Because the position of the senors is not at the center of mass of the pendulum, an additional displacement vector has to be added to the position (compare figure \ref{displacement}). With transforming the distance between the center of mass and the sensor into the inertial frame, the position is adjusted. The displacement gives an additional velocity which is the crossproduct of the rate of rotation and the displacement from the center of mass.
+An illustration of the relation between the position and velocity in $(y,x,z)$ or $(dx,dy,dz)$ and the two angles $\Phi$, $\Theta$ and $\Psi$  is shown in figure \ref{dof}. With this sketch, the assumption of a constant radius and the fact that the velocity is the derivative of the position we get to the equations: 
+
+\begin{eqnarray}
+pos\;x&=&R*cos(\Theta)cos(\Psi)\\
+pos\;y&=&R*sin(\Psi)cos(\Theta)\\
+pos\;z&=&R*sin(\Theta)\\
+vel\;x&=&-sin(\Theta)cos(\Psi)*R*\dot{\Theta}-cos(\Theta)sin(\Psi)*R*\dot{\Psi}\\
+vel\;y&=&-sin(\Theta)sin(\Psi)*R*\dot{\Theta}+cos(\Theta)cos(\Psi)*R*\dot{\Psi}\\
+vel\;z&=&-cos(\Theta)*R*\dot{\Theta}\\
+\end{eqnarray}
+The centripetal acceleration always accting in z direction of the sensor can be calculated by the formula:
+\begin{equation}
+a_{cp}=\frac{v^2}{R}
+\end{equation}
+We then have the an additional acceleration of the earth gravitation. The earth gravitation is in the inertial frame only in z direction and has to be transformed with the $DCM_{bi}$ from the inertial in the body frame. Finally the acceleration can be written as:
+\begin{equation}
+acc&=& \begin{bmatrix} 0\\0\\ \frac{v^2}{R}\end{bmatrix}+DCM_{bi}*\begin{bmatrix}0\\0\\g\end{bmatrix}
+\end{equation}
+The magnetic field is given in the inertial frame in Zurich by :...... . By transforming that into the body frame again with the help of the $DCM_{bi}$, the expected measurement from the magnetometer is calculated:
+\begin{equation}
+mag&=& DCM_{bi}* \begin{bmatrix} 0.2145 \\ 0.0060 \\ 0.4268 \end{bmatrix} [gauss]
+\end{equation} 
+The gyroscope measurement is directly represented by the rate of the euler angles $\dor{\Phi}$,$\dot{\Theta}$ and $\dot{\Psi}$. Since the euler angular rate has to be transformed into the body frame coordinates and additinally has a converstion about which axes is rotated the first, what the gyroscope has not,a transformation matrix has to be used as follows:
+\begin{equation}
+gyro=\begin{bmatrix} 1 & 0 & -sin(\Theta) \\ 0 & cos(\Phi) & sin(\Phi) cos(\Theta) \\ 0 & -sin(\Phi) & cos(\Phi)cos(\Theta) \end{bmatrix}*\begin{bmatrix} \dot{\Psi}\\ \dot{\Theta}\\ \dot{\Phi} \end{bmatrix}
+\end{equation}
+Because the position of the senors is not at the center of mass of the pendulum, an additional displacement vector has to be added to the position (compare figure \ref{displacement}). With transforming the distance between the center of mass and the sensor into the inertial frame, the position is adjusted. The displacement gives an additional velocity which is the crossproduct of the rate of rotation and the displacement from the center of mass. By the derivative of this additional velocity the additional acceleration is calculated. The displcement has no influence on the gyrometer measurement and the magnetometer.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=8 cm]{pictures/displacement_1}
+\includegraphics[width=8 cm]{pictures/displacement_1.eps}
 \caption{The black dot represents the sensor, while r is the distance between the center of mass of the pendulum and the sensor.}
 \label{displacement}
 \end{center}
