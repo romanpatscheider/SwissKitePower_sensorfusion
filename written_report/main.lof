@@ -1,18 +1,19 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces GPS Position}}{5}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces GPS velocity}}{6}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Accelerometer}}{7}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Gyrometer}}{7}{figure.2.4}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces GPS Position}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces GPS velocity}}{7}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Accelerometer}}{8}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Gyrometer}}{8}{figure.2.4}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Magnetometer}}{8}{figure.2.5}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces A closer look in time on the three IMU sensors.}}{8}{figure.2.6}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces A simple structure of the algorithm}}{10}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The prediction and the correction step with their corresponding equations. }}{12}{figure.3.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The prediction and the correction step with their corresponding equations. }}{11}{figure.3.2}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces The prediction and correction step of the EKF with their corresponding equations. }}{12}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The graphical represenetation of the algorithm's structure.}}{15}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces The black dot represents the sensor, while r is the distance between the center of mass of the pendulum and the sensor.}}{17}{figure.3.5}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The definition of the inertial and body frame as well as the convention for the angles in the pendulum model.}}{13}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The graphical represenetation of the algorithm's structure.}}{15}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The black dot represents the sensor, while r is the distance between the center of mass of the pendulum and the sensor.}}{19}{figure.3.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

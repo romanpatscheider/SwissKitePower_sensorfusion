@@ -1,11 +1,7 @@
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-Even though Paragliding is basically an individual sport, group dynamics can emerge very clearly. Pilots are constantly observing the other gliders in order to improve their own performance. Once a pilot discovers a nice thermal, it usually does not take long until other pilots follow him and soon many pilots are rising in the same thermal tube.
-
-Observing other gliders requires a lot of attention of the pilot and always provides only a snapshot of the current situation. We intend to develop an application fot mobile phones that assists pilots in finding good thermal spots. The whole concept is based on the principle of sharing information. Every pilot in the air posesses a mobile phone running our application.\footnote{For the purposes of our work we assume that to be true. We will not consider the introduction and spreading of the application among the paraglider pilots. However, we are aware that it would prove difficult to get an initial base of early adopters using the application.} That way, the vertical speed of the gliders and their current positions are constantly uploaded to a server. The more gliders flying in the same area, the better we are going to be able to reconstruct the movement of the air in this particular site. In return every pilot can download the visual representation of the data in his surroundings to his mobile phone and is thus constantly receiving the most recent information about the other pilots movements.
-
-This work starts with presenting some basics about paragliding, the information we obtained by interviewing experienced pilots and the existing software framework we started with. In a second part, the quality of the acquired climb rate data is discussed, the user interface is explained and the software adaptations both on the client and the server side are elaborated. As a evaluation of the work we are going to present the opinion of expert pilots who were showed a simulation of a flight with our application and the findings gained in a real world experiment.
+Bla Bla Bla
 
 
 
