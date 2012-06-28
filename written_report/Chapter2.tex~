@@ -16,7 +16,7 @@ The x-IMU is a product of the company x-io Technologies. It has as well a temper
 \end{description}
 
 
-\section{Centrifue Test}
+\section{Centrifuge Test}
 There are several performance requirements on an IMU installed on a kite. One of them is the dependency on g-loads because on a kite several g loads can appear. Therefore a centrifuge test was carried out in corporation with the Fachhochschule Nordwestschweiz (FHNW)
 \subsection{Set-up}
 The setting of the centrifuge is described in (…..Figure.....). It is provided by the FHNW. A arm is rotated by a motor. The IMUs are set into a box at the end of the arm. The sensors are put next to each other to have the almost the same measurements in all sensors. The Box can be seen on the picture in (….Figure....). Obviously is the motion of the box describing a circle with a radius (he distance between the center and the  center of the box) of $0.75 m$. The motor is able to rotate the arm with a velocity of about $10 m/s$. With formula $a=\omega*r^2$ we get maximum acceleration of about $8 g$. There is no software for the data collection of the measured velocity implemented. Therefore we have no ground truth to compare the sensor data with. The motor is driven in order to have 5 steps between $1.62 g$ and $7.8 g$ $(ca. 1.6 g; 2.4 g 3.7 g; 5.4 g; 6.9 g; 7.8 g)$ of centripetal acceleration.
