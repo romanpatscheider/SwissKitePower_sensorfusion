@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  28 JUN 2012 15:37
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  28 JUN 2012 20:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -347,8 +347,11 @@ LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 ) (./main.aux
 (./Deckblatt.aux) (./Aufgabenstellung.aux) (./Abstract.aux) (./Chapter1.aux)
-(./Chapter2.aux) (./Chapter3.aux) (./Chapter4.aux) (./Chapter5.aux)
-(./addAppendix.aux))
+(./Chapter2.aux) (./Chapter3.aux) (./Chapter4.aux
+
+LaTeX Warning: Label `ct_units_PX4' multiply defined.
+
+) (./Chapter5.aux) (./addAppendix.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
@@ -420,14 +423,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<pictures/titelbild.jpg, id=116, 906.38625pt x 302.12875pt>
+<pictures/titelbild.jpg, id=124, 906.38625pt x 302.12875pt>
 File: pictures/titelbild.jpg Graphic file (type jpg)
 
 <use pictures/titelbild.jpg>
 Package pdftex.def Info: pictures/titelbild.jpg used on input line 23.
 (pdftex.def)             Requested size: 295.6074pt x 98.53642pt.
 
-<pictures/ETHlogo.pdf, id=117, 179.67125pt x 45.16875pt>
+<pictures/ETHlogo.pdf, id=125, 179.67125pt x 45.16875pt>
 File: pictures/ETHlogo.pdf Graphic file (type pdf)
 
 <use pictures/ETHlogo.pdf>
@@ -450,7 +453,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \openout2 = `Aufgabenstellung.aux'.
 
  (./Aufgabenstellung.tex
-<aufgabeProv.pdf, id=129, page=1, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=137, page=1, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 1>
@@ -478,7 +481,7 @@ Package pdftex.def Info: aufgabeProv.pdf, page1 used on input line 2.
 
 
  <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=153, page=2, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=161, page=2, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 2>
@@ -494,7 +497,7 @@ File: aufgabeProv.pdf Graphic file (type pdf)
 Package pdftex.def Info: aufgabeProv.pdf, page2 used on input line 2.
 (pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
  [2 <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=159, page=3, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=167, page=3, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 3>
@@ -510,7 +513,7 @@ File: aufgabeProv.pdf Graphic file (type pdf)
 Package pdftex.def Info: aufgabeProv.pdf, page3 used on input line 2.
 (pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
  [3 <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=165, page=4, 596.2275pt x 844.15375pt>
+<aufgabeProv.pdf, id=173, page=4, 596.2275pt x 844.15375pt>
 File: aufgabeProv.pdf Graphic file (type pdf)
 
 <use aufgabeProv.pdf, page 4>
@@ -615,7 +618,7 @@ Package epstopdf Info: Source file: <pictures/ct_pos.eps>
 ted-to.pdf pictures/ct_pos.eps>
 (epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
-<pictures/ct_pos-eps-converted-to.pdf, id=296, 1442.38875pt x 755.82375pt>
+<pictures/ct_pos-eps-converted-to.pdf, id=328, 1442.38875pt x 755.82375pt>
 File: pictures/ct_pos-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pictures/ct_pos-eps-converted-to.pdf>
@@ -643,7 +646,7 @@ Package epstopdf Info: Source file: <pictures/ct_vel.eps>
 ted-to.pdf pictures/ct_vel.eps>
 (epstopdf)             \includegraphics on input line 74.
 Package epstopdf Info: Output file is already uptodate.
-<pictures/ct_vel-eps-converted-to.pdf, id=298, 1442.38875pt x 755.82375pt>
+<pictures/ct_vel-eps-converted-to.pdf, id=330, 1442.38875pt x 755.82375pt>
 File: pictures/ct_vel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pictures/ct_vel-eps-converted-to.pdf>
@@ -671,7 +674,7 @@ Package epstopdf Info: Source file: <pictures/ct_acc.eps>
 ted-to.pdf pictures/ct_acc.eps>
 (epstopdf)             \includegraphics on input line 97.
 Package epstopdf Info: Output file is already uptodate.
-<pictures/ct_acc-eps-converted-to.pdf, id=302, 1442.38875pt x 755.82375pt>
+<pictures/ct_acc-eps-converted-to.pdf, id=334, 1442.38875pt x 755.82375pt>
 File: pictures/ct_acc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pictures/ct_acc-eps-converted-to.pdf>
@@ -693,7 +696,7 @@ Package epstopdf Info: Source file: <pictures/ct_gyro.eps>
 rted-to.pdf pictures/ct_gyro.eps>
 (epstopdf)             \includegraphics on input line 102.
 Package epstopdf Info: Output file is already uptodate.
-<pictures/ct_gyro-eps-converted-to.pdf, id=303, 1442.38875pt x 755.82375pt>
+<pictures/ct_gyro-eps-converted-to.pdf, id=335, 1442.38875pt x 755.82375pt>
 File: pictures/ct_gyro-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pictures/ct_gyro-eps-converted-to.pdf>
@@ -737,7 +740,7 @@ Package epstopdf Info: Source file: <pictures/ct_mag.eps>
 ted-to.pdf pictures/ct_mag.eps>
 (epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
-<pictures/ct_mag-eps-converted-to.pdf, id=317, 1442.38875pt x 755.82375pt>
+<pictures/ct_mag-eps-converted-to.pdf, id=350, 1442.38875pt x 755.82375pt>
 File: pictures/ct_mag-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pictures/ct_mag-eps-converted-to.pdf>
@@ -762,7 +765,7 @@ Package epstopdf Info: Source file: <pictures/ct_sine.eps>
 rted-to.pdf pictures/ct_sine.eps>
 (epstopdf)             \includegraphics on input line 119.
 Package epstopdf Info: Output file is already uptodate.
-<pictures/ct_sine-eps-converted-to.pdf, id=319, 1442.38875pt x 755.82375pt>
+<pictures/ct_sine-eps-converted-to.pdf, id=352, 1442.38875pt x 755.82375pt>
 File: pictures/ct_sine-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pictures/ct_sine-eps-converted-to.pdf>
@@ -802,7 +805,7 @@ algo-eps-converted-to.pdf pictures/simple_schematic_algo.eps>
 (epstopdf)             \includegraphics on input line 25.
 Package epstopdf Info: Output file is already uptodate.
 
-<pictures/simple_schematic_algo-eps-converted-to.pdf, id=390, 394.47375pt x 227
+<pictures/simple_schematic_algo-eps-converted-to.pdf, id=422, 394.47375pt x 227
 .85126pt>
 File: pictures/simple_schematic_algo-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -826,7 +829,7 @@ ps-converted-to.pdf pictures/equation_kalman.eps>
 (epstopdf)             \includegraphics on input line 64.
 Package epstopdf Info: Output file is already uptodate.
 
-<pictures/equation_kalman-eps-converted-to.pdf, id=407, 969.6225pt x 505.89pt>
+<pictures/equation_kalman-eps-converted-to.pdf, id=439, 969.6225pt x 505.89pt>
 File: pictures/equation_kalman-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pictures/equation_kalman-eps-converted-to.pdf>
@@ -846,7 +849,7 @@ converted-to.pdf pictures/equation_ekf.eps>
 (epstopdf)             \includegraphics on input line 90.
 Package epstopdf Info: Output file is already uptodate.
 
-<pictures/equation_ekf-eps-converted-to.pdf, id=420, 980.66376pt x 507.8975pt>
+<pictures/equation_ekf-eps-converted-to.pdf, id=453, 980.66376pt x 507.8975pt>
 File: pictures/equation_ekf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pictures/equation_ekf-eps-converted-to.pdf>
@@ -854,7 +857,7 @@ Package pdftex.def Info: pictures/equation_ekf-eps-converted-to.pdf used on inp
 ut line 90.
 (pdftex.def)             Requested size: 284.52756pt x 147.35625pt.
  [14 <./pictures/equation_ekf-eps-converted-to.pdf>]
-<pictures/sketch_coordinate_systems.png, id=437, 421.575pt x 451.6875pt>
+<pictures/sketch_coordinate_systems.png, id=470, 421.575pt x 451.6875pt>
 File: pictures/sketch_coordinate_systems.png Graphic file (type png)
 
 <use pictures/sketch_coordinate_systems.png>
@@ -881,7 +884,7 @@ eps-converted-to.pdf pictures/structure_algo_1.eps>
 (epstopdf)             \includegraphics on input line 185.
 Package epstopdf Info: Output file is already uptodate.
 
-<pictures/structure_algo_1-eps-converted-to.pdf, id=463, 226.8475pt x 463.7325p
+<pictures/structure_algo_1-eps-converted-to.pdf, id=495, 226.8475pt x 463.7325p
 t>
 File: pictures/structure_algo_1-eps-converted-to.pdf Graphic file (type pdf)
  <use pictures/structure_algo_1-eps-converted-to.pdf>
@@ -929,7 +932,7 @@ s-converted-to.pdf pictures/displacement_1.eps>
 (epstopdf)             \includegraphics on input line 300.
 Package epstopdf Info: Output file is already uptodate.
 
-<pictures/displacement_1-eps-converted-to.pdf, id=531, 171.64125pt x 85.31876pt
+<pictures/displacement_1-eps-converted-to.pdf, id=563, 171.64125pt x 85.31876pt
 >
 File: pictures/displacement_1-eps-converted-to.pdf Graphic file (type pdf)
  <use pictures/displacement_1-eps-converted-to.pdf>
@@ -941,16 +944,364 @@ nput line 300.
 
  (./Chapter4.tex
 Chapter 4.
-) [25
+<vicon_bilder/IMG_0137.jpg, id=587, 2601.72pt x 1943.26pt>
+File: vicon_bilder/IMG_0137.jpg Graphic file (type jpg)
+
+<use vicon_bilder/IMG_0137.jpg>
+Package pdftex.def Info: vicon_bilder/IMG_0137.jpg used on input line 8.
+(pdftex.def)             Requested size: 315.31577pt x 235.49397pt.
+
+<vicon_bilder/IMG_0130.jpg, id=588, 2601.72pt x 1943.26pt>
+File: vicon_bilder/IMG_0130.jpg Graphic file (type jpg)
+
+<use vicon_bilder/IMG_0130.jpg>
+Package pdftex.def Info: vicon_bilder/IMG_0130.jpg used on input line 15.
+(pdftex.def)             Requested size: 315.31577pt x 235.49397pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `' on page 25 undefined on input line 22.
+
+[25
 
 
 
 ]
+
+LaTeX Warning: Reference `detail_5snf' on page 26 undefined on input line 25.
+
+<pictures/2_2_SNR5_detail_GPS.png, id=599, 588.599pt x 553.267pt>
+File: pictures/2_2_SNR5_detail_GPS.png Graphic file (type png)
+
+<use pictures/2_2_SNR5_detail_GPS.png>
+Package pdftex.def Info: pictures/2_2_SNR5_detail_GPS.png used on input line 28
+.
+(pdftex.def)             Requested size: 394.14322pt x 370.48434pt.
+
+<pictures/2_2_SNR25_detail_GPS.png, id=600, 581.372pt x 554.873pt>
+File: pictures/2_2_SNR25_detail_GPS.png Graphic file (type png)
+
+<use pictures/2_2_SNR25_detail_GPS.png>
+Package pdftex.def Info: pictures/2_2_SNR25_detail_GPS.png used on input line 3
+4.
+(pdftex.def)             Requested size: 394.14322pt x 376.19104pt.
+
+<pictures/2_2_SNR5_errors_GPS.png, id=603, 449.68pt x 337.26pt>
+File: pictures/2_2_SNR5_errors_GPS.png Graphic file (type png)
+
+<use pictures/2_2_SNR5_errors_GPS.png>
+Package pdftex.def Info: pictures/2_2_SNR5_errors_GPS.png used on input line 42
+.
+(pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
+
+<pictures/2_2_SNR25_errors_GPS.png, id=604, 449.68pt x 337.26pt>
+File: pictures/2_2_SNR25_errors_GPS.png Graphic file (type png)
+
+<use pictures/2_2_SNR25_errors_GPS.png>
+Package pdftex.def Info: pictures/2_2_SNR25_errors_GPS.png used on input line 4
+8.
+(pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+! Misplaced alignment tab character &.
+l.54 error&
+           =& \left\vert \begin{bmatrix} vicon_{pos\;x} \\ vicon_{pos\;y} \\...
+
+? 
+! Misplaced alignment tab character &.
+l.54 error&=&
+              \left\vert \begin{bmatrix} vicon_{pos\;x} \\ vicon_{pos\;y} \\...
+
+? 
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.55 \end{equation}
+                   
+? 
+
+Underfull \vbox (badness 1248) has occurred while \output is active []
+
+ [26 <./vicon_bilder/IMG_0137.jpg>]
+
+LaTeX Warning: Reference `detail:_noGPS' on page 27 undefined on input line 65.
+
+
+<pictures/2_2_detail_noGPS.png, id=609, 515.526pt x 554.873pt>
+File: pictures/2_2_detail_noGPS.png Graphic file (type png)
+
+<use pictures/2_2_detail_noGPS.png>
+Package pdftex.def Info: pictures/2_2_detail_noGPS.png used on input line 68.
+(pdftex.def)             Requested size: 394.14322pt x 424.2394pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27 <./vicon_bilder/IMG_0130.jpg>]
+
+LaTeX Warning: Reference `detail_no_GPS_P' on page 28 undefined on input line 7
+4.
+
+<pictures/2_2_P_detail_noGPS.png, id=618, 594.22pt x 553.267pt>
+File: pictures/2_2_P_detail_noGPS.png Graphic file (type png)
+
+<use pictures/2_2_P_detail_noGPS.png>
+Package pdftex.def Info: pictures/2_2_P_detail_noGPS.png used on input line 77.
+
+(pdftex.def)             Requested size: 394.14322pt x 366.99773pt.
+
+<pictures/2_2_P_errors_noGPS.png, id=620, 449.68pt x 337.26pt>
+File: pictures/2_2_P_errors_noGPS.png Graphic file (type png)
+
+<use pictures/2_2_P_errors_noGPS.png>
+Package pdftex.def Info: pictures/2_2_P_errors_noGPS.png used on input line 84.
+
+(pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28 <./pictures/2_2_SNR5_detail_GPS.png (PNG copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.94  Ratios &  meanError_
+                          {pos}^{5\;dB} & meanError_{pos}^{25\;dB} & meanErr...
+
+? 
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.94  Ratios &  meanError_{pos}^{5\;dB} &
+                                          meanError_{pos}^{25\;dB} & meanErr...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.94  Ratios &  meanError_{pos}^{5\;dB} &
+                                          meanError_{pos}^{25\;dB} & meanErr...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.94  Ratios &  meanError_{pos}^{5\;dB} &
+                                          meanError_{pos}^{25\;dB} & meanErr...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.94 ...os &  meanError_{pos}^{5\;dB} & meanError_
+                                                  {pos}^{25\;dB} & meanError...
+
+? 
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.94 ...{pos}^{5\;dB} & meanError_{pos}^{25\;dB} &
+                                                   meanError_{pos}^{no GPS\;...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.94 ...{pos}^{5\;dB} & meanError_{pos}^{25\;dB} &
+                                                   meanError_{pos}^{no GPS\;...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.94 ...{pos}^{5\;dB} & meanError_{pos}^{25\;dB} &
+                                                   meanError_{pos}^{no GPS\;...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.94 ...B} & meanError_{pos}^{25\;dB} & meanError_
+                                                  {pos}^{no GPS\;MTi-G} & me...
+
+? 
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.94 ...5\;dB} & meanError_{pos}^{no GPS\;MTi-G} &
+                                                   meanError_{pos}^{no GPS\;...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.94 ...5\;dB} & meanError_{pos}^{no GPS\;MTi-G} &
+                                                   meanError_{pos}^{no GPS\;...
+
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.94 ...5\;dB} & meanError_{pos}^{no GPS\;MTi-G} &
+                                                   meanError_{pos}^{no GPS\;...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.94 ...anError_{pos}^{no GPS\;MTi-G} & meanError_
+                                                  {pos}^{no GPS\;PX4} \\
+? 
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.95  \hline
+            
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.95  \hline
+            
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.95  \hline
+            
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.96  meanError_
+                {pos}^{5\;dB} & $ 1$ && &     \\
+? 
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.96  meanError_{pos}^{5\;dB} &
+                                $ 1$ && &     \\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.96  meanError_{pos}^{5\;dB} &
+                                $ 1$ && &     \\
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.96  meanError_{pos}^{5\;dB} &
+                                $ 1$ && &     \\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.98  meanError_
+                {pos}^{25\;dB} & & $1$ & &  \\
+? 
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.98  meanError_{pos}^{25\;dB} &
+                                 & $1$ & &  \\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.98  meanError_{pos}^{25\;dB} &
+                                 & $1$ & &  \\
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.98  meanError_{pos}^{25\;dB} &
+                                 & $1$ & &  \\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.100  meanError_
+                 {pos}^{no GPS\;MTi-G} &  & & 1 &   \\
+? 
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.100  meanError_{pos}^{no GPS\;MTi-G} &
+                                          & & 1 &   \\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.100  meanError_{pos}^{no GPS\;MTi-G} &
+                                          & & 1 &   \\
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.100  meanError_{pos}^{no GPS\;MTi-G} &
+                                          & & 1 &   \\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.102 meanError_
+                {pos}^{no GPS\;PX4} & & & & 1\\
+? 
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
+l.102 meanError_{pos}^{no GPS\;PX4} &
+                                      & & & 1\\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.102 meanError_{pos}^{no GPS\;PX4} &
+                                      & & & 1\\
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.102 meanError_{pos}^{no GPS\;PX4} &
+                                      & & & 1\\
+? 
+
+Overfull \hbox (136.97978pt too wide) in paragraph at lines 92--105
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [29 <./pictures/2_2_SNR25_detail_GPS.png (PNG copy)>] [30 <./pictures/2_2_SNR
+5_errors_GPS.png (PNG copy)>] [31 <./pictures/2_2_SNR25_errors_GPS.png (PNG cop
+y)>] [32 <./pictures/2_2_detail_noGPS.png (PNG copy)>] [33 <./pictures/2_2_P_de
+tail_noGPS.png (PNG copy)>] [34 <./pictures/2_2_P_errors_noGPS.png (PNG copy)>]
 \openout2 = `Chapter5.aux'.
 
- (./Chapter5.tex
+(./Chapter5.tex
 Chapter 5.
-) [26
+) [35
 
 
 
@@ -983,10 +1334,10 @@ l.62
 l.62 
      
 ? 
-[27
+[36
 
 
-]) [28]
+]) [37]
 \openout2 = `addAppendix.aux'.
 
  (./addAppendix.tex
@@ -999,7 +1350,7 @@ lusion: found PDF version <1.6>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-[29
+[38
 
 
 ]
@@ -1007,7 +1358,7 @@ lusion: found PDF version <1.6>, but at most version <1.5> allowed
 pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
 
-<appendix/acc-BST-BMA180-FL000-03.pdf, id=576, page=1, 597.50829pt x 845.0471pt
+<appendix/acc-BST-BMA180-FL000-03.pdf, id=674, page=1, 597.50829pt x 845.0471pt
 >
 File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
  <use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
@@ -1038,169 +1389,17 @@ File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
 Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
 put line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [30 <./appendix/acc-BST-BMA180-FL000-03.pdf>]
-
-pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
-lusion: found PDF version <1.6>, but at most version <1.5> allowed
-
-<appendix/acc-BST-BMA180-FL000-03.pdf, id=623, page=2, 597.50829pt x 845.0471pt
->
-File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
- <use appendix/acc-BST-BMA180-FL000-03.pdf, page 2>
-Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page2 used on in
-put line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
-
-<use appendix/acc-BST-BMA180-FL000-03.pdf, page 2>
-Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page2 used on in
-put line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
-
-<use appendix/acc-BST-BMA180-FL000-03.pdf, page 2>
-Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page2 used on in
-put line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [31 <./appendix/acc-BST-BMA180-FL000-03.pdf>] [32]
-<appendix/gyro_px4.pdf, id=664, page=1, 597.23125pt x 845.1575pt>
+ [39 <./appendix/acc-BST-BMA180-FL000-03.pdf>] [40]
+<appendix/gyro_px4.pdf, id=728, page=9, 597.23125pt x 845.1575pt>
 File: appendix/gyro_px4.pdf Graphic file (type pdf)
 
-<use appendix/gyro_px4.pdf, page 1>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page1 used on input line 5.
+<use appendix/gyro_px4.pdf, page 9>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 5.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 1>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page1 used on input line 5.
+ <use appendix/gyro_px4.pdf, page 9>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 5.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 1>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page1 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 1>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page1 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 1>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page1 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [33 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=692, page=2, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 2>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page2 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 2>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page2 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 2>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page2 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [34 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=699, page=3, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 3>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page3 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 3>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page3 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 3>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page3 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [35 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=705, page=4, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 4>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page4 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 4>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page4 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 4>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page4 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [36 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=711, page=5, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 5>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page5 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 5>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page5 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 5>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page5 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [37 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=717, page=6, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 6>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page6 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 6>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page6 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 6>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page6 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [38 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=723, page=7, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 7>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page7 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 7>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page7 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 7>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page7 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [39 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=744, page=8, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 8>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page8 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 8>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page8 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 8>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page8 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [40 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=751, page=9, 597.23125pt x 845.1575pt>
 File: appendix/gyro_px4.pdf Graphic file (type pdf)
 
 <use appendix/gyro_px4.pdf, page 9>
@@ -1215,593 +1414,17 @@ File: appendix/gyro_px4.pdf Graphic file (type pdf)
 <use appendix/gyro_px4.pdf, page 9>
 Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 5.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [41 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=757, page=10, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 10>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page10 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 10>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page10 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 10>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page10 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [42 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=763, page=11, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 11>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page11 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 11>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page11 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 11>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page11 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [43 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=786, page=12, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 12>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page12 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 12>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page12 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 12>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page12 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [44 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=794, page=13, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 13>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page13 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 13>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page13 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 13>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page13 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [45 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=803, page=14, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 14>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page14 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 14>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page14 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 14>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page14 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [46 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=810, page=15, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 15>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page15 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 15>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page15 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 15>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page15 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [47 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=818, page=16, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 16>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page16 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 16>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page16 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 16>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page16 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [48 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=826, page=17, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 17>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page17 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 17>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page17 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 17>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page17 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [49 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=837, page=18, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 18>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page18 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 18>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page18 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 18>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page18 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [50 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=845, page=19, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 19>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page19 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 19>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page19 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 19>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page19 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [51 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=856, page=20, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 20>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page20 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 20>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page20 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 20>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page20 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [52 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=873, page=21, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 21>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page21 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 21>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page21 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 21>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page21 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [53 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=879, page=22, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 22>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page22 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 22>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page22 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 22>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page22 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [54 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=885, page=23, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 23>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page23 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 23>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page23 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 23>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page23 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [55 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=891, page=24, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 24>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page24 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 24>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page24 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 24>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page24 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [56 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=898, page=25, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 25>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page25 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 25>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page25 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 25>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page25 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [57 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=909, page=26, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 26>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page26 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 26>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page26 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 26>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page26 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [58 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=923, page=27, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 27>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page27 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 27>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page27 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 27>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page27 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [59 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=937, page=28, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 28>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page28 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 28>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page28 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 28>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page28 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [60 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=947, page=29, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 29>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page29 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 29>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page29 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 29>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page29 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [61 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=953, page=30, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 30>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page30 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 30>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page30 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 30>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page30 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [62 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=959, page=31, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 31>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page31 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 31>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page31 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 31>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page31 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [63 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=965, page=32, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 32>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page32 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 32>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page32 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 32>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page32 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [64 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=972, page=33, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 33>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page33 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 33>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page33 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 33>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page33 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [65 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=978, page=34, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 34>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page34 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 34>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page34 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 34>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page34 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [66 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=984, page=35, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 35>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page35 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 35>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page35 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 35>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page35 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [67 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=992, page=36, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 36>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page36 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 36>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page36 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 36>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page36 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [68 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=998, page=37, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 37>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page37 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 37>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page37 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 37>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page37 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [69 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=1004, page=38, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 38>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page38 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 38>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page38 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 38>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page38 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [70 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=1011, page=39, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 39>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page39 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 39>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page39 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 39>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page39 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [71 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=1017, page=40, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 40>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page40 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 40>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page40 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 40>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page40 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [72 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=1023, page=41, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 41>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page41 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 41>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page41 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 41>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page41 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [73 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=1032, page=42, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 42>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page42 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 42>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page42 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 42>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page42 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [74 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=1046, page=43, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 43>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page43 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 43>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page43 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 43>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page43 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [75 <./appendix/gyro_px4.pdf>]
-<appendix/gyro_px4.pdf, id=1052, page=44, 597.23125pt x 845.1575pt>
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 44>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page44 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
- <use appendix/gyro_px4.pdf, page 44>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page44 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/gyro_px4.pdf Graphic file (type pdf)
-
-<use appendix/gyro_px4.pdf, page 44>
-Package pdftex.def Info: appendix/gyro_px4.pdf, page44 used on input line 5.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [76 <./appendix/gyro_px4.pdf>] [77]
-<appendix/mag_px4.pdf, id=1065, page=1, 614.295pt x 794.97pt>
+ [41 <./appendix/gyro_px4.pdf>] [42]
+<appendix/mag_px4.pdf, id=759, page=2, 614.295pt x 794.97pt>
 File: appendix/mag_px4.pdf Graphic file (type pdf)
 
-<use appendix/mag_px4.pdf, page 1>
-Package pdftex.def Info: appendix/mag_px4.pdf, page1 used on input line 7.
+<use appendix/mag_px4.pdf, page 2>
+Package pdftex.def Info: appendix/mag_px4.pdf, page2 used on input line 7.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 1>
-Package pdftex.def Info: appendix/mag_px4.pdf, page1 used on input line 7.
+ <use appendix/mag_px4.pdf, page 2>
+Package pdftex.def Info: appendix/mag_px4.pdf, page2 used on input line 7.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 1>
-Package pdftex.def Info: appendix/mag_px4.pdf, page1 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 1>
-Package pdftex.def Info: appendix/mag_px4.pdf, page1 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 1>
-Package pdftex.def Info: appendix/mag_px4.pdf, page1 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [78 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1103, page=2, 614.295pt x 794.97pt>
 File: appendix/mag_px4.pdf Graphic file (type pdf)
 
 <use appendix/mag_px4.pdf, page 2>
@@ -1816,2178 +1439,94 @@ File: appendix/mag_px4.pdf Graphic file (type pdf)
 <use appendix/mag_px4.pdf, page 2>
 Package pdftex.def Info: appendix/mag_px4.pdf, page2 used on input line 7.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [79 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1119, page=3, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 3>
-Package pdftex.def Info: appendix/mag_px4.pdf, page3 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 3>
-Package pdftex.def Info: appendix/mag_px4.pdf, page3 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 3>
-Package pdftex.def Info: appendix/mag_px4.pdf, page3 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [80 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1131, page=4, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 4>
-Package pdftex.def Info: appendix/mag_px4.pdf, page4 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 4>
-Package pdftex.def Info: appendix/mag_px4.pdf, page4 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 4>
-Package pdftex.def Info: appendix/mag_px4.pdf, page4 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [81 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1139, page=5, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 5>
-Package pdftex.def Info: appendix/mag_px4.pdf, page5 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 5>
-Package pdftex.def Info: appendix/mag_px4.pdf, page5 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 5>
-Package pdftex.def Info: appendix/mag_px4.pdf, page5 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [82 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1152, page=6, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 6>
-Package pdftex.def Info: appendix/mag_px4.pdf, page6 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 6>
-Package pdftex.def Info: appendix/mag_px4.pdf, page6 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 6>
-Package pdftex.def Info: appendix/mag_px4.pdf, page6 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [83 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1161, page=7, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 7>
-Package pdftex.def Info: appendix/mag_px4.pdf, page7 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 7>
-Package pdftex.def Info: appendix/mag_px4.pdf, page7 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 7>
-Package pdftex.def Info: appendix/mag_px4.pdf, page7 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [84 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1169, page=8, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 8>
-Package pdftex.def Info: appendix/mag_px4.pdf, page8 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 8>
-Package pdftex.def Info: appendix/mag_px4.pdf, page8 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 8>
-Package pdftex.def Info: appendix/mag_px4.pdf, page8 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [85 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1187, page=9, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 9>
-Package pdftex.def Info: appendix/mag_px4.pdf, page9 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 9>
-Package pdftex.def Info: appendix/mag_px4.pdf, page9 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 9>
-Package pdftex.def Info: appendix/mag_px4.pdf, page9 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [86 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1201, page=10, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 10>
-Package pdftex.def Info: appendix/mag_px4.pdf, page10 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 10>
-Package pdftex.def Info: appendix/mag_px4.pdf, page10 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 10>
-Package pdftex.def Info: appendix/mag_px4.pdf, page10 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [87 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1210, page=11, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 11>
-Package pdftex.def Info: appendix/mag_px4.pdf, page11 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 11>
-Package pdftex.def Info: appendix/mag_px4.pdf, page11 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 11>
-Package pdftex.def Info: appendix/mag_px4.pdf, page11 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [88 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1217, page=12, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 12>
-Package pdftex.def Info: appendix/mag_px4.pdf, page12 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 12>
-Package pdftex.def Info: appendix/mag_px4.pdf, page12 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 12>
-Package pdftex.def Info: appendix/mag_px4.pdf, page12 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [89 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1223, page=13, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 13>
-Package pdftex.def Info: appendix/mag_px4.pdf, page13 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 13>
-Package pdftex.def Info: appendix/mag_px4.pdf, page13 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 13>
-Package pdftex.def Info: appendix/mag_px4.pdf, page13 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [90 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1229, page=14, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 14>
-Package pdftex.def Info: appendix/mag_px4.pdf, page14 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 14>
-Package pdftex.def Info: appendix/mag_px4.pdf, page14 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 14>
-Package pdftex.def Info: appendix/mag_px4.pdf, page14 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [91 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1235, page=15, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 15>
-Package pdftex.def Info: appendix/mag_px4.pdf, page15 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 15>
-Package pdftex.def Info: appendix/mag_px4.pdf, page15 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 15>
-Package pdftex.def Info: appendix/mag_px4.pdf, page15 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [92 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1241, page=16, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 16>
-Package pdftex.def Info: appendix/mag_px4.pdf, page16 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 16>
-Package pdftex.def Info: appendix/mag_px4.pdf, page16 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 16>
-Package pdftex.def Info: appendix/mag_px4.pdf, page16 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [93 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1248, page=17, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 17>
-Package pdftex.def Info: appendix/mag_px4.pdf, page17 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 17>
-Package pdftex.def Info: appendix/mag_px4.pdf, page17 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 17>
-Package pdftex.def Info: appendix/mag_px4.pdf, page17 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [94 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1255, page=18, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 18>
-Package pdftex.def Info: appendix/mag_px4.pdf, page18 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 18>
-Package pdftex.def Info: appendix/mag_px4.pdf, page18 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 18>
-Package pdftex.def Info: appendix/mag_px4.pdf, page18 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [95 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1261, page=19, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 19>
-Package pdftex.def Info: appendix/mag_px4.pdf, page19 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 19>
-Package pdftex.def Info: appendix/mag_px4.pdf, page19 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 19>
-Package pdftex.def Info: appendix/mag_px4.pdf, page19 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [96 <./appendix/mag_px4.pdf>]
-<appendix/mag_px4.pdf, id=1267, page=20, 614.295pt x 794.97pt>
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 20>
-Package pdftex.def Info: appendix/mag_px4.pdf, page20 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
- <use appendix/mag_px4.pdf, page 20>
-Package pdftex.def Info: appendix/mag_px4.pdf, page20 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/mag_px4.pdf Graphic file (type pdf)
-
-<use appendix/mag_px4.pdf, page 20>
-Package pdftex.def Info: appendix/mag_px4.pdf, page20 used on input line 7.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [97 <./appendix/mag_px4.pdf>]
+ [43 <./appendix/mag_px4.pdf>]
 Appendix B.
-[98
+[44
 
-] <appendix/x-imu_gyro.pdf, id=1281, page=1, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 1>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page1 used on input line 9.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 1>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page1 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 1>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page1 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 1>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page1 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 1>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page1 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [99 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1302, page=2, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 2>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page2 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 2>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page2 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 2>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page2 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [100 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1314, page=3, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 3>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page3 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 3>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page3 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 3>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page3 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [101 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1320, page=4, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 4>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page4 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 4>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page4 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 4>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page4 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [102 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1333, page=5, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 5>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page5 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 5>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page5 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 5>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page5 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [103 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1346, page=6, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 6>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page6 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 6>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page6 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 6>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page6 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [104 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1352, page=7, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 7>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page7 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 7>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page7 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 7>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page7 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [105 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1361, page=8, 614.295pt x 794.97pt>
+] <appendix/x-imu_gyro.pdf, id=799, page=8, 614.295pt x 794.97pt>
 File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_gyro.pdf, page 8>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 9.
+Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 10.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
+ <use appendix/x-imu_gyro.pdf, page 8>
+Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 10.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
+
+<use appendix/x-imu_gyro.pdf, page 8>
+Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 10.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
  <use appendix/x-imu_gyro.pdf, page 8>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 9.
+Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 10.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_gyro.pdf, page 8>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 9.
+Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 10.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [106 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1368, page=9, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 9>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page9 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 9>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page9 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 9>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page9 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [107 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1374, page=10, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 10>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page10 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 10>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page10 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 10>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page10 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [108 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1380, page=11, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 11>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page11 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 11>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page11 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 11>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page11 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [109 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1386, page=12, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 12>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page12 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 12>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page12 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 12>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page12 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [110 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1442, page=13, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 13>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page13 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 13>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page13 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 13>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page13 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [111 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1448, page=14, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 14>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page14 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 14>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page14 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 14>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page14 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [112 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1552, page=15, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 15>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page15 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 15>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page15 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 15>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page15 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [113 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1618, page=16, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 16>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page16 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 16>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page16 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 16>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page16 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [114 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1706, page=17, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 17>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page17 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 17>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page17 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 17>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page17 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [115 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1809, page=18, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 18>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page18 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 18>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page18 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 18>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page18 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [116 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1819, page=19, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 19>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page19 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 19>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page19 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 19>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page19 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [117 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1825, page=20, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 20>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page20 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 20>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page20 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 20>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page20 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [118 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1832, page=21, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 21>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page21 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 21>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page21 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 21>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page21 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [119 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1848, page=22, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 22>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page22 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 22>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page22 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 22>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page22 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [120 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1912, page=23, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 23>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page23 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 23>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page23 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 23>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page23 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [121 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1918, page=24, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 24>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page24 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 24>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page24 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 24>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page24 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [122 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=1926, page=25, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 25>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page25 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 25>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page25 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 25>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page25 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [123 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=2058, page=26, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 26>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page26 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 26>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page26 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 26>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page26 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [124 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=2252, page=27, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 27>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page27 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 27>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page27 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 27>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page27 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [125 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3240, page=28, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 28>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page28 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 28>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page28 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 28>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page28 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [126 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3246, page=29, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 29>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page29 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 29>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page29 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 29>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page29 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [127 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3252, page=30, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 30>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page30 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 30>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page30 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 30>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page30 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [128 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3258, page=31, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 31>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page31 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 31>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page31 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 31>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page31 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [129 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3264, page=32, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 32>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page32 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 32>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page32 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 32>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page32 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [130 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3271, page=33, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 33>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page33 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 33>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page33 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 33>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page33 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [131 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3277, page=34, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 34>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page34 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 34>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page34 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 34>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page34 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [132 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3283, page=35, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 35>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page35 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 35>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page35 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 35>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page35 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [133 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3289, page=36, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 36>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page36 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 36>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page36 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 36>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page36 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [134 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3295, page=37, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 37>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page37 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 37>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page37 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 37>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page37 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [135 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3301, page=38, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 38>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page38 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 38>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page38 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 38>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page38 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [136 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3308, page=39, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 39>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page39 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 39>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page39 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 39>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page39 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [137 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3314, page=40, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 40>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page40 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 40>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page40 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 40>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page40 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [138 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3354, page=41, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 41>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page41 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 41>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page41 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 41>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page41 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [139 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3360, page=42, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 42>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page42 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 42>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page42 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 42>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page42 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [140 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3366, page=43, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 43>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page43 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 43>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page43 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 43>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page43 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [141 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3383, page=44, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 44>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page44 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 44>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page44 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 44>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page44 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [142 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3653, page=45, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 45>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page45 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 45>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page45 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 45>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page45 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [143 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3660, page=46, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 46>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page46 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 46>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page46 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 46>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page46 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [144 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3666, page=47, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 47>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page47 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 47>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page47 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 47>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page47 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [145 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3701, page=48, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 48>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page48 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 48>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page48 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 48>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page48 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [146 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3707, page=49, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 49>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page49 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 49>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page49 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 49>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page49 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [147 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3716, page=50, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 50>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page50 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 50>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page50 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 50>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page50 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [148 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3723, page=51, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 51>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page51 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 51>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page51 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 51>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page51 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [149 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3774, page=52, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 52>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page52 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 52>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page52 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 52>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page52 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [150 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3787, page=53, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 53>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page53 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 53>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page53 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 53>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page53 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [151 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3799, page=54, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 54>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page54 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 54>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page54 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 54>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page54 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [152 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3806, page=55, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 55>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page55 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 55>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page55 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 55>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page55 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [153 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_gyro.pdf, id=3812, page=56, 614.295pt x 794.97pt>
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 56>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page56 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
- <use appendix/x-imu_gyro.pdf, page 56>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page56 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_gyro.pdf, page 56>
-Package pdftex.def Info: appendix/x-imu_gyro.pdf, page56 used on input line 9.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [154 <./appendix/x-imu_gyro.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3822, page=1, 597.23125pt x 845.1575pt>
+ [45 <./appendix/x-imu_gyro.pdf>] [46]
+<appendix/x-imu_acc_mag.pdf, id=835, page=11, 597.23125pt x 845.1575pt>
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
-<use appendix/x-imu_acc_mag.pdf, page 1>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page1 used on input line 1
-0.
+<use appendix/x-imu_acc_mag.pdf, page 11>
+Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
+12.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
-<use appendix/x-imu_acc_mag.pdf, page 1>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page1 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 1>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page1 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 1>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page1 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 1>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page1 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [155 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3853, page=2, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 2>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page2 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 2>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page2 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 2>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page2 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [156 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3859, page=3, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 3>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page3 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 3>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page3 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 3>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page3 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [157 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3865, page=4, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 4>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page4 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 4>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page4 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 4>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page4 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [158 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3871, page=5, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 5>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page5 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 5>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page5 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 5>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page5 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [159 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3877, page=6, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 6>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page6 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 6>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page6 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 6>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page6 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [160 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3884, page=7, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 7>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page7 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 7>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page7 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 7>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page7 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [161 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3890, page=8, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 8>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page8 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 8>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page8 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 8>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page8 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [162 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3903, page=9, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 9>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page9 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 9>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page9 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 9>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page9 used on input line 1
-0.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [163 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3916, page=10, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 10>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page10 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 10>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page10 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 10>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page10 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [164 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3922, page=11, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
 <use appendix/x-imu_acc_mag.pdf, page 11>
 Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
-10.
+12.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_acc_mag.pdf, page 11>
 Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
-10.
+12.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_acc_mag.pdf, page 11>
 Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
-10.
+12.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [165 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3928, page=12, 597.23125pt x 845.1575pt>
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
-<use appendix/x-imu_acc_mag.pdf, page 12>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page12 used on input line 
-10.
+<use appendix/x-imu_acc_mag.pdf, page 11>
+Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
+12.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 12>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page12 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 12>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page12 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [166 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3940, page=13, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 13>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page13 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 13>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page13 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 13>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page13 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [167 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3946, page=14, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 14>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page14 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 14>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page14 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 14>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page14 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [168 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3959, page=15, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 15>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page15 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 15>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page15 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 15>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page15 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [169 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3965, page=16, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 16>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page16 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 16>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page16 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 16>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page16 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [170 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3974, page=17, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 17>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page17 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 17>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page17 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 17>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page17 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [171 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3983, page=18, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 18>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page18 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 18>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page18 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 18>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page18 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [172 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3990, page=19, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 19>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page19 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 19>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page19 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 19>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page19 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [173 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=3996, page=20, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 20>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page20 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 20>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page20 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 20>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page20 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [174 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4007, page=21, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 21>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page21 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 21>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page21 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 21>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page21 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [175 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4013, page=22, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 22>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page22 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 22>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page22 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 22>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page22 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [176 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4019, page=23, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 23>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page23 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 23>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page23 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 23>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page23 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [177 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4025, page=24, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 24>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page24 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 24>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page24 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 24>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page24 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [178 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4032, page=25, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 25>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page25 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 25>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page25 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 25>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page25 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [179 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4038, page=26, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 26>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page26 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 26>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page26 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 26>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page26 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [180 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4044, page=27, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 27>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page27 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 27>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page27 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 27>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page27 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [181 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4050, page=28, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 28>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page28 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 28>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page28 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 28>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page28 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [182 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4056, page=29, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 29>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page29 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 29>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page29 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 29>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page29 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [183 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4062, page=30, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 30>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page30 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 30>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page30 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 30>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page30 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [184 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4069, page=31, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 31>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page31 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 31>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page31 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 31>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page31 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [185 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4078, page=32, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 32>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page32 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 32>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page32 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 32>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page32 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [186 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4084, page=33, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 33>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page33 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 33>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page33 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 33>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page33 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [187 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4090, page=34, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 34>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page34 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 34>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page34 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 34>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page34 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [188 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4096, page=35, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 35>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page35 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 35>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page35 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 35>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page35 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [189 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4102, page=36, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 36>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page36 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 36>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page36 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 36>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page36 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [190 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4109, page=37, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 37>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page37 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 37>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page37 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 37>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page37 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [191 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4115, page=38, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 38>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page38 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 38>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page38 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 38>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page38 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [192 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4121, page=39, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 39>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page39 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 39>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page39 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 39>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page39 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [193 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4127, page=40, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 40>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page40 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 40>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page40 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 40>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page40 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [194 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4133, page=41, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 41>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page41 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 41>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page41 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 41>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page41 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [195 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4141, page=42, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 42>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page42 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 42>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page42 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 42>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page42 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [196 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4148, page=43, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 43>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page43 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 43>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page43 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 43>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page43 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [197 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4154, page=44, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 44>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page44 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 44>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page44 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 44>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page44 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [198 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4160, page=45, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 45>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page45 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 45>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page45 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 45>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page45 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [199 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4175, page=46, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 46>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page46 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 46>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page46 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 46>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page46 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [200 <./appendix/x-imu_acc_mag.pdf>]
-<appendix/x-imu_acc_mag.pdf, id=4181, page=47, 597.23125pt x 845.1575pt>
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 47>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page47 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 47>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page47 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
-File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
-
-<use appendix/x-imu_acc_mag.pdf, page 47>
-Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page47 used on input line 
-10.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [201 <./appendix/x-imu_acc_mag.pdf>])
+ [47 <./appendix/x-imu_acc_mag.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
+
 (./main.aux (./Deckblatt.aux) (./Aufgabenstellung.aux) (./Abstract.aux)
 (./Chapter1.aux) (./Chapter2.aux) (./Chapter3.aux) (./Chapter4.aux)
 (./Chapter5.aux) (./addAppendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DFA500B529517A669361B96200DF9D47;1774.
+(rerunfilecheck)             Checksum: 66CB9128BEB4ADC8E171CB5014926875;1947.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
  ) 
 Here is how much of TeX's memory you used:
- 8526 strings out of 493633
- 130158 string characters out of 3143378
- 216702 words of memory out of 3000000
- 11272 multiletter control sequences out of 15000+200000
+ 7962 strings out of 493633
+ 114517 string characters out of 3143378
+ 216479 words of memory out of 3000000
+ 10837 multiletter control sequences out of 15000+200000
  47684 words of font info for 85 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 45i,18n,49p,1306b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,18n,49p,1306b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
@@ -4002,10 +1541,10 @@ l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (210 pages, 7377505 bytes).
+Output written on main.pdf (56 pages, 7422824 bytes).
 PDF statistics:
- 4307 PDF objects out of 5155 (max. 8388607)
- 1975 compressed objects within 20 object streams
- 313 named destinations out of 1000 (max. 500000)
- 1220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 940 PDF objects out of 1000 (max. 8388607)
+ 747 compressed objects within 8 object streams
+ 174 named destinations out of 1000 (max. 500000)
+ 461 words of extra memory for PDF output out of 10000 (max. 10000000)
 

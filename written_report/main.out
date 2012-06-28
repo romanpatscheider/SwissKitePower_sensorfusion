@@ -17,12 +17,14 @@
 \BOOKMARK [0][-]{chapter.4}{Results - Vicon Test}{}% 17
 \BOOKMARK [1][-]{section.4.1}{Set up}{chapter.4}% 18
 \BOOKMARK [1][-]{section.4.2}{Evaluation}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.2.1}{short vs long radius}{section.4.2}% 20
-\BOOKMARK [2][-]{subsection.4.2.2}{Outage and Sensor rate}{section.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.2.3}{Pixhawk vs Xsens}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.1}{Noise of the GPS}{section.4.2}% 20
+\BOOKMARK [2][-]{subsection.4.2.2}{GPS outage}{section.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.2.3}{The MTi-G unit versus the PX4 unit}{section.4.2}% 22
 \BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 23
 \BOOKMARK [0][-]{appendix.A}{Data Sheets of the PX4 sensors}{}% 24
 \BOOKMARK [1][-]{section.A.1}{Data Sheet of the Accelerometer}{appendix.A}% 25
 \BOOKMARK [1][-]{section.A.2}{Data Sheet of the Gyroscope}{appendix.A}% 26
 \BOOKMARK [1][-]{section.A.3}{Data Sheet of the Magnetometer}{appendix.A}% 27
 \BOOKMARK [0][-]{appendix.B}{Data Sheets of the x-IMU sensors}{}% 28
+\BOOKMARK [1][-]{section.B.1}{Data Sheet of the Gyroscope}{appendix.B}% 29
+\BOOKMARK [1][-]{section.B.2}{Data Sheet of the Accelerometer and Magnetometer}{appendix.B}% 30

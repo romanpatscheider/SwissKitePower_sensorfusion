@@ -15,6 +15,15 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces The graphical represenetation of the algorithm's structure.}}{19}{figure.3.5}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces The black dot represents the sensor, while r is the distance between the center of mass of the pendulum and the sensor.}}{24}{figure.3.6}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Pendulum set up.}}{26}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Box with sensors.}}{27}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces GPS signal with a SNR of 5 dB.}}{28}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces GPS signal with a SNR of 25 dB.}}{29}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Error in position and orientation using a GPS signal with a SNR of 5 dB.}}{30}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Error in position and orientation using a GPS signal with a SNR of 25 dB.}}{31}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Estimation of the states without GPS signal.}}{32}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Estimation of the states without GPS and the help of the PX4 IMU.}}{33}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Error of the estimation of the states without GPS and the help of the PX4 IMU.}}{34}{figure.4.9}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

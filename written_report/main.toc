@@ -18,12 +18,14 @@
 \contentsline {chapter}{\numberline {4}Results - Vicon Test}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Set up}{25}{section.4.1}
 \contentsline {section}{\numberline {4.2}Evaluation}{25}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}short vs long radius}{25}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Outage and Sensor rate}{25}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Pixhawk vs Xsens}{25}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Conclusion}{26}{chapter.5}
-\contentsline {chapter}{\numberline {A}Data Sheets of the PX4 sensors}{29}{appendix.A}
-\contentsline {section}{\numberline {A.1}Data Sheet of the Accelerometer}{29}{section.A.1}
-\contentsline {section}{\numberline {A.2}Data Sheet of the Gyroscope}{32}{section.A.2}
-\contentsline {section}{\numberline {A.3}Data Sheet of the Magnetometer}{77}{section.A.3}
-\contentsline {chapter}{\numberline {B}Data Sheets of the x-IMU sensors}{98}{appendix.B}
+\contentsline {subsection}{\numberline {4.2.1}Noise of the GPS}{26}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}GPS outage}{27}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}The MTi-G unit versus the PX4 unit}{28}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Conclusion}{35}{chapter.5}
+\contentsline {chapter}{\numberline {A}Data Sheets of the PX4 sensors}{38}{appendix.A}
+\contentsline {section}{\numberline {A.1}Data Sheet of the Accelerometer}{38}{section.A.1}
+\contentsline {section}{\numberline {A.2}Data Sheet of the Gyroscope}{40}{section.A.2}
+\contentsline {section}{\numberline {A.3}Data Sheet of the Magnetometer}{42}{section.A.3}
+\contentsline {chapter}{\numberline {B}Data Sheets of the x-IMU sensors}{44}{appendix.B}
+\contentsline {section}{\numberline {B.1}Data Sheet of the Gyroscope}{44}{section.B.1}
+\contentsline {section}{\numberline {B.2}Data Sheet of the Accelerometer and Magnetometer}{46}{section.B.2}
