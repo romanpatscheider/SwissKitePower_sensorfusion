@@ -29,7 +29,7 @@ VI_new=VI';
 % position
 % the position is added with noise
 for i=2:4
-      pos_VI_p_noisy(i-1,:)=awgn(interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_P),-5);
+      pos_VI_p_noisy(i-1,:)=awgn(interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_P),-25);
       pos_VI_p(i-1,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_P);
 end
 
@@ -63,7 +63,7 @@ for j=2:size(meas_time_P,2);
        vel_P(3,j)=vel_P(3,j-1);
     end
 end
-vel_p_noisy=awgn(vel_P,-5);
+vel_p_noisy=awgn(vel_P,-25);
 
 %angles
 for i=5:7
