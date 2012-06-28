@@ -1,0 +1,2 @@
+function [DCM_bi]= calc_DCMvicon_bi(phi,thet,psi)
+DCM_bi =[cos(psi),sin(psi),0;-sin(psi),cos(psi),0;0,0,1]*[cos(thet), 0, -sin(thet);0,1,0;sin(thet),0,cos(thet)]*[1,0,0;0,cos(phi),sin(phi);0,-sin(phi),cos(phi)];

@@ -55,7 +55,7 @@
 \usepackage{AufgTwo}            % Formatiert die Aufgabenstellung
 \usepackage{verbatim}           % Package for including files
 \usepackage[final]{pdfpages}	% Bindet PDF ein
-
+\usepackage{amsmath}
 
 %=============================================================================
 % Layout Header and Footer

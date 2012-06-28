@@ -1,0 +1,81 @@
+\begin{thebibliography}{10}
+
+\bibitem{loyd1980}
+Miles~L. Loyd.
+\newblock Crosswind kite power.
+\newblock {\em J. Energy}, 4(3):106--111, 1980.
+
+\bibitem{canale2006}
+M.~Canale, L.~Fagiano, M.~Ippolito, and M.~Milanese.
+\newblock Control of tethered airfoils for a new class of wind energy
+  generator.
+\newblock In {\em Decision and Control, 2006 45th IEEE Conference on}, pages
+  4020 --4026, dec. 2006.
+
+\bibitem{schmehl2012}
+R.~Schmehl.
+\newblock Large-scale power generation with kites.
+\newblock {\em J. Soc. Aerospace Engineering Students}, 1:21--22, 2012.
+
+\bibitem{geebelen2012}
+M.~Vukov S. Gros J.~Swevers K.~Geebelen, H.~Ahmad and M.~Diehl.
+\newblock An experimental test set-up for launch/recovery of an airborne wind
+  energy (awe) system.
+\newblock In {\em In Proceedings of the 2012 American Control Conference,
+  Montreal, Canada}, 2012.
+
+\bibitem{erhard2012}
+Michael Erhard and Hans Strauch.
+\newblock Control of towing kites for seagoing vessels.
+\newblock {\em CoRR}, abs/1202.3641, 2012.
+
+\bibitem{skp}
+Swiss kite power.
+\newblock \url{http://www.swisskitepower.ch}.
+\newblock accessed 06-2012.
+
+\bibitem{hejj}
+Andr\'{a}s H\'{e}jj.
+\newblock Kalman-filter based position and attitude estimation algorithms for
+  an inertial measurement unit.
+
+\bibitem{ushanthan}
+Ushanthan Jeyabalan.
+\newblock The ring on the hook.
+
+\bibitem{sukkarieh1999}
+S.~Sukkarieh, E.M. Nebot, and H.F. Durrant-Whyte.
+\newblock A high integrity imu/gps navigation loop for autonomous land vehicle
+  applications.
+\newblock {\em Robotics and Automation, IEEE Transactions on}, 15(3):572 --578,
+  jun 1999.
+
+\bibitem{kim2006}
+Jong-Hyuk Kim, Salah Sukkarieh, and Stuart Wishart.
+\newblock Real-time navigation, guidance, and control of a uav using low-cost
+  sensors.
+\newblock In Shin’ichi Yuta, Hajima Asama, Erwin Prassler, Takashi Tsubouchi,
+  and Sebastian Thrun, editors, {\em Field and Service Robotics}, volume~24 of
+  {\em Springer Tracts in Advanced Robotics}, pages 299--309. Springer Berlin /
+  Heidelberg, 2006.
+\newblock 10.1007/10991459_29.
+
+\bibitem{smith2006}
+D.~Smith and S.~Singh.
+\newblock Approaches to multisensor data fusion in target tracking: A survey.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  18(12):1696 --1710, dec. 2006.
+
+\bibitem{debnath2005}
+L.~Debnath.
+\newblock {\em Nonlinear Partial Differential Equations for Scientists and
+  Engineers}.
+\newblock Birkh{\"a}user, 2005.
+
+\bibitem{Kutta1901}
+W.~Kutta.
+\newblock {Beitrag zur n\"{a}herungweisen Integration totaler
+  Differentialgleichungen}.
+\newblock {\em Z. Math. Phys.}, 46:435--453, 1901.
+
+\end{thebibliography}

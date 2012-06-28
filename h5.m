@@ -14,18 +14,23 @@ function [z_est]=h5(x_est,t)
     MAG2=0.0060;
     MAG3=0.4268;
     
-    % magnetic field as measured by magnetometer in resting position. Angle from vicon. 
-    true_mag=[-0.119784172661871;-0.0330935251798561;0.341007194244604;];
-    mag_angle=-1.496;
+%     % magnetic field as measured by magnetometer in resting position. Angle from vicon. 
+%     true_mag=[-0.119784172661871;-0.0330935251798561;0.341007194244604;];
+%     mag_angle=1.496-pi/2;
+%     mag=[cos(mag_angle),sin(mag_angle),0;-sin(mag_angle),cos(mag_angle),0;0,0,1]*true_mag;
+%     
+    
+    true_mag=[-0.3381;-0.3777;0.3252;];
+    mag_angle=2.417-pi/2;
     mag=[cos(mag_angle),sin(mag_angle),0;-sin(mag_angle),cos(mag_angle),0;0,0,1]*true_mag;
     
 %calculate matrix to convert changes in euler angles to rotations in the
 %body frame
 deuler2body=calc_deuler2body(x_est(1),x_est(2),x_est(3));
-w_body=[0,0,-1;0,1,0;1,0,0]*deuler2body*x_est(5:7);
+w_body=[0,0,1;0,-1,0;-1,0,0]*deuler2body*x_est(5:7);
 
 % calculate DCM to get from inertial to body frame
-DCM_bi=[0,0,1;0,1,0;-1,0,0]*calc_DCM_br(x_est(1),x_est(2),x_est(3));
+DCM_bi=[0,0,1;0,-1,0;-1,0,0]*calc_DCM_br(x_est(1),x_est(2),x_est(3));
 
 
 vg=transp(cross(transp(w_body),transp(dis)));
@@ -57,7 +62,7 @@ a_G=DCM_bi*(-G).*[0;0;1.15];
 h3=a_zp+a_zp_dis+a_G;
 
 h4=w_body;%gyr
-h5=DCM_bi*mag.*[1;-1;1]+[-0.2;-0.2;0];%magnetometer
+h5=DCM_bi*mag;%.*[1;-1;1]+[-0.2;-0.2;0];%magnetometer
 
 % calculate cardan angles from staes (not used for correction! -> complex
 % atan2 warning may be ignored
