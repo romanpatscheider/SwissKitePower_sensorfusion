@@ -33,6 +33,14 @@ for i=2:4
       pos_VI_p(i-1,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_P);
 end
 
+
+meas_time_VI_gt=meas_time_VI_new+8.5646+0.6363-0.07+shift;
+VI_gt=[VI_new(2,:)/1000-0.13165*ones(1,size(VI_new,2));VI_new(3,:)/1000-0.21*ones(1,size(VI_new,2));VI_new(4,:)/1000-1.347185*ones(1,size(VI_new,2));VI_new(5:7,:)];
+
+
+%segment1_ground_truth_X(1:3,:)=[segment1_ground_truth_X(1,:)-0.13165*ones(1,size(segment1_ground_truth_X,2));segment1_ground_truth_X(2,:)-0.21*ones(1,size(segment1_ground_truth_X,2));segment1_ground_truth_X(3,:)-1.347185*ones(1,size(segment1_ground_truth_X,2))];
+
+
 % velocity
 % calculation of the velocity from the position measurement of the vicon
 % the velocity is added with noise
@@ -67,6 +75,8 @@ ground_truth_P=[pos_VI_p/1000;vel_P/1000;angles_VI_p]; %position, velocity and a
 Z_p=[(pos_VI_p_noisy)/1000;vel_p_noisy/1000;acc_P;gyro_P;magn_P];
 
 
+%%
+%plot(meas_time_P,pos_VI_p,'-',meas_time_P,pos_VI_p_noisy,'.');
 %% Counter
 % A counter is calculated for the measurements form the vicon. This counter
 % is needed, weather we have new senosor data
@@ -76,7 +86,7 @@ Z_p=[(pos_VI_p_noisy)/1000;vel_p_noisy/1000;acc_P;gyro_P;magn_P];
 %to set a gps outage set vicon_outage(1) to start of outage and
 %vicon_outage(2) to end of outage
 vicon_freq=10;
-vicon_outage=[54 57];
+vicon_outage=[0 0];
 j_old_p=1;
 j_old_v=1;
 counter_P_pv(1,1)=1;
@@ -163,7 +173,7 @@ Z_x=[(pos_VI_x_noisy)/1000;vel_x_noisy/1000;acc_X_c;gyro_X_c;magn_X_c].*[1*ones(
 %to set a gps outage set vicon_outage(1) to start of outage and
 %vicon_outage(2) to end of outage
 vicon_freq=10;
-vicon_outage=[54 57];
+vicon_outage=[0 0];
 j_old_p=1;
 j_old_v=1;
 counter_X_pv(1,1)=1;
@@ -215,10 +225,14 @@ segment1_Z_X(1:3,:)=[segment1_Z_X(1,:)-0.13165*ones(1,size(segment1_Z_X,2));segm
 segment1_ground_truth_X(1:3,:)=[segment1_ground_truth_X(1,:)-0.13165*ones(1,size(segment1_ground_truth_X,2));segment1_ground_truth_X(2,:)-0.21*ones(1,size(segment1_ground_truth_X,2));segment1_ground_truth_X(3,:)-1.347185*ones(1,size(segment1_ground_truth_X,2))];
 
 %%
- plot(meas_time_P,2*Z_p(13:15,:)-[-0.689*ones(size(meas_time_P));-0.341*ones(size(meas_time_P));-0.16*ones(size(meas_time_P))],meas_time_X_c,Z_x(13:15,:));legend('xp','yp','zp','x','y','z');title('mag')
+% plot(meas_time_P,2*Z_p(13:15,:)-[-0.689*ones(size(meas_time_P));-0.341*ones(size(meas_time_P));-0.16*ones(size(meas_time_P))],meas_time_X_c,Z_x(13:15,:));legend('xp','yp','zp','x','y','z');title('mag')
  
 %%
- plot(meas_time_P,ground_truth_P(7:9,:));
+% plot(meas_time_P,ground_truth_P(7:9,:));
+
+%%
+
+%plot(segment1_time_P,segment1_Z_P(13:15,:),meas_time,M(13:15,:))
 
 %%
 meas_time=segment1_time_P;

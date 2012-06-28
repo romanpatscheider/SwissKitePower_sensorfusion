@@ -1,0 +1,13 @@
+mean_pos_error =
+
+    0.0223
+
+
+mean_psi_error =
+
+    0.1584
+
+
+
+Attention:
+used GPS pos noise of 0.01 and GPs vel noise of 0.05
