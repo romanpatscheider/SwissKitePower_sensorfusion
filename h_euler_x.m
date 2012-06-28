@@ -36,14 +36,15 @@ function [z_est]=h_euler_x(x_est,x_old,t,dis,G,mag)
     mag_angle=2.417-pi/2-0.4;
     mag=[cos(mag_angle),sin(mag_angle),0;-sin(mag_angle),cos(mag_angle),0;0,0,1]*true_mag;
     
-DCM_bi=[1 0 0;0 1 0; 0 0 1]*calc_DCM_br(x_est(7),x_est(8),x_est(9));
+DCM_bi=[-1 0 0;0 1 0; 0 0 1]*calc_DCM_br(x_est(7),x_est(8),x_est(9));
 deuler2body=calc_deuler2body(x_est(7),x_est(8),x_est(9));
-w=[1 0 0;0 1 0; 0 0 1]*deuler2body*x_est(10:12);
+w=[-1 0 0;0 -1 0; 0 0 -1]*deuler2body*x_est(10:12);
 deuler2body_old=calc_deuler2body(x_old(7),x_old(8),x_old(9));
-w_old=[1 0 0;0 1 0; 0 0 1]*deuler2body_old*x_old(10:12);
+w_old=[-1 0 0;0 -1 0; 0 0 1]*deuler2body_old*x_old(10:12);
 
-vg=transp(cross(transp(w),transp(dis))); %vg and vg_old are additional velocitys introduced by the displacement of the Imu from the center of mass
-vg_old=transp(cross(transp(w_old),transp(dis)));
+%vg=transp(cross(transp(w),transp(dis))); %vg and vg_old are additional velocitys introduced by the displacement of the Imu from the center of mass
+%vg_old=transp(cross(transp(w_old),transp(dis)));
+vg=[0;0;0];
 v=[vn;ve;vd];
 v_old=[vn_old;ve_old;vd_old];
 

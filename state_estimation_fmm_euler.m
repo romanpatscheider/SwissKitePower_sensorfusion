@@ -16,12 +16,12 @@ long0=8+32/60;
 % noise form Xsens datasheet
 
 
-NOISE_ACC_b=50*[0.14;10*0.14;0.1* 0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
+NOISE_ACC_b=50*[0.14;0.14;0.14];% [m/s^2/sqrt(Hz)]noise acc   Xsens: [0.002;0.002;0.002]
 NOISE_GYRO_b=[0.3;0.3;0.3]*2*pi/360;% [rad/s] noise gyro      Xsens: [0.05;0.05;0.05]./360.*2*pi
-NOISE_MAG_b=100*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
+NOISE_MAG_b=0.1*[0.002;0.002;0.002];%[gauss]                         Xsens: [0.5e-3;0.5e-3;0.5e-3]
 
 NOISE_GPS_POS=0.001;% Noise in position of the GPS
-NOISE_GPS_VEL=0.01;%Noise in velocity of the GPS
+NOISE_GPS_VEL=0.001;%Noise in velocity of the GPS
 
 
 %------------------------
@@ -192,7 +192,7 @@ while (i<size(M,2))%size(M,2)
     DCM_b2i_n=calc_DCM_br(real(x_new(7)),real(x_new(8)),real(x_new(9)));
     psi=-0.2;
     thet=0.07;
-    DCM_br_n=[cos(psi),sin(psi),0;-sin(psi),cos(psi),0;0,0,1]*[cos(thet), 0, -sin(thet);0,1,0;sin(thet),0,cos(thet)]*[-1 0 0;0 1 0; 0 0 -1]*DCM_b2i_n;
+    DCM_br_n=[cos(psi),sin(psi),0;-sin(psi),cos(psi),0;0,0,1]*[cos(thet), 0, -sin(thet);0,1,0;sin(thet),0,cos(thet)]*[1 0 0;0 -1 0; 0 0 -1]*DCM_b2i_n;
     diss=[0.0;-0.02;0];
     
 
@@ -202,7 +202,7 @@ while (i<size(M,2))%size(M,2)
     save_pos(:,k)=[x_new(1);x_new(2);x_new(3)]+transp(DCM_br_n)*diss;
     save_orientation(:,k)=[-atan2(-DCM_br_n(3,2),-DCM_br_n(3,3))  ...
               asin(-DCM_br_n(3,1)) ...
-              atan2(DCM_br_n(2,1),DCM_br_n(1,1))];
+              atan2(-DCM_br_n(2,1),-DCM_br_n(1,1))];
     
     
     k=k+1;
@@ -213,23 +213,23 @@ while (i<size(M,2))%size(M,2)
 end
 
 %% Plots against ground truth
-range=[47 68];
-plot_range=[max(save_t(1),range(1))-0.2 min(save_t(size(save_t,2)),range(2))+2];
+range=[75 78];
+plot_range=[max(save_t(1),range(1))-2 min(save_t(size(save_t,2)),range(2))+2];
 [val,mintime]=min(abs(meas_time_VI_gt-save_t(1)));
 [val,maxtime]=min(abs(meas_time_VI_gt-save_t(size(save_t,2))));
-figure(1);subplot(3,1,1);plot(save_t,save_pos(1,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(1,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos x [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
-subplot(3,1,2);plot(save_t,save_pos(2,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(2,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos y [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
-subplot(3,1,3);plot(save_t,save_pos(3,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(3,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos z [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
-figure(2);subplot(3,1,1);plot(save_t,save_orientation(1,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(6,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\phi [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
-subplot(3,1,2);plot(save_t,save_orientation(2,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(5,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\theta [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
-subplot(3,1,3);plot(save_t,save_orientation(3,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(4,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\psi [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
-
-% figure(1);subplot(3,2,1);plot(save_t,save_pos(1,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(1,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos x [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
-% subplot(3,2,3);plot(save_t,save_pos(2,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(2,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos y [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
-% subplot(3,2,5);plot(save_t,save_pos(3,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(3,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos z [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
-% subplot(3,2,2);plot(save_t,save_orientation(1,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(6,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\phi [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
-% subplot(3,2,4);plot(save_t,save_orientation(2,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(5,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\theta [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
-% subplot(3,2,6);plot(save_t,save_orientation(3,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(4,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\psi [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
+% figure(1);subplot(3,1,1);plot(save_t,save_pos(1,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(1,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos x [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
+% subplot(3,1,2);plot(save_t,save_pos(2,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(2,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos y [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
+% subplot(3,1,3);plot(save_t,save_pos(3,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(3,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos z [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
+% figure(2);subplot(3,1,1);plot(save_t,save_orientation(1,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(6,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\phi [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
+% subplot(3,1,2);plot(save_t,save_orientation(2,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(5,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\theta [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
+% subplot(3,1,3);plot(save_t,save_orientation(3,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(4,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\psi [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
+% 
+figure(1);subplot(3,2,1);plot(save_t,save_pos(1,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(1,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos x [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
+subplot(3,2,3);plot(save_t,save_pos(2,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(2,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos y [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
+subplot(3,2,5);plot(save_t,save_pos(3,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(3,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('pos z [m]');xlabel('time [s]');set(gca,'xlim',plot_range);
+subplot(3,2,2);plot(save_t,save_orientation(1,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(6,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\phi [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
+subplot(3,2,4);plot(save_t,save_orientation(2,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(5,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\theta [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
+subplot(3,2,6);plot(save_t,save_orientation(3,:),'r-',meas_time_VI_gt(mintime:maxtime),VI_gt(4,mintime:maxtime),'k--');legend('state estimator','vicon');ylabel('\psi [rad]');xlabel('time [s]');set(gca,'xlim',plot_range);
 %% plot errors
 
 range=[0 135];
