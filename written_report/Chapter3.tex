@@ -1,5 +1,7 @@
 \chapter{State Estimation}\label{cha3}
-In this chapter is first an introduction in the Kalman Filter and the modified version called Extendend Kalman Filter given. In a second step will the state estimation algorithm, developed during this thesis explained. This gives an overview over the whole code and describes how the parameters were set and how a sensor data outage is handled. Section \ref{state_estimation} and \ref{sensor_estimation} will focus on the two essential parts of the algorithm, how the states are estimated and how the measurements are estimated.
+In this chapter an introduction to the Kalman Filter and the modified version called Extendend Kalman Filter is given. In a second step  the state estimation algorithm, that was developed during this thesis, will be explained. This gives an overview over the whole code and describes how the parameters were set and how a sensor data outage is handled. Sections \ref{state_estimation} and \ref{sensor_estimation} will focus on the two essential parts of the algorithm: The propagation of the states and how the measurements are estimated.
+
+
 \section{Extended Kalman Filter}
 
 \subsection*{Discrete Kalman Filter}
@@ -223,7 +225,7 @@ In order to propagate the state of the system $x_{k}$ to the a priori state esti
 \subsection*{Free Mass Model}
 The dynamics of the body are described by a system of first order differential equations describing the change in the state variables.
 \begin{equation} \dot{x}=g(x,t)  \end{equation}
-In this case the model is time invariant and thus g is not time dependant. 
+In this case the model is time invariant and thus g is not time dependent. 
 \begin{equation} \dot{x}=g(x)  \end{equation}
 Since there is no knwoledge about the forces acting on the body, this set of equation looks rather simple: 
 \begin{equation} g(x)=\begin{bmatrix}  x_{4} \\  x_{5} \\ x_{6} \\ 0 \\ 0 \\ 0 \\ x_{10} \\ x_{11} \\ x_{12} \\ 0 \\ 0 \\0 \end{bmatrix} \end{equation}
@@ -278,19 +280,19 @@ vel\;x&=&-sin(\Theta)cos(\Psi)*R*\dot{\Theta}-cos(\Theta)sin(\Psi)*R*\dot{\Psi}\
 vel\;y&=&-sin(\Theta)sin(\Psi)*R*\dot{\Theta}+cos(\Theta)cos(\Psi)*R*\dot{\Psi}\\
 vel\;z&=&-cos(\Theta)*R*\dot{\Theta}\\
 \end{eqnarray}
-The centripetal acceleration always accting in z direction of the sensor can be calculated by the formula:
+The centripetal acceleration always acting in z direction of the sensor can be calculated by the formula:
 \begin{equation}
 a_{cp}=\frac{v^2}{R}
 \end{equation}
 We then have the an additional acceleration of the earth gravitation. The earth gravitation is in the inertial frame only in z direction and has to be transformed with the $DCM_{bi}$ from the inertial in the body frame. Finally the acceleration can be written as:
 \begin{equation}
-acc&=& \begin{bmatrix} 0\\0\\ \frac{v^2}{R}\end{bmatrix}+DCM_{bi}*\begin{bmatrix}0\\0\\g\end{bmatrix}
+acc= \begin{bmatrix} 0\\0\\ \frac{v^2}{R}\end{bmatrix}+DCM_{bi}*\begin{bmatrix}0\\0\\g\end{bmatrix}
 \end{equation}
 The magnetic field is  a constant value in Zurich. By transforming that into the body frame again with the help of the $DCM_{bi}$, the expected measurement from the magnetometer is calculated:
 \begin{equation}
-mag&=& DCM_{bi}* \begin{bmatrix} 0.2145 \\ 0.0060 \\ 0.4268 \end{bmatrix} [gauss]
+mag= DCM_{bi}* \begin{bmatrix} 0.2145 \\ 0.0060 \\ 0.4268 \end{bmatrix} [gauss]
 \end{equation} 
-The gyroscope measurement is directly represented by the rate of the euler angles $\dor{\Phi}$,$\dot{\Theta}$ and $\dot{\Psi}$. Since the euler angular rate has to be transformed into the body frame coordinates and additinally has a converstion about which axes is rotated the first, what the gyroscope has not,a transformation matrix has to be used as follows:
+The gyroscope measurement is directly represented by the rate of the euler angles $\dot{\Phi}$,$\dot{\Theta}$ and $\dot{\Psi}$. Since the euler angular rate has to be transformed into the body frame coordinates and additinally has a converstion about which axes is rotated the first, what the gyroscope has not,a transformation matrix has to be used as follows:
 \begin{equation}
 gyro=\begin{bmatrix} 1 & 0 & -sin(\Theta) \\ 0 & cos(\Phi) & sin(\Phi) cos(\Theta) \\ 0 & -sin(\Phi) & cos(\Phi)cos(\Theta) \end{bmatrix}*\begin{bmatrix} \dot{\Psi}\\ \dot{\Theta}\\ \dot{\Phi} \end{bmatrix}
 \end{equation}

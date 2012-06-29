@@ -70,6 +70,7 @@ $4.87*10^{4} s – 4.91*10^{4} s$&$1.04*10^{-4} deg/ 1.02*10^{-4} deg / 13.01 m$
 \end{table}
 Due to the fact that the velocity is the derivative of the position of the GPS the amplitude of the error behaves  similar.
 \begin{figure}[h]
+\centering
 \includegraphics[width=1.2\textwidth]{pictures/ct_vel.eps}
 \caption{GPS velocity}
 \label{ct_vel}

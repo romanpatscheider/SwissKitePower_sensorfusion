@@ -1,29 +1,35 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces GPS Position}}{7}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces GPS velocity}}{8}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Accelerometer}}{9}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Gyrometer}}{9}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Magnetometer}}{10}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces A closer look in time on the three IMU sensors.}}{10}{figure.2.6}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces GPS Position}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces GPS velocity}}{7}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Accelerometer}}{8}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Gyrometer}}{8}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Magnetometer}}{9}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces A closer look in time on the three IMU sensors.}}{9}{figure.2.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A simple structure of the algorithm}}{12}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The prediction and the correction step with their corresponding equations. }}{13}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The prediction and correction step of the EKF with their corresponding equations. }}{14}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The definition of the inertial and body frame as well as the convention for the angles in the pendulum model.}}{16}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces The graphical represenetation of the algorithm's structure.}}{19}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces The black dot represents the sensor, while r is the distance between the center of mass of the pendulum and the sensor.}}{24}{figure.3.6}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A simple structure of the algorithm}}{11}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The prediction and the correction step with their corresponding equations. }}{12}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The prediction and correction step of the EKF with their corresponding equations. }}{13}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The definition of the inertial and body frame as well as the convention for the angles in the pendulum model.}}{14}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The graphical represenetation of the algorithm's structure.}}{16}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The black dot represents the sensor, while r is the distance between the center of mass of the pendulum and the sensor.}}{21}{figure.3.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Pendulum set up.}}{26}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Box with sensors.}}{27}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces GPS signal with a SNR of 5 dB.}}{28}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces GPS signal with a SNR of 25 dB.}}{29}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Error in position and orientation using a GPS signal with a SNR of 5 dB.}}{30}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Error in position and orientation using a GPS signal with a SNR of 25 dB.}}{31}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Estimation of the states without GPS signal.}}{32}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Estimation of the states without GPS and the help of the PX4 IMU.}}{33}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Error of the estimation of the states without GPS and the help of the PX4 IMU.}}{34}{figure.4.9}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Pendulum set up.}}{23}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Box with sensors.}}{24}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Estimation of the position using the "Pendulum"-estimator compared to the ground truth obtained from the Vicon system.}}{27}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Estimation of the orientation using the "Pendulum"-estimator compared to the ground truth obtained from the Vicon system.}}{28}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Estimation of the position using the "free mass model"-estimator compared to the ground truth obtained from the Vicon system.}}{29}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Estimation of the orientation using the "free mass model"-estimator compared to the ground truth obtained from the Vicon system.}}{30}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Error in position and orientation for the "free mass model"-estimator.}}{31}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces GPS signal with a SNR of -5 dB.}}{32}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces GPS signal with a SNR of -25 dB.}}{33}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Error in position and orientation using a GPS signal with a SNR of -5 dB.}}{34}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Error in position and orientation using a GPS signal with a SNR of -25 dB.}}{35}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Estimation of the states without GPS signal.}}{36}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Error in position and orientation only using IMU measurements and no GPS data.}}{37}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces "Free mass model" estimator during a GPS outage from $t=75 s$ to $t=78 s$.}}{38}{figure.4.14}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Error of the estimation of the states without GPS using only the PX4 IMU.}}{39}{figure.4.15}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
