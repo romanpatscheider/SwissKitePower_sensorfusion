@@ -1,5 +1,12 @@
 \begin{thebibliography}{10}
 
+\bibitem{welch1997}
+Greg Welch and Gary Bishop.
+\newblock An introduction to the kalman filter.
+\newblock Technical report, Department of Computer Science, University of North
+  Carolina at Chapel Hill, NC 27599-3175, 1997.
+\newblock Available from ens-cachan.fr.
+
 \bibitem{loyd1980}
 Miles~L. Loyd.
 \newblock Crosswind kite power.
@@ -65,6 +72,12 @@ D.~Smith and S.~Singh.
 \newblock Approaches to multisensor data fusion in target tracking: A survey.
 \newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
   18(12):1696 --1710, dec. 2006.
+
+\bibitem{andrews2007}
+Angus P.~Andrews Mohinder S.~Grewal, Lawrence R.~Weill.
+\newblock {\em Global positioning systems, inertial navigation and
+  integration}.
+\newblock Hoboken, NJ : Wiley, 2007.
 
 \bibitem{debnath2005}
 L.~Debnath.

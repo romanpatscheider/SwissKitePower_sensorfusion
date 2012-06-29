@@ -1,4 +1,6 @@
 % import pixHawk data; counter=[acc,gyro,magn]'
+% the data is brought in the correct units and saved in matrixes according
+% the sensor
 function [acc_P,gyro_P,magn_P,meas_time_P,counter_P]= import_PixHawk(fid)
 
 

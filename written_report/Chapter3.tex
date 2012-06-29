@@ -6,7 +6,7 @@ In this chapter an introduction to the Kalman Filter and the modified version ca
 
 \subsection*{Discrete Kalman Filter}
 We will first give a short introduction to the Kalman Filter in general and its mathematical justification.
-\begin{quote}The Kalman filter is an extremely effective versatile procedure for combining noisy sensor outputs to estimate the state of a system with uncertain dynamics.\end{quote} […angu...] It was published in 1960 by R.E.Kalman. The Filter gained a strong impact in the area of autonomous or assisted navigation [..pap...]. 
+\begin{quote}The Kalman filter is an extremely effective versatile procedure for combining noisy sensor outputs to estimate the state of a system with uncertain dynamics.\cite{andrews2007}\end{quote} It was published in 1960 by R.E.Kalman. The Filter gained a strong impact in the area of autonomous or assisted navigation \cite{welch1997}. 
 Systems in which the filter is estimating the state $x \in R^{n}$ can be described by the following linear stochastic difference equation.
 \begin{equation}
 x_{k+1}=A_k*x_k+B_k*u_k+w
@@ -17,15 +17,19 @@ z_k=H_k*x_k+D_k*u_k+v
 \label{eq2}
 \end{equation}
 Where the random variables $w$ and $v$ stand for the process and the measurement noise, which are assumed to be independent, white and normal probability distributions.
-\begin{quote}The $n\times n$ matrix A in equation \ref{eq1} relates the state at time step $k$ to the state at step $k+1$, in the absene of either a dirving function or process noise. The $n\times l$ matrix $B$ relates the control input $u \in R^{l}$ to the state $x$. The $m \times m$ matrix $H$ in the measurement equation \ref{eq2} relates to the state to the measurement $z_k$.\end{quote}[.pap.]
-In most navigation applications, the noisy sensors are a GPS receiver and an inertial navigation system or other sensors like for example speed sensors. The states of a system are described by the position, velocity, attitude and attitude rate [.angu..].
+\begin{equation}
+p(w)\sim N(0,Q)\;, \\
+p(v)\sim N(0,R)\label{R_Q_noise}
+\end{equation}
+\begin{quote}The $n\times n$ matrix A in equation \ref{eq1} relates the state at time step $k$ to the state at step $k+1$, in the absene of either a dirving function or process noise. The $n\times l$ matrix $B$ relates the control input $u \in R^{l}$ to the state $x$. The $m \times m$ matrix $H$ in the measurement equation \ref{eq2} relates to the state to the measurement $z_k$.\cite{welch1997}\end{quote}
+In most navigation applications, the noisy sensors are a GPS receiver and an inertial navigation system or other sensors like for example speed sensors. The states of a system are described by the position, velocity, attitude and attitude rate \cite{andrews2007}.
 
 \subsection*{Mathematical Background}\label{math_kalman}
 In figure \ref{simple_schematic} the structure of the algorithm is sketched for a better understanding of the filter's mathematical background. 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=6cm]{pictures/simple_schematic_algo.eps}
-\caption{A simple structure of the algorithm}
+\caption{A simple structure of the algorithm \cite{welch1997}.}
 \label{simple_schematic}
 \end{center}
 \end{figure}
@@ -56,19 +60,19 @@ The Kalman gain $K$ is the heart of the Kalman Filter. $K$, a $n\times n$ Matrix
 \begin{equation}
 K=\frac{P^{-}_k*H^{T}_k}{(H_k*P^{-}_k*H^{T}_k+R_k)}
 \end{equation}
-can be derived for the Kalman gain $K$.[..pap..]] 
-This concept uses the information of a normal gaussian distribution of the noise mentioned in (..equ2..). $P_k$ is minimized using the Maximum Likelihood Estimation and is called the  Gaussian Maximum-Likelihood Estimator […]. A more detailed derivation of the mathematics is shown in [..maybeck..] and [..angu..].
+can be derived for the Kalman gain $K$ \cite{welch1997} 
+This concept uses the information of a normal gaussian distribution of the noise mentioned in equations \ref{R_Q_noise}. $P_k$ is minimized using the Maximum Likelihood Estimation and is called the  Gaussian Maximum-Likelihood Estimator. A more detailed derivation of the mathematics is shown in [..maybeck..] and \cite{andrews2007}.
 
 \subsection*{Algorithm}
 With equations described in the section above, the estimation and correction step can be summarized as shown in figure \ref{equation_kalman}.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=10cm]{pictures/equation_kalman.eps}
-\caption{The prediction and the correction step with their corresponding equations. }
+\caption{The prediction and the correction step with their corresponding equations \cite{welch1997}. }
 \label{equation_kalman}
 \end{center}
 \end{figure} 
-For a fine tuning of the filter often the measurement error covariance matrix $R_k$ and process noise $Q_k$ can be used. $R_k$ contains the information how accurate the sensors and therefore the measurements are expected to be. This can be estimated in a first round with some static sensor test or can be found in the data sheets of the sensors. The matrix $Q_k$ describes how correct the propagation model described by the matrix $A_k$ is believed to be. In this sense as higher the values and therefore the noise of $R_k$ and $Q_k$ the less influence do the measurements or the propagation model respectively have on the estimated state. Having a diagonal matrix with constant values over time, does not represent the reality, but brings it to a form which is fast stable and easier tunable[..pap..]. 
+For a fine tuning of the filter often the measurement error covariance matrix $R_k$ and process noise $Q_k$ can be used. $R_k$ contains the information how accurate the sensors and therefore the measurements are expected to be. This can be estimated in a first round with some static sensor test or can be found in the data sheets of the sensors. The matrix $Q_k$ describes how correct the propagation model described by the matrix $A_k$ is believed to be. In this sense as higher the values and therefore the noise of $R_k$ and $Q_k$ the less influence do the measurements or the propagation model respectively have on the estimated state. Having a diagonal matrix with constant values over time, does not represent the reality, but brings it to a form which is fast stable and easier tunable \cite{welch1997}. 
 
 \subsection*{Extended Kalman Filter (EKF)}\label{ekf}
 In reality the process to estimate the new state and the measurement relationship to the process is non-linear.
@@ -90,7 +94,7 @@ This brings us to the summarized equations of the EKF in figure \ref{equation_ek
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=10cm]{pictures/equation_ekf.eps}
-\caption{The prediction and correction step of the EKF with their corresponding equations. }
+\caption{The prediction and correction step of the EKF with their corresponding equations \cite{welch1997}. }
 \label{equation_ekf}
 \end{center}
 \end{figure}
@@ -110,7 +114,7 @@ The filter has to handle two different coordinates frames. One is the inertial f
 \end{center}
 \end{figure}
 
-The euler angles describe how the inertial frame has to be rotated to bring into the body frame. With other words, the euler angles tell us the orientation of the body frame. With the direct cosine matrix ($DCM$) we can transform a vector from the inertial frame into the body frame and vise versa. For example can the accelerometer data which is given in body frame coordinates be transformed into the inertial frame, where the propagation of the states is calculated.[..angus..]
+The euler angles describe how the inertial frame has to be rotated to bring into the body frame. With other words, the euler angles tell us the orientation of the body frame. With the direct cosine matrix ($DCM$) we can transform a vector from the inertial frame into the body frame and vise versa. For example can the accelerometer data which is given in body frame coordinates be transformed into the inertial frame, where the propagation of the states is calculated \cite{andrews2007}.
 
 \subsection*{Degrees of Freedom}
 As stated in the introduction, we implemented two different versions of the state estimation algorithm. A standard implementation assuming a free mass and one version that exploits the constraints given by the knowledge that the mass is oscillatingly suspended at a fixed point. These two versions are quite similar and share a lot of code, but one crucial point where they differ from each other is the number of degrees of freedom (DoF). The free mass model uses 12 DoF, namely position, velocity, attitude and attitude rate. Thus the state vector consists of 12 variables. The pendulum model uses only 6 true degrees of freedom: Three angles representing the position and attitude as well as their respective rates representing velocity and attitude rate. The definition of these angles can be seen in figure \ref{dof}.

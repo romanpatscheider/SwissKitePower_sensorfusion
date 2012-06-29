@@ -1,24 +1,28 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.22)  29 JUN 2012 01:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  29 JUN 2012 17:55
 entering extended mode
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
 LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
-ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
-9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
-skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
-orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
-, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
-rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
-(/usr/share/texmf-texlive/tex/latex/base/report.cls
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/fleqn.clo
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/fleqn.clo
 File: fleqn.clo 1998/08/17 v1.1c Standard LaTeX option (flush left equations)
 \mathindent=\dimen102
 )
-(/usr/share/texmf-texlive/tex/latex/base/size11.clo
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -34,15 +38,23 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen103
 )
-(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2009/10/09 v6.79a Hypertext links for LaTeX
+(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2011/04/17 v6.82g Hypertext links for LaTeX
 
-(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks14
-)
-(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2011/04/23 v1.4 Bundle oberdiek, subset hyperref (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 
 
 ! Package ifpdf Error: Name clash, \ifpdf is already defined.
@@ -51,255 +63,258 @@ See the ifpdf package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.148     }
-           %
+l.3485 }
+        %
 ? 
-) (/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
-Package ifvtex Info: VTeX not detected.
-)
-(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
-)
-(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
-Package: hycolor 2009/10/02 v1.5 Code for color options of hyperref/bookmark (H
-O)
-
-(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
-Package: xcolor-patch 2009/10/02 xcolor patch
-))
-\@linkdim=\dimen104
-\Hy@linkcounter=\count88
-\Hy@pagecounter=\count89
-
-(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
-)
-(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
-)
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-)
-(/etc/texmf/tex/latex/config/hyperref.cfg
-File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
-)
-(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
-t (HO)
-))
-Package hyperref Info: Option `colorlinks' set `true' on input line 2864.
-Package hyperref Info: Option `hyperindex' set `true' on input line 2864.
-Package hyperref Info: Hyper figures OFF on input line 2975.
-Package hyperref Info: Link nesting OFF on input line 2980.
-Package hyperref Info: Hyper index ON on input line 2983.
-Package hyperref Info: Plain pages OFF on input line 2990.
-Package hyperref Info: Backreferencing OFF on input line 2995.
-
-Implicit mode ON; LaTeX internals redefined
-Package hyperref Info: Bookmarks ON on input line 3191.
-(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
-\Urlmuskip=\muskip10
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
-)
-LaTeX Info: Redefining \url on input line 3428.
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
-Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty
-Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
-)
-(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
-Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
- (HO)
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
-)
-)
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-)))
-\Fld@menulength=\count90
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
+Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
+Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provides unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/01/30 v1.0 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
+Package atveryend Info: \enddocument detected (standard).
+Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+)
+\@linkdim=\dimen104
+\Hy@linkcounter=\count88
+\Hy@pagecounter=\count89
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2011/04/17 v6.82g Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count90
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 3905.
+Package hyperref Info: Option `hyperindex' set `true' on input line 3905.
+Package hyperref Info: Hyper figures OFF on input line 4026.
+Package hyperref Info: Link nesting OFF on input line 4031.
+Package hyperref Info: Hyper index ON on input line 4034.
+Package hyperref Info: Plain pages OFF on input line 4041.
+Package hyperref Info: Backreferencing OFF on input line 4046.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4264.
+\c@Hy@tempcnt=\count91
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4617.
+\Fld@menulength=\count92
 \Field@Width=\dimen105
 \Fld@charsize=\dimen106
-\Field@toks=\toks15
-Package hyperref Info: Hyper figures OFF on input line 4377.
-Package hyperref Info: Link nesting OFF on input line 4382.
-Package hyperref Info: Hyper index ON on input line 4385.
-Package hyperref Info: backreferencing OFF on input line 4392.
-Package hyperref Info: Link coloring ON on input line 4395.
-Package hyperref Info: Link coloring with OCG OFF on input line 4402.
-Package hyperref Info: PDF/A mode OFF on input line 4407.
+Package hyperref Info: Hyper figures OFF on input line 5701.
+Package hyperref Info: Link nesting OFF on input line 5706.
+Package hyperref Info: Hyper index ON on input line 5709.
+Package hyperref Info: backreferencing OFF on input line 5716.
+Package hyperref Info: Link coloring ON on input line 5719.
+Package hyperref Info: Link coloring with OCG OFF on input line 5726.
+Package hyperref Info: PDF/A mode OFF on input line 5731.
+LaTeX Info: Redefining \ref on input line 5771.
+LaTeX Info: Redefining \pageref on input line 5775.
+\Hy@abspage=\count93
+\c@Item=\count94
+\c@Hfootnote=\count95
+)
 
-(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
-Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+Package hyperref Message: Driver: hpdftex.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2011/04/17 v6.82g Hyperref driver for pdfTeX
+\Fld@listcount=\count96
+\c@bookmark@seq@number=\count97
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
 )
-\Hy@abspage=\count91
-\c@Item=\count92
-\c@Hfootnote=\count93
+\Hy@SectionHShift=\skip43
 )
-*hyperref using driver hpdftex*
-(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
-\Fld@listcount=\count94
-)
-(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/etc/texmf/tex/latex/config/graphics.cfg
-File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
-\Gread@gobject=\count95
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count98
 ))
 \Gin@req@height=\dimen107
 \Gin@req@width=\dimen108
 )
-(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texmf-texlive/tex/latex/base/t1enc.def
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )) (./ae.sty
 Package: ae 1998/11/17 1.0 Almost European Computer Modern
 
-(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texmf-texlive/tex/latex/base/t1enc.def
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )
 LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
-(/usr/share/texmf-texlive/tex/latex/ae/t1aer.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))
-(/var/lib/texmf/tex/generic/babel/babel.sty
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2008/07/06 v3.8l The Babel package
 
-(/usr/share/texmf-texlive/tex/generic/babel/english.ldf
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/english.ldf
 Language: english 2005/03/30 v3.3o English support from the babel system
 
-(/usr/share/texmf-texlive/tex/generic/babel/babel.def
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2008/07/06 v3.8l Babel common definitions
-\babel@savecnt=\count96
+\babel@savecnt=\count99
 \U@D=\dimen109
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip43
-\f@ncyO@elh=\skip44
-\f@ncyO@erh=\skip45
-\f@ncyO@olh=\skip46
-\f@ncyO@orh=\skip47
-\f@ncyO@elf=\skip48
-\f@ncyO@erf=\skip49
-\f@ncyO@olf=\skip50
-\f@ncyO@orf=\skip51
-) (./ETHkopfTwo.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip44
+\f@ncyO@elh=\skip45
+\f@ncyO@erh=\skip46
+\f@ncyO@olh=\skip47
+\f@ncyO@orh=\skip48
+\f@ncyO@elf=\skip49
+\f@ncyO@erf=\skip50
+\f@ncyO@olf=\skip51
+\f@ncyO@orf=\skip52
+)
+(./ETHkopfTwo.sty
 LaTeX Font Info:    Try loading font information for T1+aess on input line 39.
-
-(/usr/share/texmf-texlive/tex/latex/ae/t1aess.fd
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
-)) (./AufgTwo.sty)
-(/usr/share/texmf-texlive/tex/latex/tools/verbatim.sty
+))
+(./AufgTwo.sty)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks16
-\verbatim@line=\toks17
+\every@verbatim=\toks15
+\verbatim@line=\toks16
 \verbatim@in@stream=\read1
 )
-(/usr/share/texmf-texlive/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2009/02/07 v0.4g Insert pages of external PDF documents (AM)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2011/03/10 v0.4n Insert pages of external PDF documents (AM)
 
-(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/share/texmf-texlive/tex/latex/tools/calc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count97
-\calc@Bcount=\count98
+\calc@Acount=\count100
+\calc@Bcount=\count101
 \calc@Adimen=\dimen110
 \calc@Bdimen=\dimen111
-\calc@Askip=\skip52
-\calc@Bskip=\skip53
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count99
-\calc@Cskip=\skip54
+\calc@Ccount=\count102
+\calc@Cskip=\skip55
 )
-(/usr/share/texmf-texlive/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2006/07/14 v1.1d eso-pic (RN)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
 
-(/usr/share/texmf-texlive/tex/latex/ms/everyshi.sty
-Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
-(/usr/share/texmf-texlive/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2009/02/07 v0.4g Pdfpages driver for pdfTeX (AM)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2011/03/10 v0.4n Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box26
-\AM@toc@title=\toks18
-\c@AM@survey=\count100
+\AM@toc@title=\toks17
+\c@AM@survey=\count103
 \AM@templatesizebox=\box27
 )
-(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip55
+\@mathmargin=\skip56
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks19
+\@emptytoks=\toks18
 \ex@=\dimen112
 ))
-(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen113
 )
-(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count101
+\inf@bad=\count104
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count102
-\leftroot@=\count103
+\uproot@=\count105
+\leftroot@=\count106
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count104
-\DOTSCASE@=\count105
+\classnum@=\count107
+\DOTSCASE@=\count108
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
@@ -308,26 +323,26 @@ LaTeX Info: Redefining \cdots on input line 467.
 \big@size=\dimen114
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count106
-\c@MaxMatrixCols=\count107
+\macc@depth=\count109
+\c@MaxMatrixCols=\count110
 \dotsspace@=\muskip11
-\c@parentequation=\count108
-\dspbrk@lvl=\count109
-\tag@help=\toks20
-\row@=\count110
-\column@=\count111
-\maxfields@=\count112
-\andhelp@=\toks21
+\c@parentequation=\count111
+\dspbrk@lvl=\count112
+\tag@help=\toks19
+\row@=\count113
+\column@=\count114
+\maxfields@=\count115
+\andhelp@=\toks20
 \eqnshift@=\dimen115
 \alignsep@=\dimen116
 \tagshift@=\dimen117
 \tagwidth@=\dimen118
 \totwidth@=\dimen119
 \lineht@=\dimen120
-\@envbody=\toks22
-\multlinegap=\skip56
-\multlinetaggap=\skip57
-\mathdisplay@stack=\toks23
+\@envbody=\toks21
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 ) (./main.aux
@@ -350,60 +365,75 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
 LaTeX Font Info:    ... okay on input line 128.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
 LaTeX Font Info:    ... okay on input line 128.
- (/usr/share/texmf-texlive/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
-
-(/etc/texmf/tex/latex/config/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package color Info: Driver file: pdftex.def on input line 130.
-)
+\AtBeginShipoutBox=\box30
 Package hyperref Info: Link coloring ON on input line 128.
 
-(/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
-Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
+(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
-(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
-Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count113
+\c@section@level=\count116
 )
 LaTeX Info: Redefining \ref on input line 128.
 LaTeX Info: Redefining \pageref on input line 128.
- (./main.out)
-(./main.out)
+LaTeX Info: Redefining \nameref on input line 128.
+
+(./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-\AtBeginShipoutBox=\box30
- (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
+\scratchcounter=\count117
 \scratchdimen=\dimen121
 \scratchbox=\box31
-\nofMPsegments=\count115
-\nofMParguments=\count116
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count117
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count120
 \MPscratchDim=\dimen122
-\MPnumerator=\count118
-\everyMPtoPDFconversion=\toks25
-) ABD: EveryShipout initializing macros
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.jpg,.pdf,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 \openout2 = `Deckblatt.aux'.
 
- (./Deckblatt.tex
+
+(./Deckblatt.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<pictures/titelbild.jpg, id=127, 906.38625pt x 302.12875pt>
+<pictures/titelbild.jpg, id=132, 906.38625pt x 302.12875pt>
 File: pictures/titelbild.jpg Graphic file (type jpg)
 
 <use pictures/titelbild.jpg>
-<pictures/ETHlogo.pdf, id=128, 179.67125pt x 45.16875pt>
+Package pdftex.def Info: pictures/titelbild.jpg used on input line 23.
+(pdftex.def)             Requested size: 295.6074pt x 98.53642pt.
+
+<pictures/ETHlogo.pdf, id=133, 179.67125pt x 45.16875pt>
 File: pictures/ETHlogo.pdf Graphic file (type pdf)
 
 <use pictures/ETHlogo.pdf>
+Package pdftex.def Info: pictures/ETHlogo.pdf used on input line 47.
+(pdftex.def)             Requested size: 179.25235pt x 45.06662pt.
+
 Overfull \hbox (61.0082pt too wide) has occurred while \output is active
 [][] 
  []
@@ -413,70 +443,94 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./pictures/ETHlogo.pdf> <./pictures/titelbild.jpg>])
 \openout2 = `Aufgabenstellung.aux'.
 
  (./Aufgabenstellung.tex
+<aufgabe.pdf, id=145, page=1, 596.2275pt x 844.15375pt>
+File: aufgabe.pdf Graphic file (type pdf)
 
-Package hyperref Warning: No destination for bookmark of \addcontentsline,
-(hyperref)                destination is added on input line 1.
+<use aufgabe.pdf, page 1>
+Package pdftex.def Info: aufgabe.pdf, page1 used on input line 2.
+(pdftex.def)             Requested size: 596.22604pt x 844.15169pt.
+File: aufgabe.pdf Graphic file (type pdf)
+ <use aufgabe.pdf, page 1>
+Package pdftex.def Info: aufgabe.pdf, page1 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
+File: aufgabe.pdf Graphic file (type pdf)
+ <use aufgabe.pdf, page 1>
+Package pdftex.def Info: aufgabe.pdf, page1 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
+File: aufgabe.pdf Graphic file (type pdf)
 
-<aufgabeProv.pdf, id=143, page=1, 596.2275pt x 844.15375pt>
-File: aufgabeProv.pdf Graphic file (type pdf)
-
-<use aufgabeProv.pdf, page 1>
-File: aufgabeProv.pdf Graphic file (type pdf)
- <use aufgabeProv.pdf, page 1>
-File: aufgabeProv.pdf Graphic file (type pdf)
-
-<use aufgabeProv.pdf, page 1>
-File: aufgabeProv.pdf Graphic file (type pdf)
- <use aufgabeProv.pdf, page 1>
-File: aufgabeProv.pdf Graphic file (type pdf)
-
-<use aufgabeProv.pdf, page 1> [1
+<use aufgabe.pdf, page 1>
+Package pdftex.def Info: aufgabe.pdf, page1 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
+File: aufgabe.pdf Graphic file (type pdf)
+ <use aufgabe.pdf, page 1>
+Package pdftex.def Info: aufgabe.pdf, page1 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
+ [1
 
 
- <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=167, page=2, 596.2275pt x 844.15375pt>
-File: aufgabeProv.pdf Graphic file (type pdf)
+ <./aufgabe.pdf>]
+<aufgabe.pdf, id=171, page=2, 596.2275pt x 844.15375pt>
+File: aufgabe.pdf Graphic file (type pdf)
 
-<use aufgabeProv.pdf, page 2>
-File: aufgabeProv.pdf Graphic file (type pdf)
- <use aufgabeProv.pdf, page 2>
-File: aufgabeProv.pdf Graphic file (type pdf)
+<use aufgabe.pdf, page 2>
+Package pdftex.def Info: aufgabe.pdf, page2 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
+File: aufgabe.pdf Graphic file (type pdf)
+ <use aufgabe.pdf, page 2>
+Package pdftex.def Info: aufgabe.pdf, page2 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
+File: aufgabe.pdf Graphic file (type pdf)
+ <use aufgabe.pdf, page 2>
+Package pdftex.def Info: aufgabe.pdf, page2 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
 
-<use aufgabeProv.pdf, page 2> [2 <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=173, page=3, 596.2275pt x 844.15375pt>
-File: aufgabeProv.pdf Graphic file (type pdf)
+[2 <./aufgabe.pdf>] <aufgabe.pdf, id=177, page=3, 596.2275pt x 844.15375pt>
+File: aufgabe.pdf Graphic file (type pdf)
 
-<use aufgabeProv.pdf, page 3>
-File: aufgabeProv.pdf Graphic file (type pdf)
- <use aufgabeProv.pdf, page 3>
-File: aufgabeProv.pdf Graphic file (type pdf)
+<use aufgabe.pdf, page 3>
+Package pdftex.def Info: aufgabe.pdf, page3 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
+File: aufgabe.pdf Graphic file (type pdf)
+ <use aufgabe.pdf, page 3>
+Package pdftex.def Info: aufgabe.pdf, page3 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
+File: aufgabe.pdf Graphic file (type pdf)
+ <use aufgabe.pdf, page 3>
+Package pdftex.def Info: aufgabe.pdf, page3 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
 
-<use aufgabeProv.pdf, page 3> [3 <./aufgabeProv.pdf>]
-<aufgabeProv.pdf, id=179, page=4, 596.2275pt x 844.15375pt>
-File: aufgabeProv.pdf Graphic file (type pdf)
+[3 <./aufgabe.pdf>] <aufgabe.pdf, id=183, page=4, 596.2275pt x 844.15375pt>
+File: aufgabe.pdf Graphic file (type pdf)
 
-<use aufgabeProv.pdf, page 4>
-File: aufgabeProv.pdf Graphic file (type pdf)
- <use aufgabeProv.pdf, page 4>
-File: aufgabeProv.pdf Graphic file (type pdf)
+<use aufgabe.pdf, page 4>
+Package pdftex.def Info: aufgabe.pdf, page4 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
+File: aufgabe.pdf Graphic file (type pdf)
+ <use aufgabe.pdf, page 4>
+Package pdftex.def Info: aufgabe.pdf, page4 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
+File: aufgabe.pdf Graphic file (type pdf)
+ <use aufgabe.pdf, page 4>
+Package pdftex.def Info: aufgabe.pdf, page4 used on input line 2.
+(pdftex.def)             Requested size: 596.96295pt x 845.19502pt.
 
-<use aufgabeProv.pdf, page 4> [4 <./aufgabeProv.pdf>]) (./main.toc [5
+[4 <./aufgabe.pdf>]) (./main.toc [5
 
 
 ])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
-
-[6] (./main.lof
-Overfull \hbox (0.17183pt too wide) in paragraph at lines 12--12
+ [6] (./main.lof
+Overfull \hbox (0.17183pt too wide) in paragraph at lines 14--14
  [][] [][][]\T1/aer/m/n/10.95 The pre-dic-tion and the cor-rec-tion step with t
 heir cor-re-spond-ing equa- 
  []
@@ -527,36 +581,47 @@ Chapter 2.
 
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 38--38
+] <pictures/centrifuge.JPG, id=373, 3019.28pt x 2007.5pt>
+File: pictures/centrifuge.JPG Graphic file (type jpg)
+
+<use pictures/centrifuge.JPG>
+Package pdftex.def Info: pictures/centrifuge.JPG used on input line 25.
+(pdftex.def)             Requested size: 315.31577pt x 209.64502pt.
+ <pictures/box.JPG, id=375, 481.8pt x 724.6272pt>
+File: pictures/box.JPG Graphic file (type jpg)
+
+<use pictures/box.JPG>
+Package pdftex.def Info: pictures/box.JPG used on input line 33.
+(pdftex.def)             Requested size: 315.31577pt x 474.24178pt.
+ [5 <./pictures/centrifuge.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 []\T1/aer/m/n/10.95 Accelerometer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\T1/aer/m/n/10.95 Gyroscope
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
 []\T1/aer/m/n/10.95 Magnetometer
  []
 
 
-Overfull \hbox (11.52498pt too wide) in paragraph at lines 34--45
+Overfull \hbox (14.56659pt too wide) in paragraph at lines 50--61
  [][] 
  []
 
 
-! LaTeX Error: Unknown graphics extension: .eps.
+LaTeX Warning: Reference `ds_mit-g' on page 6 undefined on input line 64.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52 ...[width=1.2\textwidth]{pictures/ct_pos.eps}
-                                                  
-? 
+<pictures/ct_pos.png, id=384, 561.09625pt x 420.57124pt>
+File: pictures/ct_pos.png Graphic file (type png)
+
+<use pictures/ct_pos.png>
+Package pdftex.def Info: pictures/ct_pos.png used on input line 68.
+(pdftex.def)             Requested size: 394.14322pt x 295.43106pt.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -564,15 +629,12 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 
-! LaTeX Error: Unknown graphics extension: .eps.
+<pictures/ct_vel.png, id=386, 561.09625pt x 420.57124pt>
+File: pictures/ct_vel.png Graphic file (type png)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 ...[width=1.2\textwidth]{pictures/ct_vel.eps}
-                                                  
-? 
+<use pictures/ct_vel.png>
+Package pdftex.def Info: pictures/ct_vel.png used on input line 93.
+(pdftex.def)             Requested size: 394.14322pt x 295.43106pt.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -580,343 +642,368 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 
-! LaTeX Error: Unknown graphics extension: .eps.
+<pictures/ct_acc.png, id=390, 561.09625pt x 420.57124pt>
+File: pictures/ct_acc.png Graphic file (type png)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.100 ...width=1.2\textwidth]{pictures/ct_acc.eps}
-                                                  
-? 
+<use pictures/ct_acc.png>
+Package pdftex.def Info: pictures/ct_acc.png used on input line 116.
+(pdftex.def)             Requested size: 394.14322pt x 295.43106pt.
 
-! LaTeX Error: Unknown graphics extension: .eps.
+<pictures/ct_gyro.png, id=391, 561.09625pt x 420.57124pt>
+File: pictures/ct_gyro.png Graphic file (type png)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.105 ...idth=1.2\textwidth]{pictures/ct_gyro.eps}
-                                                  
-? 
+<use pictures/ct_gyro.png>
+Package pdftex.def Info: pictures/ct_gyro.png used on input line 121.
+(pdftex.def)             Requested size: 394.14322pt x 295.43106pt.
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ² in font cmr10!
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ [6]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `acc_mag' on page 7 undefined on input line 128.
 
+<pictures/ct_mag.png, id=398, 561.09625pt x 420.57124pt>
+File: pictures/ct_mag.png Graphic file (type png)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+<use pictures/ct_mag.png>
+Package pdftex.def Info: pictures/ct_mag.png used on input line 130.
+(pdftex.def)             Requested size: 394.14322pt x 295.43106pt.
+ [7]
+<pictures/ct_sine.png, id=406, 586.19pt x 652.4375pt>
+File: pictures/ct_sine.png Graphic file (type png)
 
-[6]
-
-LaTeX Warning: Reference `acc_mag' on page 7 undefined on input line 112.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.114 ...width=1.2\textwidth]{pictures/ct_mag.eps}
-                                                  
-? 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.122 ...idth=1.2\textwidth]{pictures/ct_sine.eps}
-                                                  
-? 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7]) [8] [9]
+<use pictures/ct_sine.png>
+Package pdftex.def Info: pictures/ct_sine.png used on input line 138.
+(pdftex.def)             Requested size: 394.14322pt x 438.68388pt.
+) [8] [9 <./pictures/box.JPG>] [10 <./pictures/ct_pos.png (PNG copy)>] [11 <./p
+ictures/ct_vel.png (PNG copy)>] [12 <./pictures/ct_acc.png (PNG copy)>] [13 <./
+pictures/ct_gyro.png (PNG copy)>] [14 <./pictures/ct_mag.png (PNG copy)>] [15 <
+./pictures/ct_sine.png (PNG copy)>]
 \openout2 = `Chapter3.aux'.
 
  (./Chapter3.tex
 Chapter 3.
-[10
+[16
 
 
 
 ]
+Package epstopdf Info: Source file: <pictures/simple_schematic_algo.eps>
+(epstopdf)                    date: 2012-06-23 06:23:10
+(epstopdf)                    size: 547887 bytes
+(epstopdf)             Output file: <pictures/simple_schematic_algo-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2012-06-23 06:30:31
+(epstopdf)                    size: 11493 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/simple_schematic_
+algo-eps-converted-to.pdf pictures/simple_schematic_algo.eps>
+(epstopdf)             \includegraphics on input line 31.
+Package epstopdf Info: Output file is already uptodate.
 
-! LaTeX Error: Unknown graphics extension: .eps.
+<pictures/simple_schematic_algo-eps-converted-to.pdf, id=461, 394.47375pt x 227
+.85126pt>
+File: pictures/simple_schematic_algo-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use pictures/simple_schematic_algo-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/simple_schematic_algo-eps-converted-to.pdf us
+ed on input line 31.
+(pdftex.def)             Requested size: 170.71652pt x 98.60689pt.
+ [17 <./pictures/simple_schematic_algo-eps-converted-to.pdf>]
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.27 ...h=6cm]{pictures/simple_schematic_algo.eps}
-                                                  
-? 
+LaTeX Warning: Reference `P-post' on page 18 undefined on input line 59.
 
-LaTeX Warning: Reference `P-post' on page 11 undefined on input line 55.
+Package epstopdf Info: Source file: <pictures/equation_kalman.eps>
+(epstopdf)                    date: 2012-06-23 06:22:51
+(epstopdf)                    size: 2964387 bytes
+(epstopdf)             Output file: <pictures/equation_kalman-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2012-06-23 08:00:11
+(epstopdf)                    size: 48082 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/equation_kalman-e
+ps-converted-to.pdf pictures/equation_kalman.eps>
+(epstopdf)             \includegraphics on input line 70.
+Package epstopdf Info: Output file is already uptodate.
 
-[11]
+<pictures/equation_kalman-eps-converted-to.pdf, id=482, 969.6225pt x 505.89pt>
+File: pictures/equation_kalman-eps-converted-to.pdf Graphic file (type pdf)
 
-! LaTeX Error: Unknown graphics extension: .eps.
+<use pictures/equation_kalman-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/equation_kalman-eps-converted-to.pdf used on 
+input line 70.
+(pdftex.def)             Requested size: 284.52756pt x 148.44888pt.
+ [18 <./pictures/equation_kalman-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <pictures/equation_ekf.eps>
+(epstopdf)                    date: 2012-06-23 06:22:30
+(epstopdf)                    size: 3009948 bytes
+(epstopdf)             Output file: <pictures/equation_ekf-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2012-06-23 08:00:12
+(epstopdf)                    size: 50417 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/equation_ekf-eps-
+converted-to.pdf pictures/equation_ekf.eps>
+(epstopdf)             \includegraphics on input line 96.
+Package epstopdf Info: Output file is already uptodate.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.66 ...[width=10cm]{pictures/equation_kalman.eps}
-                                                  
-? 
-[12]
+<pictures/equation_ekf-eps-converted-to.pdf, id=498, 980.66376pt x 507.8975pt>
+File: pictures/equation_ekf-eps-converted-to.pdf Graphic file (type pdf)
 
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.92 ...ics[width=10cm]{pictures/equation_ekf.eps}
-                                                  
-? 
-<pictures/sketch_coordinate_systems.png, id=422, 421.575pt x 451.6875pt>
+<use pictures/equation_ekf-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/equation_ekf-eps-converted-to.pdf used on inp
+ut line 96.
+(pdftex.def)             Requested size: 284.52756pt x 147.35625pt.
+ [19 <./pictures/equation_ekf-eps-converted-to.pdf>]
+<pictures/sketch_coordinate_systems.png, id=517, 421.575pt x 451.6875pt>
 File: pictures/sketch_coordinate_systems.png Graphic file (type png)
 
 <use pictures/sketch_coordinate_systems.png>
+Package pdftex.def Info: pictures/sketch_coordinate_systems.png used on input l
+ine 111.
+(pdftex.def)             Requested size: 284.52756pt x 304.85522pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13] [14 <./pictures/sketch_coordinate_systems.png>] [15]
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-! LaTeX Error: Unknown graphics extension: .eps.
+ [21 <./pictures/sketch_coordinate_systems.png>] [22]
+Package epstopdf Info: Source file: <pictures/structure_algo_1.eps>
+(epstopdf)                    date: 2012-06-23 07:20:07
+(epstopdf)                    size: 8562 bytes
+(epstopdf)             Output file: <pictures/structure_algo_1-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2012-06-23 08:00:31
+(epstopdf)                    size: 9131 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/structure_algo_1-
+eps-converted-to.pdf pictures/structure_algo_1.eps>
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.187 ...idth=8 cm]{pictures/structure_algo_1.eps}
-                                                  
-? 
-[16] [17] [18] [19] [20]
+<pictures/structure_algo_1-eps-converted-to.pdf, id=543, 226.8475pt x 463.7325p
+t>
+File: pictures/structure_algo_1-eps-converted-to.pdf Graphic file (type pdf)
+ <use pictures/structure_algo_1-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/structure_algo_1-eps-converted-to.pdf used on
+ input line 191.
+(pdftex.def)             Requested size: 227.62204pt x 465.31636pt.
+ [23] [24 <./pictures/structure_algo_1-eps-converted-to.pdf>] [25] [26] [27] [2
+8]
+Package epstopdf Info: Source file: <pictures/displacement_1.eps>
+(epstopdf)                    date: 2012-06-23 07:46:33
+(epstopdf)                    size: 4532 bytes
+(epstopdf)             Output file: <pictures/displacement_1-eps-converted-to.p
+df>
+(epstopdf)                    date: 2012-06-23 08:00:41
+(epstopdf)                    size: 5284 bytes
+(epstopdf)             Command: <repstopdf --outfile=pictures/displacement_1-ep
+s-converted-to.pdf pictures/displacement_1.eps>
+(epstopdf)             \includegraphics on input line 306.
+Package epstopdf Info: Output file is already uptodate.
 
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.302 ...[width=8 cm]{pictures/displacement_1.eps}
-                                                  
-? 
-) [21]
+<pictures/displacement_1-eps-converted-to.pdf, id=612, 171.64125pt x 85.31876pt
+>
+File: pictures/displacement_1-eps-converted-to.pdf Graphic file (type pdf)
+ <use pictures/displacement_1-eps-converted-to.pdf>
+Package pdftex.def Info: pictures/displacement_1-eps-converted-to.pdf used on i
+nput line 306.
+(pdftex.def)             Requested size: 227.62204pt x 113.14442pt.
+) [29 <./pictures/displacement_1-eps-converted-to.pdf>]
 \openout2 = `Chapter4.aux'.
 
  (./Chapter4.tex
 Chapter 4.
-<vicon_bilder/IMG_0137.JPG, id=515, 2601.72pt x 1943.26pt>
+<vicon_bilder/IMG_0137.JPG, id=635, 2601.72pt x 1943.26pt>
 File: vicon_bilder/IMG_0137.JPG Graphic file (type jpg)
 
 <use vicon_bilder/IMG_0137.JPG>
-<vicon_bilder/IMG_0130.JPG, id=516, 2601.72pt x 1943.26pt>
+Package pdftex.def Info: vicon_bilder/IMG_0137.JPG used on input line 8.
+(pdftex.def)             Requested size: 315.31577pt x 235.49397pt.
+
+<vicon_bilder/IMG_0130.JPG, id=637, 2601.72pt x 1943.26pt>
 File: vicon_bilder/IMG_0130.JPG Graphic file (type jpg)
 
 <use vicon_bilder/IMG_0130.JPG>
+Package pdftex.def Info: vicon_bilder/IMG_0130.JPG used on input line 15.
+(pdftex.def)             Requested size: 315.31577pt x 235.49397pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22
+[30
 
 
 
-] <pictures/2_2_SNR5_pos_GPS.png, id=530, 565.312pt x 549.252pt>
+] <pictures/2_2_SNR5_pos_GPS.png, id=651, 565.312pt x 549.252pt>
 File: pictures/2_2_SNR5_pos_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR5_pos_GPS.png>
-<pictures/2_2_SNR5_orientation_GPS.png, id=531, 581.372pt x 553.267pt>
+Package pdftex.def Info: pictures/2_2_SNR5_pos_GPS.png used on input line 31.
+(pdftex.def)             Requested size: 394.14322pt x 382.96521pt.
+
+<pictures/2_2_SNR5_orientation_GPS.png, id=652, 581.372pt x 553.267pt>
 File: pictures/2_2_SNR5_orientation_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR5_orientation_GPS.png>
-<pictures/2_2_fmm_SNR5_pos_GPS.png, id=532, 645.612pt x 554.07pt>
+Package pdftex.def Info: pictures/2_2_SNR5_orientation_GPS.png used on input li
+ne 37.
+(pdftex.def)             Requested size: 394.14322pt x 375.1022pt.
+
+<pictures/2_2_fmm_SNR5_pos_GPS.png, id=653, 645.612pt x 554.07pt>
 File: pictures/2_2_fmm_SNR5_pos_GPS.png Graphic file (type png)
 
 <use pictures/2_2_fmm_SNR5_pos_GPS.png>
-<pictures/2_2_fmm_SNR5_orientation_GPS.png, id=533, 644.809pt x 554.873pt>
+Package pdftex.def Info: pictures/2_2_fmm_SNR5_pos_GPS.png used on input line 4
+3.
+(pdftex.def)             Requested size: 394.14322pt x 338.2612pt.
+
+<pictures/2_2_fmm_SNR5_orientation_GPS.png, id=654, 644.809pt x 554.873pt>
 File: pictures/2_2_fmm_SNR5_orientation_GPS.png Graphic file (type png)
 
 <use pictures/2_2_fmm_SNR5_orientation_GPS.png>
+Package pdftex.def Info: pictures/2_2_fmm_SNR5_orientation_GPS.png used on inpu
+t line 49.
+(pdftex.def)             Requested size: 394.14322pt x 339.17477pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.58 \end{equation}
-                   
-? 
-<pictures/2_2_fmm_SNR5_errors_GPS.png, id=536, 449.68pt x 337.26pt>
+<pictures/2_2_fmm_SNR5_errors_GPS.png, id=657, 449.68pt x 337.26pt>
 File: pictures/2_2_fmm_SNR5_errors_GPS.png Graphic file (type png)
 
 <use pictures/2_2_fmm_SNR5_errors_GPS.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[23 <./vicon_bilder/IMG_0137.JPG>]
-
-LaTeX Warning: Reference `detail_5snf' on page 24 undefined on input line 76.
-
-<pictures/2_2_SNR5_detail_GPS.png, id=544, 588.599pt x 553.267pt>
+Package pdftex.def Info: pictures/2_2_fmm_SNR5_errors_GPS.png used on input lin
+e 63.
+(pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
+ [31 <./vicon_bilder/IMG_0137.JPG>]
+<pictures/2_2_SNR5_detail_GPS.png, id=664, 588.599pt x 553.267pt>
 File: pictures/2_2_SNR5_detail_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR5_detail_GPS.png>
-<pictures/2_2_SNR25_detail_GPS.png, id=545, 581.372pt x 554.873pt>
+Package pdftex.def Info: pictures/2_2_SNR5_detail_GPS.png used on input line 78
+.
+(pdftex.def)             Requested size: 394.14322pt x 370.48434pt.
+
+<pictures/2_2_SNR25_detail_GPS.png, id=665, 581.372pt x 554.873pt>
 File: pictures/2_2_SNR25_detail_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR25_detail_GPS.png>
-<pictures/2_2_SNR5_errors_GPS.png, id=548, 449.68pt x 337.26pt>
+Package pdftex.def Info: pictures/2_2_SNR25_detail_GPS.png used on input line 8
+4.
+(pdftex.def)             Requested size: 394.14322pt x 376.19104pt.
+
+<pictures/2_2_SNR5_errors_GPS.png, id=668, 449.68pt x 337.26pt>
 File: pictures/2_2_SNR5_errors_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR5_errors_GPS.png>
-<pictures/2_2_SNR25_errors_GPS.png, id=549, 449.68pt x 337.26pt>
+Package pdftex.def Info: pictures/2_2_SNR5_errors_GPS.png used on input line 92
+.
+(pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
+
+<pictures/2_2_SNR25_errors_GPS.png, id=669, 449.68pt x 337.26pt>
 File: pictures/2_2_SNR25_errors_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR25_errors_GPS.png>
+Package pdftex.def Info: pictures/2_2_SNR25_errors_GPS.png used on input line 9
+8.
+(pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
+ [32 <./vicon_bilder/IMG_0130.JPG>]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[24 <./vicon_bilder/IMG_0130.JPG>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-! Extra \right.
-\vert ->\delimiter "026A30C 
-                            
-l.105 ...ate_{pos\;y} \\ state_{pos\;z}\right\vert
-                                                   \end{bmatrix}
-? 
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.106 \end{equation}
-                    
-? 
-
-LaTeX Warning: Reference `detail:_noGPS' on page 25 undefined on input line 119
+LaTeX Warning: Reference `detail:_noGPS' on page 33 undefined on input line 118
 .
 
-<pictures/2_2_detail_noGPS.png, id=555, 515.526pt x 554.873pt>
+<pictures/2_2_detail_noGPS.png, id=675, 515.526pt x 554.873pt>
 File: pictures/2_2_detail_noGPS.png Graphic file (type png)
 
 <use pictures/2_2_detail_noGPS.png>
-<pictures/2_2_errors_noGPS.png, id=558, 449.68pt x 337.26pt>
+Package pdftex.def Info: pictures/2_2_detail_noGPS.png used on input line 121.
+(pdftex.def)             Requested size: 394.14322pt x 424.2394pt.
+
+<pictures/2_2_errors_noGPS.png, id=678, 449.68pt x 337.26pt>
 File: pictures/2_2_errors_noGPS.png Graphic file (type png)
 
 <use pictures/2_2_errors_noGPS.png>
+Package pdftex.def Info: pictures/2_2_errors_noGPS.png used on input line 128.
+(pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[25] <pictures/2_2_fmm_SNR5_detail_GPSoutage.png, id=567, 642.4pt x 554.07pt>
+<pictures/2_2_fmm_SNR5_detail_GPSoutage.png, id=680, 642.4pt x 554.07pt>
 File: pictures/2_2_fmm_SNR5_detail_GPSoutage.png Graphic file (type png)
 
 <use pictures/2_2_fmm_SNR5_detail_GPSoutage.png>
+Package pdftex.def Info: pictures/2_2_fmm_SNR5_detail_GPSoutage.png used on inp
+ut line 138.
+(pdftex.def)             Requested size: 394.14322pt x 339.96054pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `error_noGPS_P' on page 26 undefined on input line 153
-.
-
-<pictures/2_2_P_errors_noGPS.png, id=568, 449.68pt x 337.26pt>
+<pictures/2_2_P_errors_noGPS.png, id=682, 449.68pt x 337.26pt>
 File: pictures/2_2_P_errors_noGPS.png Graphic file (type png)
 
 <use pictures/2_2_P_errors_noGPS.png>
+Package pdftex.def Info: pictures/2_2_P_errors_noGPS.png used on input line 155
+.
+(pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
+
+<pictures/mean_error.png, id=683, 845.21486pt x 597.432pt>
+File: pictures/mean_error.png Graphic file (type png)
+
+<use pictures/mean_error.png>
+Package pdftex.def Info: pictures/mean_error.png used on input line 162.
+(pdftex.def)             Requested size: 394.14322pt x 278.5961pt.
+ [33]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [26] [27 <./pictures/2_2_SNR5_pos_GPS.png (PNG copy)>] [28 <./pictures/2_2_SN
-R5_orientation_GPS.png (PNG copy)>] [29 <./pictures/2_2_fmm_SNR5_pos_GPS.png (P
-NG copy)>] [30 <./pictures/2_2_fmm_SNR5_orientation_GPS.png (PNG copy)>]
-[31 <./pictures/2_2_fmm_SNR5_errors_GPS.png (PNG copy)>] [32 <./pictures/2_2_SN
-R5_detail_GPS.png (PNG copy)>] [33 <./pictures/2_2_SNR25_detail_GPS.png (PNG co
-py)>] [34 <./pictures/2_2_SNR5_errors_GPS.png (PNG copy)>] [35 <./pictures/2_2_
-SNR25_errors_GPS.png (PNG copy)>] [36 <./pictures/2_2_detail_noGPS.png (PNG cop
-y)>] [37 <./pictures/2_2_errors_noGPS.png (PNG copy)>] [38 <./pictures/2_2_fmm_
-SNR5_detail_GPSoutage.png (PNG copy)>] [39 <./pictures/2_2_P_errors_noGPS.png (
-PNG copy)>]
+) [34] [35 <./pictures/2_2_SNR5_pos_GPS.png (PNG copy)>] [36 <./pictures/2_2_SN
+R5_orientation_GPS.png (PNG copy)>] [37 <./pictures/2_2_fmm_SNR5_pos_GPS.png (P
+NG copy)>] [38 <./pictures/2_2_fmm_SNR5_orientation_GPS.png (PNG copy)>]
+[39 <./pictures/2_2_fmm_SNR5_errors_GPS.png (PNG copy)>] [40 <./pictures/2_2_SN
+R5_detail_GPS.png (PNG copy)>] [41 <./pictures/2_2_SNR25_detail_GPS.png (PNG co
+py)>] [42 <./pictures/2_2_SNR5_errors_GPS.png (PNG copy)>] [43 <./pictures/2_2_
+SNR25_errors_GPS.png (PNG copy)>] [44 <./pictures/2_2_detail_noGPS.png (PNG cop
+y)>] [45 <./pictures/2_2_errors_noGPS.png (PNG copy)>] [46 <./pictures/2_2_fmm_
+SNR5_detail_GPSoutage.png (PNG copy)>] [47 <./pictures/2_2_P_errors_noGPS.png (
+PNG copy)>] [48 <./pictures/mean_error.png>]
 \openout2 = `Chapter5.aux'.
 
  (./Chapter5.tex
 Chapter 5.
-) [40
+) [49
 
 
 
 ] (./main.bbl
-LaTeX Font Info:    Try loading font information for T1+aett on input line 34.
- (/usr/share/texmf-texlive/tex/latex/ae/t1aett.fd
+LaTeX Font Info:    Try loading font information for T1+aett on input line 41.
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.61 \newblock 10.1007/10991459_
+l.68 \newblock 10.1007/10991459_
                                 29.
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.62 
+l.69 
      
 ? 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.62 
+l.69 
      
 ? 
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.62 
+l.69 
      
 ? 
-[41
+[50
 
 
-]) [42]
+]) [51]
 \openout2 = `addAppendix.aux'.
 
  (./addAppendix.tex
@@ -924,142 +1011,338 @@ Appendix A.
 
 
 pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
-lusion: found PDF version <1.6>, but at most version <1.4> allowed
+lusion: found PDF version <1.6>, but at most version <1.5> allowed
 
 
 pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
-lusion: found PDF version <1.6>, but at most version <1.4> allowed
-[43
+lusion: found PDF version <1.6>, but at most version <1.5> allowed
+[52
 
 
 ]
 
 pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
-lusion: found PDF version <1.6>, but at most version <1.4> allowed
+lusion: found PDF version <1.6>, but at most version <1.5> allowed
 
-<appendix/acc-BST-BMA180-FL000-03.pdf, id=651, page=1, 597.50829pt x 845.0471pt
+<appendix/acc-BST-BMA180-FL000-03.pdf, id=777, page=1, 597.50829pt x 845.0471pt
 >
 File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
  <use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
+put line 3.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
 
 <use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
+put line 3.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
 
 <use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
+put line 3.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
 
 <use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
+put line 3.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
 
-<use appendix/acc-BST-BMA180-FL000-03.pdf, page 1> [44 <./appendix/acc-BST-BMA1
-80-FL000-03.pdf>] [45]
-<appendix/gyro_px4.pdf, id=704, page=9, 597.23125pt x 845.1575pt>
+<use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
+Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
+put line 3.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [53 <./appendix/acc-BST-BMA180-FL000-03.pdf>] [54]
+<appendix/gyro_px4.pdf, id=831, page=9, 597.23125pt x 845.1575pt>
 File: appendix/gyro_px4.pdf Graphic file (type pdf)
 
 <use appendix/gyro_px4.pdf, page 9>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 5.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: appendix/gyro_px4.pdf Graphic file (type pdf)
  <use appendix/gyro_px4.pdf, page 9>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 5.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: appendix/gyro_px4.pdf Graphic file (type pdf)
 
 <use appendix/gyro_px4.pdf, page 9>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 5.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: appendix/gyro_px4.pdf Graphic file (type pdf)
  <use appendix/gyro_px4.pdf, page 9>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 5.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: appendix/gyro_px4.pdf Graphic file (type pdf)
 
-<use appendix/gyro_px4.pdf, page 9> [46 <./appendix/gyro_px4.pdf>]
-
-pdfTeX warning: pdflatex (file ./appendix/mag_px4.pdf): PDF inclusion: found PD
-F version <1.5>, but at most version <1.4> allowed
-
-
-pdfTeX warning: pdflatex (file ./appendix/mag_px4.pdf): PDF inclusion: found PD
-F version <1.5>, but at most version <1.4> allowed
-[47]
-
-pdfTeX warning: pdflatex (file ./appendix/mag_px4.pdf): PDF inclusion: found PD
-F version <1.5>, but at most version <1.4> allowed
-<appendix/mag_px4.pdf, id=736, page=2, 614.295pt x 794.97pt>
+<use appendix/gyro_px4.pdf, page 9>
+Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 5.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [55 <./appendix/gyro_px4.pdf>] [56]
+<appendix/mag_px4.pdf, id=862, page=2, 614.295pt x 794.97pt>
 File: appendix/mag_px4.pdf Graphic file (type pdf)
 
 <use appendix/mag_px4.pdf, page 2>
+Package pdftex.def Info: appendix/mag_px4.pdf, page2 used on input line 7.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: appendix/mag_px4.pdf Graphic file (type pdf)
  <use appendix/mag_px4.pdf, page 2>
+Package pdftex.def Info: appendix/mag_px4.pdf, page2 used on input line 7.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/mag_px4.pdf Graphic file (type pdf)
 
 <use appendix/mag_px4.pdf, page 2>
+Package pdftex.def Info: appendix/mag_px4.pdf, page2 used on input line 7.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/mag_px4.pdf Graphic file (type pdf)
  <use appendix/mag_px4.pdf, page 2>
+Package pdftex.def Info: appendix/mag_px4.pdf, page2 used on input line 7.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/mag_px4.pdf Graphic file (type pdf)
 
-<use appendix/mag_px4.pdf, page 2> [48 <./appendix/mag_px4.pdf>]
+<use appendix/mag_px4.pdf, page 2>
+Package pdftex.def Info: appendix/mag_px4.pdf, page2 used on input line 7.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [57 <./appendix/mag_px4.pdf>]
 Appendix B.
-[49
+[58
 
-] <appendix/x-imu_gyro.pdf, id=776, page=8, 614.295pt x 794.97pt>
+] <appendix/mti-g_leaflet.pdf, id=903, page=1, 597.66286pt x 845.0471pt>
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 1>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page1 used on input line 9
+.
+(pdftex.def)             Requested size: 597.66139pt x 845.04504pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 1>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page1 used on input line 9
+.
+(pdftex.def)             Requested size: 597.68874pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 1>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page1 used on input line 9
+.
+(pdftex.def)             Requested size: 597.68874pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 1>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page1 used on input line 9
+.
+(pdftex.def)             Requested size: 597.68874pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 1>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page1 used on input line 9
+.
+(pdftex.def)             Requested size: 597.68874pt x 845.08372pt.
+ [59 <./appendix/mti-g_leaflet.pdf>]
+<appendix/mti-g_leaflet.pdf, id=953, page=2, 596.55876pt x 845.0471pt>
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 2>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page2 used on input line 9
+.
+(pdftex.def)             Requested size: 596.58461pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 2>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page2 used on input line 9
+.
+(pdftex.def)             Requested size: 596.58461pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 2>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page2 used on input line 9
+.
+(pdftex.def)             Requested size: 596.58461pt x 845.08372pt.
+ [60 <./appendix/mti-g_leaflet.pdf>]
+<appendix/mti-g_leaflet.pdf, id=1025, page=3, 599.18753pt x 845.0471pt>
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 3>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page3 used on input line 9
+.
+(pdftex.def)             Requested size: 599.21349pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 3>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page3 used on input line 9
+.
+(pdftex.def)             Requested size: 599.21349pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 3>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page3 used on input line 9
+.
+(pdftex.def)             Requested size: 599.21349pt x 845.08372pt.
+ [61 <./appendix/mti-g_leaflet.pdf>]
+<appendix/mti-g_leaflet.pdf, id=1034, page=4, 592.40321pt x 845.0471pt>
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 4>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page4 used on input line 9
+.
+(pdftex.def)             Requested size: 592.42888pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 4>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page4 used on input line 9
+.
+(pdftex.def)             Requested size: 592.42888pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 4>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page4 used on input line 9
+.
+(pdftex.def)             Requested size: 592.42888pt x 845.08372pt.
+ [62 <./appendix/mti-g_leaflet.pdf>]
+<appendix/mti-g_leaflet.pdf, id=1042, page=5, 592.61702pt x 845.0471pt>
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 5>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page5 used on input line 9
+.
+(pdftex.def)             Requested size: 592.64268pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 5>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page5 used on input line 9
+.
+(pdftex.def)             Requested size: 592.64268pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 5>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page5 used on input line 9
+.
+(pdftex.def)             Requested size: 592.64268pt x 845.08372pt.
+ [63 <./appendix/mti-g_leaflet.pdf>]
+<appendix/mti-g_leaflet.pdf, id=1052, page=6, 597.87067pt x 845.0471pt>
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 6>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page6 used on input line 9
+.
+(pdftex.def)             Requested size: 597.89656pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 6>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page6 used on input line 9
+.
+(pdftex.def)             Requested size: 597.89656pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 6>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page6 used on input line 9
+.
+(pdftex.def)             Requested size: 597.89656pt x 845.08372pt.
+ [64 <./appendix/mti-g_leaflet.pdf>]
+Appendix C.
+[65
+
+] <appendix/x-imu_gyro.pdf, id=1067, page=8, 614.295pt x 794.97pt>
 File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_gyro.pdf, page 8>
+Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 12.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
  <use appendix/x-imu_gyro.pdf, page 8>
+Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 12.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_gyro.pdf, page 8>
+Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 12.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
  <use appendix/x-imu_gyro.pdf, page 8>
+Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 12.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
 
-<use appendix/x-imu_gyro.pdf, page 8> [50 <./appendix/x-imu_gyro.pdf>] [51]
-<appendix/x-imu_acc_mag.pdf, id=810, page=11, 597.23125pt x 845.1575pt>
+<use appendix/x-imu_gyro.pdf, page 8>
+Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 12.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [66 <./appendix/x-imu_gyro.pdf>] [67]
+<appendix/x-imu_acc_mag.pdf, id=1101, page=11, 597.23125pt x 845.1575pt>
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_acc_mag.pdf, page 11>
+Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
+14.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_acc_mag.pdf, page 11>
+Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
+14.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_acc_mag.pdf, page 11>
+Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
+14.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_acc_mag.pdf, page 11>
+Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
+14.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
-<use appendix/x-imu_acc_mag.pdf, page 11> [52 <./appendix/x-imu_acc_mag.pdf>])
+<use appendix/x-imu_acc_mag.pdf, page 11>
+Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
+14.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [68 <./appendix/x-imu_acc_mag.pdf>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
+
 (./main.aux (./Deckblatt.aux) (./Aufgabenstellung.aux) (./Abstract.aux)
 (./Chapter1.aux) (./Chapter2.aux) (./Chapter3.aux) (./Chapter4.aux)
 (./Chapter5.aux) (./addAppendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: BE7B3DC6B5C3BE07414BD0AEFED56CD3;2114.
+
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
  ) 
 Here is how much of TeX's memory you used:
- 6791 strings out of 493848
- 96048 string characters out of 1152823
- 181561 words of memory out of 3000000
- 9594 multiletter control sequences out of 15000+50000
+ 8076 strings out of 493633
+ 116703 string characters out of 3143378
+ 219898 words of memory out of 3000000
+ 10904 multiletter control sequences out of 15000+200000
  47684 words of font info for 85 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
- 38i,16n,48p,1306b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.p
-fb>
-Output written on main.pdf (62 pages, 4724773 bytes).
+ 831 hyphenation exceptions out of 8191
+ 45i,18n,49p,1334b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
+/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
+exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/te
+xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (78 pages, 9694700 bytes).
 PDF statistics:
- 916 PDF objects out of 1000 (max. 8388607)
- 189 named destinations out of 1000 (max. 500000)
- 444 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1214 PDF objects out of 1440 (max. 8388607)
+ 895 compressed objects within 9 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 562 words of extra memory for PDF output out of 10000 (max. 10000000)
 

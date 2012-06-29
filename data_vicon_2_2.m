@@ -14,7 +14,8 @@ shift=0.51-0.02;
 %------------------------
 %bringing sensors and vicon together.
 %------------------------
-% deleting error measurements
+% deleting error measurements: measurements wit incorrect time stap get
+% deleted. for the algorithm the time has to be constantely increasing
 [meas_time_X_c,acc_X_c,gyro_X_c,magn_X_c,counter_X_c]=delete_meas_error(0.8,450,meas_time_X_c,acc_X_c,gyro_X_c,magn_X_c,counter_X_c);
 [meas_time_P,acc_P,gyro_P,magn_P,counter_P]=delete_meas_error(0.8,450,meas_time_P,acc_P,gyro_P,magn_P,counter_P);
 
@@ -27,18 +28,18 @@ meas_time_VI_new=meas_time_VI';
 VI_new=VI';
 
 % position
-% the position is added with noise
+% the poition from vicon is interpolated on the data of the PX4 measurement and added with noise
+% the time is also shifted in order the time form vicon and PX4 match
 for i=2:4
       pos_VI_p_noisy(i-1,:)=awgn(interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_P),-25);
       pos_VI_p(i-1,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_P);
 end
 
 
-meas_time_VI_gt=meas_time_VI_new+8.5646+0.6363-0.07+shift;
-VI_gt=[VI_new(2,:)/1000-0.13165*ones(1,size(VI_new,2));VI_new(3,:)/1000-0.21*ones(1,size(VI_new,2));VI_new(4,:)/1000-1.347185*ones(1,size(VI_new,2));VI_new(5:7,:)];
+%meas_time_VI_gt=meas_time_VI_new+8.5646+0.6363-0.07+shift;
+%VI_gt=[VI_new(2,:)/1000-0.13165*ones(1,size(VI_new,2));VI_new(3,:)/1000-0.21*ones(1,size(VI_new,2));VI_new(4,:)/1000-1.347185*ones(1,size(VI_new,2));VI_new(5:7,:)];
 
 
-%segment1_ground_truth_X(1:3,:)=[segment1_ground_truth_X(1,:)-0.13165*ones(1,size(segment1_ground_truth_X,2));segment1_ground_truth_X(2,:)-0.21*ones(1,size(segment1_ground_truth_X,2));segment1_ground_truth_X(3,:)-1.347185*ones(1,size(segment1_ground_truth_X,2))];
 
 
 % velocity
@@ -51,6 +52,8 @@ for i=1:3
     
 end
 vel_P=([vel_P_tmp(:,1),vel_P_tmp(:,:)]);
+% if there is no velocity the counter is constant. In the algorithm is this
+% interpreted as sensor outage of the velocity
 for j=2:size(meas_time_P,2);
 
     if isnan(vel_P(1,j))
@@ -70,9 +73,9 @@ for i=5:7
      angles_VI_p(i-4,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_P);
 end
 
-% ground truth
+% ground truth is saved in a vector to be able to compare the results.
 ground_truth_P=[pos_VI_p/1000;vel_P/1000;angles_VI_p]; %position, velocity and angels without noise.
-Z_p=[(pos_VI_p_noisy)/1000;vel_p_noisy/1000;acc_P;gyro_P;magn_P];
+Z_p=[(pos_VI_p_noisy)/1000;vel_p_noisy/1000;acc_P;gyro_P;magn_P]; % This matrix contains all PX4 measurements in the right units
 
 
 %%
@@ -126,13 +129,16 @@ meas_time_VI=VI(:,1).*dt_vicon;
 meas_time_VI=meas_time_VI';
 
 % position
+% the poition from vicon is interpolated on the data of the MTi-G measurement and added with noise
+% the time is also shifted in order the time form vicon and MTi-G match
 for i=2:4
      pos_VI_x_noisy(i-1,:)=awgn(interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_X_c),-5);
      pos_VI_x(i-1,:)=interp1(meas_time_VI_new+8.5646+0.6363-0.07+shift,VI_new(i,:),meas_time_X_c);
 end
 
 %velocity
-% velocity 
+% calculation of the velocity from the position measurement of the vicon
+% the velocity is added with noise
 vel_X_tmp=zeros(3,size(meas_time_X_c,2)-1);
 vel_X=zeros(3,size(meas_time_X_c,2));
 
@@ -141,6 +147,8 @@ for i=1:3
     
 end
 vel_X=([vel_X_tmp(:,1),vel_X_tmp(:,:)]);
+% if there is no velocity the counter is constant. In the algorithm is this
+% interpreted as sensor outage of the velocity
 for j=2:size(meas_time_P,2);
 
     if isnan(vel_X(1,j))
@@ -224,21 +232,12 @@ segment1_ground_truth_P(1:3,:)=[segment1_ground_truth_P(1,:)-0.13165*ones(1,size
 segment1_Z_X(1:3,:)=[segment1_Z_X(1,:)-0.13165*ones(1,size(segment1_Z_X,2));segment1_Z_X(2,:)-0.21*ones(1,size(segment1_Z_X,2));segment1_Z_X(3,:)-1.347185*ones(1,size(segment1_Z_X,2))];
 segment1_ground_truth_X(1:3,:)=[segment1_ground_truth_X(1,:)-0.13165*ones(1,size(segment1_ground_truth_X,2));segment1_ground_truth_X(2,:)-0.21*ones(1,size(segment1_ground_truth_X,2));segment1_ground_truth_X(3,:)-1.347185*ones(1,size(segment1_ground_truth_X,2))];
 
-%%
-% plot(meas_time_P,2*Z_p(13:15,:)-[-0.689*ones(size(meas_time_P));-0.341*ones(size(meas_time_P));-0.16*ones(size(meas_time_P))],meas_time_X_c,Z_x(13:15,:));legend('xp','yp','zp','x','y','z');title('mag')
- 
-%%
-% plot(meas_time_P,ground_truth_P(7:9,:));
 
-%%
-
-%plot(segment1_time_P,segment1_Z_P(13:15,:),meas_time,M(13:15,:))
-
-%%
+%% run this cell to run the estimator afterwards based on the Pix Hawk measurements
 meas_time=segment1_time_P;
 M=segment1_Z_P;
 counter=segment1_counter_P;
-%%
+%% run this cell to run the estimator afterwards based on the Xsens measurements
 meas_time=segment1_time_X;
 M=segment1_Z_X;
 counter=segment1_counter_X;

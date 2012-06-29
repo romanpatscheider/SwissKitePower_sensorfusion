@@ -1,4 +1,4 @@
-%state_estimation_4
+%state_estimation_5
 %------------------------
 % constants are defined
 %------------------------
@@ -60,7 +60,7 @@ R=diag(r);
 % for every measurement the Extended Kalman Filter is used for state
 % estimation
 %------------------------
-totalTime=meas_time(1);
+totalTime=meas_time(1); %time of the next estimated state
 i=1;
 k=1;
 while (i<size(M,2))
@@ -73,12 +73,12 @@ while (i<size(M,2))
     %------------------------
     % estimation step
     %------------------------
-    [x_est,A]=jaccsd_5(@f5,x,t);
-    %deviation0=x_est-x;
+    [x_est,A]=jaccsd_5(@f5,x,t); % jacobian matrix(A) of f5 (pendulum model) and estimated state(x_est)are calculated
+    
     
     P_est=A*P*A'+Q;
     
-    if(meas_time(i+1)>totalTime)
+    if(meas_time(i+1)>totalTime) % if no new sensor measurements are available, the filter keeps propagating
         disp('no new value within t')
         x_new=x_est;
         P=P_est;
@@ -91,10 +91,11 @@ while (i<size(M,2))
     %-----------------------
     
    
-    [z_est,H]=jaccsd_5(@h5_x,x_est,t);
+    [z_est,H]=jaccsd_5(@h5_x,x_est,t);  % jacobian matrix (H) of the h5_x (measurement-state relation) 
+                                        % and estimated measurements (z_est) are calculated
     
     %----------------------
-    % find the latest new measurement value
+    % find the newest measurement value
     %----------------------
     if(i==1)
         i_old=10;
@@ -104,31 +105,15 @@ while (i<size(M,2))
     while(meas_time(i+1)<=totalTime)
         i=i+1;
     end
-    z_new=M(:,i);
+    z_new=M(:,i); %all sensor data is saved in the matrix M
     counter_new=counter(:,i);
     counter_old=counter(:,i_old);
     length_z=size(z_new);
    
-    meas_control= d_meas(counter_new,counter_old,length_z);
+    meas_control= d_meas(counter_new,counter_old,length_z); % d_meas tells us which sensors have new data
     
     x_tmp=x_est;
     P_tmp=P_est;
-    
-    %deviation1=z_est-z_new;
-    %do not use mag!
-    
-%     P12=P_tmp*H([1:6 7:9 10:12 13:15],:)';                   %cross covariance
-%     % K=P12*inv(H*P12+R);       %Kalman filter gain
-%     % x=x1+K*(z-z1);            %state estimate
-%     % P=P-K*P12';               %state covariance matrix
-%     S=chol(H([1:6 7:9 10:12 13:15],:)*P12+R([1:6 7:9 10:12 13:15],[1:6 7:9 10:12 13:15]));            %Cholesky factorization
-%     U=P12/S;                    %K=U/R'; Faster because of back substitution
-%     
-%     x_tmp=x_tmp+U*(S'\(z_new([1:6 7:9 10:12 13:15])-z_est([1:6 7:9 10:12 13:15])));  %Back substitution to get state update
-%     
-%     P_tmp=P_tmp-U*U';
-    
-    
     
     %-----------------------
     % only perform correction using new measurements
@@ -150,22 +135,17 @@ while (i<size(M,2))
         end
             
     end
-    x_new=x_tmp;
+    x_new=x_tmp;%x_new is the corrected step according to the measurements
     P=P_tmp;
     end
     
     %saving:
-%     save(:,k)=x;
-%     save_est(:,k)=x_est;
-%     save_corr(:,k)=x_new;
-%     save_t(k)=totalTime;
-     save_z_est(:,k)=z_est;
+
      save_z(:,k)=z_new;
      save_z_used(:,k)=z_new.*meas_control';
-%     [val,ind]=min(abs(meas_time_P-meas_time(i)));
-%     save_anlges(:,k)=angles_VI_p(:,ind);
-    
 
+    
+    % coordinate system of vicon and IMU has to be aligned
     DCM_b2i_n=calc_DCM_br(real(x_new(1)),real(x_new(2)),real(x_new(3)));
     psi=-0.2;
     thet=0.07;
@@ -174,7 +154,7 @@ while (i<size(M,2))
     
 
 
-
+    % the data is savet to plot it afterwards
     save_t(k)=totalTime;
     save_pos(:,k)=RAD*[cos(x_new(3))*cos(x_new(2));sin(x_new(3))*cos(x_new(2));-sin(x_new(2))]+transp(DCM_br_n)*dis;
     save_orientation(:,k)=[-atan2(-DCM_br_n(3,2),-DCM_br_n(3,3))  ...
@@ -182,9 +162,8 @@ while (i<size(M,2))
               atan2(DCM_br_n(2,1),DCM_br_n(1,1))];
     k=k+1;
 
-    
-    %deviation2=x_new-x_est;
-    x=x_new;
+  
+    x=x_new;%the corrected state is the next state
     
     x(1)=mod(x(1),2*pi);
     x(2)=mod(x(2),2*pi);

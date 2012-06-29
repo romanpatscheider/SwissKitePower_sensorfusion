@@ -1,4 +1,6 @@
 % daten centrifuge test
+% the text files of the PX4 unit (p_test...) and the MTi-G unit are
+% imported (x_test ...)
 fid1 = fopen('p_test_1.txt');
 fid2 = fopen('x_test_1.txt');
 
@@ -7,6 +9,7 @@ fid2 = fopen('x_test_1.txt');
 
 counter_X=[counter_X_IMU;counter_X_pos];
 
+% import of the text file of the x-IMU, coded by Raphael Mueller
 % Daten?bertragungsrate xIMU, siehe Registereintrag xIMU:
 f = 32; %[Hz]
 
@@ -28,6 +31,7 @@ clear PacketNumber;
 deltaPacket = PacketTime(3) - PacketTime(2);
 t =  1/(f*deltaPacket);
 
-%deleting measurements
+%some measurements have a incorrect time stamp. In order to plot the
+%measurements, the incorrect measurements are deleted
 [meas_time_X,acc_X,gyro_X,magn_X,pos_X,vel_X,counter_X]=delete_meas_error_ct(47946,49190,meas_time_X,acc_X,gyro_X,magn_X,pos_X,vel_X,counter_X);
 [meas_time_P,acc_P,gyro_P,magn_P,counter_P]=delete_meas_error(47946,49190,meas_time_P,acc_P,gyro_P,magn_P,counter_P);

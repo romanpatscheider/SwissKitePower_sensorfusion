@@ -1,4 +1,5 @@
 %free mass model
+% 
 
 function [x_est]= free_mass_model(x,t)
 
@@ -9,9 +10,9 @@ d_phi=x(10);d_thet=x(11);d_psi=x(12);
 
 
 
-f1=[lat+t*vn;long+t*ve;alt+t*vd]; 
+f1=[lat+t*vn;long+t*ve;alt+t*vd]; %position = integration of the velocity
 f2=[vn;ve;vd];
-f3=[phi+t*d_phi;thet+t*d_thet;pssi+t*d_psi];
+f3=[phi+t*d_phi;thet+t*d_thet;pssi+t*d_psi]; %angles = integration of the angular rates
 f4=[d_phi;d_thet;d_psi];
 
 x_est=[f1;f2;f3;f4;x(13:21)];

@@ -1,4 +1,6 @@
 % import Xsens calibrated data
+% the data is saved in matrixes according
+% the sensor
 
 function [pos_X_c,vel_X_c, acc_X_c,gyro_X_c,magn_X_c,meas_time_X_c,quat_X_c,counter_X_IMU_c,counter_X_pos_c]= import_Xsens_cal(fid)
 
@@ -32,6 +34,8 @@ for i=10:13
 end
 
 %counter
+%counter if all three measurements of a sensor are equal to the old one 
+%it is assumed to have no new measurement and therefore a constant counter
 counter_X_c(1,1)=1;
 for j=2:size(pos_X_c,1)
     if pos_X_c(j,1) == pos_X_c(j-1,1) && pos_X_c(j,2) == pos_X_c(j-1,2) && pos_X_c(j,3) == pos_X_c(j-1,3);
