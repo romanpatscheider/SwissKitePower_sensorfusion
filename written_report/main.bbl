@@ -79,6 +79,12 @@ Angus P.~Andrews Mohinder S.~Grewal, Lawrence R.~Weill.
   integration}.
 \newblock Hoboken, NJ : Wiley, 2007.
 
+\bibitem{maybeck1979}
+Chapter 6 design and performance analysis of kalman filters.
+\newblock In Peter~S. Maybeck, editor, {\em Stochastic models, estimation, and
+  control}, volume 141, Part 1 of {\em Mathematics in Science and Engineering},
+  pages 289 -- 367. Elsevier, 1979.
+
 \bibitem{debnath2005}
 L.~Debnath.
 \newblock {\em Nonlinear Partial Differential Equations for Scientists and

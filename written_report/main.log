@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  1 JUL 2012 12:23
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  1 JUL 2012 13:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -345,28 +345,30 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
-) (./main.aux
-(./Deckblatt.aux) (./Aufgabenstellung.aux) (./Abstract.aux) (./Chapter1.aux)
-(./Chapter2.aux) (./Chapter3.aux) (./Chapter4.aux) (./Chapter5.aux)
-(./addAppendix.aux))
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(./main.aux (./Deckblatt.aux) (./Abstract.aux) (./Chapter1.aux) (./Chapter2.aux
+) (./Chapter3.aux) (./Chapter4.aux) (./Chapter5.aux) (./addAppendix.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring ON on input line 128.
+Package hyperref Info: Link coloring ON on input line 129.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -376,9 +378,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count116
 )
-LaTeX Info: Redefining \ref on input line 128.
-LaTeX Info: Redefining \pageref on input line 128.
-LaTeX Info: Redefining \nameref on input line 128.
+LaTeX Info: Redefining \ref on input line 129.
+LaTeX Info: Redefining \pageref on input line 129.
+LaTeX Info: Redefining \nameref on input line 129.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
@@ -420,14 +422,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<pictures/titelbild.jpg, id=132, 906.38625pt x 302.12875pt>
+<pictures/titelbild.jpg, id=128, 906.38625pt x 302.12875pt>
 File: pictures/titelbild.jpg Graphic file (type jpg)
 
 <use pictures/titelbild.jpg>
 Package pdftex.def Info: pictures/titelbild.jpg used on input line 23.
 (pdftex.def)             Requested size: 295.6074pt x 98.53642pt.
 
-<pictures/ETHlogo.pdf, id=133, 179.67125pt x 45.16875pt>
+<pictures/ETHlogo.pdf, id=129, 179.67125pt x 45.16875pt>
 File: pictures/ETHlogo.pdf Graphic file (type pdf)
 
 <use pictures/ETHlogo.pdf>
@@ -506,13 +508,13 @@ Chapter 2.
 
 
 
-] <pictures/centrifuge.JPG, id=326, 3019.28pt x 2007.5pt>
+] <pictures/centrifuge.JPG, id=321, 3019.28pt x 2007.5pt>
 File: pictures/centrifuge.JPG Graphic file (type jpg)
 
 <use pictures/centrifuge.JPG>
 Package pdftex.def Info: pictures/centrifuge.JPG used on input line 25.
 (pdftex.def)             Requested size: 315.31577pt x 209.64502pt.
- <pictures/box.JPG, id=328, 481.8pt x 724.6272pt>
+ <pictures/box.JPG, id=323, 481.8pt x 724.6272pt>
 File: pictures/box.JPG Graphic file (type jpg)
 
 <use pictures/box.JPG>
@@ -551,7 +553,7 @@ Overfull \hbox (14.56659pt too wide) in paragraph at lines 50--61
 
 LaTeX Warning: Reference `ds_mit-g' on page 6 undefined on input line 64.
 
-<pictures/ct_pos.png, id=337, 561.09625pt x 420.57124pt>
+<pictures/ct_pos.png, id=333, 561.09625pt x 420.57124pt>
 File: pictures/ct_pos.png Graphic file (type png)
 
 <use pictures/ct_pos.png>
@@ -564,7 +566,7 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 
-<pictures/ct_vel.png, id=339, 561.09625pt x 420.57124pt>
+<pictures/ct_vel.png, id=335, 561.09625pt x 420.57124pt>
 File: pictures/ct_vel.png Graphic file (type png)
 
 <use pictures/ct_vel.png>
@@ -577,14 +579,14 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 
-<pictures/ct_acc.png, id=343, 561.09625pt x 420.57124pt>
+<pictures/ct_acc.png, id=339, 561.09625pt x 420.57124pt>
 File: pictures/ct_acc.png Graphic file (type png)
 
 <use pictures/ct_acc.png>
 Package pdftex.def Info: pictures/ct_acc.png used on input line 116.
 (pdftex.def)             Requested size: 394.14322pt x 295.43106pt.
 
-<pictures/ct_gyro.png, id=344, 561.09625pt x 420.57124pt>
+<pictures/ct_gyro.png, id=340, 561.09625pt x 420.57124pt>
 File: pictures/ct_gyro.png Graphic file (type png)
 
 <use pictures/ct_gyro.png>
@@ -596,14 +598,14 @@ Missing character: There is no ² in font cmr10!
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pictures/ct_mag.png, id=353, 561.09625pt x 420.57124pt>
+<pictures/ct_mag.png, id=349, 561.09625pt x 420.57124pt>
 File: pictures/ct_mag.png Graphic file (type png)
 
 <use pictures/ct_mag.png>
 Package pdftex.def Info: pictures/ct_mag.png used on input line 130.
 (pdftex.def)             Requested size: 394.14322pt x 295.43106pt.
  [7]
-<pictures/ct_sine.png, id=362, 586.19pt x 652.4375pt>
+<pictures/ct_sine.png, id=358, 586.19pt x 652.4375pt>
 File: pictures/ct_sine.png Graphic file (type png)
 
 <use pictures/ct_sine.png>
@@ -621,32 +623,39 @@ Chapter 3.
 
 
 
-] <pictures/simple_schematic_algo.png, id=415, 1355.0625pt x 693.59125pt>
+] <pictures/simple_schematic_algo.png, id=411, 1355.0625pt x 693.59125pt>
 File: pictures/simple_schematic_algo.png Graphic file (type png)
 
 <use pictures/simple_schematic_algo.png>
 Package pdftex.def Info: pictures/simple_schematic_algo.png used on input line 
 31.
 (pdftex.def)             Requested size: 170.71652pt x 87.37602pt.
- [17 <./pictures/simple_schematic_algo.png>]
-
-LaTeX Warning: Reference `P-post' on page 18 undefined on input line 59.
-
-<pictures/equation_kalman.png, id=432, 1375.1375pt x 723.70375pt>
+ [17 <./pictures/simple_schematic_algo.png>] <pictures/equation_kalman.png, id=
+430, 1375.1375pt x 723.70375pt>
 File: pictures/equation_kalman.png Graphic file (type png)
 
 <use pictures/equation_kalman.png>
 Package pdftex.def Info: pictures/equation_kalman.png used on input line 70.
-(pdftex.def)             Requested size: 284.52756pt x 149.74057pt.
- [18 <./pictures/equation_kalman.png>]
-<pictures/equation_ekf.png, id=445, 1378.14874pt x 716.6775pt>
+(pdftex.def)             Requested size: 369.88582pt x 194.66275pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18] <pictures/equation_ekf.png, id=447, 1378.14874pt x 716.6775pt>
 File: pictures/equation_ekf.png Graphic file (type png)
 
 <use pictures/equation_ekf.png>
 Package pdftex.def Info: pictures/equation_ekf.png used on input line 96.
-(pdftex.def)             Requested size: 284.52756pt x 147.95872pt.
- [19 <./pictures/equation_ekf.png>]
-<pictures/sketch_coordinate_systems.png, id=461, 421.575pt x 451.6875pt>
+(pdftex.def)             Requested size: 369.88582pt x 192.34634pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1281) has occurred while \output is active []
+
+ [19 <./pictures/equation_kalman.png>]
+<pictures/sketch_coordinate_systems.png, id=460, 421.575pt x 451.6875pt>
 File: pictures/sketch_coordinate_systems.png Graphic file (type png)
 
 <use pictures/sketch_coordinate_systems.png>
@@ -657,7 +666,7 @@ ine 111.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20]
+[20 <./pictures/equation_ekf.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21 <./pictures/sketch_coordinate_systems.png>] [22]
@@ -673,7 +682,7 @@ eps-converted-to.pdf pictures/structure_algo_1.eps>
 (epstopdf)             \includegraphics on input line 191.
 Package epstopdf Info: Output file is already uptodate.
 
-<pictures/structure_algo_1-eps-converted-to.pdf, id=486, 226.8475pt x 463.7325p
+<pictures/structure_algo_1-eps-converted-to.pdf, id=485, 226.8475pt x 463.7325p
 t>
 File: pictures/structure_algo_1-eps-converted-to.pdf Graphic file (type pdf)
  <use pictures/structure_algo_1-eps-converted-to.pdf>
@@ -694,7 +703,7 @@ s-converted-to.pdf pictures/displacement_1.eps>
 (epstopdf)             \includegraphics on input line 306.
 Package epstopdf Info: Output file is already uptodate.
 
-<pictures/displacement_1-eps-converted-to.pdf, id=553, 171.64125pt x 85.31876pt
+<pictures/displacement_1-eps-converted-to.pdf, id=552, 171.64125pt x 85.31876pt
 >
 File: pictures/displacement_1-eps-converted-to.pdf Graphic file (type pdf)
  <use pictures/displacement_1-eps-converted-to.pdf>
@@ -706,14 +715,14 @@ nput line 306.
 
  (./Chapter4.tex
 Chapter 4.
-<vicon_bilder/IMG_0137.JPG, id=576, 2601.72pt x 1943.26pt>
+<vicon_bilder/IMG_0137.JPG, id=575, 2601.72pt x 1943.26pt>
 File: vicon_bilder/IMG_0137.JPG Graphic file (type jpg)
 
 <use vicon_bilder/IMG_0137.JPG>
 Package pdftex.def Info: vicon_bilder/IMG_0137.JPG used on input line 8.
 (pdftex.def)             Requested size: 315.31577pt x 235.49397pt.
 
-<vicon_bilder/IMG_0130.JPG, id=578, 2601.72pt x 1943.26pt>
+<vicon_bilder/IMG_0130.JPG, id=577, 2601.72pt x 1943.26pt>
 File: vicon_bilder/IMG_0130.JPG Graphic file (type jpg)
 
 <use vicon_bilder/IMG_0130.JPG>
@@ -730,14 +739,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-] <pictures/2_2_SNR5_pos_GPS.png, id=593, 565.312pt x 549.252pt>
+] <pictures/2_2_SNR5_pos_GPS.png, id=592, 565.312pt x 549.252pt>
 File: pictures/2_2_SNR5_pos_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR5_pos_GPS.png>
 Package pdftex.def Info: pictures/2_2_SNR5_pos_GPS.png used on input line 31.
 (pdftex.def)             Requested size: 394.14322pt x 382.96521pt.
 
-<pictures/2_2_SNR5_orientation_GPS.png, id=594, 581.372pt x 553.267pt>
+<pictures/2_2_SNR5_orientation_GPS.png, id=593, 581.372pt x 553.267pt>
 File: pictures/2_2_SNR5_orientation_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR5_orientation_GPS.png>
@@ -745,7 +754,7 @@ Package pdftex.def Info: pictures/2_2_SNR5_orientation_GPS.png used on input li
 ne 38.
 (pdftex.def)             Requested size: 394.14322pt x 375.1022pt.
 
-<pictures/2_2_fmm_SNR5_pos_GPS.png, id=595, 645.612pt x 554.07pt>
+<pictures/2_2_fmm_SNR5_pos_GPS.png, id=594, 645.612pt x 554.07pt>
 File: pictures/2_2_fmm_SNR5_pos_GPS.png Graphic file (type png)
 
 <use pictures/2_2_fmm_SNR5_pos_GPS.png>
@@ -753,7 +762,7 @@ Package pdftex.def Info: pictures/2_2_fmm_SNR5_pos_GPS.png used on input line 4
 4.
 (pdftex.def)             Requested size: 394.14322pt x 338.2612pt.
 
-<pictures/2_2_fmm_SNR5_orientation_GPS.png, id=596, 644.809pt x 554.873pt>
+<pictures/2_2_fmm_SNR5_orientation_GPS.png, id=595, 644.809pt x 554.873pt>
 File: pictures/2_2_fmm_SNR5_orientation_GPS.png Graphic file (type png)
 
 <use pictures/2_2_fmm_SNR5_orientation_GPS.png>
@@ -761,7 +770,7 @@ Package pdftex.def Info: pictures/2_2_fmm_SNR5_orientation_GPS.png used on inpu
 t line 50.
 (pdftex.def)             Requested size: 394.14322pt x 339.17477pt.
 
-<pictures/2_2_fmm_SNR5_errors_GPS.png, id=599, 449.68pt x 337.26pt>
+<pictures/2_2_fmm_SNR5_errors_GPS.png, id=598, 449.68pt x 337.26pt>
 File: pictures/2_2_fmm_SNR5_errors_GPS.png Graphic file (type png)
 
 <use pictures/2_2_fmm_SNR5_errors_GPS.png>
@@ -769,7 +778,11 @@ Package pdftex.def Info: pictures/2_2_fmm_SNR5_errors_GPS.png used on input lin
 e 64.
 (pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
  [31 <./vicon_bilder/IMG_0137.JPG>]
-<pictures/2_2_SNR5_detail_GPS.png, id=607, 588.599pt x 553.267pt>
+[32 <./vicon_bilder/IMG_0130.JPG>] [33 <./pictures/2_2_SNR5_pos_GPS.png (PNG co
+py)>] [34 <./pictures/2_2_SNR5_orientation_GPS.png (PNG copy)>] [35 <./pictures
+/2_2_fmm_SNR5_pos_GPS.png (PNG copy)>] [36 <./pictures/2_2_fmm_SNR5_orientation
+_GPS.png (PNG copy)>] [37 <./pictures/2_2_fmm_SNR5_errors_GPS.png (PNG copy)>]
+<pictures/2_2_SNR5_detail_GPS.png, id=632, 588.599pt x 553.267pt>
 File: pictures/2_2_SNR5_detail_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR5_detail_GPS.png>
@@ -777,7 +790,7 @@ Package pdftex.def Info: pictures/2_2_SNR5_detail_GPS.png used on input line 79
 .
 (pdftex.def)             Requested size: 394.14322pt x 370.48434pt.
 
-<pictures/2_2_SNR25_detail_GPS.png, id=608, 581.372pt x 554.873pt>
+<pictures/2_2_SNR25_detail_GPS.png, id=633, 581.372pt x 554.873pt>
 File: pictures/2_2_SNR25_detail_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR25_detail_GPS.png>
@@ -785,7 +798,7 @@ Package pdftex.def Info: pictures/2_2_SNR25_detail_GPS.png used on input line 8
 5.
 (pdftex.def)             Requested size: 394.14322pt x 376.19104pt.
 
-<pictures/2_2_SNR5_errors_GPS.png, id=611, 449.68pt x 337.26pt>
+<pictures/2_2_SNR5_errors_GPS.png, id=636, 449.68pt x 337.26pt>
 File: pictures/2_2_SNR5_errors_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR5_errors_GPS.png>
@@ -793,41 +806,49 @@ Package pdftex.def Info: pictures/2_2_SNR5_errors_GPS.png used on input line 93
 .
 (pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
 
-<pictures/2_2_SNR25_errors_GPS.png, id=612, 449.68pt x 337.26pt>
+<pictures/2_2_SNR25_errors_GPS.png, id=637, 449.68pt x 337.26pt>
 File: pictures/2_2_SNR25_errors_GPS.png Graphic file (type png)
 
 <use pictures/2_2_SNR25_errors_GPS.png>
 Package pdftex.def Info: pictures/2_2_SNR25_errors_GPS.png used on input line 9
 9.
 (pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
- [32 <./vicon_bilder/IMG_0130.JPG>]
+ [38
 
-LaTeX Warning: Reference `detail:_noGPS' on page 33 undefined on input line 119
+ <./pictures/2_2_SNR5_detail_GPS.png (PNG copy)>] [39] [40 <./pictures/2_2_SNR2
+5_detail_GPS.png (PNG copy)>]
+[41 <./pictures/2_2_SNR5_errors_GPS.png (PNG copy)>] [42 <./pictures/2_2_SNR25_
+errors_GPS.png (PNG copy)>]
+
+LaTeX Warning: Reference `detail:_noGPS' on page 43 undefined on input line 119
 .
 
-<pictures/2_2_detail_noGPS.png, id=618, 515.526pt x 554.873pt>
+<pictures/2_2_detail_noGPS.png, id=660, 515.526pt x 554.873pt>
 File: pictures/2_2_detail_noGPS.png Graphic file (type png)
 
 <use pictures/2_2_detail_noGPS.png>
 Package pdftex.def Info: pictures/2_2_detail_noGPS.png used on input line 122.
 (pdftex.def)             Requested size: 394.14322pt x 424.2394pt.
 
-<pictures/2_2_errors_noGPS.png, id=621, 449.68pt x 337.26pt>
+<pictures/2_2_errors_noGPS.png, id=663, 449.68pt x 337.26pt>
 File: pictures/2_2_errors_noGPS.png Graphic file (type png)
 
 <use pictures/2_2_errors_noGPS.png>
 Package pdftex.def Info: pictures/2_2_errors_noGPS.png used on input line 129.
 (pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
+ [43
 
-<pictures/2_2_fmm_SNR5_detail_GPSoutage.png, id=623, 642.4pt x 554.07pt>
+ <./pictures/2_2_detail_noGPS.png (PNG copy)>]
+<pictures/2_2_fmm_SNR5_detail_GPSoutage.png, id=670, 642.4pt x 554.07pt>
 File: pictures/2_2_fmm_SNR5_detail_GPSoutage.png Graphic file (type png)
 
 <use pictures/2_2_fmm_SNR5_detail_GPSoutage.png>
 Package pdftex.def Info: pictures/2_2_fmm_SNR5_detail_GPSoutage.png used on inp
 ut line 139.
 (pdftex.def)             Requested size: 394.14322pt x 339.96054pt.
-
-<pictures/2_2_P_errors_noGPS.png, id=625, 449.68pt x 337.26pt>
+ [44 <./pictures/2_2_errors_noGPS.png (PNG copy)>] [45 <./pictures/2_2_fmm_SNR5
+_detail_GPSoutage.png (PNG copy)>] <pictures/2_2_P_errors_noGPS.png, id=681, 44
+9.68pt x 337.26pt>
 File: pictures/2_2_P_errors_noGPS.png Graphic file (type png)
 
 <use pictures/2_2_P_errors_noGPS.png>
@@ -835,31 +856,21 @@ Package pdftex.def Info: pictures/2_2_P_errors_noGPS.png used on input line 156
 .
 (pdftex.def)             Requested size: 394.14322pt x 295.62154pt.
 
-<pictures/mean_error.png, id=626, 845.21486pt x 597.432pt>
+<pictures/mean_error.png, id=682, 845.21486pt x 597.432pt>
 File: pictures/mean_error.png Graphic file (type png)
 
 <use pictures/mean_error.png>
 Package pdftex.def Info: pictures/mean_error.png used on input line 163.
 (pdftex.def)             Requested size: 394.14322pt x 278.5961pt.
- [33]
+) [46
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [34] [35 <./pictures/2_2_SNR5_pos_GPS.png (PNG copy)>] [36 <./pictures/2_2_SN
-R5_orientation_GPS.png (PNG copy)>] [37 <./pictures/2_2_fmm_SNR5_pos_GPS.png (P
-NG copy)>] [38 <./pictures/2_2_fmm_SNR5_orientation_GPS.png (PNG copy)>]
-[39 <./pictures/2_2_fmm_SNR5_errors_GPS.png (PNG copy)>] [40 <./pictures/2_2_SN
-R5_detail_GPS.png (PNG copy)>] [41 <./pictures/2_2_SNR25_detail_GPS.png (PNG co
-py)>] [42 <./pictures/2_2_SNR5_errors_GPS.png (PNG copy)>] [43 <./pictures/2_2_
-SNR25_errors_GPS.png (PNG copy)>] [44 <./pictures/2_2_detail_noGPS.png (PNG cop
-y)>] [45 <./pictures/2_2_errors_noGPS.png (PNG copy)>] [46 <./pictures/2_2_fmm_
-SNR5_detail_GPSoutage.png (PNG copy)>] [47 <./pictures/2_2_P_errors_noGPS.png (
-PNG copy)>] [48 <./pictures/mean_error.png>]
+ <./pictures/2_2_P_errors_noGPS.png (PNG copy)>] [47 <./pictures/mean_error.png
+>]
 \openout2 = `Chapter5.aux'.
 
  (./Chapter5.tex
 Chapter 5.
-) [49
+) [48
 
 
 
@@ -892,10 +903,10 @@ l.69
 l.69 
      
 ? 
-[50
+[49
 
 
-]) [51]
+]) [50]
 \openout2 = `addAppendix.aux'.
 
  (./addAppendix.tex
@@ -908,7 +919,7 @@ lusion: found PDF version <1.6>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-[52
+[51
 
 
 ]
@@ -916,7 +927,7 @@ lusion: found PDF version <1.6>, but at most version <1.5> allowed
 pdfTeX warning: pdflatex (file ./appendix/acc-BST-BMA180-FL000-03.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
 
-<appendix/acc-BST-BMA180-FL000-03.pdf, id=719, page=1, 597.50829pt x 845.0471pt
+<appendix/acc-BST-BMA180-FL000-03.pdf, id=714, page=1, 597.50829pt x 845.0471pt
 >
 File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
  <use appendix/acc-BST-BMA180-FL000-03.pdf, page 1>
@@ -947,8 +958,8 @@ File: appendix/acc-BST-BMA180-FL000-03.pdf Graphic file (type pdf)
 Package pdftex.def Info: appendix/acc-BST-BMA180-FL000-03.pdf, page1 used on in
 put line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [53 <./appendix/acc-BST-BMA180-FL000-03.pdf>] [54]
-<appendix/gyro_px4.pdf, id=771, page=9, 597.23125pt x 845.1575pt>
+ [52 <./appendix/acc-BST-BMA180-FL000-03.pdf>] [53]
+<appendix/gyro_px4.pdf, id=766, page=9, 597.23125pt x 845.1575pt>
 File: appendix/gyro_px4.pdf Graphic file (type pdf)
 
 <use appendix/gyro_px4.pdf, page 9>
@@ -972,8 +983,8 @@ File: appendix/gyro_px4.pdf Graphic file (type pdf)
 <use appendix/gyro_px4.pdf, page 9>
 Package pdftex.def Info: appendix/gyro_px4.pdf, page9 used on input line 5.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [55 <./appendix/gyro_px4.pdf>] [56]
-<appendix/mag_px4.pdf, id=803, page=2, 614.295pt x 794.97pt>
+ [54 <./appendix/gyro_px4.pdf>] [55]
+<appendix/mag_px4.pdf, id=797, page=2, 614.295pt x 794.97pt>
 File: appendix/mag_px4.pdf Graphic file (type pdf)
 
 <use appendix/mag_px4.pdf, page 2>
@@ -997,11 +1008,11 @@ File: appendix/mag_px4.pdf Graphic file (type pdf)
 <use appendix/mag_px4.pdf, page 2>
 Package pdftex.def Info: appendix/mag_px4.pdf, page2 used on input line 7.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [57 <./appendix/mag_px4.pdf>]
+ [56 <./appendix/mag_px4.pdf>]
 Appendix B.
-[58
+[57
 
-] <appendix/mti-g_leaflet.pdf, id=843, page=1, 597.66286pt x 845.0471pt>
+] <appendix/mti-g_leaflet.pdf, id=838, page=1, 597.66286pt x 845.0471pt>
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
 <use appendix/mti-g_leaflet.pdf, page 1>
@@ -1032,111 +1043,111 @@ File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page1 used on input line 9
 .
 (pdftex.def)             Requested size: 597.68874pt x 845.08372pt.
+ [58 <./appendix/mti-g_leaflet.pdf>]
+<appendix/mti-g_leaflet.pdf, id=888, page=2, 596.55876pt x 845.0471pt>
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 2>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page2 used on input line 9
+.
+(pdftex.def)             Requested size: 596.58461pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 2>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page2 used on input line 9
+.
+(pdftex.def)             Requested size: 596.58461pt x 845.08372pt.
+File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
+
+<use appendix/mti-g_leaflet.pdf, page 2>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page2 used on input line 9
+.
+(pdftex.def)             Requested size: 596.58461pt x 845.08372pt.
  [59 <./appendix/mti-g_leaflet.pdf>]
-<appendix/mti-g_leaflet.pdf, id=893, page=2, 596.55876pt x 845.0471pt>
+<appendix/mti-g_leaflet.pdf, id=960, page=3, 599.18753pt x 845.0471pt>
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 2>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page2 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 3>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page3 used on input line 9
 .
-(pdftex.def)             Requested size: 596.58461pt x 845.08372pt.
+(pdftex.def)             Requested size: 599.21349pt x 845.08372pt.
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 2>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page2 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 3>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page3 used on input line 9
 .
-(pdftex.def)             Requested size: 596.58461pt x 845.08372pt.
+(pdftex.def)             Requested size: 599.21349pt x 845.08372pt.
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 2>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page2 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 3>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page3 used on input line 9
 .
-(pdftex.def)             Requested size: 596.58461pt x 845.08372pt.
+(pdftex.def)             Requested size: 599.21349pt x 845.08372pt.
  [60 <./appendix/mti-g_leaflet.pdf>]
-<appendix/mti-g_leaflet.pdf, id=965, page=3, 599.18753pt x 845.0471pt>
+<appendix/mti-g_leaflet.pdf, id=968, page=4, 592.40321pt x 845.0471pt>
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 3>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page3 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 4>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page4 used on input line 9
 .
-(pdftex.def)             Requested size: 599.21349pt x 845.08372pt.
+(pdftex.def)             Requested size: 592.42888pt x 845.08372pt.
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 3>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page3 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 4>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page4 used on input line 9
 .
-(pdftex.def)             Requested size: 599.21349pt x 845.08372pt.
+(pdftex.def)             Requested size: 592.42888pt x 845.08372pt.
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 3>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page3 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 4>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page4 used on input line 9
 .
-(pdftex.def)             Requested size: 599.21349pt x 845.08372pt.
+(pdftex.def)             Requested size: 592.42888pt x 845.08372pt.
  [61 <./appendix/mti-g_leaflet.pdf>]
-<appendix/mti-g_leaflet.pdf, id=974, page=4, 592.40321pt x 845.0471pt>
+<appendix/mti-g_leaflet.pdf, id=977, page=5, 592.61702pt x 845.0471pt>
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 4>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page4 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 5>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page5 used on input line 9
 .
-(pdftex.def)             Requested size: 592.42888pt x 845.08372pt.
+(pdftex.def)             Requested size: 592.64268pt x 845.08372pt.
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 4>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page4 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 5>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page5 used on input line 9
 .
-(pdftex.def)             Requested size: 592.42888pt x 845.08372pt.
+(pdftex.def)             Requested size: 592.64268pt x 845.08372pt.
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 4>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page4 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 5>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page5 used on input line 9
 .
-(pdftex.def)             Requested size: 592.42888pt x 845.08372pt.
+(pdftex.def)             Requested size: 592.64268pt x 845.08372pt.
  [62 <./appendix/mti-g_leaflet.pdf>]
-<appendix/mti-g_leaflet.pdf, id=982, page=5, 592.61702pt x 845.0471pt>
+<appendix/mti-g_leaflet.pdf, id=986, page=6, 597.87067pt x 845.0471pt>
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 5>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page5 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 6>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page6 used on input line 9
 .
-(pdftex.def)             Requested size: 592.64268pt x 845.08372pt.
+(pdftex.def)             Requested size: 597.89656pt x 845.08372pt.
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 5>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page5 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 6>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page6 used on input line 9
 .
-(pdftex.def)             Requested size: 592.64268pt x 845.08372pt.
+(pdftex.def)             Requested size: 597.89656pt x 845.08372pt.
 File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
 
-<use appendix/mti-g_leaflet.pdf, page 5>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page5 used on input line 9
+<use appendix/mti-g_leaflet.pdf, page 6>
+Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page6 used on input line 9
 .
-(pdftex.def)             Requested size: 592.64268pt x 845.08372pt.
+(pdftex.def)             Requested size: 597.89656pt x 845.08372pt.
  [63 <./appendix/mti-g_leaflet.pdf>]
-<appendix/mti-g_leaflet.pdf, id=991, page=6, 597.87067pt x 845.0471pt>
-File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
-
-<use appendix/mti-g_leaflet.pdf, page 6>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page6 used on input line 9
-.
-(pdftex.def)             Requested size: 597.89656pt x 845.08372pt.
-File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
-
-<use appendix/mti-g_leaflet.pdf, page 6>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page6 used on input line 9
-.
-(pdftex.def)             Requested size: 597.89656pt x 845.08372pt.
-File: appendix/mti-g_leaflet.pdf Graphic file (type pdf)
-
-<use appendix/mti-g_leaflet.pdf, page 6>
-Package pdftex.def Info: appendix/mti-g_leaflet.pdf, page6 used on input line 9
-.
-(pdftex.def)             Requested size: 597.89656pt x 845.08372pt.
- [64 <./appendix/mti-g_leaflet.pdf>]
 Appendix C.
-[65
+[64
 
-] <appendix/x-imu_gyro.pdf, id=1006, page=8, 614.295pt x 794.97pt>
+] <appendix/x-imu_gyro.pdf, id=1001, page=8, 614.295pt x 794.97pt>
 File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_gyro.pdf, page 8>
@@ -1160,8 +1171,8 @@ File: appendix/x-imu_gyro.pdf Graphic file (type pdf)
 <use appendix/x-imu_gyro.pdf, page 8>
 Package pdftex.def Info: appendix/x-imu_gyro.pdf, page8 used on input line 12.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [66 <./appendix/x-imu_gyro.pdf>] [67]
-<appendix/x-imu_acc_mag.pdf, id=1042, page=11, 597.23125pt x 845.1575pt>
+ [65 <./appendix/x-imu_gyro.pdf>] [66]
+<appendix/x-imu_acc_mag.pdf, id=1036, page=11, 597.23125pt x 845.1575pt>
 File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 
 <use appendix/x-imu_acc_mag.pdf, page 11>
@@ -1192,33 +1203,30 @@ File: appendix/x-imu_acc_mag.pdf Graphic file (type pdf)
 Package pdftex.def Info: appendix/x-imu_acc_mag.pdf, page11 used on input line 
 14.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
- [68 <./appendix/x-imu_acc_mag.pdf>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
+ [67 <./appendix/x-imu_acc_mag.pdf>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
 
 (./main.aux (./Deckblatt.aux) (./Abstract.aux) (./Chapter1.aux) (./Chapter2.aux
 ) (./Chapter3.aux) (./Chapter4.aux) (./Chapter5.aux) (./addAppendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 7D399A17834949EEE81107A23C8C998A;2074.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: BE7B3DC6B5C3BE07414BD0AEFED56CD3;2114
-(rerunfilecheck)             After:  7D399A17834949EEE81107A23C8C998A;2074.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
  ) 
 Here is how much of TeX's memory you used:
- 8052 strings out of 493633
- 116098 string characters out of 3143378
- 219898 words of memory out of 3000000
- 10890 multiletter control sequences out of 15000+200000
+ 8062 strings out of 493633
+ 116357 string characters out of 3143378
+ 219609 words of memory out of 3000000
+ 10899 multiletter control sequences out of 15000+200000
  47684 words of font info for 85 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  45i,18n,49p,1554b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1236,10 +1244,10 @@ l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (74 pages, 9594441 bytes).
+Output written on main.pdf (73 pages, 9594632 bytes).
 PDF statistics:
- 1155 PDF objects out of 1200 (max. 8388607)
- 863 compressed objects within 9 object streams
+ 1150 PDF objects out of 1200 (max. 8388607)
+ 859 compressed objects within 9 object streams
  206 named destinations out of 1000 (max. 500000)
- 532 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 524 words of extra memory for PDF output out of 10000 (max. 10000000)
 

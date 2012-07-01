@@ -61,13 +61,13 @@ The Kalman gain $K$ is the heart of the Kalman Filter. $K$, a $n\times n$ Matrix
 K=\frac{P^{-}_k*H^{T}_k}{(H_k*P^{-}_k*H^{T}_k+R_k)}
 \end{equation}
 can be derived for the Kalman gain $K$ \cite{welch1997} 
-This concept uses the information of a normal gaussian distribution of the noise mentioned in equations \ref{R_Q_noise}. $P_k$ is minimized using the Maximum Likelihood Estimation and is called the  Gaussian Maximum-Likelihood Estimator. A more detailed derivation of the mathematics is shown in [..maybeck..] and \cite{andrews2007}.
+This concept uses the information of a normal gaussian distribution of the noise mentioned in equations \ref{R_Q_noise}. $P_k$ is minimized using the Maximum Likelihood Estimation and is called the  Gaussian Maximum-Likelihood Estimator. A more detailed derivation of the mathematics is shown in \cite{maybeck1979} and \cite{andrews2007}.
 
 \subsection*{Algorithm}
 With equations described in the section above, the estimation and correction step can be summarized as shown in figure \ref{equation_kalman}.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=10cm]{pictures/equation_kalman.png}
+\includegraphics[width=13cm]{pictures/equation_kalman.png}
 \caption{The prediction and the correction step with their corresponding equations \cite{welch1997}. }
 \label{equation_kalman}
 \end{center}
@@ -93,7 +93,7 @@ H_{i,j}=\frac{\partial h_{i}}{\partial x_j}(\hat{x}_k,u_k,9)
 This brings us to the summarized equations of the EKF in figure \ref{equation_ekf}.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=10cm]{pictures/equation_ekf.png}
+\includegraphics[width=13cm]{pictures/equation_ekf.png}
 \caption{The prediction and correction step of the EKF with their corresponding equations \cite{welch1997}. }
 \label{equation_ekf}
 \end{center}
