@@ -1,6 +1,7 @@
 function dy=pendulum(t,y)
 g=9.81;
 
+
 dy = zeros(8,1);    % a column vector
 
 % Model from Roman

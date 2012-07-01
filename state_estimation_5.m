@@ -120,7 +120,7 @@ while (i<size(M,2))
     %-----------------------
     
     for j=1:size(meas_control,2)                  % if we have new data, correction step is done
-        if meas_control(j)==1 && (j<=0 || (j>=7 && j<=15)) % after && define wich measurements are to be used for correction (in this care magn is ignored)
+        if meas_control(j)==1 && (j<=6 || (j>=7 && j<=15)) % after && define wich measurements are to be used for correction (in this care magn is ignored)
 %             [x_tmp,P_tmp]= correction(P_tmp,H(j,:),R(j,j),z_new(j),x_tmp,j);
               P12=P_tmp*H(j,:)';                   %cross covariance
               % K=P12*inv(H*P12+R);       %Kalman filter gain
