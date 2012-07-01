@@ -2,7 +2,6 @@ This is BibTeX, Version 0.99d (TeX Live 2011)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: Deckblatt.aux
-A level-1 auxiliary file: Aufgabenstellung.aux
 A level-1 auxiliary file: Abstract.aux
 A level-1 auxiliary file: Chapter1.aux
 A level-1 auxiliary file: Chapter2.aux
@@ -32,45 +31,46 @@ Too many commas in name 1 of "K. Geebelen, H. Ahmad, M. Vukov, S. Gros, J. Sweve
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "K. Geebelen, H. Ahmad, M. Vukov, S. Gros, J. Swevers, and M. Diehl" for entry geebelen2012
 while executing---line 944 of file unsrt.bst
-You've used 15 entries,
+Warning--empty author in maybeck1979
+You've used 16 entries,
             1791 wiz_defined-function locations,
-            543 strings with 5944 characters,
-and the built_in function-call counts, 3172 in all, are:
-= -- 276
-> -- 114
-< -- 3
-+ -- 45
-- -- 30
-* -- 173
-:= -- 485
-add.period$ -- 46
-call.type$ -- 15
-change.case$ -- 14
+            552 strings with 6135 characters,
+and the built_in function-call counts, 3577 in all, are:
+= -- 317
+> -- 119
+< -- 5
++ -- 47
+- -- 31
+* -- 203
+:= -- 529
+add.period$ -- 49
+call.type$ -- 16
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 154
-empty$ -- 346
-format.name$ -- 30
-if$ -- 740
+cite$ -- 17
+duplicate$ -- 179
+empty$ -- 389
+format.name$ -- 31
+if$ -- 844
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 13
-newline$ -- 78
-num.names$ -- 16
-pop$ -- 56
+int.to.str$ -- 16
+missing$ -- 14
+newline$ -- 82
+num.names$ -- 18
+pop$ -- 62
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 83
+skip$ -- 101
 stack$ -- 0
-substring$ -- 180
-swap$ -- 40
-text.length$ -- 3
+substring$ -- 216
+swap$ -- 54
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 24
-width$ -- 17
-write$ -- 160
+warning$ -- 1
+while$ -- 27
+width$ -- 18
+write$ -- 171
 (There were 5 error messages)

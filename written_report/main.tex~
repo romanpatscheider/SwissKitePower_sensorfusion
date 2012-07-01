@@ -56,6 +56,7 @@
 \usepackage{verbatim}           % Package for including files
 \usepackage[final]{pdfpages}	% Bindet PDF ein
 \usepackage{amsmath}
+\usepackage[section]{placeins}
 
 %=============================================================================
 % Layout Header and Footer
@@ -132,8 +133,6 @@
 
     %\include{Vorwort}
 \clear
-    \include{Aufgabenstellung}
-\clear
     \tableofcontents
 \clear
     \listoffigures % Creates list of all figures used in document
@@ -162,8 +161,8 @@
     %\include{Ausblick}
 \clear
     %Bibliography
-    %\bibliographystyle{unsrt}
-    %\bibliography{Parashare}
+    \bibliographystyle{unsrt}
+    \bibliography{bibliography}
 \clear
 %\begin{appendix}
     %Appendix
