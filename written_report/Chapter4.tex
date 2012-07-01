@@ -1,7 +1,7 @@
 \chapter{Results - Vicon Test}\label{cha4}
 In this chapter the algorithm from chapter \ref{cha2} is tested under different conditions. In a first part (see chapter \ref{setup}) the set up of the test is presented. In the second part (see chapter \ref{evaluation}). The different test conditions are described and the results shown.
 \section{Set up}\label{setup}
-To verify the performance of the kalman filter algorithm described in chapter \ref{cha3} a ground truth is needed.  By using the motion capture system from the english company "vicon" some test were performed. The vicon system provides the position of the sensors and the orientation. Because this test has to be performed indoors no GPS signal was available. The vicon data for position added with some noise was simulated as GPS measurement and as such handed to the algorithm.The same was done with the derivative of the vicon position to provide a velocity measurement. The impact of level of noise added to the signals can be seen in chapter \ref{noise}.
+To verify the performance of the Kalman filter algorithm described in chapter \ref{cha3} a ground truth is needed.  By using the motion capture system from the English company "vicon" some test were performed. The vicon system provides the position of the sensors and the orientation. Because this test has to be performed indoors no GPS signal was available. The vicon data for position added with some noise was simulated as GPS measurement and as such handed to the algorithm.The same was done with the derivative of the vicon position to provide a velocity measurement. The impact of level of noise added to the signals can be seen in chapter \ref{noise}.
 The pendulum setup can be seen on the picture in figure \ref{pend_setup}. 
 \begin{figure}[h]
 \centering
@@ -22,15 +22,16 @@ How the algorithm's state estimation differs depending on wether the measurement
 
 
 \section{Evaluation}\label{evaluation}
-Four comparisons are made to get an overview of the estimators performance. This chapter shows how different test conditions influence the performance. First it has to be verified if an estimator using a model of the pendulum's physical behavior is more accurate than a conventional Extended Kalman Filter. The results of this comparison can be seen in section \ref{fmm}. In chapter \ref{noise} the estimator is tested once with a low noise GPS signal and a second time with a higher noise GPS signal. Since a GPS signal is not always available or has at least a lower frequency than the IMU measurements, the behavior of the estimator in between two GPS fixes is a main performance criteona for an estimator. In chapter \ref{no_GPS} this condition is tested. How the estimator performes with the measurements of the two IMUs is shown in section \ref{IMU_comp}. 
+Four comparisons are made to get an overview of the estimators performance. This chapter shows how different test conditions influence the performance. First it has to be verified if an estimator using a model of the pendulum's physical behavior is more accurate than a conventional Extended Kalman Filter using the free mass model as estimation model. The results of this comparison can be seen in section \ref{fmm}. In chapter \ref{noise} the estimator is tested once with a low noise GPS signal and a second time with a higher noise GPS signal. Since a GPS signal is not always available or has at least a lower frequency than the IMU measurements, the behavior of the estimator in between two GPS fixes is a main performance criteona for an estimator. In chapter \ref{no_GPS} this condition is tested. How the estimator performes with the measurements of the two IMUs is shown in section \ref{IMU_comp}. The following test are all using the MTi-G IMU except the last one in chapter \ref{IMU_comp}.
 
 \subsection{"Pendulum"-estimator vs. "free mass model"-estimator}\label{fmm}
-In order to investigate the performance difference of the two different estimators, they were both tested with the same inputs and their respective outputs were compared. In both cases a GPS signal with an SNR of $-5 dB$ was used. The results are shown in Figures \ref{pos}, \ref{orientation}, \ref{pos_fmm} and \ref{orientation_fmm}. The estimator output is plotted together with the ground truth obtained from the Vicon system.
+In order to investigate the performance difference of the two different estimators, they were both tested with the same inputs and their respective outputs were compared. In both cases a GPS signal with a signal to noise ratio (SNR) of $-5 dB$ was used. SNR is the ratio between the desired signal and the background noise. It behaves like the smaller the ratio the higher the noise. The results are shown in Figures \ref{pos}, \ref{orientation}, \ref{pos_fmm} and \ref{orientation_fmm}. The estimator output is plotted together with the ground truth obtained from the Vicon system.
 \begin{figure}[H]
-\centering
+\begin{center}
 \includegraphics[width=1\textwidth]{pictures/2_2_SNR5_pos_GPS.png}
 \caption{Estimation of the position using the "Pendulum"-estimator compared to the ground truth obtained from the Vicon system.}
 \label{pos}
+\end{center}
 \end{figure}
 \begin{figure}
 \centering
@@ -142,7 +143,7 @@ This behaviour is also the big advantage of the pendulum model compared to the f
 
 
 \subsection{The MTi-G unit versus the PX4 unit}\label{IMU_comp}
-In this section the influence of the different IMU's on the estimator is presented. The above test of the estimator without having a GPS signal and only using the MTi-G data is carried out again with only the PX4 measurements. %In figure \ref{detail_no_GPS_P} the same detail is shown. 
+In this section the influence of the different IMU's on the estimator is presented. The above test of the estimator without having a GPS signal is carried out again.But this time using the PX4 IMU data instead of the MTi-G data. %In figure \ref{detail_no_GPS_P} the same detail is shown. 
 %\begin{figure}[hb]
 %\centering
 %\includegraphics[width=1\textwidth]{pictures/2_2_P_detail_noGPS.png}

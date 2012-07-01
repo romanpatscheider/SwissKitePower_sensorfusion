@@ -17,7 +17,7 @@ The x-IMU is a product of the company x-io Technologies. It also has a temperatu
 
 
 \section{Centrifuge Test}
-There are several performance requirements on an IMU installed on a kite. One of them is the dependency on g-loads because on a kite several g loads can appear. Therefore a centrifuge test was carried out in corporation with the Fachhochschule Nordwestschweiz (FHNW)
+There are several performance requirements on an IMU installed on a kite. One of them is the dependency on acceleration because a kite experience acceleration of multiple times g. Therefore a centrifuge test was carried out in corporation with the Fachhochschule Nordwestschweiz (FHNW)
 \subsection{Set-up}
 The setting of the centrifuge is described in figure \ref{centrifuge}.
 \begin{figure}[hb]
@@ -113,7 +113,7 @@ $4.87e4\;s – 4.91e4\;s$&$157.20\;m / 123.56\;m / 58.78\;m$\\
 \end{table}
 In figure \ref{ct_acc} and figure \ref{ct_gyro} the accelerometer and gyroscope measurements are shown. 
 \begin{figure}[h]
-\includegraphics[width=1.2\textwidth]{pictures/ct_acc.png}
+\includegraphics[width=1\textwidth]{pictures/ct_acc.png}
 \caption{Accelerometer}
 \label{ct_acc}
 \end{figure}
@@ -122,7 +122,7 @@ In figure \ref{ct_acc} and figure \ref{ct_gyro} the accelerometer and gyroscope 
 \caption{Gyrometer}
 \label{ct_gyro}
 \end{figure}
-As expected, we do have the highest acceleration in x direction and the fastest rotational rate in z direction. In the accelerometer x axis and the gyroscope z axis measurements can be seen the 5 steps of different rotational speed. The very first step is a test rotation followed by the hit on the sensors which react with a peak. Since the sensitivity of the PX4 accelerometer is set to $+/- 4 \;g$, the output of accelerometer in x direction is limited to $39.24 \;m/s^2$. The acceleration in y direction is showing small steps which can be accounted for by the placement of the sensors slightly off the center of the box. The gyroscope from the MTi-G shows a limitation in measuring the rate of turn. It is unable to resolve more than $ 403 \;deg/s$. The x-axis and y-axis should be zero for the gyroscope since the rotation is only two dimensional. Obviously, the noise again increases with higher rates of rotation. This can be clearly seen in the acceleration in z direction which should be constant at $-9.81 \;m/s²$, the gravitation. It looks like the noise level of the PX4 is the highest before the x-IMU and the MTI-G which has the lowest. This can be traced back on the high sensitivity set up of the PX4 accelerometer.
+As expected, we do have the highest acceleration in x direction and the fastest rotational rate in z direction. In the accelerometer x axis and the gyroscope z axis measurements can be seen the 5 steps of different rotational speed. The very first step is a test rotation followed by the hit on the sensors which react with a peak. Since the sensitivity of the PX4 accelerometer is set to $+/- 4 \;g$, the output of accelerometer in x direction is limited to $39.24 \;m/s^2$. The MTi-G Unit is as well limited to $+/- 5\;g$. This is does not obviously seen in the plots. The acceleration in y direction is showing small steps which can be accounted for by the placement of the sensors slightly off the center of the box. The gyroscope from the MTi-G shows a limitation in measuring the rate of turn (see figure \ref{ct_gyro}. It is unable to resolve more than $ 403 \;deg/s$. By the choice of the PX4's gyroscope setting the range is limited to $+/- 500\;dps$. But on the plot this limitation is not seen up to $520\;dps$. The x-axis and y-axis should be zero for the gyroscope since the rotation is only two dimensional. Obviously, the noise again increases with higher rates of rotation. This can be clearly seen in the acceleration in z direction which should be constant at $-9.81 \;m/s²$, the gravitation. It looks like the noise level of the PX4 is the highest before the x-IMU and the MTI-G which has the lowest. This can be traced back on the high sensitivity set up of the PX4 accelerometer.
 
 
 In figure \ref{acc_mag} the magnetometer output is plotted.

@@ -21,21 +21,21 @@ Where the random variables $w$ and $v$ stand for the process and the measurement
 p(w)\sim N(0,Q)\;, \\
 p(v)\sim N(0,R)\label{R_Q_noise}
 \end{equation}
-\begin{quote}The $n\times n$ matrix A in equation \ref{eq1} relates the state at time step $k$ to the state at step $k+1$, in the absene of either a dirving function or process noise. The $n\times l$ matrix $B$ relates the control input $u \in R^{l}$ to the state $x$. The $m \times m$ matrix $H$ in the measurement equation \ref{eq2} relates to the state to the measurement $z_k$.\cite{welch1997}\end{quote}
+\begin{quote}The $n\times n$ matrix A in equation \ref{eq1} relates the state at time step $k$ to the state at step $k+1$, in the absene of either a driving function or process noise. The $n\times l$ matrix $B$ relates the control input $u \in R^{l}$ to the state $x$. The $m \times m$ matrix $H$ in the measurement equation \ref{eq2} relates to the state to the measurement $z_k$.\cite{welch1997}\end{quote}
 In most navigation applications, the noisy sensors are a GPS receiver and an inertial navigation system or other sensors like for example speed sensors. The states of a system are described by the position, velocity, attitude and attitude rate \cite{andrews2007}.
 
 \subsection*{Mathematical Background}\label{math_kalman}
 In figure \ref{simple_schematic} the structure of the algorithm is sketched for a better understanding of the filter's mathematical background. 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=6cm]{pictures/simple_schematic_algo.eps}
+\includegraphics[width=6cm]{pictures/simple_schematic_algo.png}
 \caption{A simple structure of the algorithm \cite{welch1997}.}
 \label{simple_schematic}
 \end{center}
 \end{figure}
 In a first step the state at $k+1$ is estimated based on \ref{eq1}. This estimation is called a priori state estimation and written as $\hat{x}_k^{-}$. In a second step the a priori state estimation is corrected by the knowledge of measurements $z_k$. This corrected estimation is called the a posteriori estimation and written as $\hat{x}_k$.
 
-Now two error can be defined with it's a error covariances. First the error of the a priori estimation 
+Now two error can be defined with it's an error covariances. First the error of the a priori estimation 
 \begin{equation}
 e^{-}=x_k-\hat{x}_k^{-}
 \end{equation}
@@ -67,7 +67,7 @@ This concept uses the information of a normal gaussian distribution of the noise
 With equations described in the section above, the estimation and correction step can be summarized as shown in figure \ref{equation_kalman}.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=10cm]{pictures/equation_kalman.eps}
+\includegraphics[width=10cm]{pictures/equation_kalman.png}
 \caption{The prediction and the correction step with their corresponding equations \cite{welch1997}. }
 \label{equation_kalman}
 \end{center}
@@ -80,7 +80,7 @@ In reality the process to estimate the new state and the measurement relationshi
 x_{k+1}=f(x_k,u_k,w)
 z_k=h(x_k,v_k)
 \end{equation}
-One of the solution to overcome this problem is the Extended Kalman Filter shortly EKF. The EKF is linearizing the this functions with a first order Taylor-Series around the current state. This can be summerized with the following equation:
+One of the solution to overcome this problem is the Extended Kalman Filter shortly EKF. The EKF is linearizing the functions with a first order Taylor-Series around the current state. This can be summerized with the following equation:
 \begin{equation}
 x_{k+1}\approx \hat{x}_{k+1}+A(x_k-\hat{x}_k)+w\\
 z_k\approx \hat{z}_k+H(x_k-\hat{x}_k) +v 
@@ -93,7 +93,7 @@ H_{i,j}=\frac{\partial h_{i}}{\partial x_j}(\hat{x}_k,u_k,9)
 This brings us to the summarized equations of the EKF in figure \ref{equation_ekf}.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=10cm]{pictures/equation_ekf.eps}
+\includegraphics[width=10cm]{pictures/equation_ekf.png}
 \caption{The prediction and correction step of the EKF with their corresponding equations \cite{welch1997}. }
 \label{equation_ekf}
 \end{center}
@@ -104,7 +104,7 @@ This brings us to the summarized equations of the EKF in figure \ref{equation_ek
 In this chapter we will present the structure of the state estimation algorithm as we implemented it in MATLAB. As mentioned before, the goal is to get an estimation of the system's state as precise as possible using an Extended Kalman Filter. The Algorithm can be split in several main tasks. First the physical relations between the state $x_{k}$ and the state $x_{k+1}$ has to be defined and summarized in a propagation model. This is needed to calculate the a priori state estimation as described in chapter \ref{math_kalman}. Since this step is  crucial for the accuracy of the algorithm, it is further explained in chapter \ref{state_estimation}. A second key role plays the measurement estimation which corrects the a priori state estimation and calculates the a posteriori state estimation. A more detailed explanation of this correction can be found in chapter \ref{sensor_estimation}. A third question to be elaborated is how the algorithm has to behave if no sensor data is available or if not all sensors provide their outputs with the same frequency. In the last paragraph we will explain how the error covariances were chosen.
 
 \subsection*{Orientation}
-The filter has to handle two different coordinates frames. One is the inertial frame and the other the body frame. The inertial frame is the global frame. The position and the velocity both provided by the GPS are in the inertial frame. The origin of the inertial frame lies at the suspension point of the pendulum/kite. The body frame is a coordinate system on the kite. Its z-axis always points in the direction of the line and its origin lies at the center of gravity of the kite. The sensor measurements from the IMU are all in the body frame. Figure \ref{dof} contains an illustration of these two coordinate systems. 
+The estimator algorithm has to handle two different coordinates frames. One is the inertial frame and the other the body frame. The inertial frame is the earth fixed frame. The two measurements position and the velocity both provided by the GPS are in the inertial frame. Also the states of the system are in the inertial frame. The origin of the inertial frame lies at the suspension point of the pendulum/kite. The body frame is a coordinate system on the kite. The propagation model needs the body frame to calculate the forces acting on the body.Measurements form the IMU are as well as in body coordinates since the represent the forces. Its z-axis always points in the direction of the line and its origin lies at the center of gravity of the kite. The sensor measurements from the IMU are all in the body frame. Figure \ref{dof} contains an illustration of these two coordinate systems. 
 
  \begin{figure}[h]
 \begin{center}
@@ -203,13 +203,13 @@ The filter estimates with constant rate the state of the system. This rate is in
 During the second block the a priori state of the system is estimated with the help of the physical model. How and why the physical model is defined is explained in chapter \ref{state_estimation}. After this step the vector $x_{est}$ is up to date.
 
 \item[Block 3, measurement availability:]
-If there is no new measurement until the time of the a priori estimated state, the correction step is not executed. This allows the algorithm to run the ekf with a higher rate, then the IMU provide data. To summarize: If we have no new data from the sensors the system just keeps propagating based on the physical model.
+If there is no new measurement until the time of the a priori estimated state, the correction step is not executed. This allows the algorithm to run the EKF with a higher rate, then the IMU and GPS provide data. To summarize: If we have no new data from the sensors the system just keeps propagating based on the physical model. If there is at least one new measurement from any sensor block 4 will be executed.
 
 \item[Block 4, finding the closest measurement:]
 In this block it is searched for the closest measurement to the time of the a priori estimated state in block 2. If until the time of the estimation several sensor values are available only the newest and therefore most accurate value is taken for the correction.
 
 \item[Block 5, measurement selection:]
-Mostly not all sensors of an IMU provide an output with the same rate. Here it is tested, weather we have a new sensor value or is it still the one of the previous estimation. The correction step in block 5 is only for the new data executed. The other one still just propagate.
+Mostly not all sensors of an IMU provide an output with the same rate. Here it is tested, which sensors actually have a new output value and which has still it's output value from the previous estimation. The correction step in block 6 is only executed for measurements with new data and therefore only these have an influence updating the a priori estimation to the a posteriori estimation.
 
 \item[Block 6, correction:]
 As last step the correction of the a priori estimation takes place and the posteriori estimation is calculated. How the relationship between the state and the measurements look like is explained in chapter \ref{sensor_estimation}

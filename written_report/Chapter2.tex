@@ -17,7 +17,7 @@ The x-IMU is a product of the company x-io Technologies. It also has a temperatu
 
 
 \section{Centrifuge Test}
-There are several performance requirements on an IMU installed on a kite. One of them is the dependency on g-loads because on a kite several g loads can appear. Therefore a centrifuge test was carried out in corporation with the Fachhochschule Nordwestschweiz (FHNW)
+There are several performance requirements on an IMU installed on a kite. One of them is the dependency on acceleration because a kite experience acceleration of multiple times g. Therefore a centrifuge test was carried out in corporation with the Fachhochschule Nordwestschweiz (FHNW)
 \subsection{Set-up}
 The setting of the centrifuge is described in figure \ref{centrifuge}.
 \begin{figure}[hb]
@@ -51,11 +51,11 @@ The PX4 was set by the group of the PixHawk Project. How the output of the senso
  \hline
  Sensor & Sensitivity & Scale Factor & Unit & Comment \\
  \hline
- Accelerometer BMA180 & $2048\;LSB/g$ & $output*9.81/2048$ & $m/s^2$ &     Sensitivity range: $+/- 4 g$ \\
+ Accelerometer BMA180 & $2048\;LSB/g$ & $output*9.81/2048$ & $m/s^2$ &     Sensitivity range: $+/- 4\;g$ \\
  \hline
- Gyroscope L3GD20 & $17.5\;mdps/digit$ & $output*17.5/1000$ & $deg/s$ &   \\
+ Gyroscope L3GD20 & $17.5\;mdps/digit$ & $output*17.5/1000$ & $deg/s$ &  Sensitivity range $+/- 500\;dps$ \\
  \hline
- Magnetometer HMC5883L & $1370\;LSB/g$ & $output/1370$ & gauss &   \\
+ Magnetometer HMC5883L & $1370\;LSB/g$ & $output/1370$ & gauss &   Sensitivity range $+/-8\;gauss$\\
 \hline
 \end {tabular}
 \caption{This table shows how the raw data output of the PX4 has to be sclaed to get the right units.}
@@ -122,16 +122,16 @@ In figure \ref{ct_acc} and figure \ref{ct_gyro} the accelerometer and gyroscope 
 \caption{Gyrometer}
 \label{ct_gyro}
 \end{figure}
-As expected, we do have the highest acceleration in x direction and the fastest rotational rate in z direction. In the accelerometer x axis and the gyroscope z axis measurements can be seen the 5 steps of different rotational speed. The very first step is a test rotation followed by the hit on the sensors which react with a peak. Since the sensitivity of the PX4 accelerometer is set to $+/- 4 \;g$, the output of accelerometer in x direction is limited to $39.24 \;m/s^2$. The acceleration in y direction is showing small steps which can be accounted for by the placement of the sensors slightly off the center of the box. The gyroscope from the MTi-G shows a limitation in measuring the rate of turn. It is unable to resolve more than $ 403 \;deg/s$. The x-axis and y-axis should be zero for the gyroscope since the rotation is only two dimensional. Obviously, the noise again increases with higher rates of rotation. This can be clearly seen in the acceleration in z direction which should be constant at $-9.81 \;m/s²$, the gravitation. It looks like the noise level of the PX4 is the highest before the x-IMU and the MTI-G which has the lowest. This can be traced back on the high sensitivity set up of the PX4 accelerometer.
+As expected, we do have the highest acceleration in x direction and the fastest rotational rate in z direction. In the accelerometer x axis and the gyroscope z axis measurements can be seen the 5 steps of different rotational speed. The very first step is a test rotation followed by the hit on the sensors which react with a peak. Since the sensitivity of the PX4 accelerometer is set to $+/- 4 \;g$, the output of accelerometer in x direction is limited to $39.24 \;m/s^2$. The MTi-G Unit is as well limited to $+/- 5\;g$. This is does not obviously seen in the plots. The acceleration in y direction is showing small steps which can be accounted for by the placement of the sensors slightly off the center of the box. The gyroscope from the MTi-G shows a limitation in measuring the rate of turn (see figure \ref{ct_gyro}. It is unable to resolve more than $ 403 \;deg/s$. By the choice of the PX4's gyroscope setting the range is limited to $+/- 500\;dps$. But on the plot this limitation is not seen up to $520\;dps$. The x-axis and y-axis should be zero for the gyroscope since the rotation is only two dimensional. Obviously, the noise again increases with higher rates of rotation. This can be clearly seen in the acceleration in z direction which should be constant at $-9.81 \;m/s²$, the gravitation. It looks like the noise level of the PX4 is the highest before the x-IMU and the MTI-G which has the lowest. This can be traced back on the high sensitivity set up of the PX4 accelerometer.
 
 
-In figure \ref{acc_mag} the magnetometer output is plotted.
+In figure \ref{ct_mag} the magnetometer output is plotted.
 \begin{figure}[hb]
 \includegraphics[width=1\textwidth]{pictures/ct_mag.png}
 \caption{Magnetometer}
 \label{ct_mag}
 \end{figure}
-There is a mis alignment between the x-IMU,MTi-G and the PX4 which cannot be explained by the authors. The range of the maximum value and the minimum value of the PX4, MTi-G and the x-IMU is in x and y direction $0.4 \;gauss$. This is the expected range in the region of Zurich. In this sense, if the the output is added with an offset in order to get the range to $+/- 0.2\; gauss$, the measurements should be correct. The PX4 has a mean value of $0.3893$ gauss while the ground truth is $0.4268 \;gauss$.  The noise of the magnetometer is in the x-IMU higher than in the other two IMUs.
+There is a misalignment between the x-IMU,MTi-G and the PX4 which cannot be explained by the authors. The range of the maximum value and the minimum value of the PX4, MTi-G and the x-IMU is in x and y direction $0.4 \;gauss$. This is the expected range in the region of Zurich. In this sense, if the the output is added with an offset in order to get the range to $+/- 0.2\; gauss$, the measurements should be correct. The PX4 has a mean value of $0.3893$ gauss while the ground truth is $0.4268 \;gauss$.  The noise of the magnetometer is in the x-IMU higher than in the other two IMUs.The PX4 unit has limited range of $+/-8\;guass$ what not appear in this test and therefor
 
 In figure \ref{ct_sine} a closer look on the x axis of the magnetometer and accelerometer and on the y axis of the gyroscope is presented. The form of the curve has sine behavior, what we would expect again.
 \begin{figure}[hb]
@@ -142,5 +142,5 @@ In figure \ref{ct_sine} a closer look on the x axis of the magnetometer and acce
 
 \subsection{Conclusion}
 All IMUs work in the same range of noise level. With an increasing rotational velocity and therefore a higher centripetal acceleration, the average error is increasing in all sensors, except in the magnetometer. There could not be found a dependency between noise in the measurement of the magnetic field and the acceleration. 
-In a future experiment it would be interesting to also record the rotational rate of the centrifuge in order to have a more accurate ground truth that could be used to determine the accuracy of the IMU measurements. This could lead to a more founded compairison of the the different sensors' accuracy. Finally the sensitivity of the accelerometer of the PX4 unit should be set in a way to be able to observe the whole range of the applied centripetal acceleration and the MTi-G would need to be set to record the data in the calibrated output mode.
+In a future experiment it would be interesting to also record the rotational rate of the centrifuge in order to have a more accurate ground truth that could be used to determine the accuracy of the IMU measurements. This could lead to a more founded compairison of the the different sensors' accuracy. Finally the sensitivity of the accelerometer of the PX4 unit should be set in a way to be able to observe the whole range of the applied centripetal acceleration and the MTi-G would need to be set to record the data in the calibrated output mode. An arbitrary scaling will then not be necessary anymore.
 
