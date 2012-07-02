@@ -1,7 +1,7 @@
 \chapter{Results - Vicon Test}\label{cha4}
 In this chapter the algorithm from chapter \ref{cha2} is tested under different conditions. In a first part (see chapter \ref{setup}) the set up of the test is presented. In the second part (see chapter \ref{evaluation}). The different test conditions are described and the results shown.
 \section{Set up}\label{setup}
-To verify the performance of the Kalman filter algorithm described in chapter \ref{cha3} a ground truth is needed.  By using the motion capture system from the English company "vicon" some test were performed. The vicon system provides the position of the sensors and the orientation. Because this test has to be performed indoors no GPS signal was available. The vicon data for position added with some noise was simulated as GPS measurement and as such handed to the algorithm.The same was done with the derivative of the vicon position to provide a velocity measurement. The impact of level of noise added to the signals can be seen in chapter \ref{noise}.
+To verify the performance of the Kalman filter algorithm described in chapter \ref{cha3} a ground truth is needed.  By using the motion capture system from the English company "vicon" some tests were performed. The vicon system provides the position of the sensors and the orientation. Because this test has to be performed indoors no GPS signal is available. The vicon data for position added with some noise is simulated as GPS measurement and as such handed to the algorithm. The same is done with the derivative of the vicon position to provide a velocity measurement. The impact of the noise level added to the signals can be seen in chapter \ref{noise}.
 The pendulum setup can be seen on the picture in figure \ref{pend_setup}. 
 \begin{figure}[h]
 \centering
@@ -19,10 +19,10 @@ The box with the two sensors PX4 and MTi-G is showed in figure \ref{box_setup}.
 How the algorithm's state estimation differs depending on wether the measurements from the PX4 IMU or from the MTi-G IMU are used, can be read in chapter \ref{IMU_comp}.
 %In addition, a Kalman Filter which does not take into account the information of a pendulum's movement has to be implemented. A free mass model state estimation is used as control algorithm. The varying results between the state estimation with using the pendulum's physical behavior and without are shown in chapter (..). SENTENCE OBSOLETE SINCE MENTIONED IN CH3???
 
-
+\FloatBarrier
 
 \section{Evaluation}\label{evaluation}
-Four comparisons are made to get an overview of the estimators performance. This chapter shows how different test conditions influence the performance. First it has to be verified if an estimator using a model of the pendulum's physical behavior is more accurate than a conventional Extended Kalman Filter using the free mass model as estimation model. The results of this comparison can be seen in section \ref{fmm}. In chapter \ref{noise} the estimator is tested once with a low noise GPS signal and a second time with a higher noise GPS signal. Since a GPS signal is not always available or has at least a lower frequency than the IMU measurements, the behavior of the estimator in between two GPS fixes is a main performance criteona for an estimator. In chapter \ref{no_GPS} this condition is tested. How the estimator performes with the measurements of the two IMUs is shown in section \ref{IMU_comp}. The following test are all using the MTi-G IMU except the last one in chapter \ref{IMU_comp}.
+Four comparisons are made to get an overview of the estimators performance. This chapter shows how different test conditions influence the performance. First it has to be verified if an estimator using a model of the pendulum's physical behavior is more accurate than a conventional Extended Kalman Filter using the free mass model for estimating. The results of this comparison can be seen in section \ref{fmm}. In chapter \ref{noise} the estimator is tested once with a low noise GPS signal and a second time with a higher noise GPS signal. Since a GPS signal is not always available or has at least a lower frequency than the IMU measurements, the behavior of the estimator in between two GPS fixes is a main performance criterion for an estimator. In chapter \ref{no_GPS} this condition is tested. How the estimator performs with the measurements of the two IMUs is shown in section \ref{IMU_comp}. The following tests are all using the MTi-G IMU except the last one in chapter \ref{IMU_comp}.
 
 \FloatBarrier
 
@@ -88,7 +88,7 @@ The quality of the received GPS signal can vary according to the GPS unit used o
 \caption{GPS signal with a SNR of -25 dB.}
 \label{detail_25snr}
 \end{figure}
-The estimator output somehow differs, but the noise level does not have a strong impact. In the algorithm, the noise covariance matrixes are adjusted depending on the input signal's SNR. In the first case of a $-5\; dB$ SNR the variance of the GPS position and velocity are defined as $0.001 m$ and $0.01 m/s$ respectively. In the second case with a SNR of $-25\; dB$ the variance in the algorithm is increased to $0.01 m$ for the position and $0.05 m/s$ for the velocity.
+The estimator output somehow differs, but the noise level does not have a strong impact. In the algorithm, the noise covariance matrixes are adjusted depending on the input signal's SNR. In the first case of a $-5\; dB$ SNR the variance of the GPS position and velocity are defined as $0.001\;m$ and $0.01\;m/s$ respectively. In the second case with a SNR of $-25\; dB$ the variance in the algorithm is increased to $0.01\;m$ for the position and $0.05 m/s$ for the velocity.
 In figure \ref{error_5snr} and figure \ref{error_25snr} the errors in position and orientation are plotted for the $-5\; dB$ and $-25\; dB$ GPS signals respectively. 
 \begin{figure}[hb]
 \centering
@@ -110,15 +110,11 @@ For the orientation only the error of the $\Psi$ angle is calculated since the e
 \begin{eqnarray}
 meanError_{pos}^{-5\;dB}&=&0.0162\;m \\ meanError_{pos}^{-25\;dB}&=&0.0223\;m \\ meanError_{\Psi}^{-5\;dB}&=& 0.1440\;rad\\ meanError_{\Psi}^{-25\;dB}&=& 0.1584 \;rad
 \end{eqnarray}
-And a ratio of:
-\begin{eqnarray}
-\frac{meanError_{pos}^{-5\;dB}}{meanError_{pos}^{-25\;dB}}&=&0.7265 \\ \frac{meanError_{\Theta}^{-5\;dB}}{meanError_{\Theta}^{-25\;dB}}&=&0.9091
-\end{eqnarray}
 
 \FloatBarrier
 
 \subsection{GPS outage}\label{no_GPS}
-As explained earlier in this chapter, the performance of a estimator without having a GPS signal is an important criterion. For this purpose, the algorithm was run without any position or velocity measurements in the input. In figure \ref{detail:_noGPS} a detail of the plot is shown.
+As explained earlier in this chapter, the performance of a estimator without having a GPS signal is an important criterion. For this purpose, the algorithm is run without any position or velocity measurements in the input. In figure \ref{detail_noGPS} a detail of the plot is shown.
 \begin{figure}[hb]
 \centering
 \includegraphics[width=1\textwidth]{pictures/2_2_detail_noGPS.png}
@@ -132,14 +128,14 @@ As can be seen, the estimator is able to very accurately estimate the state of t
 \caption{Error in position and orientation only using IMU measurements and no GPS data.}
 \label{error_noGPS}
 \end{figure}
-The fact that no GPS data is available has an influence on the time it takes the estimator to settle. Without the accurate GPS signal, it takes between one and two seconds while the accurate information on position and velocity drag the estimator to its correct state in a few tenths of a second. Furthermore, the overall error levels are slightly higher without the GPS data ($0.0393 m$ compared to $0.0162 m$ for the position and $0.1947 rad$ compared to $0.144 rad$ for $\Psi$). 
+The fact that no GPS data is available has an influence on the time it takes the estimator to settle. Without the accurate GPS signal, it takes between one and two seconds while the accurate information on position and velocity drag the estimator to its correct state in a few tenths of a second. Furthermore, the overall error levels are slightly higher without the GPS data ($0.0393\;m$ compared to $0.0162\;m$ for the position and $0.1947\;rad$ compared to $0.144\;rad$ for $\Psi$). 
 
-This behaviour is also the big advantage of the pendulum model compared to the free mass model. While the first does not dramatically change its performance, the latter is very much dependent on a GPS signal. The "free mass model"-estimator was used on a GPS signal that contained a simulated GPS outage from $t=75 s$ to $t=78 s$. During that time, the position and orientation both drift away from the true values. However, upon reaquiring a GPS fix, the estimator returns very fast to its correct state, as can be seen in Figure \ref{detail_fmm_outage}.
+This behaviour is also the big advantage of the pendulum model compared to the free mass model. While the first does not dramatically change its performance, the latter is very much dependent on a GPS signal. The "free mass model"-estimator was used on a GPS signal that contained a simulated GPS outage from $t=75\;s$ to $t=78\;s$. During that time, the position and orientation both drift away from the true values. However, upon reaquiring a GPS fix, the estimator returns very fast to its correct state, as can be seen in Figure \ref{detail_fmm_outage}.
 
 \begin{figure}[hb]
 \centering
 \includegraphics[width=1\textwidth]{pictures/2_2_fmm_SNR5_detail_GPSoutage.png}
-\caption{"Free mass model" estimator during a GPS outage from $t=75 s$ to $t=78 s$.}
+\caption{"Free mass model" estimator during a GPS outage from $t=75\;s$ to $t=78\;s$.}
 \label{detail_fmm_outage}
 \end{figure}
 

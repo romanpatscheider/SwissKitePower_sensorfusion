@@ -163,7 +163,7 @@ For the definition of the angles $\Phi$, $\Theta$ and $\Psi$ see figure \ref{dof
  The measurement vector is the same for the free mass model as well as for the pendulum model. It consits of the position (pos) and the velocity (vel) of the GPS, the acceleration (acc) from the accelerometer and the rate of turn (gyro) from the gyroscope and the orientation (mag) from the magnetometer. Each of them in all three dimensions give us the measurement vector z with a dimension of 15.
  
 \begin{equation}
- z= \begin{bmatrix}
+ z= \begin{pmatrix}
   pos\;x \\
   pos\;y \\
   pos\;z \\
@@ -179,7 +179,7 @@ For the definition of the angles $\Phi$, $\Theta$ and $\Psi$ see figure \ref{dof
   mag\;x \\
   mag\;y \\
   mag\;z
- \end{bmatrix}
+ \end{pmatrix}
 \end{equation}
 
 
@@ -188,7 +188,7 @@ For the definition of the angles $\Phi$, $\Theta$ and $\Psi$ see figure \ref{dof
 In \ref{structure_algo} the schematic of the algorithm is shown. Each of the blocks will now successive explained.
 \begin{figure}
 \begin{center}
-\includegraphics[width=8 cm]{pictures/structure_algo_1.eps}
+\includegraphics[width=8 cm]{pictures/structure_algo_2.png}
 \caption{The graphical represenetation of the algorithm's structure.}
 \label{structure_algo}
 \end{center}
@@ -202,16 +202,13 @@ The filter estimates with constant rate the state of the system. This rate is in
 \item[Block 2, Propagation:]
 During the second block the a priori state of the system is estimated with the help of the physical model. How and why the physical model is defined is explained in chapter \ref{state_estimation}. After this step the vector $x_{est}$ is up to date.
 
-\item[Block 3, measurement availability:]
-If there is no new measurement until the time of the a priori estimated state, the correction step is not executed. This allows the algorithm to run the EKF with a higher rate, then the IMU and GPS provide data. To summarize: If we have no new data from the sensors the system just keeps propagating based on the physical model. If there is at least one new measurement from any sensor block 4 will be executed.
+\item[Block 3, Finding newest Data:]
+If there is no new data available until the time of the a priori estimated state, the correction step is not executed. This allows the algorithm to run the EKF with a higher rate, then the IMU and GPS provide data. If there is new data available, the algorithm is finding the newest or closest one to the a priori estimation time(totalTime).To summarize: If we have no new data from the sensors the system just keeps propagating based on the physical model. If there is at least one new measurement from any sensor block 4 will be executed.If we have new data, the algorithm takes the newest one for the correction.
 
-\item[Block 4, finding the closest measurement:]
-In this block it is searched for the closest measurement to the time of the a priori estimated state in block 2. If until the time of the estimation several sensor values are available only the newest and therefore most accurate value is taken for the correction.
+\item[Block 4, measurement selection:]
+Mostly not all sensors of an IMU provide an output with the same rate. Here it is tested, which sensors actually have a new output value and which has still it's output value from the previous estimation. The correction step in block 5 is only executed for measurements with new data and therefore only these have an influence updating the a priori estimation to the a posteriori estimation.
 
-\item[Block 5, measurement selection:]
-Mostly not all sensors of an IMU provide an output with the same rate. Here it is tested, which sensors actually have a new output value and which has still it's output value from the previous estimation. The correction step in block 6 is only executed for measurements with new data and therefore only these have an influence updating the a priori estimation to the a posteriori estimation.
-
-\item[Block 6, correction:]
+\item[Block 5, correction:]
 As last step the correction of the a priori estimation takes place and the posteriori estimation is calculated. How the relationship between the state and the measurements look like is explained in chapter \ref{sensor_estimation}
 \end{description}
 
