@@ -6,20 +6,20 @@ The Swiss Kite Power Project has the following options of IMUs to choose:
 
 \begin{description}
 \item[MTi-G]
-The MTi-G development kit is a commercial product from the Dutch company Xsens. The unit has an accelerometer, gyroscope, magnetometer, pressure sensor and GPS with antenna included. It exist two output data formats. It can be chosen wether the output is raw data or calibrated data. The calibrated data from the sensors without GPS gives the data in common units and uses a calibration to compensate offsets. In addition, the GPS and IMU data can be processed with an Extended Kalman Filter resulting in a filtered output of position and attitude.
+The MTi-G development kit is a commercial product from the Dutch company Xsens. The unit has an accelerometer, a gyroscope, a magnetometer, a pressure sensor and GPS with antenna included. There exist two output data formats. It can be chosen wether the output is raw data or calibrated data. The calibrated data from the sensors without GPS gives the data in common units and uses a calibration to compensate offsets. In addition, the GPS and IMU data can be processed with an Extended Kalman Filter resulting in a filtered output of position and attitude.
 
 \item[PX4]
-The PX4 is a open-source/open-hardware IMU used and developed by the PIXHAWK Project of the Computer Vision and Geometry Lab of ETH Zurich. The unit contains a temperature and pressure sensor, an accelerometer, a gyroscope and a magnetometer. The IMU additionally provides a counter for each sensor to ensure an easy handling of the different output frequencies of the included sensors. The output of the sensors is raw data. In the estimation algorithm (see chapter \ref{cha3}) only the embedded accelerometer a BMA180 from Bosch (see the data sheet in appendix \ref{ds_acc}), the gyroscope a L3GD20 from STMicroelectronics (see the data sheet in appendix \ref {ds_gyro}) and the magnetometer a HMC5883L from Honeywell(see the data sheet in appendix \ref{ds_mag}) are used.
+The PX4 is an open-source/open-hardware IMU used and developed by the PIXHAWK Project of the Computer Vision and Geometry Lab of ETH Zurich. The unit contains a temperature and pressure sensor, an accelerometer, a gyroscope and a magnetometer. The IMU additionally provides a counter for each sensor to ensure an easy handling of the different output frequencies of the included sensors. The output of the sensors is raw data. In the estimation algorithm (see chapter \ref{cha3}) only the embedded accelerometer, a BMA180 from Bosch (see the data sheet in appendix \ref{ds_acc}), the gyroscope, a L3GD20 from STMicroelectronics (see the data sheet in appendix \ref {ds_gyro}) and the magnetometer, a HMC5883L from Honeywell(see the data sheet in appendix \ref{ds_mag}) are used.
 
 \item[x-IMU]
-The x-IMU is a product of the company x-io Technologies. It also has a temperature sensor, an accelerometer, a gyroscope and a magnetometer. The configuration of the x-IMU was done by the FHNW. It provides only raw data. The data sheets of the sensors can be found in the appendix \ref{ds_ximu}.
+The x-IMU is a product of the company x-io Technologies. It also consists of a temperature sensor, an accelerometer, a gyroscope and a magnetometer. The configuration of the x-IMU was done by the FHNW. It provides only raw data. The data sheets of the sensors can be found in the appendix \ref{ds_ximu}.
 \end{description}
 
 
 \section{Centrifuge Test}
-There are several performance requirements on an IMU installed on a kite. One of them is the dependency on acceleration because a kite experience acceleration of multiple times g. Therefore a centrifuge test was carried out in corporation with the Fachhochschule Nordwestschweiz (FHNW)
+There are several performance requirements on an IMU installed on a kite. One of them is the sensors' dependency on acceleration because a kite can experience accelerations of multiple times g. Therefore a centrifuge test was carried out in collaboration with the Fachhochschule Nordwestschweiz (FHNW).
 \subsection{Set-up}
-The setting of the centrifuge is described in figure \ref{centrifuge}.
+The layout of the centrifuge can be seen in figure \ref{centrifuge}.
 \begin{figure}[hb]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{pictures/centrifuge.JPG}
@@ -27,7 +27,7 @@ The setting of the centrifuge is described in figure \ref{centrifuge}.
 \label{centrifuge}
 \end{center}
 \end{figure}
-It was provided by the FHNW. An arm is rotated by a motor. The IMUs are mounted in a box at the end of the arm. The sensors are put next to each other to have similar measurements in all sensors. A psicture of the Box can be seen in figure \ref{box}. 
+It was provided by the FHNW. An arm is rotated by a motor. The IMUs are mounted in a box at the end of the arm. The sensors are put next to each other to have similar measurements in all sensors. A picture of the Box can be seen in figure \ref{box}. 
 \begin{figure}[hb]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{pictures/box.JPG}
@@ -40,7 +40,7 @@ Obviously, the motion of the box is describing a circle with a radius (the dista
 Even though a sensor on the centrifuge was measuring the rate of turn, there was no software for the data collection implemented. Therefore we have no ground truth to compare the sensor data with. 
 During the test, the motor was driven in order to have 5 steps between $1.62\;g$ and $7.8\;g$ $(ca.\;1.6\;g;\;2.4\;g\;3.7\;g;\;5.4\;g;\;6.9\;g;\;7.8\;g)$ of centripetal acceleration.
 
-The PX4 and MTi-G are connected together. Both, the PX4 and the MTi-G measurements are written on the SD card of the PX4 Unit. The timestamps for the sensor readings are taken from the GPS clock for the MTi-G as well as for the PX4 at the time when they are logged on the SD card. This results in easy and accurate synchronization between the two IMUs. To get the time synchronized with the third IMU, the x-IMU is synchronized to the computer's time. Additionally the 3 sensors are hit for having a clearly distinghuishable signal aiding in the estimation of how accurate the synchronization is.
+The PX4 and MTi-G are connected together. Both, the PX4 and the MTi-G measurements are written on the SD card of the PX4 Unit. The timestamps for the sensor readings are taken from the GPS clock for the MTi-G as well as for the PX4 at the time when they are logged on the SD card. This results in easy and accurate synchronization between the two IMUs. To get the time synchronized with the third IMU, the x-IMU is synchronized to the computer's time. Additionally the 3 sensors are hit for having a clearly distinguishable signal aiding in the estimation of how accurate the synchronization is.
 \FloatBarrier
 \subsection{Result}
 The raw data from the x-IMU is scaled by Raphael Mueller bringing it to the common units $m/s^2$ for the accelerometer, $deg/s$ for the gyroscope and $gauss$ for the magnetometer.
@@ -71,7 +71,7 @@ In figure \ref{ct_pos} we can see the plot of the GPS data.
 \label{ct_pos}
 \end{center}
 \end{figure}
-Until $4.83*10^{4}\; s$ is the centrifuge not in motion. The mean value of this period is taken as the ground truth to calculate the the average error of the GPS signal. The mean value of the north component is $47.48\;deg$ for the east component $8.2138\;deg$ and for the down component $415.74\;m$. The coordinates of Winidsch, where the test takes place is $47.4806\;deg$, $8.2222\;deg$ and $357\;m$. By taking the average absolute difference between the GPS data and the mean value calculated before, an error of the GPS can be estimated: $1.08*10^{-5}\;deg$, $1.37*10^{-5}\;deg$ and $2.49\;m$ for north, east, down respectively. After $4.83*10^{4}\;s$ the noise is increasing. At this time the centrifuge starts rotating. The calculated  errors in this period are: $1.68*10^{-5}\;deg$, $2.27*10^{-5}\;deg$ and $2.89\;m$ for north east and down respectively. After $4.87*10^{4}\;s$ the noise looks even higher. This is when we have  a centripetal acceleration of more than  $6.7\;g$. The estimated noise is: $1.04*10^{-4}\;deg$, $1.02*10^{-4}\;deg$ and $13.01\;m$. Since in non of this periods a cosine of sine behavior of the north and east component can be seen, all three components should be stable in the ideal case. The error values a summarized in table \ref{ct_pos_error}.
+Until $4.83*10^{4}\; s$ is the centrifuge not in motion. The mean value of this period is taken as the ground truth to calculate the the average error of the GPS signal. The mean value of the north component is $47.48\;deg$ for the east component $8.2138\;deg$ and for the down component $415.74\;m$. The coordinates of Winidsch, where the test takes place is $47.4806\;deg$, $8.2222\;deg$ and $357\;m$. By taking the average absolute difference between the GPS data and the mean value calculated before, an error of the GPS can be estimated: $1.08*10^{-5}\;deg$, $1.37*10^{-5}\;deg$ and $2.49\;m$ for north, east, down respectively. After $4.83*10^{4}\;s$ the noise is increasing. At this time the centrifuge starts rotating. The calculated  errors in this period are: $1.68*10^{-5}\;deg$, $2.27*10^{-5}\;deg$ and $2.89\;m$ for north east and down respectively. After $4.87*10^{4}\;s$ the noise looks even higher. This is when we have  a centripetal acceleration of more than  $6.7\;g$. The estimated noise is: $1.04*10^{-4}\;deg$, $1.02*10^{-4}\;deg$ and $13.01\;m$. Since in none of these periods a cosine or sine behavior of the north and east component can be seen, all three components should be stable in the ideal case. The error values are summarized in table \ref{ct_pos_error}.
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|r|}
@@ -141,7 +141,7 @@ In figure \ref{ct_sine} a closer look on the x axis of the magnetometer and acce
 \label{ct_sine}
 \end{figure}
 
-\FloatingBarrier
+\FloatBarrier
 \subsection{Conclusion}
 All IMUs work in the same range of noise level. With an increasing rotational velocity and therefore a higher centripetal acceleration, the average error is increasing in all sensors, except in the magnetometer. There could not be found a dependency between noise in the measurement of the magnetic field and the acceleration. 
 In a future experiment it would be interesting to also record the rotational rate of the centrifuge in order to have a more accurate ground truth that could be used to determine the accuracy of the IMU measurements. This could lead to a more founded compairison of the the different sensors' accuracy. Finally the sensitivity of the accelerometer of the PX4 unit should be set in a way to be able to observe the whole range of the applied centripetal acceleration and the MTi-G would need to be set to record the data in the calibrated output mode. An arbitrary scaling will then not be necessary anymore.

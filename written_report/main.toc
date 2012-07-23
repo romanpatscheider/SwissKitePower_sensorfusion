@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {4.1}Set up}{31}{section.4.1}
 \contentsline {section}{\numberline {4.2}Evaluation}{33}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}"Pendulum"-estimator vs. "free mass model"-estimator}{33}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Noise of the GPS}{40}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Noise of the GPS}{41}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}GPS outage}{45}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}The MTi-G unit versus the PX4 unit}{48}{subsection.4.2.4}
 \contentsline {chapter}{\numberline {5}Conclusion and Outlook}{50}{chapter.5}
@@ -29,6 +29,3 @@
 \contentsline {section}{\numberline {A.2}Data Sheet of the Gyroscope}{56}{section.A.2}
 \contentsline {section}{\numberline {A.3}Data Sheet of the Magnetometer}{58}{section.A.3}
 \contentsline {chapter}{\numberline {B}Data Sheets of the MTi-G}{60}{appendix.B}
-\contentsline {chapter}{\numberline {C}Data Sheets of the x-IMU sensors}{67}{appendix.C}
-\contentsline {section}{\numberline {C.1}Data Sheet of the Gyroscope}{67}{section.C.1}
-\contentsline {section}{\numberline {C.2}Data Sheet of the Accelerometer and Magnetometer}{69}{section.C.2}

@@ -1,7 +1,7 @@
 \chapter{Results - Vicon Test}\label{cha4}
 In this chapter the algorithm from chapter \ref{cha2} is tested under different conditions. In a first part (see chapter \ref{setup}) the set up of the test is presented. In the second part (see chapter \ref{evaluation}). The different test conditions are described and the results shown.
 \section{Set up}\label{setup}
-To verify the performance of the Kalman filter algorithm described in chapter \ref{cha3} a ground truth is needed.  By using the motion capture system from the English company "vicon" some tests were performed. The vicon system provides the position of the sensors and the orientation. The convention of the three Euler Angles describing the orientation is different from any of the conventions used in this text so far. The rotation sequence is XY'Z''. This means that $\Psi$ (the rotation about the Z'' axis) now corresponds to the box's rotation about the line. Because this test has to be performed indoors no GPS signal is available. The vicon data for position added with some noise is simulated as GPS measurement and as such handed to the algorithm. The same is done with the derivative of the vicon position to provide a velocity measurement. The impact of the noise level added to the signals can be seen in chapter \ref{noise}.
+To verify the performance of the Kalman filter algorithm described in chapter \ref{cha3} a ground truth is needed.  By using the motion capture system from the English company "vicon" some tests were performed. The vicon system provides the position of the sensors and the orientation. The convention of the three Euler Angles describing the orientation is different from any of the conventions used in this text so far. The rotation sequence is XY'Z''. This means that $\Psi$ (the rotation about the Z'' axis) now corresponds to the box's rotation about the line. Because this test has to be performed indoors no GPS signal is available. The vicon data for position added with some noise is simulated as GPS measurement and as such handed to the algorithm. The same is done with the derivative of the vicon position to provide a velocity measurement. We used a frequency of $10 Hz$ for the simulated GPS measurements. The impact of the noise level added to the signals can be seen in chapter \ref{noise}.
 The pendulum setup can be seen on the picture in figure \ref{pend_setup}. 
 \begin{figure}[h]
 \centering
@@ -64,8 +64,14 @@ The plots of these errors can be seen in Figures \ref{error_5snr} and \ref{error
 \begin{figure}[hb]
 \centering
 \includegraphics[width=1\textwidth]{pictures/2_2_fmm_SNR5_errors_GPS.png}
-\caption{Error in position and orientation for the "free mass model"-estimator.}
+\caption{Error in position and orientation for the "free mass model"-estimator. The spikes in the errors are due to outages in the recording of the sensor data (i.e. at those times no measurements are available).}
 \label{error_5snr_fmm}
+\end{figure}
+\begin{figure}[hb]
+\centering
+\includegraphics[width=1\textwidth]{pictures/2_2_SNR5_errors_GPS.png}
+\caption{Error in position and orientation using a GPS signal with a SNR of -5 dB.}
+\label{error_5snr}
 \end{figure}
 When calculating the mean value of the error, starting at the time, when the estimator is settled down, the following results are obtained:
 \begin{eqnarray}
@@ -90,12 +96,7 @@ The quality of the received GPS signal can vary according to the GPS unit used o
 \end{figure}
 The estimator output somehow differs, but the noise level does not have a strong impact. In the algorithm, the noise covariance matrixes are adjusted depending on the input signal's SNR. In the first case of a $-5\; dB$ SNR the variance of the GPS position and velocity are defined as $0.001\;m$ and $0.01\;m/s$ respectively. In the second case with a SNR of $-25\; dB$ the variance in the algorithm is increased to $0.01\;m$ for the position and $0.05 m/s$ for the velocity.
 In figure \ref{error_5snr} and figure \ref{error_25snr} the errors in position and orientation are plotted for the $-5\; dB$ and $-25\; dB$ GPS signals respectively. 
-\begin{figure}[hb]
-\centering
-\includegraphics[width=1\textwidth]{pictures/2_2_SNR5_errors_GPS.png}
-\caption{Error in position and orientation using a GPS signal with a SNR of -5 dB.}
-\label{error_5snr}
-\end{figure}
+
 \begin{figure}[hb]
 \centering
 \includegraphics[width=1\textwidth]{pictures/2_2_SNR25_errors_GPS.png}
