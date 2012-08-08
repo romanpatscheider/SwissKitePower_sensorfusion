@@ -90,7 +90,8 @@ Where $A$ and $H$ are the Jacobian matrix of the function $f$ and $h$.
 A_{i,j}=\frac{\partial f_{i}}{\partial x_j}(\hat{x}_k,u_k,9)\\
 H_{i,j}=\frac{\partial h_{i}}{\partial x_j}(\hat{x}_k,u_k,9)
 \end{equation}
-This brings us to the summarized equations of the EKF in figure \ref{equation_ekf}.
+This brings us to the summarized equations of the EKF in figure \ref{equation_ekf}. Where W and V are the jaccobians of f() with respect to w and v respectively. But since the models (\ref{state_estimation} and \ref{sensor_estimation} are independent of w and v the derivatives are equal 1.
+
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=13cm]{pictures/equation_ekf.png}
@@ -188,7 +189,7 @@ For the definition of the angles $\Phi$, $\Theta$ and $\Psi$ see figure \ref{dof
 In \ref{structure_algo} the schematic of the algorithm is shown. Each of the blocks will now successive explained.
 \begin{figure}
 \begin{center}
-\includegraphics[width=8 cm]{pictures/structure_algo_2.png}
+\includegraphics[width=8 cm]{pictures/structure_aldo_2.png}
 \caption{The graphical represenetation of the algorithm's structure.}
 \label{structure_algo}
 \end{center}

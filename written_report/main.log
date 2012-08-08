@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  2 JUL 2012 15:55
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.6.4)  4 JUL 2012 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1213,15 +1213,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
 ) (./Chapter3.aux) (./Chapter4.aux) (./Chapter5.aux) (./addAppendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 73E08984A662EB28EE41806A89DAF0D2;2212.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 114AA70316D1AA0DE1C8790F791BF683;2212
-(rerunfilecheck)             After:  73E08984A662EB28EE41806A89DAF0D2;2212.
 
 LaTeX Warning: There were undefined references.
 
@@ -1250,7 +1244,7 @@ exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (76 pages, 9735390 bytes).
+Output written on main.pdf (76 pages, 9735392 bytes).
 PDF statistics:
  1172 PDF objects out of 1200 (max. 8388607)
  879 compressed objects within 9 object streams
