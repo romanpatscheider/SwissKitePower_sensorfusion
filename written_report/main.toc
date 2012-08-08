@@ -14,18 +14,21 @@
 \contentsline {section}{\numberline {3.2}Algorithm for State Estimation}{20}{section.3.2}
 \contentsline {section}{\numberline {3.3}State Estimation Model}{26}{section.3.3}
 \contentsline {section}{\numberline {3.4}Sensor Estimation Model}{29}{section.3.4}
-\contentsline {chapter}{\numberline {4}Results - Vicon Test}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Set up}{31}{section.4.1}
-\contentsline {section}{\numberline {4.2}Evaluation}{33}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}"Pendulum"-estimator vs. "free mass model"-estimator}{33}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Noise of the GPS}{41}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}GPS outage}{45}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}The MTi-G unit versus the PX4 unit}{48}{subsection.4.2.4}
-\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{50}{chapter.5}
-\contentsline {section}{\numberline {5.1}Sensor Selection}{50}{section.5.1}
-\contentsline {section}{\numberline {5.2}State Estimation}{50}{section.5.2}
-\contentsline {chapter}{\numberline {A}Data Sheets of the PX4 sensors}{54}{appendix.A}
-\contentsline {section}{\numberline {A.1}Data Sheet of the Accelerometer}{54}{section.A.1}
-\contentsline {section}{\numberline {A.2}Data Sheet of the Gyroscope}{56}{section.A.2}
-\contentsline {section}{\numberline {A.3}Data Sheet of the Magnetometer}{58}{section.A.3}
-\contentsline {chapter}{\numberline {B}Data Sheets of the MTi-G}{60}{appendix.B}
+\contentsline {chapter}{\numberline {4}Results - Vicon Test}{32}{chapter.4}
+\contentsline {section}{\numberline {4.1}Set up}{32}{section.4.1}
+\contentsline {section}{\numberline {4.2}Evaluation}{34}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}"Pendulum"-estimator vs. "free mass model"-estimator}{34}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Noise of the GPS}{42}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}GPS outage}{46}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}The MTi-G unit versus the PX4 unit}{49}{subsection.4.2.4}
+\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{51}{chapter.5}
+\contentsline {section}{\numberline {5.1}Sensor Selection}{51}{section.5.1}
+\contentsline {section}{\numberline {5.2}State Estimation}{51}{section.5.2}
+\contentsline {chapter}{\numberline {A}Data Sheets of the PX4 sensors}{55}{appendix.A}
+\contentsline {section}{\numberline {A.1}Data Sheet of the Accelerometer}{55}{section.A.1}
+\contentsline {section}{\numberline {A.2}Data Sheet of the Gyroscope}{57}{section.A.2}
+\contentsline {section}{\numberline {A.3}Data Sheet of the Magnetometer}{59}{section.A.3}
+\contentsline {chapter}{\numberline {B}Data Sheets of the MTi-G}{61}{appendix.B}
+\contentsline {chapter}{\numberline {C}Data Sheets of the x-IMU sensors}{68}{appendix.C}
+\contentsline {section}{\numberline {C.1}Data Sheet of the Gyroscope}{68}{section.C.1}
+\contentsline {section}{\numberline {C.2}Data Sheet of the Accelerometer and Magnetometer}{70}{section.C.2}

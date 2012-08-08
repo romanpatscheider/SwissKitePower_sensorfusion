@@ -15,24 +15,25 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces The prediction and correction step of the EKF with their corresponding equations \cite {welch1997}. }}{21}{figure.3.3}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces The definition of the inertial and body frame as well as the convention for the angles in the pendulum model.}}{22}{figure.3.4}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces The graphical representation of the algorithm's structure.}}{25}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces The black dot represents the sensor, while r is the distance between the center of mass of the pendulum and the sensor.}}{30}{figure.3.6}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The black dot represents the sensor, while r is the distance between the center of mass of the pendulum and the sensor.}}{31}{figure.3.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Pendulum set up.}}{32}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Box with sensors.}}{32}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Estimation of the position using the "Pendulum"-estimator compared to the ground truth obtained from the Vicon system.}}{35}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Estimation of the orientation using the "Pendulum"-estimator compared to the ground truth obtained from the Vicon system.}}{36}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Estimation of the position using the "free mass model"-estimator compared to the ground truth obtained from the Vicon system.}}{37}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Estimation of the orientation using the "free mass model"-estimator compared to the ground truth obtained from the Vicon system.}}{38}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Error in position and orientation for the "free mass model"-estimator. The spikes in the errors are due to outages in the recording of the sensor data (i.e. at those times no measurements are available).}}{39}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Error in position and orientation using a GPS signal with a SNR of -5 dB.}}{40}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces GPS signal with a SNR of -5 dB.}}{41}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces GPS signal with a SNR of -25 dB.}}{43}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Error in position and orientation using a GPS signal with a SNR of -25 dB.}}{44}{figure.4.11}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Estimation of the states without GPS signal.}}{45}{figure.4.12}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Error in position and orientation only using IMU measurements and no GPS data.}}{46}{figure.4.13}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces "Free mass model" estimator during a GPS outage from $t=75\tmspace +\thickmuskip {.2777em}s$ to $t=78\tmspace +\thickmuskip {.2777em}s$.}}{47}{figure.4.14}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Error of the estimation of the states without GPS using only the PX4 IMU.}}{48}{figure.4.15}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces All mean errors. Where fmm stands for free mass model which is used only in the first error calculation. All errors were calculated using the MTi-G IMU. Only the last one is using the PX4 Unit.}}{49}{figure.4.16}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Pendulum set up.}}{33}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Box with sensors.}}{33}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Estimation of the position using the "Pendulum"-estimator compared to the ground truth obtained from the Vicon system.}}{36}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Estimation of the orientation using the "Pendulum"-estimator compared to the ground truth obtained from the Vicon system.}}{37}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Estimation of the position using the "free mass model"-estimator compared to the ground truth obtained from the Vicon system.}}{38}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Estimation of the orientation using the "free mass model"-estimator compared to the ground truth obtained from the Vicon system.}}{39}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Error in position and orientation for the "free mass model"-estimator. The spikes in the errors are due to outages in the recording of the sensor data (i.e. at those times no measurements are available).}}{40}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Error in position and orientation using a GPS signal with a SNR of -5 dB.}}{41}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces GPS signal with a SNR of -5 dB.}}{42}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces GPS signal with a SNR of -25 dB.}}{44}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Error in position and orientation using a GPS signal with a SNR of -25 dB.}}{45}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Estimation of the states without GPS signal.}}{46}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Error in position and orientation only using IMU measurements and no GPS data.}}{47}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces "Free mass model" estimator during a GPS outage from $t=75\tmspace +\thickmuskip {.2777em}s$ to $t=78\tmspace +\thickmuskip {.2777em}s$.}}{48}{figure.4.14}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Error of the estimation of the states without GPS using only the PX4 IMU.}}{49}{figure.4.15}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces All mean errors. Where fmm stands for free mass model which is used only in the first error calculation. All errors were calculated using the MTi-G IMU. Only the last one is using the PX4 Unit.}}{50}{figure.4.16}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
