@@ -189,14 +189,10 @@ For the definition of the angles $\Phi$, $\Theta$ and $\Psi$ see figure \ref{dof
 In \ref{structure_algo} the schematic of the algorithm is shown. Each of the blocks will now be successively explained.
 \begin{figure}
 \begin{center}
-<<<<<<< HEAD
-\includegraphics[width=8 cm]{pictures/structure_aldo_2.png}
-\caption{The graphical represenetation of the algorithm's structure.}
-=======
+
 \includegraphics[width=8 cm]{pictures/structure_algo_2.png}
 \caption{The graphical representation of the algorithm's structure.}
->>>>>>> e9d8b4013d5980cd84e1a42e0e9b78376c6d646b
-\label{structure_algo}
+
 \end{center}
 \end{figure}
 
