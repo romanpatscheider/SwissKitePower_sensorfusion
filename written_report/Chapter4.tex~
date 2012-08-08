@@ -1,7 +1,7 @@
 \chapter{Results - Vicon Test}\label{cha4}
 In this chapter the algorithm from chapter \ref{cha2} is tested under different conditions. In a first part (see chapter \ref{setup}) the set up of the test is presented. In the second part (see chapter \ref{evaluation}). The different test conditions are described and the results shown.
 \section{Set up}\label{setup}
-To verify the performance of the Kalman filter algorithm described in chapter \ref{cha3} a ground truth is needed.  By using the motion capture system from the English company "vicon" some tests were performed. The vicon system provides the position of the sensors and the orientation. Because this test has to be performed indoors no GPS signal is available. The vicon data for position added with some noise is simulated as GPS measurement and as such handed to the algorithm. The same is done with the derivative of the vicon position to provide a velocity measurement. The impact of the noise level added to the signals can be seen in chapter \ref{noise}.
+To verify the performance of the Kalman filter algorithm described in chapter \ref{cha3} a ground truth is needed.  By using the motion capture system from the English company "vicon" some tests were performed. The vicon system provides the position of the sensors and the orientation. The convention of the three Euler Angles describing the orientation is different from any of the conventions used in this text so far. The rotation sequence is XY'Z''. This means that $\Psi$ (the rotation about the Z'' axis) now corresponds to the box's rotation about the line. Because this test has to be performed indoors no GPS signal is available. The vicon data for position added with some noise is simulated as GPS measurement and as such handed to the algorithm. The same is done with the derivative of the vicon position to provide a velocity measurement. We used a frequency of $10 Hz$ for the simulated GPS measurements. The impact of the noise level added to the signals can be seen in chapter \ref{noise}.
 The pendulum setup can be seen on the picture in figure \ref{pend_setup}. 
 \begin{figure}[h]
 \centering
@@ -158,7 +158,7 @@ Quite surprisingly, the performance of the estimator degrades significantly comp
 In figure all mean errors are summarized.
 \begin{figure}[hb]
 \centering
-\includegraphics[width=1\textwidth]{pictures/mean_error.png}
+\includegraphics[width=1\textwidth]{pictures/mean_error_2.png}
 \caption{All mean errors. Where fmm stands for free mass model which is used only in the first error calculation. All errors were calculated using the MTi-G IMU. Only the last one is using the PX4 Unit.}
 \label{mean_error}
 \end{figure}

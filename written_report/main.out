@@ -1,33 +1,30 @@
-\BOOKMARK [0][-]{chapter*.3}{Abstract}{}% 1
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
-\BOOKMARK [1][-]{section.1.1}{Kite Power in General and the SwissKitePower Project}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.2}{Motivation and Methods}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.3}{Related Work}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{IMUs}{}% 6
-\BOOKMARK [1][-]{section.2.1}{Centrifuge Test}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.1.1}{Set-up}{section.2.1}% 8
-\BOOKMARK [2][-]{subsection.2.1.2}{Result}{section.2.1}% 9
-\BOOKMARK [2][-]{subsection.2.1.3}{Conclusion}{section.2.1}% 10
-\BOOKMARK [0][-]{chapter.3}{State Estimation}{}% 11
-\BOOKMARK [1][-]{section.3.1}{Extended Kalman Filter}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.2}{Algorithm for State Estimation}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.3}{State Estimation Model}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.4}{Sensor Estimation Model}{chapter.3}% 15
-\BOOKMARK [0][-]{chapter.4}{Results - Vicon Test}{}% 16
-\BOOKMARK [1][-]{section.4.1}{Set up}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.2}{Evaluation}{chapter.4}% 18
-\BOOKMARK [2][-]{subsection.4.2.1}{"Pendulum"-estimator vs. "free mass model"-estimator}{section.4.2}% 19
-\BOOKMARK [2][-]{subsection.4.2.2}{Noise of the GPS}{section.4.2}% 20
-\BOOKMARK [2][-]{subsection.4.2.3}{GPS outage}{section.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.2.4}{The MTi-G unit versus the PX4 unit}{section.4.2}% 22
-\BOOKMARK [0][-]{chapter.5}{Conclusion and Outlook}{}% 23
-\BOOKMARK [1][-]{section.5.1}{Sensor Selection}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.2}{State Estimation}{chapter.5}% 25
-\BOOKMARK [0][-]{appendix.A}{Data Sheets of the PX4 sensors}{}% 26
-\BOOKMARK [1][-]{section.A.1}{Data Sheet of the Accelerometer}{appendix.A}% 27
-\BOOKMARK [1][-]{section.A.2}{Data Sheet of the Gyroscope}{appendix.A}% 28
-\BOOKMARK [1][-]{section.A.3}{Data Sheet of the Magnetometer}{appendix.A}% 29
-\BOOKMARK [0][-]{appendix.B}{Data Sheets of the MTi-G}{}% 30
-\BOOKMARK [0][-]{appendix.C}{Data Sheets of the x-IMU sensors}{}% 31
-\BOOKMARK [1][-]{section.C.1}{Data Sheet of the Gyroscope}{appendix.C}% 32
-\BOOKMARK [1][-]{section.C.2}{Data Sheet of the Accelerometer and Magnetometer}{appendix.C}% 33
+\BOOKMARK [0][-]{chapter*.3}{Abstract}{}
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}
+\BOOKMARK [1][-]{section.1.1}{Kite Power in General and the SwissKitePower Project}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{Motivation and Methods}{chapter.1}
+\BOOKMARK [1][-]{section.1.3}{Related Work}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{IMUs}{}
+\BOOKMARK [1][-]{section.2.1}{Centrifuge Test}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.1.1}{Set-up}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.2}{Result}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.3}{Conclusion}{section.2.1}
+\BOOKMARK [0][-]{chapter.3}{State Estimation}{}
+\BOOKMARK [1][-]{section.3.1}{Extended Kalman Filter}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{Algorithm for State Estimation}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{State Estimation Model}{chapter.3}
+\BOOKMARK [1][-]{section.3.4}{Sensor Estimation Model}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Results - Vicon Test}{}
+\BOOKMARK [1][-]{section.4.1}{Set up}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Evaluation}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.2.1}{"Pendulum"-estimator vs. "free mass model"-estimator}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.2}{Noise of the GPS}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.3}{GPS outage}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.4}{The MTi-G unit versus the PX4 unit}{section.4.2}
+\BOOKMARK [0][-]{chapter.5}{Conclusion and Outlook}{}
+\BOOKMARK [1][-]{section.5.1}{Sensor Selection}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{State Estimation}{chapter.5}
+\BOOKMARK [0][-]{appendix.A}{Data Sheets of the PX4 sensors}{}
+\BOOKMARK [1][-]{section.A.1}{Data Sheet of the Accelerometer}{appendix.A}
+\BOOKMARK [1][-]{section.A.2}{Data Sheet of the Gyroscope}{appendix.A}
+\BOOKMARK [1][-]{section.A.3}{Data Sheet of the Magnetometer}{appendix.A}
+\BOOKMARK [0][-]{appendix.B}{Data Sheets of the MTi-G}{}

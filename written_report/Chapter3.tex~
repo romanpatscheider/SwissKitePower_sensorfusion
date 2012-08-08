@@ -35,7 +35,7 @@ In figure \ref{simple_schematic} the structure of the algorithm is sketched for 
 \end{figure}
 In a first step the state at $k+1$ is estimated based on \ref{eq1}. This estimation is called a priori state estimation and written as $\hat{x}_k^{-}$. In a second step the a priori state estimation is corrected by the knowledge of measurements $z_k$. This corrected estimation is called the a posteriori estimation and written as $\hat{x}_k$.
 
-Now two error can be defined with it's an error covariances. First the error of the a priori estimation 
+Now two errors can be defined with their error covariances. First the error of the a priori estimation 
 \begin{equation}
 e^{-}=x_k-\hat{x}_k^{-}
 \end{equation}
@@ -64,7 +64,7 @@ can be derived for the Kalman gain $K$ \cite{welch1997}
 This concept uses the information of a normal gaussian distribution of the noise mentioned in equations \ref{R_Q_noise}. $P_k$ is minimized using the Maximum Likelihood Estimation and is called the  Gaussian Maximum-Likelihood Estimator. A more detailed derivation of the mathematics is shown in \cite{maybeck1979} and \cite{andrews2007}.
 
 \subsection*{Algorithm}
-With equations described in the section above, the estimation and correction step can be summarized as shown in figure \ref{equation_kalman}.
+With the equations described in the section above, the estimation and correction step can be summarized as shown in figure \ref{equation_kalman}.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=13cm]{pictures/equation_kalman.png}
@@ -72,7 +72,7 @@ With equations described in the section above, the estimation and correction ste
 \label{equation_kalman}
 \end{center}
 \end{figure} 
-For a fine tuning of the filter often the measurement error covariance matrix $R_k$ and process noise $Q_k$ can be used. $R_k$ contains the information how accurate the sensors and therefore the measurements are expected to be. This can be estimated in a first round with some static sensor test or can be found in the data sheets of the sensors. The matrix $Q_k$ describes how correct the propagation model described by the matrix $A_k$ is believed to be. In this sense as higher the values and therefore the noise of $R_k$ and $Q_k$ the less influence do the measurements or the propagation model respectively have on the estimated state. Having a diagonal matrix with constant values over time, does not represent the reality, but brings it to a form which is fast stable and easier tunable \cite{welch1997}. 
+For a fine tuning of the filter often the measurement error covariance matrix $R_k$ and process noise $Q_k$ can be used. $R_k$ contains the information how accurate the sensors and therefore the measurements are expected to be. This can be estimated in a first round with some static sensor test or can be found in the data sheets of the sensors. The matrix $Q_k$ describes how correct the propagation model described by the matrix $A_k$ is believed to be. In this sense, the higher one chooses the values and therefore the noise of $R_k$ and $Q_k$ the less influence do the measurements or the propagation model respectively have on the estimated state. Having a diagonal matrix with constant values over time, does not represent the reality, but brings it to a form which is fast stable and easier tunable \cite{welch1997}. 
 
 \subsection*{Extended Kalman Filter (EKF)}\label{ekf}
 In reality the process to estimate the new state and the measurement relationship to the process is non-linear.
@@ -90,7 +90,8 @@ Where $A$ and $H$ are the Jacobian matrix of the function $f$ and $h$.
 A_{i,j}=\frac{\partial f_{i}}{\partial x_j}(\hat{x}_k,u_k,9)\\
 H_{i,j}=\frac{\partial h_{i}}{\partial x_j}(\hat{x}_k,u_k,9)
 \end{equation}
-This brings us to the summarized equations of the EKF in figure \ref{equation_ekf}.
+This brings us to the summarized equations of the EKF in figure \ref{equation_ekf}. Where W and V are the jaccobians of f() with respect to w and v respectively. But since the models (\ref{state_estimation} and \ref{sensor_estimation} are independent of w and v the derivatives are equal 1.
+
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=13cm]{pictures/equation_ekf.png}
@@ -101,7 +102,7 @@ This brings us to the summarized equations of the EKF in figure \ref{equation_ek
 
 
 \section{Algorithm for State Estimation}
-In this chapter we will present the structure of the state estimation algorithm as we implemented it in MATLAB. As mentioned before, the goal is to get an estimation of the system's state as precise as possible using an Extended Kalman Filter. The Algorithm can be split in several main tasks. First the physical relations between the state $x_{k}$ and the state $x_{k+1}$ has to be defined and summarized in a propagation model. This is needed to calculate the a priori state estimation as described in chapter \ref{math_kalman}. Since this step is  crucial for the accuracy of the algorithm, it is further explained in chapter \ref{state_estimation}. A second key role plays the measurement estimation which corrects the a priori state estimation and calculates the a posteriori state estimation. A more detailed explanation of this correction can be found in chapter \ref{sensor_estimation}. A third question to be elaborated is how the algorithm has to behave if no sensor data is available or if not all sensors provide their outputs with the same frequency. In the last paragraph we will explain how the error covariances were chosen.
+In this chapter we will present the structure of the state estimation algorithm as we implemented it in MATLAB. As mentioned before, the goal is to get an estimation of the system's state as precise as possible using an Extended Kalman Filter. The Algorithm can be split in several main tasks. First the physical relations between the state $x_{k}$ and the state $x_{k+1}$ have to be defined and summarized in a propagation model. This is needed to calculate the a priori state estimation as described in chapter \ref{math_kalman}. Since this step is  crucial for the accuracy of the algorithm, it is further explained in chapter \ref{state_estimation}. A second key role plays the measurement estimation which corrects the a priori state estimation and calculates the a posteriori state estimation. A more detailed explanation of this correction can be found in chapter \ref{sensor_estimation}. A third question to be elaborated is how the algorithm has to behave if no sensor data is available or if not all sensors provide their outputs with the same frequency. In the last paragraph we will explain how the error covariances were chosen.
 
 \subsection*{Orientation}
 The estimator algorithm has to handle two different coordinates frames. One is the inertial frame and the other the body frame. The inertial frame is the earth fixed frame. The two measurements position and the velocity both provided by the GPS are in the inertial frame. Also the states of the system are in the inertial frame. The origin of the inertial frame lies at the suspension point of the pendulum/kite. The body frame is a coordinate system on the kite. The propagation model needs the body frame to calculate the forces acting on the body.Measurements form the IMU are as well as in body coordinates since the represent the forces. Its z-axis always points in the direction of the line and its origin lies at the center of gravity of the kite. The sensor measurements from the IMU are all in the body frame. Figure \ref{dof} contains an illustration of these two coordinate systems. 
@@ -114,7 +115,7 @@ The estimator algorithm has to handle two different coordinates frames. One is t
 \end{center}
 \end{figure}
 
-The euler angles describe how the inertial frame has to be rotated to bring into the body frame. With other words, the euler angles tell us the orientation of the body frame. With the direct cosine matrix ($DCM$) we can transform a vector from the inertial frame into the body frame and vise versa. For example can the accelerometer data which is given in body frame coordinates be transformed into the inertial frame, where the propagation of the states is calculated \cite{andrews2007}.
+The euler angles describe how the inertial frame has to be rotated to bring it into the body frame. With other words, the euler angles tell us the orientation of the body frame. With the direct cosine matrix ($DCM$) we can transform a vector from the inertial frame into the body frame and vise versa. For example can the accelerometer data which is given in body frame coordinates be transformed into the inertial frame, where the propagation of the states is calculated \cite{andrews2007}.
 
 \subsection*{Degrees of Freedom}
 As stated in the introduction, we implemented two different versions of the state estimation algorithm. A standard implementation assuming a free mass and one version that exploits the constraints given by the knowledge that the mass is oscillatingly suspended at a fixed point. These two versions are quite similar and share a lot of code, but one crucial point where they differ from each other is the number of degrees of freedom (DoF). The free mass model uses 12 DoF, namely position, velocity, attitude and attitude rate. Thus the state vector consists of 12 variables. The pendulum model uses only 6 true degrees of freedom: Three angles representing the position and attitude as well as their respective rates representing velocity and attitude rate. The definition of these angles can be seen in figure \ref{dof}.
@@ -185,11 +186,16 @@ For the definition of the angles $\Phi$, $\Theta$ and $\Psi$ see figure \ref{dof
 
 
 \subsection*{Structure of the Algorithm}
-In \ref{structure_algo} the schematic of the algorithm is shown. Each of the blocks will now successive explained.
+In \ref{structure_algo} the schematic of the algorithm is shown. Each of the blocks will now be successively explained.
 \begin{figure}
 \begin{center}
+<<<<<<< HEAD
 \includegraphics[width=8 cm]{pictures/structure_aldo_2.png}
 \caption{The graphical represenetation of the algorithm's structure.}
+=======
+\includegraphics[width=8 cm]{pictures/structure_algo_2.png}
+\caption{The graphical representation of the algorithm's structure.}
+>>>>>>> e9d8b4013d5980cd84e1a42e0e9b78376c6d646b
 \label{structure_algo}
 \end{center}
 \end{figure}
@@ -197,16 +203,16 @@ In \ref{structure_algo} the schematic of the algorithm is shown. Each of the blo
 
 \begin{description}
 \item[Block 1, totalTime:]
-The filter estimates with constant rate the state of the system. This rate is independent on any output rate of the sensors. In the first block the time at which the state is estimated is set. It is the old time totalTime added with the constant time step t.
+The filter estimates with constant rate the state of the system. This rate is independent on any output rate of the sensors. In the first block the time at which the state is estimated is set. It is the old time totalTime added with a constant time step t.
 
 \item[Block 2, Propagation:]
 During the second block the a priori state of the system is estimated with the help of the physical model. How and why the physical model is defined is explained in chapter \ref{state_estimation}. After this step the vector $x_{est}$ is up to date.
 
 \item[Block 3, Finding newest Data:]
-If there is no new data available until the time of the a priori estimated state, the correction step is not executed. This allows the algorithm to run the EKF with a higher rate, then the IMU and GPS provide data. If there is new data available, the algorithm is finding the newest or closest one to the a priori estimation time(totalTime).To summarize: If we have no new data from the sensors the system just keeps propagating based on the physical model. If there is at least one new measurement from any sensor block 4 will be executed.If we have new data, the algorithm takes the newest one for the correction.
+If there is no new data available until the time of the a priori estimated state, the correction step is not executed. This allows the algorithm to run the EKF with a higher rate, then the IMU and GPS provide data. If there is new data available, the algorithm is finding the newest or closest one to the a priori estimation time (totalTime). To summarize: If we have no new data from the sensors the system just keeps propagating based on the physical model. If there is at least one new measurement from any sensor block 4 will be executed.If we have new data, the algorithm takes the newest one for the correction.
 
 \item[Block 4, measurement selection:]
-Mostly not all sensors of an IMU provide an output with the same rate. Here it is tested, which sensors actually have a new output value and which has still it's output value from the previous estimation. The correction step in block 5 is only executed for measurements with new data and therefore only these have an influence updating the a priori estimation to the a posteriori estimation.
+Not all sensors of an IMU provide an output with the same rate. Here it is tested, which sensors actually have a new output value and which has still it's output value from the previous dataset. The correction step in block 5 is only executed for measurements with new data and therefore only these have an influence updating the a priori estimation to the a posteriori estimation.
 
 \item[Block 5, correction:]
 As last step the correction of the a priori estimation takes place and the posteriori estimation is calculated. How the relationship between the state and the measurements look like is explained in chapter \ref{sensor_estimation}
@@ -214,10 +220,10 @@ As last step the correction of the a priori estimation takes place and the poste
 
 
 \subsection*{Error Covariance}
-For the measurement error covariance the noise of the different sensors are taken from the data sheets. But  they were manually scaled according to have more accurate and stable filter. For the propagation model the covariance was estimated on how accurate the equations are. But also in this case were they manually adjusted afterwards. For an easier handling only the diagonal elements have a value. The off diagonal values are all zero.
+For the measurement error covariance the noise of the different sensors are taken from the data sheets. But they were manually scaled according to have more accurate and stable filter. For the propagation model the covariance was estimated on how accurate the equations are. But also in this case were they manually adjusted afterwards. For an easier handling only the diagonal elements have a value. The off diagonal values are all zero.
 
 \subsection*{Jacobian Matrix}
-In chapter \ref{ekf} the matrixes H and A were derived. Since the physical model and relations between state and the measurements are non linear, H and A are the Jacobian matrixes of the functions $f$ and $h$. For having an accurate as possible solution the Jacobian was in a first version calculated analytically with symbolic toolbox from MathWorks. The Jacobian matrix then has to be evaluated in every iteration step. Simulating 0.01 seconds took the filter much longer than 10 minutes. It was then decided to rewrite the algorithm calculating the Jacobian matrixes numerical. The function ekf.m [..ekfwebsite..]from MathWorks was restructured to match the requirements of this algorithm. It uses a complex step differentiation to calculate the derivatives of the function f and h [..papCompDiff..]. 
+In chapter \ref{ekf} the matrixes H and A were derived. Since the physical model and relations between state and the measurements are non linear, H and A are the Jacobian matrixes of the functions $f$ and $h$. For having an accurate as possible solution the Jacobian was in a first version calculated analytically with symbolic toolbox from MathWorks. The Jacobian matrix then has to be evaluated in every iteration step. Simulating 0.01 seconds took the filter much longer than 10 minutes. It was then decided to rewrite the algorithm calculating the Jacobian matrixes numerical. The function ekf.m \cite{mcekf} from MathWorks was restructured to match the requirements of this algorithm. It uses a complex step differentiation to calculate the derivatives of the function f and h \cite{diehl11}. 
 
 
 \section{State Estimation Model}\label{state_estimation}
@@ -252,7 +258,7 @@ And similarly for $\ddot{\Theta}$:
 \begin{eqnarray} \frac{\partial L}{\partial \Theta}-\frac{d}{dt}\frac{\partial L}{\partial \dot{\Theta}}=0 \\
  \ddot{\Theta}=\dfrac{\cos{\Theta}(g-r\sin{\Theta}\dot{\Psi}^2)}{r} \end{eqnarray}
 
-The third degree of freedom, the body's rotation about its z-axis, is assumed to be constant. However, due to the convention of the euler angles, a change in phi contributes an additional term to the z component of the rotation vector in the body frame. (For further explanation see section ...) To compensate for that, the second derivative of $\Phi$ is not zero but defined as follows: 
+The third degree of freedom, the body's rotation about its z-axis, is assumed to be constant. However, due to the convention of the euler angles, a change in phi contributes an additional term to the z component of the rotation vector in the body frame. (As can be seen in equation \ref{deuler2body}) To compensate for that, the second derivative of $\Phi$ is not zero but defined as follows: 
 
 \begin{eqnarray} \frac{d}{dt}w_{z}^{body}=\frac{d}{dt}(\dot{\Phi} - \sin{\Theta} \dot{\Psi}) =0 \\
  \ddot{\Phi}=\cos{\Theta}\dot{\Theta}\dot{\Psi}+\sin{\Theta}\ddot{\Psi} \end{eqnarray}
@@ -285,16 +291,16 @@ The centripetal acceleration always acting in z direction of the sensor can be c
 \begin{equation}
 a_{cp}=\frac{v^2}{R}
 \end{equation}
-We then have the an additional acceleration of the earth gravitation. The earth gravitation is in the inertial frame only in z direction and has to be transformed with the $DCM_{bi}$ from the inertial in the body frame. Finally the acceleration can be written as:
+We then have the an additional acceleration of the earth gravitation. The earth gravitation is in the inertial frame only in z direction and has to be transformed with the $DCM_{bi}$ from the inertial in the body frame. However, since the accelerometer is suspended in a pendulum, it will only measure a z component. The component of g tangential to the sphere, will just accelerate the box and thus not show up in the measurements. Finally the acceleration can be written as:
 \begin{equation}
-acc= \begin{bmatrix} 0\\0\\ \frac{v^2}{R}\end{bmatrix}+DCM_{bi}*\begin{bmatrix}0\\0\\g\end{bmatrix}
+acc= \begin{bmatrix} 0\\0\\ \frac{v^2}{R}\end{bmatrix}+\begin{bmatrix}0\\0\\cos(\Theta) g\end{bmatrix}
 \end{equation}
 The magnetic field is  a constant value in Zurich. By transforming that into the body frame again with the help of the $DCM_{bi}$, the expected measurement from the magnetometer is calculated:
 \begin{equation}
 mag= DCM_{bi}* \begin{bmatrix} 0.2145 \\ 0.0060 \\ 0.4268 \end{bmatrix} [gauss]
 \end{equation} 
 The gyroscope measurement is directly represented by the rate of the euler angles $\dot{\Phi}$,$\dot{\Theta}$ and $\dot{\Psi}$. Since the euler angular rate has to be transformed into the body frame coordinates and additinally has a converstion about which axes is rotated the first, what the gyroscope has not,a transformation matrix has to be used as follows:
-\begin{equation}
+\begin{equation}\label{deuler2body}
 gyro=\begin{bmatrix} 1 & 0 & -sin(\Theta) \\ 0 & cos(\Phi) & sin(\Phi) cos(\Theta) \\ 0 & -sin(\Phi) & cos(\Phi)cos(\Theta) \end{bmatrix}*\begin{bmatrix} \dot{\Psi}\\ \dot{\Theta}\\ \dot{\Phi} \end{bmatrix}
 \end{equation}
 Because the position of the senors is not at the center of mass of the pendulum, an additional displacement vector has to be added to the position (compare figure \ref{displacement}). With transforming the distance between the center of mass and the sensor into the inertial frame, the position is adjusted. The displacement gives an additional velocity which is the crossproduct of the rate of rotation and the displacement from the center of mass. By the derivative of this additional velocity the additional acceleration is calculated. The displcement has no influence on the gyrometer measurement and the magnetometer.
